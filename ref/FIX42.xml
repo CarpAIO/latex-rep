@@ -13,4 +13,55 @@
     <field name="SenderSubID" required="N"/>
     <field name="SenderLocationID" required="N"/>
     <field name="TargetSubID" required="N"/>
-    <field name="TargetLocationI
+    <field name="TargetLocationID" required="N"/>
+    <field name="OnBehalfOfSubID" required="N"/>
+    <field name="OnBehalfOfLocationID" required="N"/>
+    <field name="DeliverToSubID" required="N"/>
+    <field name="DeliverToLocationID" required="N"/>
+    <field name="PossDupFlag" required="N"/>
+    <field name="PossResend" required="N"/>
+    <field name="SendingTime" required="Y"/>
+    <field name="OrigSendingTime" required="N"/>
+    <field name="XmlDataLen" required="N"/>
+    <field name="XmlData" required="N"/>
+    <field name="MessageEncoding" required="N"/>
+    <field name="LastMsgSeqNumProcessed" required="N"/>
+    <field name="OnBehalfOfSendingTime" required="N"/>
+  </header>
+  <trailer>
+    <field name="SignatureLength" required="N"/>
+    <field name="Signature" required="N"/>
+    <field name="CheckSum" required="Y"/>
+  </trailer>
+  <messages>
+    <message name="Heartbeat" msgtype="0" msgcat="admin">
+      <field name="TestReqID" required="N"/>
+    </message>
+    <message name="Logon" msgtype="A" msgcat="admin">
+      <field name="EncryptMethod" required="Y"/>
+      <field name="HeartBtInt" required="Y"/>
+      <field name="RawDataLength" required="N"/>
+      <field name="RawData" required="N"/>
+      <field name="ResetSeqNumFlag" required="N"/>
+      <field name="MaxMessageSize" required="N"/>
+      <group name="NoMsgTypes" required="N">
+        <field name="RefMsgType" required="N"/>
+        <field name="MsgDirection" required="N"/>
+      </group>
+    </message>
+    <message name="TestRequest" msgtype="1" msgcat="admin">
+      <field name="TestReqID" required="Y"/>
+    </message>
+    <message name="ResendRequest" msgtype="2" msgcat="admin">
+      <field name="BeginSeqNo" required="Y"/>
+      <field name="EndSeqNo" required="Y"/>
+    </message>
+    <message name="Reject" msgtype="3" msgcat="admin">
+      <field name="RefSeqNum" required="Y"/>
+      <field name="RefTagID" required="N"/>
+      <field name="RefMsgType" required="N"/>
+      <field name="SessionRejectReason" required="N"/>
+      <field name="Text" required="N"/>
+      <field name="EncodedTextLen" required="N"/>
+      <field name="EncodedText" required="N"/>
+ 
