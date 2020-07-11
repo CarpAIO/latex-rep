@@ -110,4 +110,49 @@
       <field name="LastMkt" required="N"/>
       <field name="TradingSessionID" required="N"/>
     </message>
- 
+    <message name="IndicationofInterest" msgtype="6" msgcat="app">
+      <field name="IOIid" required="Y"/>
+      <field name="IOITransType" required="Y"/>
+      <field name="IOIRefID" required="N"/>
+      <field name="Symbol" required="Y"/>
+      <field name="SymbolSfx" required="N"/>
+      <field name="SecurityID" required="N"/>
+      <field name="IDSource" required="N"/>
+      <field name="SecurityType" required="N"/>
+      <field name="MaturityMonthYear" required="N"/>
+      <field name="MaturityDay" required="N"/>
+      <field name="PutOrCall" required="N"/>
+      <field name="StrikePrice" required="N"/>
+      <field name="OptAttribute" required="N"/>
+      <field name="ContractMultiplier" required="N"/>
+      <field name="CouponRate" required="N"/>
+      <field name="SecurityExchange" required="N"/>
+      <field name="Issuer" required="N"/>
+      <field name="EncodedIssuerLen" required="N"/>
+      <field name="EncodedIssuer" required="N"/>
+      <field name="SecurityDesc" required="N"/>
+      <field name="EncodedSecurityDescLen" required="N"/>
+      <field name="EncodedSecurityDesc" required="N"/>
+      <field name="Side" required="Y"/>
+      <field name="IOIShares" required="Y"/>
+      <field name="Price" required="N"/>
+      <field name="Currency" required="N"/>
+      <field name="ValidUntilTime" required="N"/>
+      <field name="IOIQltyInd" required="N"/>
+      <field name="IOINaturalFlag" required="N"/>
+      <group name="NoIOIQualifiers" required="N">
+        <field name="IOIQualifier" required="N"/>
+      </group>
+      <field name="Text" required="N"/>
+      <field name="EncodedTextLen" required="N"/>
+      <field name="EncodedText" required="N"/>
+      <field name="TransactTime" required="N"/>
+      <field name="URLLink" required="N"/>
+      <group name="NoRoutingIDs" required="N">
+        <field name="RoutingType" required="N"/>
+        <field name="RoutingID" required="N"/>
+      </group>
+      <field name="SpreadToBenchmark" required="N"/>
+      <field name="Benchmark" required="N"/>
+    </message>
+    <
