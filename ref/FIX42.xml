@@ -244,4 +244,46 @@
         <field name="SymbolSfx" required="N"/>
         <field name="SecurityID" required="N"/>
         <field name="IDSource" required="N"/>
-        <field name="SecurityType"
+        <field name="SecurityType" required="N"/>
+        <field name="MaturityMonthYear" required="N"/>
+        <field name="MaturityDay" required="N"/>
+        <field name="PutOrCall" required="N"/>
+        <field name="StrikePrice" required="N"/>
+        <field name="OptAttribute" required="N"/>
+        <field name="ContractMultiplier" required="N"/>
+        <field name="CouponRate" required="N"/>
+        <field name="SecurityExchange" required="N"/>
+        <field name="Issuer" required="N"/>
+        <field name="EncodedIssuerLen" required="N"/>
+        <field name="EncodedIssuer" required="N"/>
+        <field name="SecurityDesc" required="N"/>
+        <field name="EncodedSecurityDescLen" required="N"/>
+        <field name="EncodedSecurityDesc" required="N"/>
+        <field name="PrevClosePx" required="N"/>
+        <field name="QuoteRequestType" required="N"/>
+        <field name="TradingSessionID" required="N"/>
+        <field name="Side" required="N"/>
+        <field name="OrderQty" required="N"/>
+        <field name="FutSettDate" required="N"/>
+        <field name="OrdType" required="N"/>
+        <field name="FutSettDate2" required="N"/>
+        <field name="OrderQty2" required="N"/>
+        <field name="ExpireTime" required="N"/>
+        <field name="TransactTime" required="N"/>
+        <field name="Currency" required="N"/>
+      </group>
+    </message>
+    <message name="Quote" msgtype="S" msgcat="app">
+      <field name="QuoteReqID" required="N"/>
+      <field name="QuoteID" required="Y"/>
+      <field name="QuoteResponseLevel" required="N"/>
+      <field name="TradingSessionID" required="N"/>
+      <field name="Symbol" required="Y"/>
+      <field name="SymbolSfx" required="N"/>
+      <field name="SecurityID" required="N"/>
+      <field name="IDSource" required="N"/>
+      <field name="SecurityType" required="N"/>
+      <field name="MaturityMonthYear" required="N"/>
+      <field name="MaturityDay" required="N"/>
+      <field name="PutOrCall" required="N"/>
+      <fie
