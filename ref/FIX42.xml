@@ -447,4 +447,41 @@
         <field name="QuoteSetID" required="N"/>
         <field name="UnderlyingSymbol" required="N"/>
         <field name="UnderlyingSymbolSfx" required="N"/>
-        <field name="UnderlyingSecurityID" required="N
+        <field name="UnderlyingSecurityID" required="N"/>
+        <field name="UnderlyingIDSource" required="N"/>
+        <field name="UnderlyingSecurityType" required="N"/>
+        <field name="UnderlyingMaturityMonthYear" required="N"/>
+        <field name="UnderlyingMaturityDay" required="N"/>
+        <field name="UnderlyingPutOrCall" required="N"/>
+        <field name="UnderlyingStrikePrice" required="N"/>
+        <field name="UnderlyingOptAttribute" required="N"/>
+        <field name="UnderlyingContractMultiplier" required="N"/>
+        <field name="UnderlyingCouponRate" required="N"/>
+        <field name="UnderlyingSecurityExchange" required="N"/>
+        <field name="UnderlyingIssuer" required="N"/>
+        <field name="EncodedUnderlyingIssuerLen" required="N"/>
+        <field name="EncodedUnderlyingIssuer" required="N"/>
+        <field name="UnderlyingSecurityDesc" required="N"/>
+        <field name="EncodedUnderlyingSecurityDescLen" required="N"/>
+        <field name="EncodedUnderlyingSecurityDesc" required="N"/>
+        <field name="TotQuoteEntries" required="N"/>
+        <group name="NoQuoteEntries" required="N">
+          <field name="QuoteEntryID" required="N"/>
+          <field name="Symbol" required="N"/>
+          <field name="SymbolSfx" required="N"/>
+          <field name="SecurityID" required="N"/>
+          <field name="IDSource" required="N"/>
+          <field name="SecurityType" required="N"/>
+          <field name="MaturityMonthYear" required="N"/>
+          <field name="MaturityDay" required="N"/>
+          <field name="PutOrCall" required="N"/>
+          <field name="StrikePrice" required="N"/>
+          <field name="OptAttribute" required="N"/>
+          <field name="ContractMultiplier" required="N"/>
+          <field name="CouponRate" required="N"/>
+          <field name="SecurityExchange" required="N"/>
+          <field name="Issuer" required="N"/>
+          <field name="EncodedIssuerLen" required="N"/>
+          <field name="EncodedIssuer" required="N"/>
+          <field name="SecurityDesc" required="N"/>
+          <field name="EncodedSecurityDescLen"
