@@ -568,4 +568,43 @@
         <field name="MinQty" required="N"/>
         <field name="ExecInst" required="N"/>
         <field name="SellerDays" required="N"/>
-        <field name=
+        <field name="OrderID" required="N"/>
+        <field name="QuoteEntryID" required="N"/>
+        <field name="MDEntryBuyer" required="N"/>
+        <field name="MDEntrySeller" required="N"/>
+        <field name="NumberOfOrders" required="N"/>
+        <field name="MDEntryPositionNo" required="N"/>
+        <field name="Text" required="N"/>
+        <field name="EncodedTextLen" required="N"/>
+        <field name="EncodedText" required="N"/>
+      </group>
+    </message>
+    <message name="MarketDataIncrementalRefresh" msgtype="X" msgcat="app">
+      <field name="MDReqID" required="N"/>
+      <group name="NoMDEntries" required="Y">
+        <field name="MDUpdateAction" required="Y"/>
+        <field name="DeleteReason" required="N"/>
+        <field name="MDEntryType" required="N"/>
+        <field name="MDEntryID" required="N"/>
+        <field name="MDEntryRefID" required="N"/>
+        <field name="Symbol" required="N"/>
+        <field name="SymbolSfx" required="N"/>
+        <field name="SecurityID" required="N"/>
+        <field name="IDSource" required="N"/>
+        <field name="SecurityType" required="N"/>
+        <field name="MaturityMonthYear" required="N"/>
+        <field name="MaturityDay" required="N"/>
+        <field name="PutOrCall" required="N"/>
+        <field name="StrikePrice" required="N"/>
+        <field name="OptAttribute" required="N"/>
+        <field name="ContractMultiplier" required="N"/>
+        <field name="CouponRate" required="N"/>
+        <field name="SecurityExchange" required="N"/>
+        <field name="Issuer" required="N"/>
+        <field name="EncodedIssuerLen" required="N"/>
+        <field name="EncodedIssuer" required="N"/>
+        <field name="SecurityDesc" required="N"/>
+        <field name="EncodedSecurityDescLen" required="N"/>
+        <field name="EncodedSecurityDesc" required="N"/>
+        <field name="FinancialStatus" required="N"/>
+        <field name="CorporateAction" required="N"
