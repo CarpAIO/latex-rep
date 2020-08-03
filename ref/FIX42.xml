@@ -769,4 +769,46 @@
       <field name="CouponRate" required="N"/>
       <field name="SecurityExchange" required="N"/>
       <field name="Issuer" required="N"/>
-      <field n
+      <field name="EncodedIssuerLen" required="N"/>
+      <field name="EncodedIssuer" required="N"/>
+      <field name="SecurityDesc" required="N"/>
+      <field name="EncodedSecurityDescLen" required="N"/>
+      <field name="EncodedSecurityDesc" required="N"/>
+      <field name="Currency" required="N"/>
+      <field name="SubscriptionRequestType" required="Y"/>
+      <field name="TradingSessionID" required="N"/>
+    </message>
+    <message name="SecurityStatus" msgtype="f" msgcat="app">
+      <field name="SecurityStatusReqID" required="N"/>
+      <field name="Symbol" required="Y"/>
+      <field name="SymbolSfx" required="N"/>
+      <field name="SecurityID" required="N"/>
+      <field name="IDSource" required="N"/>
+      <field name="SecurityType" required="N"/>
+      <field name="MaturityMonthYear" required="N"/>
+      <field name="MaturityDay" required="N"/>
+      <field name="PutOrCall" required="N"/>
+      <field name="StrikePrice" required="N"/>
+      <field name="OptAttribute" required="N"/>
+      <field name="ContractMultiplier" required="N"/>
+      <field name="CouponRate" required="N"/>
+      <field name="SecurityExchange" required="N"/>
+      <field name="Issuer" required="N"/>
+      <field name="EncodedIssuerLen" required="N"/>
+      <field name="EncodedIssuer" required="N"/>
+      <field name="SecurityDesc" required="N"/>
+      <field name="EncodedSecurityDescLen" required="N"/>
+      <field name="EncodedSecurityDesc" required="N"/>
+      <field name="Currency" required="N"/>
+      <field name="TradingSessionID" required="N"/>
+      <field name="UnsolicitedIndicator" required="N"/>
+      <field name="SecurityTradingStatus" required="N"/>
+      <field name="FinancialStatus" required="N"/>
+      <field name="CorporateAction" required="N"/>
+      <field name="HaltReason" required="N"/>
+      <field name="InViewOfCommon" required="N"/>
+      <field name="DueToRelated" required="N"/>
+      <field name="BuyVolume" required="N"/>
+      <field name="SellVolume" required="N"/>
+      <field name="HighPx" required="N"/>
+      <field name="LowPx" r
