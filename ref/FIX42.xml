@@ -811,4 +811,48 @@
       <field name="BuyVolume" required="N"/>
       <field name="SellVolume" required="N"/>
       <field name="HighPx" required="N"/>
-      <field name="LowPx" r
+      <field name="LowPx" required="N"/>
+      <field name="LastPx" required="N"/>
+      <field name="TransactTime" required="N"/>
+      <field name="Adjustment" required="N"/>
+    </message>
+    <message name="TradingSessionStatusRequest" msgtype="g" msgcat="app">
+      <field name="TradSesReqID" required="Y"/>
+      <field name="TradingSessionID" required="N"/>
+      <field name="TradSesMethod" required="N"/>
+      <field name="TradSesMode" required="N"/>
+      <field name="SubscriptionRequestType" required="Y"/>
+    </message>
+    <message name="TradingSessionStatus" msgtype="h" msgcat="app">
+      <field name="TradSesReqID" required="N"/>
+      <field name="TradingSessionID" required="Y"/>
+      <field name="TradSesMethod" required="N"/>
+      <field name="TradSesMode" required="N"/>
+      <field name="UnsolicitedIndicator" required="N"/>
+      <field name="TradSesStatus" required="Y"/>
+      <field name="TradSesStartTime" required="N"/>
+      <field name="TradSesOpenTime" required="N"/>
+      <field name="TradSesPreCloseTime" required="N"/>
+      <field name="TradSesCloseTime" required="N"/>
+      <field name="TradSesEndTime" required="N"/>
+      <field name="TotalVolumeTraded" required="N"/>
+      <field name="Text" required="N"/>
+      <field name="EncodedTextLen" required="N"/>
+      <field name="EncodedText" required="N"/>
+    </message>
+    <message name="NewOrderSingle" msgtype="D" msgcat="app">
+      <field name="ClOrdID" required="Y"/>
+      <field name="ClientID" required="N"/>
+      <field name="ExecBroker" required="N"/>
+      <field name="Account" required="N"/>
+      <group name="NoAllocs" required="N">
+        <field name="AllocAccount" required="N"/>
+        <field name="AllocShares" required="N"/>
+      </group>
+      <field name="SettlmntTyp" required="N"/>
+      <field name="FutSettDate" required="N"/>
+      <field name="HandlInst" required="Y"/>
+      <field name="ExecInst" required="N"/>
+      <field name="MinQty" required="N"/>
+      <field name="MaxFloor" required="N"/>
+      <field name="ExDes
