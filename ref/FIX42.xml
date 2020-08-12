@@ -986,4 +986,46 @@
       <field name="LastMkt" required="N"/>
       <field name="TradingSessionID" required="N"/>
       <field name="LastCapacity" required="N"/>
-      <field nam
+      <field name="LeavesQty" required="Y"/>
+      <field name="CumQty" required="Y"/>
+      <field name="AvgPx" required="Y"/>
+      <field name="DayOrderQty" required="N"/>
+      <field name="DayCumQty" required="N"/>
+      <field name="DayAvgPx" required="N"/>
+      <field name="GTBookingInst" required="N"/>
+      <field name="TradeDate" required="N"/>
+      <field name="TransactTime" required="N"/>
+      <field name="ReportToExch" required="N"/>
+      <field name="Commission" required="N"/>
+      <field name="CommType" required="N"/>
+      <field name="GrossTradeAmt" required="N"/>
+      <field name="SettlCurrAmt" required="N"/>
+      <field name="SettlCurrency" required="N"/>
+      <field name="SettlCurrFxRate" required="N"/>
+      <field name="SettlCurrFxRateCalc" required="N"/> 
+      <field name="HandlInst" required="N"/>
+      <field name="MinQty" required="N"/>
+      <field name="MaxFloor" required="N"/>
+      <field name="OpenClose" required="N"/>
+      <field name="MaxShow" required="N"/>
+      <field name="Text" required="N"/>
+      <field name="EncodedTextLen" required="N"/>
+      <field name="EncodedText" required="N"/>
+      <field name="FutSettDate2" required="N"/>
+      <field name="OrderQty2" required="N"/>
+      <field name="ClearingFirm" required="N"/>
+      <field name="ClearingAccount" required="N"/>
+      <field name="MultiLegReportingType" required="N"/>
+    </message>
+    <message name="DontKnowTrade" msgtype="Q" msgcat="app">
+      <field name="OrderID" required="Y"/>
+      <field name="ExecID" required="Y"/>
+      <field name="DKReason" required="Y"/>
+      <field name="Symbol" required="Y"/>
+      <field name="SymbolSfx" required="N"/>
+      <field name="SecurityID" required="N"/>
+      <field name="IDSource" required="N"/>
+      <field name="SecurityType" required="N"/>
+      <field name="MaturityMonthYear" required="N"/>
+      <field name="MaturityDay" required="N"/>
+      <field name="PutOrCall"
