@@ -1245,4 +1245,45 @@
       <field name="EncodedIssuer" required="N"/>
       <field name="SecurityDesc" required="N"/>
       <field name="EncodedSecurityDescLen" required="N"/>
-   
+      <field name="EncodedSecurityDesc" required="N"/>
+      <field name="Shares" required="Y"/>
+      <field name="LastMkt" required="N"/>
+      <field name="TradingSessionID" required="N"/>
+      <field name="AvgPx" required="Y"/>
+      <field name="Currency" required="N"/>
+      <field name="AvgPrxPrecision" required="N"/>
+      <field name="TradeDate" required="Y"/>
+      <field name="TransactTime" required="N"/>
+      <field name="SettlmntTyp" required="N"/>
+      <field name="FutSettDate" required="N"/>
+      <field name="GrossTradeAmt" required="N"/>
+      <field name="NetMoney" required="N"/>
+      <field name="OpenClose" required="N"/>
+      <field name="Text" required="N"/>
+      <field name="EncodedTextLen" required="N"/>
+      <field name="EncodedText" required="N"/>
+      <field name="NumDaysInterest" required="N"/>
+      <field name="AccruedInterestRate" required="N"/>
+      <group name="NoAllocs" required="Y">
+        <field name="AllocAccount" required="Y"/>
+        <field name="AllocPrice" required="N"/>
+        <field name="AllocShares" required="Y"/>
+        <field name="ProcessCode" required="N"/>
+        <field name="BrokerOfCredit" required="N"/>
+        <field name="NotifyBrokerOfCredit" required="N"/>
+        <field name="AllocHandlInst" required="N"/>
+        <field name="AllocText" required="N"/>
+        <field name="EncodedAllocTextLen" required="N"/>
+        <field name="EncodedAllocText" required="N"/>
+        <field name="ExecBroker" required="N"/>
+        <field name="ClientID" required="N"/>
+        <field name="Commission" required="N"/>
+        <field name="CommType" required="N"/>
+        <field name="AllocAvgPx" required="N"/>
+        <field name="AllocNetMoney" required="N"/>
+        <field name="SettlCurrAmt" required="N"/>
+        <field name="SettlCurrency" required="N"/>
+        <field name="SettlCurrFxRate" required="N"/>
+        <field name="SettlCurrFxRateCalc" required="N"/>
+        <field name="AccruedInterestAmt" required="N"/>
+        <field name="S
