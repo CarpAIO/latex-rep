@@ -1115,4 +1115,45 @@
       <field name="SettlCurrency" required="N"/>
       <field name="Text" required="N"/>
       <field name="EncodedTextLen" required="N"/>
-      <field name="EncodedT
+      <field name="EncodedText" required="N"/>
+      <field name="FutSettDate2" required="N"/>
+      <field name="OrderQty2" required="N"/>
+      <field name="OpenClose" required="N"/>
+      <field name="CoveredOrUncovered" required="N"/>
+      <field name="CustomerOrFirm" required="N"/>
+      <field name="MaxShow" required="N"/>
+      <field name="LocateReqd" required="N"/>
+      <field name="ClearingFirm" required="N"/>
+      <field name="ClearingAccount" required="N"/>
+    </message>
+    <message name="OrderCancelRequest" msgtype="F" msgcat="app">
+      <field name="OrigClOrdID" required="Y"/>
+      <field name="OrderID" required="N"/>
+      <field name="ClOrdID" required="Y"/>
+      <field name="ListID" required="N"/>
+      <field name="Account" required="N"/>
+      <field name="ClientID" required="N"/>
+      <field name="ExecBroker" required="N"/>
+      <field name="Symbol" required="Y"/>
+      <field name="SymbolSfx" required="N"/>
+      <field name="SecurityID" required="N"/>
+      <field name="IDSource" required="N"/>
+      <field name="SecurityType" required="N"/>
+      <field name="MaturityMonthYear" required="N"/>
+      <field name="MaturityDay" required="N"/>
+      <field name="PutOrCall" required="N"/>
+      <field name="StrikePrice" required="N"/>
+      <field name="OptAttribute" required="N"/>
+      <field name="ContractMultiplier" required="N"/>
+      <field name="CouponRate" required="N"/>
+      <field name="SecurityExchange" required="N"/>
+      <field name="Issuer" required="N"/>
+      <field name="EncodedIssuerLen" required="N"/>
+      <field name="EncodedIssuer" required="N"/>
+      <field name="SecurityDesc" required="N"/>
+      <field name="EncodedSecurityDescLen" required="N"/>
+      <field name="EncodedSecurityDesc" required="N"/>
+      <field name="Side" required="Y"/>
+      <field name="TransactTime" required="Y"/>
+      <field name="OrderQty" required="N"/>
+      <field name="CashOrderQty" required="N"/>
