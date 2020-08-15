@@ -1157,3 +1157,47 @@
       <field name="TransactTime" required="Y"/>
       <field name="OrderQty" required="N"/>
       <field name="CashOrderQty" required="N"/>
+      <field name="ComplianceID" required="N"/>
+      <field name="SolicitedFlag" required="N"/>
+      <field name="Text" required="N"/>
+      <field name="EncodedTextLen" required="N"/>
+      <field name="EncodedText" required="N"/>
+    </message>
+    <message name="OrderCancelReject" msgtype="9" msgcat="app">
+      <field name="OrderID" required="Y"/>
+      <field name="SecondaryOrderID" required="N"/>
+      <field name="ClOrdID" required="Y"/>
+      <field name="OrigClOrdID" required="Y"/>
+      <field name="OrdStatus" required="Y"/>
+      <field name="ClientID" required="N"/>
+      <field name="ExecBroker" required="N"/>
+      <field name="ListID" required="N"/>
+      <field name="Account" required="N"/>
+      <field name="TransactTime" required="N"/>
+      <field name="CxlRejResponseTo" required="Y"/>
+      <field name="CxlRejReason" required="N"/>
+      <field name="Text" required="N"/>
+      <field name="EncodedTextLen" required="N"/>
+      <field name="EncodedText" required="N"/>
+    </message>
+    <message name="OrderStatusRequest" msgtype="H" msgcat="app">
+      <field name="OrderID" required="N"/>
+      <field name="ClOrdID" required="Y"/>
+      <field name="ClientID" required="N"/>
+      <field name="Account" required="N"/>
+      <field name="ExecBroker" required="N"/>
+      <field name="Symbol" required="Y"/>
+      <field name="SymbolSfx" required="N"/>
+      <field name="SecurityID" required="N"/>
+      <field name="IDSource" required="N"/>
+      <field name="SecurityType" required="N"/>
+      <field name="MaturityMonthYear" required="N"/>
+      <field name="MaturityDay" required="N"/>
+      <field name="PutOrCall" required="N"/>
+      <field name="StrikePrice" required="N"/>
+      <field name="OptAttribute" required="N"/>
+      <field name="ContractMultiplier" required="N"/>
+      <field name="CouponRate" required="N"/>
+      <field name="SecurityExchange" required="N"/>
+      <field name="Issuer" required="N"/>
+      <field name="EncodedIssuerLen" 
