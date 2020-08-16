@@ -1286,4 +1286,48 @@
         <field name="SettlCurrFxRate" required="N"/>
         <field name="SettlCurrFxRateCalc" required="N"/>
         <field name="AccruedInterestAmt" required="N"/>
-        <field name="S
+        <field name="SettlInstMode" required="N"/>
+        <group name="NoMiscFees" required="N">
+          <field name="MiscFeeAmt" required="N"/>
+          <field name="MiscFeeCurr" required="N"/>
+          <field name="MiscFeeType" required="N"/>
+        </group>
+      </group>
+    </message>
+    <message name="AllocationACK" msgtype="P" msgcat="app">
+      <field name="ClientID" required="N"/>
+      <field name="ExecBroker" required="N"/>
+      <field name="AllocID" required="Y"/>
+      <field name="TradeDate" required="Y"/>
+      <field name="TransactTime" required="N"/>
+      <field name="AllocStatus" required="Y"/>
+      <field name="AllocRejCode" required="N"/>
+      <field name="Text" required="N"/>
+      <field name="EncodedTextLen" required="N"/>
+      <field name="EncodedText" required="N"/>
+    </message>
+    <message name="SettlementInstructions" msgtype="T" msgcat="app">
+      <field name="SettlInstID" required="Y"/>
+      <field name="SettlInstTransType" required="Y"/>
+      <field name="SettlInstRefID" required="Y"/>
+      <field name="SettlInstMode" required="Y"/>
+      <field name="SettlInstSource" required="Y"/>
+      <field name="AllocAccount" required="Y"/>
+      <field name="SettlLocation" required="N"/>
+      <field name="TradeDate" required="N"/>
+      <field name="AllocID" required="N"/>
+      <field name="LastMkt" required="N"/>
+      <field name="TradingSessionID" required="N"/>
+      <field name="Side" required="N"/>
+      <field name="SecurityType" required="N"/>
+      <field name="EffectiveTime" required="N"/>
+      <field name="TransactTime" required="Y"/>
+      <field name="ClientID" required="N"/>
+      <field name="ExecBroker" required="N"/>
+      <field name="StandInstDbType" required="N"/>
+      <field name="StandInstDbName" required="N"/>
+      <field name="StandInstDbID" required="N"/>
+      <field name="SettlDeliveryType" required="N"/>
+      <field name="SettlDepositoryCode" required="N"/>
+      <field name="SettlBrkrCode" required="N"/>
+      <field name="SettlInstCode" required="N
