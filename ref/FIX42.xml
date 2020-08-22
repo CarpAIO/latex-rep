@@ -1413,4 +1413,49 @@
         <field name="TradingSessionID" required="N" />
         <field name="Text" required="N" />
         <field name="EncodedTextLen" required="N" />
-        <field name="EncodedText" 
+        <field name="EncodedText" required="N" />
+      </group>
+    </message>
+    <message name="NewOrderList" msgtype="E" msgcat="app">
+      <field name="ListID" required="Y"/>
+      <field name="BidID" required="N"/>
+      <field name="ClientBidID" required="N"/>
+      <field name="ProgRptReqs" required="N"/>
+      <field name="BidType" required="Y"/>
+      <field name="ProgPeriodInterval" required="N"/>
+      <field name="ListExecInstType" required="N"/>
+      <field name="ListExecInst" required="N"/>
+      <field name="EncodedListExecInstLen" required="N"/>
+      <field name="EncodedListExecInst" required="N"/>
+      <field name="TotNoOrders" required="Y"/>
+      <group name="NoOrders" required="Y">
+        <field name="ClOrdID" required="Y"/>
+        <field name="ListSeqNo" required="Y"/>
+        <field name="SettlInstMode" required="N"/>
+        <field name="ClientID" required="N"/>
+        <field name="ExecBroker" required="N"/>
+        <field name="Account" required="N"/>
+        <group name="NoAllocs" required="N">
+          <field name="AllocAccount" required="N"/>
+          <field name="AllocShares" required="N"/>
+        </group>
+        <field name="SettlmntTyp" required="N"/>
+        <field name="FutSettDate" required="N"/>
+        <field name="HandlInst" required="N"/>
+        <field name="ExecInst" required="N"/>
+        <field name="MinQty" required="N"/>
+        <field name="MaxFloor" required="N"/>
+        <field name="ExDestination" required="N"/>
+        <group name="NoTradingSessions" required="N">
+          <field name="TradingSessionID" required="N"/>
+        </group>
+        <field name="ProcessCode" required="N"/>
+        <field name="Symbol" required="Y"/>
+        <field name="SymbolSfx" required="N"/>
+        <field name="SecurityID" required="N"/>
+        <field name="IDSource" required="N"/>
+        <field name="SecurityType" required="N"/>
+        <field name="MaturityMonthYear" required="N"/>
+        <field name="MaturityDay" required="N"/>
+        <field name="PutOrCall" required="N"/>
+        <field nam
