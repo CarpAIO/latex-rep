@@ -1330,4 +1330,44 @@
       <field name="SettlDeliveryType" required="N"/>
       <field name="SettlDepositoryCode" required="N"/>
       <field name="SettlBrkrCode" required="N"/>
-      <field name="SettlInstCode" required="N
+      <field name="SettlInstCode" required="N"/>
+      <field name="SecuritySettlAgentName" required="N"/>
+      <field name="SecuritySettlAgentCode" required="N"/>
+      <field name="SecuritySettlAgentAcctNum" required="N"/>
+      <field name="SecuritySettlAgentAcctName" required="N"/>
+      <field name="SecuritySettlAgentContactName" required="N"/>
+      <field name="SecuritySettlAgentContactPhone" required="N"/>
+      <field name="CashSettlAgentName" required="N"/>
+      <field name="CashSettlAgentCode" required="N"/>
+      <field name="CashSettlAgentAcctNum" required="N"/>
+      <field name="CashSettlAgentAcctName" required="N"/>
+      <field name="CashSettlAgentContactName" required="N"/>
+      <field name="CashSettlAgentContactPhone" required="N"/>
+    </message>
+    <message name="BidRequest" msgtype="k" msgcat="app">
+      <field name="BidID" required="N" />
+      <field name="ClientBidID" required="Y" />
+      <field name="BidRequestTransType" required="Y" />
+      <field name="ListName" required="N" />
+      <field name="TotalNumSecurities" required="Y" />
+      <field name="BidType" required="Y" />
+      <field name="NumTickets" required="N" />
+      <field name="Currency" required="N" />
+      <field name="SideValue1" required="N" />
+      <field name="SideValue2" required="N" />
+      <group name="NoBidDescriptors" required="N">
+        <field name="BidDescriptorType" required="N" />
+        <field name="BidDescriptor" required="N" />
+        <field name="SideValueInd" required="N" />
+        <field name="LiquidityValue" required="N" />
+        <field name="LiquidityNumSecurities" required="N" />
+        <field name="LiquidityPctLow" required="N" />
+        <field name="LiquidityPctHigh" required="N" />
+        <field name="EFPTrackingError" required="N" />
+        <field name="FairValue" required="N" />
+        <field name="OutsideIndexPct" required="N" />
+        <field name="ValueOfFutures" required="N" />
+      </group>
+      <group name="NoBidComponents" required="N">
+        <field name="ListID" required="N" />
+        <field name="
