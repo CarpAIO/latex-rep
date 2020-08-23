@@ -1586,4 +1586,50 @@
     <message name="ListStatusRequest" msgtype="M" msgcat="app">
       <field name="ListID" required="Y"/>
       <field name="Text" required="N"/>
-      <field name="EncodedTextLen" requi
+      <field name="EncodedTextLen" required="N"/>
+      <field name="EncodedText" required="N"/>
+    </message>
+    <message name="BusinessMessageReject" msgtype="j" msgcat="app">
+      <field name="RefSeqNum" required="N"/>
+      <field name="RefMsgType" required="Y"/>
+      <field name="BusinessRejectRefID" required="N"/>
+      <field name="BusinessRejectReason" required="Y"/>
+      <field name="Text" required="N"/>
+      <field name="EncodedTextLen" required="N"/>
+      <field name="EncodedText" required="N"/>
+    </message>
+  </messages>
+  <fields>
+    <field number="1" name="Account" type="STRING"/>
+    <field number="2" name="AdvId" type="STRING"/>
+    <field number="3" name="AdvRefID" type="STRING"/>
+    <field number="4" name="AdvSide" type="CHAR">
+      <value enum="B" description="BUY"/>
+      <value enum="S" description="SELL"/>
+      <value enum="X" description="CROSS"/>
+      <value enum="T" description="TRADE"/>
+    </field>
+    <field number="5" name="AdvTransType" type="STRING">
+      <value enum="N" description="NEW"/>
+      <value enum="C" description="CANCEL"/>
+      <value enum="R" description="REPLACE"/>
+    </field>
+    <field number="6" name="AvgPx" type="PRICE"/>
+    <field number="7" name="BeginSeqNo" type="INT"/>
+    <field number="8" name="BeginString" type="STRING"/>
+    <field number="9" name="BodyLength" type="INT"/>
+    <field number="10" name="CheckSum" type="STRING"/>
+    <field number="11" name="ClOrdID" type="STRING"/>
+    <field number="12" name="Commission" type="AMT"/>
+    <field number="13" name="CommType" type="CHAR">
+      <value enum="1" description="PER_SHARE"/>
+      <value enum="2" description="PERCENTAGE"/>
+      <value enum="3" description="ABSOLUTE"/>
+    </field>
+    <field number="14" name="CumQty" type="QTY"/>
+    <field number="15" name="Currency" type="CURRENCY"/>
+    <field number="16" name="EndSeqNo" type="INT"/>
+    <field number="17" name="ExecID" type="STRING"/>
+    <field number="18" name="ExecInst" type="MULTIPLEVALUESTRING">
+      <value enum="1" description="NOT_HELD"/>
+      <val
