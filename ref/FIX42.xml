@@ -1673,4 +1673,47 @@
       <value enum="2" description="AUTOMATED_EXECUTION_ORDER_PUBLIC_BROKER_INTERVENTION_OK"/>
       <value enum="3" description="MANUAL_ORDER_BEST_EXECUTION"/>
     </field>
-    <field number="22" name="IDS
+    <field number="22" name="IDSource" type="STRING">
+      <value enum="1" description="CUSIP"/>
+      <value enum="2" description="SEDOL"/>
+      <value enum="3" description="QUIK"/>
+      <value enum="4" description="ISIN_NUMBER"/>
+      <value enum="5" description="RIC_CODE"/>
+      <value enum="6" description="ISO_CURRENCY_CODE"/>
+      <value enum="7" description="ISO_COUNTRY_CODE"/>
+      <value enum="8" description="EXCHANGE_SYMBOL"/>
+      <value enum="9" description="CONSOLIDATED_TAPE_ASSOCIATION"/>
+    </field>
+    <field number="23" name="IOIid" type="STRING"/>
+    <field number="24" name="IOIOthSvc" type="CHAR"/>
+    <field number="25" name="IOIQltyInd" type="CHAR">
+      <value enum="L" description="LOW"/>
+      <value enum="M" description="MEDIUM"/>
+      <value enum="H" description="HIGH"/>
+    </field>
+    <field number="26" name="IOIRefID" type="STRING"/>
+    <field number="27" name="IOIShares" type="STRING"/>
+    <field number="28" name="IOITransType" type="CHAR">
+      <value enum="N" description="NEW"/>
+      <value enum="C" description="CANCEL"/>
+      <value enum="R" description="REPLACE"/>
+    </field>
+    <field number="29" name="LastCapacity" type="CHAR">
+      <value enum="1" description="AGENT"/>
+      <value enum="2" description="CROSS_AS_AGENT"/>
+      <value enum="3" description="CROSS_AS_PRINCIPAL"/>
+      <value enum="4" description="PRINCIPAL"/>
+    </field>
+    <field number="30" name="LastMkt" type="EXCHANGE"/>
+    <field number="31" name="LastPx" type="PRICE"/>
+    <field number="32" name="LastShares" type="QTY"/>
+    <field number="33" name="LinesOfText" type="INT"/>
+    <field number="34" name="MsgSeqNum" type="INT"/>
+    <field number="35" name="MsgType" type="STRING"/>
+    <field number="36" name="NewSeqNo" type="INT"/>
+    <field number="37" name="OrderID" type="STRING"/>
+    <field number="38" name="OrderQty" type="QTY"/>
+    <field number="39" name="OrdStatus" type="CHAR">
+      <value enum="0" description="NEW"/>
+      <value enum="1" description="PARTIALLY_FILLED"/>
+      <value enum="2" description="FILLED"/>
