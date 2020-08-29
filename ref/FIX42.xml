@@ -1758,4 +1758,34 @@
       <value enum="N" description="ORIGINAL_TRANSMISSION"/>
     </field>
     <field number="44" name="Price" type="PRICE"/>
-    <field n
+    <field number="45" name="RefSeqNum" type="INT"/>
+    <field number="46" name="RelatdSym" type="STRING"/>
+    <field number="47" name="Rule80A" type="CHAR">
+      <value enum="A" description="AGENCY_SINGLE_ORDER"/>
+      <value enum="B" description="SHORT_EXEMPT_TRANSACTION_B"/>
+      <value enum="C" description="PROGRAM_ORDER_NONINDEX_ARB_FOR_MEMBER_FIRMORG"/>
+      <value enum="D" description="PROGRAM_ORDER_INDEX_ARB_FOR_MEMBER_FIRMORG"/>
+      <value enum="E" description="REGISTERED_EQUITY_MARKET_MAKER_TRADES"/>
+      <value enum="F" description="SHORT_EXEMPT_TRANSACTION_F"/>
+      <value enum="H" description="SHORT_EXEMPT_TRANSACTION_H"/>
+      <value enum="J" description="PROGRAM_ORDER_INDEX_ARB_FOR_INDIVIDUAL_CUSTOMER"/>
+      <value enum="K" description="PROGRAM_ORDER_NONINDEX_ARB_FOR_INDIVIDUAL_CUSTOMER"/>
+      <value enum="L" description="SHORT_EXEMPT_AFFILIATED"/>
+      <value enum="M" description="PROGRAM_ORDER_INDEX_ARB_FOR_OTHER_MEMBER"/>
+      <value enum="N" description="PROGRAM_ORDER_NONINDEX_ARB_FOR_OTHER_MEMBER"/>
+      <value enum="O" description="COMPETING_DEALER_TRADES_O"/>
+      <value enum="P" description="PRINCIPAL"/>
+      <value enum="R" description="COMPETING_DEALER_TRADES_R"/>
+      <value enum="S" description="SPECIALIST_TRADES"/>
+      <value enum="T" description="COMPETING_DEALER_TRADES_T"/>
+      <value enum="U" description="PROGRAM_ORDER_INDEX_ARB_FOR_OTHER_AGENCY"/>
+      <value enum="W" description="ALL_OTHER_ORDERS_AS_AGENT_FOR_OTHER_MEMBER"/>
+      <value enum="X" description="SHORT_EXEMPT_NOT_AFFILIATED"/>
+      <value enum="Y" description="PROGRAM_ORDER_NONINDEX_ARB_FOR_OTHER_AGENCY"/>
+      <value enum="Z" description="SHORT_EXEMPT_NONMEMBER"/>
+    </field>
+    <field number="48" name="SecurityID" type="STRING"/>
+    <field number="49" name="SenderCompID" type="STRING"/>
+    <field number="50" name="SenderSubID" type="STRING"/>
+    <field number="52" name="SendingTime" type="UTCTIMESTAMP"/>
+    <field number="53" name="
