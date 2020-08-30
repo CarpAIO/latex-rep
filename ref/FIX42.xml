@@ -1832,4 +1832,46 @@
       <value enum="8" description="SELLERS_OPTION"/>
       <value enum="9" description="TPLUS5"/>
     </field>
-    <field number="64" name="FutSettDate" type="LO
+    <field number="64" name="FutSettDate" type="LOCALMKTDATE"/>
+    <field number="65" name="SymbolSfx" type="STRING"/>
+    <field number="66" name="ListID" type="STRING"/>
+    <field number="67" name="ListSeqNo" type="INT"/>
+    <field number="68" name="TotNoOrders" type="INT"/>
+    <field number="69" name="ListExecInst" type="STRING"/>
+    <field number="70" name="AllocID" type="STRING"/>
+    <field number="71" name="AllocTransType" type="CHAR">
+      <value enum="0" description="NEW"/>
+      <value enum="1" description="REPLACE"/>
+      <value enum="2" description="CANCEL"/>
+      <value enum="3" description="PRELIMINARY"/>
+      <value enum="4" description="CALCULATED"/>
+      <value enum="5" description="CALCULATED_WITHOUT_PRELIMINARY"/>
+    </field>
+    <field number="72" name="RefAllocID" type="STRING"/>
+    <field number="73" name="NoOrders" type="INT"/>
+    <field number="74" name="AvgPrxPrecision" type="INT"/>
+    <field number="75" name="TradeDate" type="LOCALMKTDATE"/>
+    <field number="76" name="ExecBroker" type="STRING"/>
+    <field number="77" name="OpenClose" type="CHAR">
+      <value enum="O" description="OPEN"/>
+      <value enum="C" description="CLOSE"/>
+    </field>
+    <field number="78" name="NoAllocs" type="INT"/>
+    <field number="79" name="AllocAccount" type="STRING"/>
+    <field number="80" name="AllocShares" type="QTY"/>
+    <field number="81" name="ProcessCode" type="CHAR">
+      <value enum="0" description="REGULAR"/>
+      <value enum="1" description="SOFT_DOLLAR"/>
+      <value enum="2" description="STEPIN"/>
+      <value enum="3" description="STEPOUT"/>
+      <value enum="4" description="SOFTDOLLAR_STEPIN"/>
+      <value enum="5" description="SOFTDOLLAR_STEPOUT"/>
+      <value enum="6" description="PLAN_SPONSOR"/>
+    </field>
+    <field number="82" name="NoRpts" type="INT"/>
+    <field number="83" name="RptSeq" type="INT"/>
+    <field number="84" name="CxlQty" type="QTY"/>
+    <field number="85" name="NoDlvyInst" type="INT"/>
+    <field number="86" name="DlvyInst" type="STRING"/>
+    <field number="87" name="AllocStatus" type="INT">
+      <value enum="0" 
