@@ -1874,4 +1874,47 @@
     <field number="85" name="NoDlvyInst" type="INT"/>
     <field number="86" name="DlvyInst" type="STRING"/>
     <field number="87" name="AllocStatus" type="INT">
-      <value enum="0" 
+      <value enum="0" description="ACCEPTED"/>
+      <value enum="1" description="REJECTED"/>
+      <value enum="2" description="PARTIAL_ACCEPT"/>
+      <value enum="3" description="RECEIVED"/>
+    </field>
+    <field number="88" name="AllocRejCode" type="INT">
+      <value enum="0" description="UNKNOWN_ACCOUNT"/>
+      <value enum="1" description="INCORRECT_QUANTITY"/>
+      <value enum="2" description="INCORRECT_AVERAGE_PRICE"/>
+      <value enum="3" description="UNKNOWN_EXECUTING_BROKER_MNEMONIC"/>
+      <value enum="4" description="COMMISSION_DIFFERENCE"/>
+      <value enum="5" description="UNKNOWN_ORDERID"/>
+      <value enum="6" description="UNKNOWN_LISTID"/>
+      <value enum="7" description="OTHER"/>
+    </field>
+    <field number="89" name="Signature" type="DATA"/>
+    <field number="90" name="SecureDataLen" type="INT"/>
+    <field number="91" name="SecureData" type="DATA"/>
+    <field number="92" name="BrokerOfCredit" type="STRING"/>
+    <field number="93" name="SignatureLength" type="INT"/>
+    <field number="94" name="EmailType" type="CHAR">
+      <value enum="0" description="NEW"/>
+      <value enum="1" description="REPLY"/>
+      <value enum="2" description="ADMIN_REPLY"/>
+    </field>
+    <field number="95" name="RawDataLength" type="INT"/>
+    <field number="96" name="RawData" type="DATA"/>
+    <field number="97" name="PossResend" type="BOOLEAN"/>
+    <field number="98" name="EncryptMethod" type="INT">
+      <value enum="0" description="NONE_OTHER"/>
+      <value enum="1" description="PKCS"/>
+      <value enum="2" description="DES"/>
+      <value enum="3" description="PKCSDES"/>
+      <value enum="4" description="PGPDES"/>
+      <value enum="5" description="PGPDESMD5"/>
+      <value enum="6" description="PEMDESMD5"/>
+    </field>
+    <field number="99" name="StopPx" type="PRICE"/>
+    <field number="100" name="ExDestination" type="EXCHANGE"/>
+    <field number="102" name="CxlRejReason" type="INT">
+      <value enum="0" description="TOO_LATE_TO_CANCEL"/>
+      <value enum="1" description="UNKNOWN_ORDER"/>
+      <value enum="2" description="BROKER_OPTION"/>
+   
