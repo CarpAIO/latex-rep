@@ -1998,4 +1998,43 @@
     </field>
     <field number="131" name="QuoteReqID" type="STRING"/>
     <field number="132" name="BidPx" type="PRICE"/>
-  
+    <field number="133" name="OfferPx" type="PRICE"/>
+    <field number="134" name="BidSize" type="QTY"/>
+    <field number="135" name="OfferSize" type="QTY"/>
+    <field number="136" name="NoMiscFees" type="INT"/>
+    <field number="137" name="MiscFeeAmt" type="AMT"/>
+    <field number="138" name="MiscFeeCurr" type="CURRENCY"/>
+    <field number="139" name="MiscFeeType" type="CHAR">
+      <value enum="1" description="REGULATORY"/>
+      <value enum="2" description="TAX"/>
+      <value enum="3" description="LOCAL_COMMISSION"/>
+      <value enum="4" description="EXCHANGE_FEES"/>
+      <value enum="5" description="STAMP"/>
+      <value enum="6" description="LEVY"/>
+      <value enum="7" description="OTHER"/>
+      <value enum="8" description="MARKUP"/>
+      <value enum="9" description="CONSUMPTION_TAX"/>
+    </field>
+    <field number="140" name="PrevClosePx" type="PRICE"/>
+    <field number="141" name="ResetSeqNumFlag" type="BOOLEAN">
+      <value enum="Y" description="YES_RESET_SEQUENCE_NUMBERS"/>
+      <value enum="N" description="NO"/>
+    </field>
+    <field number="142" name="SenderLocationID" type="STRING"/>
+    <field number="143" name="TargetLocationID" type="STRING"/>
+    <field number="144" name="OnBehalfOfLocationID" type="STRING"/>
+    <field number="145" name="DeliverToLocationID" type="STRING"/>
+    <field number="146" name="NoRelatedSym" type="INT"/>
+    <field number="147" name="Subject" type="STRING"/>
+    <field number="148" name="Headline" type="STRING"/>
+    <field number="149" name="URLLink" type="STRING"/>
+    <field number="150" name="ExecType" type="CHAR">
+      <value enum="0" description="NEW"/>
+      <value enum="1" description="PARTIAL_FILL"/>
+      <value enum="2" description="FILL"/>
+      <value enum="3" description="DONE_FOR_DAY"/>
+      <value enum="4" description="CANCELED"/>
+      <value enum="5" description="REPLACE"/>
+      <value enum="6" description="PENDING_CANCEL"/>
+      <value enum="7" description="STOPPED"/>
+      <value
