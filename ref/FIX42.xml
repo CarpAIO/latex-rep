@@ -2145,4 +2145,45 @@
     <field number="188" name="BidSpotRate" type="PRICE"/>
     <field number="189" name="BidForwardPoints" type="PRICEOFFSET"/>
     <field number="190" name="OfferSpotRate" type="PRICE"/>
-    <field number="191" name="OfferForwardPoints" 
+    <field number="191" name="OfferForwardPoints" type="PRICEOFFSET"/>
+    <field number="192" name="OrderQty2" type="QTY"/>
+    <field number="193" name="FutSettDate2" type="LOCALMKTDATE"/>
+    <field number="194" name="LastSpotRate" type="PRICE"/>
+    <field number="195" name="LastForwardPoints" type="PRICEOFFSET"/>
+    <field number="196" name="AllocLinkID" type="STRING"/>
+    <field number="197" name="AllocLinkType" type="INT">
+      <value enum="0" description="FX_NETTING"/>
+      <value enum="1" description="FX_SWAP"/>
+    </field>
+    <field number="198" name="SecondaryOrderID" type="STRING"/>
+    <field number="199" name="NoIOIQualifiers" type="INT"/>
+    <field number="200" name="MaturityMonthYear" type="MONTHYEAR"/>
+    <field number="201" name="PutOrCall" type="INT">
+      <value enum="0" description="PUT"/>
+      <value enum="1" description="CALL"/>
+    </field>
+    <field number="202" name="StrikePrice" type="PRICE"/>
+    <field number="203" name="CoveredOrUncovered" type="INT">
+      <value enum="0" description="COVERED"/>
+      <value enum="1" description="UNCOVERED"/>
+    </field>
+    <field number="204" name="CustomerOrFirm" type="INT">
+      <value enum="0" description="CUSTOMER"/>
+      <value enum="1" description="FIRM"/>
+    </field>
+    <field number="205" name="MaturityDay" type="DAYOFMONTH"/>
+    <field number="206" name="OptAttribute" type="CHAR"/>
+    <field number="207" name="SecurityExchange" type="EXCHANGE"/>
+    <field number="208" name="NotifyBrokerOfCredit" type="BOOLEAN">
+      <value enum="Y" description="DETAILS_SHOULD_BE_COMMUNICATED"/>
+      <value enum="N" description="DETAILS_SHOULD_NOT_BE_COMMUNICATED"/>
+    </field>
+    <field number="209" name="AllocHandlInst" type="INT">
+      <value enum="1" description="MATCH"/>
+      <value enum="2" description="FORWARD"/>
+      <value enum="3" description="FORWARD_AND_MATCH"/>
+    </field>
+    <field number="210" name="MaxShow" type="QTY"/>
+    <field number="211" name="PegDifference" type="PRICEOFFSET"/>
+    <field number="212" name="XmlDataLen" type="INT"/>
+    <field number="213" 
