@@ -2273,4 +2273,43 @@
       <value enum="A" description="CASH"/>
       <value enum="B" description="AVERAGE_PRICE_TRADE"/>
       <value enum="C" description="CASH_TRADE"/>
-      <value enum=
+      <value enum="D" description="NEXT_DAY"/>
+      <value enum="E" description="OPENING_REOPENING_TRADE_DETAIL"/>
+      <value enum="F" description="INTRADAY_TRADE_DETAIL"/>
+      <value enum="G" description="RULE_127_TRADE"/>
+      <value enum="H" description="RULE_155_TRADE"/>
+      <value enum="I" description="SOLD_LAST"/>
+      <value enum="J" description="NEXT_DAY_TRADE"/>
+      <value enum="K" description="OPENED"/>
+      <value enum="L" description="SELLER"/>
+      <value enum="M" description="SOLD"/>
+      <value enum="N" description="STOPPED_STOCK"/>
+    </field>
+    <field number="278" name="MDEntryID" type="STRING"/>
+    <field number="279" name="MDUpdateAction" type="CHAR">
+      <value enum="0" description="NEW"/>
+      <value enum="1" description="CHANGE"/>
+      <value enum="2" description="DELETE"/>
+    </field>
+    <field number="280" name="MDEntryRefID" type="STRING"/>
+    <field number="281" name="MDReqRejReason" type="CHAR">
+      <value enum="0" description="UNKNOWN_SYMBOL"/>
+      <value enum="1" description="DUPLICATE_MDREQID"/>
+      <value enum="2" description="INSUFFICIENT_BANDWIDTH"/>
+      <value enum="3" description="INSUFFICIENT_PERMISSIONS"/>
+      <value enum="4" description="UNSUPPORTED_SUBSCRIPTIONREQUESTTYPE"/>
+      <value enum="5" description="UNSUPPORTED_MARKETDEPTH"/>
+      <value enum="6" description="UNSUPPORTED_MDUPDATETYPE"/>
+      <value enum="7" description="UNSUPPORTED_AGGREGATEDBOOK"/>
+      <value enum="8" description="UNSUPPORTED_MDENTRYTYPE"/>
+    </field>
+    <field number="282" name="MDEntryOriginator" type="STRING"/>
+    <field number="283" name="LocationID" type="STRING"/>
+    <field number="284" name="DeskID" type="STRING"/>
+    <field number="285" name="DeleteReason" type="CHAR">
+      <value enum="0" description="CANCELATION_TRADE_BUST"/>
+      <value enum="1" description="ERROR"/>
+    </field>
+    <field number="286" name="OpenCloseSettleFlag" type="CHAR">
+      <value enum="0" description="DAILY_OPEN_CLOSE__SETTLEMENT_PRICE"/>
+      <value enum="1" description="S
