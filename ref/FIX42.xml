@@ -2457,4 +2457,36 @@
     <field number="342" name="TradSesOpenTime" type="UTCTIMESTAMP"/>
     <field number="343" name="TradSesPreCloseTime" type="UTCTIMESTAMP"/>
     <field number="344" name="TradSesCloseTime" type="UTCTIMESTAMP"/>
-    <field number="345" name="TradSesEndT
+    <field number="345" name="TradSesEndTime" type="UTCTIMESTAMP"/>
+    <field number="346" name="NumberOfOrders" type="INT"/>
+    <field number="347" name="MessageEncoding" type="STRING"/>
+    <field number="348" name="EncodedIssuerLen" type="INT"/>
+    <field number="349" name="EncodedIssuer" type="DATA"/>
+    <field number="350" name="EncodedSecurityDescLen" type="INT"/>
+    <field number="351" name="EncodedSecurityDesc" type="DATA"/>
+    <field number="352" name="EncodedListExecInstLen" type="INT"/>
+    <field number="353" name="EncodedListExecInst" type="DATA"/>
+    <field number="354" name="EncodedTextLen" type="INT"/>
+    <field number="355" name="EncodedText" type="DATA"/>
+    <field number="356" name="EncodedSubjectLen" type="INT"/>
+    <field number="357" name="EncodedSubject" type="DATA"/>
+    <field number="358" name="EncodedHeadlineLen" type="INT"/>
+    <field number="359" name="EncodedHeadline" type="DATA"/>
+    <field number="360" name="EncodedAllocTextLen" type="INT"/>
+    <field number="361" name="EncodedAllocText" type="DATA"/>
+    <field number="362" name="EncodedUnderlyingIssuerLen" type="INT"/>
+    <field number="363" name="EncodedUnderlyingIssuer" type="DATA"/>
+    <field number="364" name="EncodedUnderlyingSecurityDescLen" type="INT"/>
+    <field number="365" name="EncodedUnderlyingSecurityDesc" type="DATA"/>
+    <field number="366" name="AllocPrice" type="PRICE"/>
+    <field number="367" name="QuoteSetValidUntilTime" type="UTCTIMESTAMP"/>
+    <field number="368" name="QuoteEntryRejectReason" type="INT">
+      <value enum="1" description="UNKNOWN_SYMBOL"/>
+      <value enum="2" description="EXCHANGE"/>
+      <value enum="3" description="QUOTE_EXCEEDS_LIMIT"/>
+      <value enum="4" description="TOO_LATE_TO_ENTER"/>
+      <value enum="5" description="UNKNOWN_QUOTE"/>
+      <value enum="6" description="DUPLICATE_QUOTE"/>
+      <value enum="7" description="INVALID_BIDASK_SPREAD"/>
+      <value enum="8" description="INVALID_PRICE"/>
+      <value enum="9" description="NOT_AUTHORIZED_
