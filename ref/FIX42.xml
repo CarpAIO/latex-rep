@@ -2529,4 +2529,41 @@
     </field>
     <field number="379" name="BusinessRejectRefID" type="STRING"/>
     <field number="380" name="BusinessRejectReason" type="INT">
-      <value
+      <value enum="0" description="OTHER"/>
+      <value enum="1" description="UNKOWN_ID"/>
+      <value enum="2" description="UNKNOWN_SECURITY"/>
+      <value enum="3" description="UNSUPPORTED_MESSAGE_TYPE"/>
+      <value enum="4" description="APPLICATION_NOT_AVAILABLE"/>
+      <value enum="5" description="CONDITIONALLY_REQUIRED_FIELD_MISSING"/>
+    </field>
+    <field number="381" name="GrossTradeAmt" type="AMT"/>
+    <field number="382" name="NoContraBrokers" type="INT"/>
+    <field number="383" name="MaxMessageSize" type="INT"/>
+    <field number="384" name="NoMsgTypes" type="INT"/>
+    <field number="385" name="MsgDirection" type="CHAR">
+      <value enum="S" description="SEND"/>
+      <value enum="R" description="RECEIVE"/>
+    </field>
+    <field number="386" name="NoTradingSessions" type="INT"/>
+    <field number="387" name="TotalVolumeTraded" type="QTY"/>
+    <field number="388" name="DiscretionInst" type="CHAR">
+      <value enum="0" description="RELATED_TO_DISPLAYED_PRICE"/>
+      <value enum="1" description="RELATED_TO_MARKET_PRICE"/>
+      <value enum="2" description="RELATED_TO_PRIMARY_PRICE"/>
+      <value enum="3" description="RELATED_TO_LOCAL_PRIMARY_PRICE"/>
+      <value enum="4" description="RELATED_TO_MIDPOINT_PRICE"/>
+      <value enum="5" description="RELATED_TO_LAST_TRADE_PRICE"/>
+    </field>
+    <field number="389" name="DiscretionOffset" type="PRICEOFFSET"/>
+    <field number="390" name="BidID" type="STRING"/>
+    <field number="391" name="ClientBidID" type="STRING"/>
+    <field number="392" name="ListName" type="STRING"/>
+    <field number="393" name="TotalNumSecurities" type="INT"/>
+    <field number="394" name="BidType" type="INT"/>
+    <field number="395" name="NumTickets" type="INT"/>
+    <field number="396" name="SideValue1" type="AMT"/>
+    <field number="397" name="SideValue2" type="AMT"/>
+    <field number="398" name="NoBidDescriptors" type="INT"/>
+    <field number="399" name="BidDescriptorType" type="INT"/>
+    <field number="400" name="BidDescriptor" type="STRING"/>
+    <field number="401" name="SideValueInd" type=
