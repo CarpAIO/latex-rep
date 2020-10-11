@@ -2566,4 +2566,40 @@
     <field number="398" name="NoBidDescriptors" type="INT"/>
     <field number="399" name="BidDescriptorType" type="INT"/>
     <field number="400" name="BidDescriptor" type="STRING"/>
-    <field number="401" name="SideValueInd" type=
+    <field number="401" name="SideValueInd" type="INT"/>
+    <field number="402" name="LiquidityPctLow" type="FLOAT"/>
+    <field number="403" name="LiquidityPctHigh" type="FLOAT"/>
+    <field number="404" name="LiquidityValue" type="AMT"/>
+    <field number="405" name="EFPTrackingError" type="FLOAT"/>
+    <field number="406" name="FairValue" type="AMT"/>
+    <field number="407" name="OutsideIndexPct" type="FLOAT"/>
+    <field number="408" name="ValueOfFutures" type="AMT"/>
+    <field number="409" name="LiquidityIndType" type="INT"/>
+    <field number="410" name="WtAverageLiquidity" type="FLOAT"/>
+    <field number="411" name="ExchangeForPhysical" type="BOOLEAN">
+      <value enum="Y" description="TRUE"/>
+      <value enum="N" description="FALSE"/>
+    </field>
+    <field number="412" name="OutMainCntryUIndex" type="AMT"/>
+    <field number="413" name="CrossPercent" type="FLOAT"/>
+    <field number="414" name="ProgRptReqs" type="INT"/>
+    <field number="415" name="ProgPeriodInterval" type="INT"/>
+    <field number="416" name="IncTaxInd" type="INT"/>
+    <field number="417" name="NumBidders" type="INT"/>
+    <field number="418" name="TradeType" type="CHAR"/>
+    <field number="419" name="BasisPxType" type="CHAR"/>
+    <field number="420" name="NoBidComponents" type="INT"/>
+    <field number="421" name="Country" type="STRING"/>
+    <field number="422" name="TotNoStrikes" type="INT"/>
+    <field number="423" name="PriceType" type="INT"/>
+    <field number="424" name="DayOrderQty" type="QTY"/>
+    <field number="425" name="DayCumQty" type="QTY"/>
+    <field number="426" name="DayAvgPx" type="PRICE"/>
+    <field number="427" name="GTBookingInst" type="INT">
+      <value enum="0" description="BOOK_OUT_ALL_TRADES_ON_DAY_OF_EXECUTION"/>
+      <value enum="1" description="ACCUMULATE_EXECUTIONS_UNTIL_ORDER_IS_FILLED_OR_EXPIRES"/>
+      <value enum="2" description="ACCUMULATE_UNTIL_VERBALLY_NOTIFIED_OTHERWISE"/>
+    </field>
+    <field number="428" name="NoStrikes" type="INT"/>
+    <field number="429" name="ListStatusType" type="INT"/>
+    <field number="430" name="NetGrossInd" type=
