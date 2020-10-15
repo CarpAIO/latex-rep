@@ -2602,4 +2602,22 @@
     </field>
     <field number="428" name="NoStrikes" type="INT"/>
     <field number="429" name="ListStatusType" type="INT"/>
-    <field number="430" name="NetGrossInd" type=
+    <field number="430" name="NetGrossInd" type="INT"/>
+    <field number="431" name="ListOrderStatus" type="INT"/>
+    <field number="432" name="ExpireDate" type="LOCALMKTDATE"/>
+    <field number="433" name="ListExecInstType" type="CHAR"/>
+    <field number="434" name="CxlRejResponseTo" type="CHAR"/>
+    <field number="435" name="UnderlyingCouponRate" type="FLOAT"/>
+    <field number="436" name="UnderlyingContractMultiplier" type="FLOAT"/>
+    <field number="437" name="ContraTradeQty" type="QTY"/>
+    <field number="438" name="ContraTradeTime" type="UTCTIMESTAMP"/>
+    <field number="439" name="ClearingFirm" type="STRING"/>
+    <field number="440" name="ClearingAccount" type="STRING"/>
+    <field number="441" name="LiquidityNumSecurities" type="INT"/>
+    <field number="442" name="MultiLegReportingType" type="CHAR"/>
+    <field number="443" name="StrikeTime" type="UTCTIMESTAMP"/>
+    <field number="444" name="ListStatusText" type="STRING"/>
+    <field number="445" name="EncodedListStatusTextLen" type="INT"/>
+    <field number="446" name="EncodedListStatusText" type="DATA"/>
+  </fields>
+</fix>
