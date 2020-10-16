@@ -68,4 +68,49 @@
       <field name="RefSeqNum" required="Y" />
       <field name="RefTagID" required="N" />
       <field name="RefMsgType" required="N" />
-      <field name="SessionRej
+      <field name="SessionRejectReason" required="N" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+    </message>
+    <message name="SequenceReset" msgtype="4" msgcat="admin">
+      <field name="GapFillFlag" required="N" />
+      <field name="NewSeqNo" required="Y" />
+    </message>
+    <message name="Logout" msgtype="5" msgcat="admin">
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+    </message>
+    <message name="BusinessMessageReject" msgtype="j" msgcat="admin">
+      <field name="RefSeqNum" required="N" />
+      <field name="RefMsgType" required="Y" />
+      <field name="BusinessRejectRefID" required="N" />
+      <field name="BusinessRejectReason" required="Y" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+    </message>
+    <message name="Advertisement" msgtype="7" msgcat="app">
+      <field name="AdvId" required="Y" />
+      <field name="AdvTransType" required="Y" />
+      <field name="AdvRefID" required="N" />
+      <component name="Instrument" required="Y" />
+      <field name="AdvSide" required="Y" />
+      <field name="Quantity" required="Y" />
+      <field name="Price" required="N" />
+      <field name="Currency" required="N" />
+      <field name="TradeDate" required="N" />
+      <field name="TransactTime" required="N" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+      <field name="URLLink" required="N" />
+      <field name="LastMkt" required="N" />
+      <field name="TradingSessionID" required="N" />
+      <field name="TradingSessionSubID" required="N" />
+    </message>
+    <message name="IndicationOfInterest" msgtype="6" msgcat="app">
+      <field name="IOIid" required="Y" />
+      <field name="IOITransType" required="Y" />
+      <field
