@@ -246,4 +246,47 @@
         <field name="Currency" required="N" />
         <component name="SpreadOrBenchmarkCurveData" required="N" />
         <field name="PriceType" required="N" />
-        <fiel
+        <field name="Price" required="N" />
+        <field name="Price2" required="N" />
+        <component name="YieldData" required="N" />
+      </group>
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+    </message>
+    <message name="RFQRequest" msgtype="AH" msgcat="app">
+      <field name="RFQReqID" required="Y" />
+      <group name="NoRelatedSym" required="Y">
+        <component name="Instrument" required="Y" />
+        <field name="PrevClosePx" required="N" />
+        <field name="QuoteRequestType" required="N" />
+        <field name="QuoteType" required="N" />
+        <field name="TradingSessionID" required="N" />
+        <field name="TradingSessionSubID" required="N" />
+      </group>
+      <field name="SubscriptionRequestType" required="N" />
+    </message>
+    <message name="Quote" msgtype="S" msgcat="app">
+      <field name="QuoteReqID" required="N" />
+      <field name="QuoteID" required="Y" />
+      <field name="QuoteType" required="N" />
+      <field name="QuoteResponseLevel" required="N" />
+      <component name="Parties" required="N" />
+      <field name="Account" required="N" />
+      <field name="AccountType" required="N" />
+      <field name="TradingSessionID" required="N" />
+      <field name="TradingSessionSubID" required="N" />
+      <component name="Instrument" required="Y" />
+      <field name="BidPx" required="N" />
+      <field name="OfferPx" required="N" />
+      <field name="MktBidPx" required="N" />
+      <field name="MktOfferPx" required="N" />
+      <field name="MinBidSize" required="N" />
+      <field name="BidSize" required="N" />
+      <field name="MinOfferSize" required="N" />
+      <field name="OfferSize" required="N" />
+      <field name="ValidUntilTime" required="N" />
+      <field name="BidSpotRate" required="N" />
+      <field name="OfferSpotRate" required="N" />
+      <field name="BidForwardPoints" required="N" />
+      <field name="OfferForwardPoints" requi
