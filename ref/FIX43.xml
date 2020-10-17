@@ -113,4 +113,50 @@
     <message name="IndicationOfInterest" msgtype="6" msgcat="app">
       <field name="IOIid" required="Y" />
       <field name="IOITransType" required="Y" />
-      <field
+      <field name="IOIRefID" required="N" />
+      <component name="Instrument" required="Y" />
+      <field name="Side" required="Y" />
+      <field name="QuantityType" required="N" />
+      <field name="IOIQty" required="Y" />
+      <field name="PriceType" required="N" />
+      <field name="Price" required="N" />
+      <field name="Currency" required="N" />
+      <field name="ValidUntilTime" required="N" />
+      <field name="IOIQltyInd" required="N" />
+      <field name="IOINaturalFlag" required="N" />
+      <group name="NoIOIQualifiers" required="N">
+        <field name="IOIQualifier" required="N" />
+      </group>
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+      <field name="TransactTime" required="N" />
+      <field name="URLLink" required="N" />
+      <group name="NoRoutingIDs" required="N">
+        <field name="RoutingType" required="N" />
+        <field name="RoutingID" required="N" />
+      </group>
+      <component name="SpreadOrBenchmarkCurveData" required="N" />
+      <field name="Benchmark" required="N" />
+    </message>
+    <message name="News" msgtype="B" msgcat="app">
+      <field name="OrigTime" required="N" />
+      <field name="Urgency" required="N" />
+      <field name="Headline" required="Y" />
+      <field name="EncodedHeadlineLen" required="N" />
+      <field name="EncodedHeadline" required="N" />
+      <group name="NoRoutingIDs" required="N">
+        <field name="RoutingType" required="N" />
+        <field name="RoutingID" required="N" />
+      </group>
+      <group name="NoRelatedSym" required="N">
+        <component name="Instrument" required="N" />
+      </group>
+      <group name="LinesOfText" required="Y">
+        <field name="Text" required="Y" />
+        <field name="EncodedTextLen" required="N" />
+        <field name="EncodedText" required="N" />
+      </group>
+      <field name="URLLink" required="N" />
+      <field name="RawDataLength" required="N" />
+      <field name="RawData" requi
