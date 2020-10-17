@@ -205,4 +205,45 @@
         <field name="FutSettDate" required="N" />
         <field name="OrdType" required="N" />
         <field name="FutSettDate2" required="N" />
-        <
+        <field name="OrderQty2" required="N" />
+        <field name="ExpireTime" required="N" />
+        <field name="TransactTime" required="N" />
+        <field name="Currency" required="N" />
+        <component name="SpreadOrBenchmarkCurveData" required="N" />
+        <field name="PriceType" required="N" />
+        <field name="Price" required="N" />
+        <field name="Price2" required="N" />
+        <component name="YieldData" required="N" />
+      </group>
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+    </message>
+    <message name="QuoteRequestReject" msgtype="AG" msgcat="app">
+      <field name="QuoteReqID" required="Y" />
+      <field name="RFQReqID" required="N" />
+      <field name="QuoteRequestRejectReason" required="Y" />
+      <group name="NoRelatedSym" required="Y">
+        <component name="Instrument" required="Y" />
+        <field name="PrevClosePx" required="N" />
+        <field name="QuoteRequestType" required="N" />
+        <field name="QuoteType" required="N" />
+        <field name="TradingSessionID" required="N" />
+        <field name="TradingSessionSubID" required="N" />
+        <field name="TradeOriginationDate" required="N" />
+        <component name="Stipulations" required="N" />
+        <field name="Side" required="N" />
+        <field name="QuantityType" required="N" />
+        <field name="OrderQty" required="N" />
+        <field name="CashOrderQty" required="N" />
+        <field name="SettlmntTyp" required="N" />
+        <field name="FutSettDate" required="N" />
+        <field name="OrdType" required="N" />
+        <field name="FutSettDate2" required="N" />
+        <field name="OrderQty2" required="N" />
+        <field name="ExpireTime" required="N" />
+        <field name="TransactTime" required="N" />
+        <field name="Currency" required="N" />
+        <component name="SpreadOrBenchmarkCurveData" required="N" />
+        <field name="PriceType" required="N" />
+        <fiel
