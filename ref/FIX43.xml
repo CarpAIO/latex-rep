@@ -289,4 +289,47 @@
       <field name="BidSpotRate" required="N" />
       <field name="OfferSpotRate" required="N" />
       <field name="BidForwardPoints" required="N" />
-      <field name="OfferForwardPoints" requi
+      <field name="OfferForwardPoints" required="N" />
+      <field name="MidPx" required="N" />
+      <field name="BidYield" required="N" />
+      <field name="MidYield" required="N" />
+      <field name="OfferYield" required="N" />
+      <field name="TransactTime" required="N" />
+      <field name="SettlmntTyp" required="N" />
+      <field name="FutSettDate" required="N" />
+      <field name="OrdType" required="N" />
+      <field name="FutSettDate2" required="N" />
+      <field name="OrderQty2" required="N" />
+      <field name="BidForwardPoints2" required="N" />
+      <field name="OfferForwardPoints2" required="N" />
+      <field name="Currency" required="N" />
+      <field name="SettlCurrBidFxRate" required="N" />
+      <field name="SettlCurrOfferFxRate" required="N" />
+      <field name="SettlCurrFxRateCalc" required="N" />
+      <field name="CommType" required="N" />
+      <field name="Commission" required="N" />
+      <field name="CustOrderCapacity" required="N" />
+      <field name="ExDestination" required="N" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+    </message>
+    <message name="QuoteCancel" msgtype="Z" msgcat="app">
+      <field name="QuoteReqID" required="N" />
+      <field name="QuoteID" required="Y" />
+      <field name="QuoteCancelType" required="Y" />
+      <field name="QuoteResponseLevel" required="N" />
+      <component name="Parties" required="N" />
+      <field name="Account" required="N" />
+      <field name="AccountType" required="N" />
+      <field name="TradingSessionID" required="N" />
+      <field name="TradingSessionSubID" required="N" />
+      <group name="NoQuoteEntries" required="N">
+        <component name="Instrument" required="N" />
+      </group>
+    </message>
+    <message name="QuoteStatusRequest" msgtype="a" msgcat="app">
+      <field name="QuoteStatusReqID" required="N" />
+      <field name="QuoteID" required="N" />
+      <component name="Instrument" required="Y" />
+      <component name="Parties"
