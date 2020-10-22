@@ -332,4 +332,45 @@
       <field name="QuoteStatusReqID" required="N" />
       <field name="QuoteID" required="N" />
       <component name="Instrument" required="Y" />
-      <component name="Parties"
+      <component name="Parties" required="N" />
+      <field name="Account" required="N" />
+      <field name="AccountType" required="N" />
+      <field name="TradingSessionID" required="N" />
+      <field name="TradingSessionSubID" required="N" />
+      <field name="SubscriptionRequestType" required="N" />
+    </message>
+    <message name="QuoteStatusReport" msgtype="AI" msgcat="app">
+      <field name="QuoteStatusReqID" required="N" />
+      <field name="QuoteReqID" required="N" />
+      <field name="QuoteID" required="Y" />
+      <field name="QuoteType" required="N" />
+      <component name="Parties" required="N" />
+      <field name="Account" required="N" />
+      <field name="AccountType" required="N" />
+      <field name="TradingSessionID" required="N" />
+      <field name="TradingSessionSubID" required="N" />
+      <component name="Instrument" required="Y" />
+      <field name="BidPx" required="N" />
+      <field name="OfferPx" required="N" />
+      <field name="MktBidPx" required="N" />
+      <field name="MktOfferPx" required="N" />
+      <field name="MinBidSize" required="N" />
+      <field name="BidSize" required="N" />
+      <field name="MinOfferSize" required="N" />
+      <field name="OfferSize" required="N" />
+      <field name="ValidUntilTime" required="N" />
+      <field name="BidSpotRate" required="N" />
+      <field name="OfferSpotRate" required="N" />
+      <field name="BidForwardPoints" required="N" />
+      <field name="OfferForwardPoints" required="N" />
+      <field name="MidPx" required="N" />
+      <field name="BidYield" required="N" />
+      <field name="MidYield" required="N" />
+      <field name="OfferYield" required="N" />
+      <field name="TransactTime" required="N" />
+      <field name="FutSettDate" required="N" />
+      <field name="OrdType" required="N" />
+      <field name="FutSettDate2" required="N" />
+      <field name="OrderQty2" required="N" />
+      <field name="BidForwardPoints2" required="N" />
+      <field name="Of
