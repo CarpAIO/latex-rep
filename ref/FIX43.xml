@@ -373,4 +373,43 @@
       <field name="FutSettDate2" required="N" />
       <field name="OrderQty2" required="N" />
       <field name="BidForwardPoints2" required="N" />
-      <field name="Of
+      <field name="OfferForwardPoints2" required="N" />
+      <field name="Currency" required="N" />
+      <field name="SettlCurrBidFxRate" required="N" />
+      <field name="SettlCurrOfferFxRate" required="N" />
+      <field name="SettlCurrFxRateCalc" required="N" />
+      <field name="CommType" required="N" />
+      <field name="Commission" required="N" />
+      <field name="CustOrderCapacity" required="N" />
+      <field name="ExDestination" required="N" />
+      <field name="QuoteStatus" required="N" />
+    </message>
+    <message name="MassQuote" msgtype="i" msgcat="app">
+      <field name="QuoteReqID" required="N" />
+      <field name="QuoteID" required="Y" />
+      <field name="QuoteType" required="N" />
+      <field name="QuoteResponseLevel" required="N" />
+      <component name="Parties" required="N" />
+      <field name="Account" required="N" />
+      <field name="AccountType" required="N" />
+      <field name="DefBidSize" required="N" />
+      <field name="DefOfferSize" required="N" />
+      <group name="NoQuoteSets" required="Y">
+        <field name="QuoteSetID" required="Y" />
+        <component name="UnderlyingInstrument" required="N" />
+        <field name="QuoteSetValidUntilTime" required="N" />
+        <field name="TotQuoteEntries" required="Y" />
+        <group name="NoQuoteEntries" required="N">
+          <field name="QuoteEntryID" required="Y" />
+          <component name="Instrument" required="N" />
+          <field name="BidPx" required="N" />
+          <field name="OfferPx" required="N" />
+          <field name="BidSize" required="N" />
+          <field name="OfferSize" required="N" />
+          <field name="ValidUntilTime" required="N" />
+          <field name="BidSpotRate" required="N" />
+          <field name="OfferSpotRate" required="N" />
+          <field name="BidForwardPoints" required="N" />
+          <field name="OfferForwardPoints" required="N" />
+          <field name="MidPx" required="N" />
+          <field
