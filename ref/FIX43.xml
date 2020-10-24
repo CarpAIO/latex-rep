@@ -412,4 +412,45 @@
           <field name="BidForwardPoints" required="N" />
           <field name="OfferForwardPoints" required="N" />
           <field name="MidPx" required="N" />
-          <field
+          <field name="BidYield" required="N" />
+          <field name="MidYield" required="N" />
+          <field name="OfferYield" required="N" />
+          <field name="TransactTime" required="N" />
+          <field name="TradingSessionID" required="N" />
+          <field name="TradingSessionSubID" required="N" />
+          <field name="FutSettDate" required="N" />
+          <field name="OrdType" required="N" />
+          <field name="FutSettDate2" required="N" />
+          <field name="OrderQty2" required="N" />
+          <field name="BidForwardPoints2" required="N" />
+          <field name="OfferForwardPoints2" required="N" />
+          <field name="Currency" required="N" />
+        </group>
+      </group>
+    </message>
+    <message name="MassQuoteAcknowledgement" msgtype="b" msgcat="app">
+      <field name="QuoteReqID" required="N" />
+      <field name="QuoteID" required="N" />
+      <field name="QuoteStatus" required="Y" />
+      <field name="QuoteRejectReason" required="N" />
+      <field name="QuoteResponseLevel" required="N" />
+      <field name="QuoteType" required="N" />
+      <component name="Parties" required="N" />
+      <field name="Account" required="N" />
+      <field name="AccountType" required="N" />
+      <field name="Text" required="N" />
+      <group name="NoQuoteSets" required="N">
+        <field name="QuoteSetID" required="N" />
+        <component name="UnderlyingInstrument" required="N" />
+        <field name="TotQuoteEntries" required="N" />
+        <group name="NoQuoteEntries" required="N">
+          <field name="QuoteEntryID" required="N" />
+          <component name="Instrument" required="N" />
+          <field name="BidPx" required="N" />
+          <field name="OfferPx" required="N" />
+          <field name="BidSize" required="N" />
+          <field name="OfferSize" required="N" />
+          <field name="ValidUntilTime" required="N" />
+          <field name="BidSpotRate" required="N" />
+          <field name="OfferSpotRate" required="N" />
+          <field name="BidForwardPoints" requ
