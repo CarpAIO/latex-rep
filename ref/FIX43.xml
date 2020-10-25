@@ -453,4 +453,47 @@
           <field name="ValidUntilTime" required="N" />
           <field name="BidSpotRate" required="N" />
           <field name="OfferSpotRate" required="N" />
-          <field name="BidForwardPoints" requ
+          <field name="BidForwardPoints" required="N" />
+          <field name="OfferForwardPoints" required="N" />
+          <field name="MidPx" required="N" />
+          <field name="BidYield" required="N" />
+          <field name="MidYield" required="N" />
+          <field name="OfferYield" required="N" />
+          <field name="TransactTime" required="N" />
+          <field name="TradingSessionID" required="N" />
+          <field name="TradingSessionSubID" required="N" />
+          <field name="FutSettDate" required="N" />
+          <field name="OrdType" required="N" />
+          <field name="FutSettDate2" required="N" />
+          <field name="OrderQty2" required="N" />
+          <field name="BidForwardPoints2" required="N" />
+          <field name="OfferForwardPoints2" required="N" />
+          <field name="Currency" required="N" />
+          <field name="QuoteEntryRejectReason" required="N" />
+        </group>
+      </group>
+    </message>
+    <message name="MarketDataRequest" msgtype="V" msgcat="app">
+      <field name="MDReqID" required="Y" />
+      <field name="SubscriptionRequestType" required="Y" />
+      <field name="MarketDepth" required="Y" />
+      <field name="MDUpdateType" required="N" />
+      <field name="AggregatedBook" required="N" />
+      <field name="OpenCloseSettleFlag" required="N" />
+      <field name="Scope" required="N" />
+      <field name="MDImplicitDelete" required="N" />
+      <group name="NoMDEntryTypes" required="Y">
+        <field name="MDEntryType" required="Y" />
+      </group>
+      <group name="NoRelatedSym" required="Y">
+        <component name="Instrument" required="Y" />
+      </group>
+      <group name="NoTradingSessions" required="N">
+        <field name="TradingSessionID" required="N" />
+        <field name="TradingSessionSubID" required="N" />
+      </group>
+    </message>
+    <message name="MarketDataSnapshotFullRefresh" msgtype="W" msgcat="app">
+      <field name="MDReqID" required="N" />
+      <component name="Instrument" required="Y" />
+      <field name="FinancialStatus" required="N" /
