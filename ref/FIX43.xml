@@ -579,4 +579,46 @@
         <field name="TotalVolumeTraded" required="N" />
         <field name="TotalVolumeTradedDate" required="N" />
         <field name="TotalVolumeTradedTime" required="N" />
-        <field name="NetCh
+        <field name="NetChgPrevDay" required="N" />
+        <field name="Text" required="N" />
+        <field name="EncodedTextLen" required="N" />
+        <field name="EncodedText" required="N" />
+      </group>
+    </message>
+    <message name="MarketDataRequestReject" msgtype="Y" msgcat="app">
+      <field name="MDReqID" required="Y" />
+      <field name="MDReqRejReason" required="N" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+    </message>
+    <message name="SecurityDefinitionRequest" msgtype="c" msgcat="app">
+      <field name="SecurityReqID" required="Y" />
+      <field name="SecurityRequestType" required="Y" />
+      <component name="Instrument" required="N" />
+      <field name="Currency" required="N" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+      <field name="TradingSessionID" required="N" />
+      <field name="TradingSessionSubID" required="N" />
+      <group name="NoLegs" required="N">
+        <component name="InstrumentLeg" required="N" />
+        <field name="LegCurrency" required="N" />
+      </group>
+      <field name="SubscriptionRequestType" required="N" />
+    </message>
+    <message name="SecurityDefinition" msgtype="d" msgcat="app">
+      <field name="SecurityReqID" required="Y" />
+      <field name="SecurityResponseID" required="Y" />
+      <field name="SecurityResponseType" required="Y" />
+      <component name="Instrument" required="N" />
+      <field name="Currency" required="N" />
+      <field name="TradingSessionID" required="N" />
+      <field name="TradingSessionSubID" required="N" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+      <group name="NoLegs" required="N">
+        <component name="InstrumentLeg" required="N" />
+        <field name="LegCurrency" required="N" /
