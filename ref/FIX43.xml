@@ -664,4 +664,46 @@
       <field name="SubscriptionRequestType" required="N" />
     </message>
     <message name="SecurityList" msgtype="y" msgcat="app">
-      <f
+      <field name="SecurityReqID" required="Y" />
+      <field name="SecurityResponseID" required="Y" />
+      <field name="SecurityRequestResult" required="Y" />
+      <field name="TotalNumSecurities" required="N" />
+      <group name="NoRelatedSym" required="N">
+        <component name="Instrument" required="N" />
+        <field name="Currency" required="N" />
+        <group name="NoLegs" required="N">
+          <component name="InstrumentLeg" required="N" />
+          <field name="LegCurrency" required="N" />
+        </group>
+        <field name="RoundLot" required="N" />
+        <field name="MinTradeVol" required="N" />
+        <field name="TradingSessionID" required="N" />
+        <field name="TradingSessionSubID" required="N" />
+        <field name="Text" required="N" />
+        <field name="EncodedTextLen" required="N" />
+        <field name="EncodedText" required="N" />
+      </group>
+    </message>
+    <message name="DerivativeSecurityListRequest" msgtype="z" msgcat="app">
+      <field name="SecurityReqID" required="Y" />
+      <field name="SecurityListRequestType" required="Y" />
+      <component name="UnderlyingInstrument" required="N" />
+      <field name="Currency" required="N" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+      <field name="TradingSessionID" required="N" />
+      <field name="TradingSessionSubID" required="N" />
+      <field name="SubscriptionRequestType" required="N" />
+    </message>
+    <message name="DerivativeSecurityList" msgtype="AA" msgcat="app">
+      <field name="SecurityReqID" required="Y" />
+      <field name="SecurityResponseID" required="Y" />
+      <field name="SecurityRequestResult" required="Y" />
+      <component name="UnderlyingInstrument" required="N" />
+      <field name="TotalNumSecurities" required="N" />
+      <group name="NoRelatedSym" required="N">
+        <component name="Instrument" required="N" />
+        <field name="Currency" required="N" />
+        <group name="NoLegs" required="N">
+       
