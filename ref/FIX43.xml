@@ -621,4 +621,47 @@
       <field name="EncodedText" required="N" />
       <group name="NoLegs" required="N">
         <component name="InstrumentLeg" required="N" />
-        <field name="LegCurrency" required="N" /
+        <field name="LegCurrency" required="N" />
+      </group>
+      <field name="RoundLot" required="N" />
+      <field name="MinTradeVol" required="N" />
+    </message>
+    <message name="SecurityTypeRequest" msgtype="v" msgcat="app">
+      <field name="SecurityReqID" required="Y" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+      <field name="TradingSessionID" required="N" />
+      <field name="TradingSessionSubID" required="N" />
+    </message>
+    <message name="SecurityTypes" msgtype="w" msgcat="app">
+      <field name="SecurityReqID" required="Y" />
+      <field name="SecurityResponseID" required="Y" />
+      <field name="SecurityResponseType" required="Y" />
+      <field name="TotalNumSecurityTypes" required="N" />
+      <group name="NoSecurityTypes" required="N">
+        <field name="SecurityType" required="N" />
+        <field name="Product" required="N" />
+        <field name="CFICode" required="N" />
+      </group>
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+      <field name="TradingSessionID" required="N" />
+      <field name="TradingSessionSubID" required="N" />
+      <field name="SubscriptionRequestType" required="N" />
+    </message>
+    <message name="SecurityListRequest" msgtype="x" msgcat="app">
+      <field name="SecurityReqID" required="Y" />
+      <field name="SecurityListRequestType" required="Y" />
+      <component name="Instrument" required="N" />
+      <field name="Currency" required="N" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+      <field name="TradingSessionID" required="N" />
+      <field name="TradingSessionSubID" required="N" />
+      <field name="SubscriptionRequestType" required="N" />
+    </message>
+    <message name="SecurityList" msgtype="y" msgcat="app">
+      <f
