@@ -706,4 +706,47 @@
         <component name="Instrument" required="N" />
         <field name="Currency" required="N" />
         <group name="NoLegs" required="N">
-       
+          <component name="InstrumentLeg" required="N" />
+          <field name="LegCurrency" required="N" />
+        </group>
+        <field name="TradingSessionID" required="N" />
+        <field name="TradingSessionSubID" required="N" />
+        <field name="Text" required="N" />
+        <field name="EncodedTextLen" required="N" />
+        <field name="EncodedText" required="N" />
+      </group>
+    </message>
+    <message name="SecurityStatusRequest" msgtype="e" msgcat="app">
+      <field name="SecurityStatusReqID" required="Y" />
+      <component name="Instrument" required="Y" />
+      <field name="Currency" required="N" />
+      <field name="SubscriptionRequestType" required="Y" />
+      <field name="TradingSessionID" required="N" />
+      <field name="TradingSessionSubID" required="N" />
+    </message>
+    <message name="SecurityStatus" msgtype="f" msgcat="app">
+      <field name="SecurityStatusReqID" required="N" />
+      <component name="Instrument" required="Y" />
+      <field name="Currency" required="N" />
+      <field name="TradingSessionID" required="N" />
+      <field name="TradingSessionSubID" required="N" />
+      <field name="UnsolicitedIndicator" required="N" />
+      <field name="SecurityTradingStatus" required="N" />
+      <field name="FinancialStatus" required="N" />
+      <field name="CorporateAction" required="N" />
+      <field name="HaltReason" required="N" />
+      <field name="InViewOfCommon" required="N" />
+      <field name="DueToRelated" required="N" />
+      <field name="BuyVolume" required="N" />
+      <field name="SellVolume" required="N" />
+      <field name="HighPx" required="N" />
+      <field name="LowPx" required="N" />
+      <field name="LastPx" required="N" />
+      <field name="TransactTime" required="N" />
+      <field name="Adjustment" required="N" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+    </message>
+    <message name="TradingSessionStatusRequest" msgtype="g" msgcat="app">
+      <field
