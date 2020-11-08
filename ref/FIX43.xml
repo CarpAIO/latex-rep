@@ -749,4 +749,44 @@
       <field name="EncodedText" required="N" />
     </message>
     <message name="TradingSessionStatusRequest" msgtype="g" msgcat="app">
-      <field
+      <field name="TradSesReqID" required="Y" />
+      <field name="TradingSessionID" required="N" />
+      <field name="TradingSessionSubID" required="N" />
+      <field name="TradSesMethod" required="N" />
+      <field name="TradSesMode" required="N" />
+      <field name="SubscriptionRequestType" required="Y" />
+    </message>
+    <message name="TradingSessionStatus" msgtype="h" msgcat="app">
+      <field name="TradSesReqID" required="N" />
+      <field name="TradingSessionID" required="Y" />
+      <field name="TradingSessionSubID" required="N" />
+      <field name="TradSesMethod" required="N" />
+      <field name="TradSesMode" required="N" />
+      <field name="UnsolicitedIndicator" required="N" />
+      <field name="TradSesStatus" required="Y" />
+      <field name="TradSesStatusRejReason" required="N" />
+      <field name="TradSesStartTime" required="N" />
+      <field name="TradSesOpenTime" required="N" />
+      <field name="TradSesPreCloseTime" required="N" />
+      <field name="TradSesCloseTime" required="N" />
+      <field name="TradSesEndTime" required="N" />
+      <field name="TotalVolumeTraded" required="N" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+    </message>
+    <message name="NewOrderSingle" msgtype="D" msgcat="app">
+      <field name="ClOrdID" required="Y" />
+      <field name="SecondaryClOrdID" required="N" />
+      <field name="ClOrdLinkID" required="N" />
+      <component name="Parties" required="N" />
+      <field name="TradeOriginationDate" required="N" />
+      <field name="Account" required="N" />
+      <field name="AccountType" required="N" />
+      <field name="DayBookingInst" required="N" />
+      <field name="BookingUnit" required="N" />
+      <field name="PreallocMethod" required="N" />
+      <group name="NoAllocs" required="N">
+        <field name="AllocAccount" required="N" />
+        <field name="IndividualAllocID" required="N" />
+        <component name="NestedParti
