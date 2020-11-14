@@ -834,3 +834,45 @@
       <field name="OrderCapacity" required="N" />
       <field name="OrderRestrictions" required="N" />
       <field name="CustOrderCapacity" required="N" />
+      <field name="Rule80A" required="N" />
+      <field name="ForexReq" required="N" />
+      <field name="SettlCurrency" required="N" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+      <field name="FutSettDate2" required="N" />
+      <field name="OrderQty2" required="N" />
+      <field name="Price2" required="N" />
+      <field name="PositionEffect" required="N" />
+      <field name="CoveredOrUncovered" required="N" />
+      <field name="MaxShow" required="N" />
+      <field name="PegDifference" required="N" />
+      <field name="DiscretionInst" required="N" />
+      <field name="DiscretionOffset" required="N" />
+      <field name="CancellationRights" required="N" />
+      <field name="MoneyLaunderingStatus" required="N" />
+      <field name="RegistID" required="N" />
+      <field name="Designation" required="N" />
+      <field name="AccruedInterestRate" required="N" />
+      <field name="AccruedInterestAmt" required="N" />
+      <field name="NetMoney" required="N" />
+    </message>
+    <message name="ExecutionReport" msgtype="8" msgcat="app">
+      <field name="OrderID" required="Y" />
+      <field name="SecondaryOrderID" required="N" />
+      <field name="SecondaryClOrdID" required="N" />
+      <field name="SecondaryExecID" required="N" />
+      <field name="ClOrdID" required="N" />
+      <field name="OrigClOrdID" required="N" />
+      <field name="ClOrdLinkID" required="N" />
+      <component name="Parties" required="N" />
+      <field name="TradeOriginationDate" required="N" />
+      <group name="NoContraBrokers" required="N">
+        <field name="ContraBroker" required="N" />
+        <field name="ContraTrader" required="N" />
+        <field name="ContraTradeQty" required="N" />
+        <field name="ContraTradeTime" required="N" />
+        <field name="ContraLegRefID" required="N" />
+      </group>
+      <field name="ListID" required="N" />
+      <field name="Cros
