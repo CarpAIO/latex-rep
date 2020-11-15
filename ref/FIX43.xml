@@ -960,4 +960,49 @@
       <field name="MinQty" required="N" />
       <field name="MaxFloor" required="N" />
       <field name="PositionEffect" required="N" />
-    
+      <field name="MaxShow" required="N" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+      <field name="FutSettDate2" required="N" />
+      <field name="OrderQty2" required="N" />
+      <field name="LastForwardPoints2" required="N" />
+      <field name="MultiLegReportingType" required="N" />
+      <field name="CancellationRights" required="N" />
+      <field name="MoneyLaunderingStatus" required="N" />
+      <field name="RegistID" required="N" />
+      <field name="Designation" required="N" />
+      <field name="TransBkdTime" required="N" />
+      <field name="ExecValuationPoint" required="N" />
+      <field name="ExecPriceType" required="N" />
+      <field name="ExecPriceAdjustment" required="N" />
+      <field name="PriorityIndicator" required="N" />
+      <field name="PriceImprovement" required="N" />
+      <group name="NoContAmts" required="N">
+        <field name="ContAmtType" required="N" />
+        <field name="ContAmtValue" required="N" />
+        <field name="ContAmtCurr" required="N" />
+      </group>
+      <group name="NoLegs" required="N">
+        <component name="InstrumentLeg" required="N" />
+        <field name="LegPositionEffect" required="N" />
+        <field name="LegCoveredOrUncovered" required="N" />
+        <component name="NestedParties" required="N" />
+        <field name="LegRefID" required="N" />
+        <field name="LegPrice" required="N" />
+        <field name="LegSettlmntTyp" required="N" />
+        <field name="LegFutSettDate" required="N" />
+        <field name="LegLastPx" required="N" />
+      </group>
+    </message>
+    <message name="DontKnowTrade" msgtype="Q" msgcat="app">
+      <field name="OrderID" required="Y" />
+      <field name="ExecID" required="Y" />
+      <field name="DKReason" required="Y" />
+      <component name="Instrument" required="Y" />
+      <field name="Side" required="Y" />
+      <component name="OrderQtyData" required="Y" />
+      <field name="LastQty" required="N" />
+      <field name="LastPx" required="N" />
+      <field name="Text" required="N" />
+      <fiel
