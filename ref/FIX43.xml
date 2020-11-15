@@ -1048,4 +1048,47 @@
       <field name="QuantityType" required="N" />
       <component name="OrderQtyData" required="Y" />
       <field name="OrdType" required="Y" />
-      <field name="Pri
+      <field name="PriceType" required="N" />
+      <field name="Price" required="N" />
+      <field name="StopPx" required="N" />
+      <component name="SpreadOrBenchmarkCurveData" required="N" />
+      <component name="YieldData" required="N" />
+      <field name="PegDifference" required="N" />
+      <field name="DiscretionInst" required="N" />
+      <field name="DiscretionOffset" required="N" />
+      <field name="ComplianceID" required="N" />
+      <field name="SolicitedFlag" required="N" />
+      <field name="Currency" required="N" />
+      <field name="TimeInForce" required="N" />
+      <field name="EffectiveTime" required="N" />
+      <field name="ExpireDate" required="N" />
+      <field name="ExpireTime" required="N" />
+      <field name="GTBookingInst" required="N" />
+      <component name="CommissionData" required="N" />
+      <field name="OrderCapacity" required="N" />
+      <field name="OrderRestrictions" required="N" />
+      <field name="CustOrderCapacity" required="N" />
+      <field name="Rule80A" required="N" />
+      <field name="ForexReq" required="N" />
+      <field name="SettlCurrency" required="N" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+      <field name="FutSettDate2" required="N" />
+      <field name="OrderQty2" required="N" />
+      <field name="Price2" required="N" />
+      <field name="PositionEffect" required="N" />
+      <field name="CoveredOrUncovered" required="N" />
+      <field name="MaxShow" required="N" />
+      <field name="LocateReqd" required="N" />
+      <field name="CancellationRights" required="N" />
+      <field name="MoneyLaunderingStatus" required="N" />
+      <field name="RegistID" required="N" />
+      <field name="Designation" required="N" />
+      <field name="AccruedInterestRate" required="N" />
+      <field name="AccruedInterestAmt" required="N" />
+      <field name="NetMoney" required="N" />
+    </message>
+    <message name="OrderCancelRequest" msgtype="F" msgcat="app">
+      <field name="OrigClOrdID" required="Y" />
+ 
