@@ -875,4 +875,46 @@
         <field name="ContraLegRefID" required="N" />
       </group>
       <field name="ListID" required="N" />
-      <field name="Cros
+      <field name="CrossID" required="N" />
+      <field name="OrigCrossID" required="N" />
+      <field name="CrossType" required="N" />
+      <field name="ExecID" required="Y" />
+      <field name="ExecRefID" required="N" />
+      <field name="ExecType" required="Y" />
+      <field name="OrdStatus" required="Y" />
+      <field name="WorkingIndicator" required="N" />
+      <field name="OrdRejReason" required="N" />
+      <field name="ExecRestatementReason" required="N" />
+      <field name="Account" required="N" />
+      <field name="AccountType" required="N" />
+      <field name="DayBookingInst" required="N" />
+      <field name="BookingUnit" required="N" />
+      <field name="PreallocMethod" required="N" />
+      <field name="SettlmntTyp" required="N" />
+      <field name="FutSettDate" required="N" />
+      <field name="CashMargin" required="N" />
+      <field name="ClearingFeeIndicator" required="N" />
+      <component name="Instrument" required="Y" />
+      <field name="Side" required="Y" />
+      <component name="Stipulations" required="N" />
+      <field name="QuantityType" required="N" />
+      <component name="OrderQtyData" required="Y" />
+      <field name="OrdType" required="N" />
+      <field name="PriceType" required="N" />
+      <field name="Price" required="N" />
+      <field name="StopPx" required="N" />
+      <field name="PegDifference" required="N" />
+      <field name="DiscretionInst" required="N" />
+      <field name="DiscretionOffset" required="N" />
+      <field name="Currency" required="N" />
+      <field name="ComplianceID" required="N" />
+      <field name="SolicitedFlag" required="N" />
+      <field name="TimeInForce" required="N" />
+      <field name="EffectiveTime" required="N" />
+      <field name="ExpireDate" required="N" />
+      <field name="ExpireTime" required="N" />
+      <field name="ExecInst" required="N" />
+      <field name="OrderCapacity" required="N" />
+      <field name="OrderRestrictions" required="N" />
+      <field name="CustOrderCapacity" required="N" />
+      <field name="Rule80A" require
