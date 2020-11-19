@@ -1091,4 +1091,47 @@
     </message>
     <message name="OrderCancelRequest" msgtype="F" msgcat="app">
       <field name="OrigClOrdID" required="Y" />
- 
+      <field name="OrderID" required="N" />
+      <field name="ClOrdID" required="Y" />
+      <field name="SecondaryClOrdID" required="N" />
+      <field name="ClOrdLinkID" required="N" />
+      <field name="ListID" required="N" />
+      <field name="OrigOrdModTime" required="N" />
+      <field name="Account" required="N" />
+      <field name="AccountType" required="N" />
+      <component name="Parties" required="N" />
+      <component name="Instrument" required="Y" />
+      <field name="Side" required="Y" />
+      <field name="TransactTime" required="Y" />
+      <component name="OrderQtyData" required="Y" />
+      <field name="ComplianceID" required="N" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+    </message>
+    <message name="OrderCancelReject" msgtype="9" msgcat="app">
+      <field name="OrderID" required="Y" />
+      <field name="SecondaryOrderID" required="N" />
+      <field name="SecondaryClOrdID" required="N" />
+      <field name="ClOrdID" required="Y" />
+      <field name="ClOrdLinkID" required="N" />
+      <field name="OrigClOrdID" required="Y" />
+      <field name="OrdStatus" required="Y" />
+      <field name="WorkingIndicator" required="N" />
+      <field name="OrigOrdModTime" required="N" />
+      <field name="ListID" required="N" />
+      <field name="Account" required="N" />
+      <field name="AccountType" required="N" />
+      <field name="TradeOriginationDate" required="N" />
+      <field name="TransactTime" required="N" />
+      <field name="CxlRejResponseTo" required="Y" />
+      <field name="CxlRejReason" required="N" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+    </message>
+    <message name="OrderStatusRequest" msgtype="H" msgcat="app">
+      <field name="OrderID" required="N" />
+      <field name="ClOrdID" required="Y" />
+      <field name="SecondaryClOrdID" required="N" />
+      <
