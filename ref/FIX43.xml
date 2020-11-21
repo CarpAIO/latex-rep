@@ -1218,4 +1218,47 @@
         <field name="OrderRestrictions" required="N" />
         <field name="CustOrderCapacity" required="N" />
         <field name="ForexReq" required="N" />
-        <field name="SettlCurrency" required
+        <field name="SettlCurrency" required="N" />
+        <field name="Text" required="N" />
+        <field name="EncodedTextLen" required="N" />
+        <field name="EncodedText" required="N" />
+        <field name="PositionEffect" required="N" />
+        <field name="CoveredOrUncovered" required="N" />
+        <field name="CashMargin" required="N" />
+        <field name="ClearingFeeIndicator" required="N" />
+        <field name="SolicitedFlag" required="N" />
+        <field name="SideComplianceID" required="N" />
+      </group>
+      <component name="Instrument" required="Y" />
+      <field name="SettlmntTyp" required="N" />
+      <field name="FutSettDate" required="N" />
+      <field name="HandlInst" required="Y" />
+      <field name="ExecInst" required="N" />
+      <field name="MinQty" required="N" />
+      <field name="MaxFloor" required="N" />
+      <field name="ExDestination" required="N" />
+      <group name="NoTradingSessions" required="N">
+        <field name="TradingSessionID" required="N" />
+        <field name="TradingSessionSubID" required="N" />
+      </group>
+      <field name="ProcessCode" required="N" />
+      <field name="PrevClosePx" required="N" />
+      <field name="LocateReqd" required="N" />
+      <field name="TransactTime" required="Y" />
+      <component name="Stipulations" required="N" />
+      <field name="OrdType" required="Y" />
+      <field name="PriceType" required="N" />
+      <field name="Price" required="N" />
+      <field name="StopPx" required="N" />
+      <component name="SpreadOrBenchmarkCurveData" required="N" />
+      <component name="YieldData" required="N" />
+      <field name="Currency" required="N" />
+      <field name="ComplianceID" required="N" />
+      <field name="IOIid" required="N" />
+      <field name="QuoteID" required="N" />
+      <field name="TimeInForce" required="N" />
+      <field name="EffectiveTime" required="N" />
+      <field name="ExpireDate" required="N" />
+      <field name="ExpireTime" required="N" />
+      <field name="GTBookingInst" required="N" />
+      <field name="MaxShow
