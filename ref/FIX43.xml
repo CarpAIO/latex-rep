@@ -1389,4 +1389,49 @@
       <field name="ClOrdID" required="Y" />
       <field name="SecondaryClOrdID" required="N" />
       <field name="ClOrdLinkID" required="N" />
-      <component name="Parties" required
+      <component name="Parties" required="N" />
+      <field name="Account" required="N" />
+      <field name="AccountType" required="N" />
+      <field name="DayBookingInst" required="N" />
+      <field name="BookingUnit" required="N" />
+      <field name="PreallocMethod" required="N" />
+      <group name="NoAllocs" required="N">
+        <field name="AllocAccount" required="N" />
+        <field name="IndividualAllocID" required="N" />
+        <field name="AllocQty" required="N" />
+      </group>
+      <field name="SettlmntTyp" required="N" />
+      <field name="FutSettDate" required="N" />
+      <field name="CashMargin" required="N" />
+      <field name="ClearingFeeIndicator" required="N" />
+      <field name="HandlInst" required="Y" />
+      <field name="ExecInst" required="N" />
+      <field name="MinQty" required="N" />
+      <field name="MaxFloor" required="N" />
+      <field name="ExDestination" required="N" />
+      <group name="NoTradingSessions" required="N">
+        <field name="TradingSessionID" required="N" />
+        <field name="TradingSessionSubID" required="N" />
+      </group>
+      <field name="ProcessCode" required="N" />
+      <field name="Side" required="Y" />
+      <component name="Instrument" required="Y" />
+      <field name="PrevClosePx" required="N" />
+      <group name="NoLegs" required="N">
+        <component name="InstrumentLeg" required="N" />
+        <field name="LegPositionEffect" required="N" />
+        <field name="LegCoveredOrUncovered" required="N" />
+        <component name="NestedParties" required="N" />
+        <field name="LegRefID" required="N" />
+        <field name="LegPrice" required="N" />
+        <field name="LegSettlmntTyp" required="N" />
+        <field name="LegFutSettDate" required="N" />
+      </group>
+      <field name="LocateReqd" required="N" />
+      <field name="TransactTime" required="Y" />
+      <field name="QuantityType" required="N" />
+      <component name="OrderQtyData" required="Y" />
+      <field name="OrdType" required="Y" />
+      <field name="PriceType" required="N" />
+      <field name="Price" required="N" />
+ 
