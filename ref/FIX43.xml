@@ -1601,4 +1601,45 @@
       <field name="BasisPxType" required="Y" />
       <field name="StrikeTime" required="N" />
       <field name="Text" required="N" />
-      <fiel
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+    </message>
+    <message name="BidResponse" msgtype="l" msgcat="app">
+      <field name="BidID" required="N" />
+      <field name="ClientBidID" required="N" />
+      <group name="NoBidComponents" required="Y">
+        <component name="CommissionData" required="Y" />
+        <field name="ListID" required="N" />
+        <field name="Country" required="N" />
+        <field name="Side" required="N" />
+        <field name="Price" required="N" />
+        <field name="PriceType" required="N" />
+        <field name="FairValue" required="N" />
+        <field name="NetGrossInd" required="N" />
+        <field name="SettlmntTyp" required="N" />
+        <field name="FutSettDate" required="N" />
+        <field name="TradingSessionID" required="N" />
+        <field name="TradingSessionSubID" required="N" />
+        <field name="Text" required="N" />
+        <field name="EncodedTextLen" required="N" />
+        <field name="EncodedText" required="N" />
+      </group>
+    </message>
+    <message name="NewOrderList" msgtype="E" msgcat="app">
+      <field name="ListID" required="Y" />
+      <field name="BidID" required="N" />
+      <field name="ClientBidID" required="N" />
+      <field name="ProgRptReqs" required="N" />
+      <field name="BidType" required="Y" />
+      <field name="ProgPeriodInterval" required="N" />
+      <field name="CancellationRights" required="N" />
+      <field name="MoneyLaunderingStatus" required="N" />
+      <field name="RegistID" required="N" />
+      <field name="ListExecInstType" required="N" />
+      <field name="ListExecInst" required="N" />
+      <field name="EncodedListExecInstLen" required="N" />
+      <field name="EncodedListExecInst" required="N" />
+      <field name="TotNoOrders" required="Y" />
+      <group name="NoOrders" required="Y">
+        <field name="ClOrdID" required="Y" />
+        <field name="SecondaryClO
