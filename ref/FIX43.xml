@@ -1770,4 +1770,48 @@
       <field name="RptSeq" required="Y" />
       <field name="ListStatusText" required="N" />
       <field name="EncodedListStatusTextLen" required="N" />
-      <field name="Encoded
+      <field name="EncodedListStatusText" required="N" />
+      <field name="TransactTime" required="N" />
+      <field name="TotNoOrders" required="Y" />
+      <group name="NoOrders" required="Y">
+        <field name="ClOrdID" required="Y" />
+        <field name="SecondaryClOrdID" required="N" />
+        <field name="CumQty" required="Y" />
+        <field name="OrdStatus" required="Y" />
+        <field name="WorkingIndicator" required="N" />
+        <field name="LeavesQty" required="Y" />
+        <field name="CxlQty" required="Y" />
+        <field name="AvgPx" required="Y" />
+        <field name="OrdRejReason" required="N" />
+        <field name="Text" required="N" />
+        <field name="EncodedTextLen" required="N" />
+        <field name="EncodedText" required="N" />
+      </group>
+    </message>
+    <message name="Allocation" msgtype="J" msgcat="app">
+      <field name="AllocID" required="Y" />
+      <field name="AllocTransType" required="Y" />
+      <field name="AllocType" required="Y" />
+      <field name="RefAllocID" required="N" />
+      <field name="AllocLinkID" required="N" />
+      <field name="AllocLinkType" required="N" />
+      <field name="BookingRefID" required="N" />
+      <group name="NoOrders" required="Y">
+        <field name="ClOrdID" required="Y" />
+        <field name="OrderID" required="N" />
+        <field name="SecondaryOrderID" required="N" />
+        <field name="SecondaryClOrdID" required="N" />
+        <field name="ListID" required="N" />
+      </group>
+      <group name="NoExecs" required="N">
+        <field name="LastQty" required="N" />      
+        <field name="ExecID" required="N" />
+        <field name="SecondaryExecID" required="N" />
+        <field name="LastPx" required="N" />
+        <field name="LastCapacity" required="N" />
+      </group>
+      <field name="Side" required="Y" />
+      <component name="Instrument" required="Y" />
+      <field name="Quantity" required="Y" />
+      <field name="LastMkt" required="N" />
+      <field name="TradeOriginationDate" r
