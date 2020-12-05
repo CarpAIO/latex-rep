@@ -1814,4 +1814,45 @@
       <component name="Instrument" required="Y" />
       <field name="Quantity" required="Y" />
       <field name="LastMkt" required="N" />
-      <field name="TradeOriginationDate" r
+      <field name="TradeOriginationDate" required="N" />
+      <field name="TradingSessionID" required="N" />
+      <field name="TradingSessionSubID" required="N" />
+      <field name="PriceType" required="N" />
+      <field name="AvgPx" required="Y" />
+      <field name="Currency" required="N" />
+      <field name="AvgPrxPrecision" required="N" />
+      <component name="Parties" required="N" />
+      <field name="TradeDate" required="Y" />
+      <field name="TransactTime" required="N" />
+      <field name="SettlmntTyp" required="N" />
+      <field name="FutSettDate" required="N" />
+      <field name="GrossTradeAmt" required="N" />
+      <field name="Concession" required="N" />
+      <field name="TotalTakedown" required="N" />
+      <field name="NetMoney" required="N" />
+      <field name="PositionEffect" required="N" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+      <field name="NumDaysInterest" required="N" />
+      <field name="AccruedInterestRate" required="N" />
+      <field name="TotalAccruedInterestAmt" required="N" />
+      <field name="LegalConfirm" required="N" />
+      <group name="NoAllocs" required="Y">
+        <field name="AllocAccount" required="Y" />
+        <field name="AllocPrice" required="N" />
+        <field name="AllocQty" required="Y" />
+        <field name="IndividualAllocID" required="N" />
+        <field name="ProcessCode" required="N" />
+        <component name="NestedParties" required="N" />
+        <field name="NotifyBrokerOfCredit" required="N" />
+        <field name="AllocHandlInst" required="N" />
+        <field name="AllocText" required="N" />
+        <field name="EncodedAllocTextLen" required="N" />
+        <field name="EncodedAllocText" required="N" />
+        <component name="CommissionData" required="N" />
+        <field name="AllocAvgPx" required="N" />
+        <field name="AllocNetMoney" required="N" />
+        <field name="SettlCurrAmt" required="N" />
+        <field name="SettlCurrency" required="N" />
+        <field name="SettlCurr
