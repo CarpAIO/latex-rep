@@ -1901,3 +1901,43 @@
       <field name="StandInstDbName" required="N" />
       <field name="StandInstDbID" required="N" />
       <field name="SettlDeliveryType" required="N" />
+      <field name="SettlDepositoryCode" required="N" />
+      <field name="SettlBrkrCode" required="N" />
+      <field name="SettlInstCode" required="N" />
+      <field name="SecuritySettlAgentName" required="N" />
+      <field name="SecuritySettlAgentCode" required="N" />
+      <field name="SecuritySettlAgentAcctNum" required="N" />
+      <field name="SecuritySettlAgentAcctName" required="N" />
+      <field name="SecuritySettlAgentContactName" required="N" />
+      <field name="SecuritySettlAgentContactPhone" required="N" />
+      <field name="CashSettlAgentName" required="N" />
+      <field name="CashSettlAgentCode" required="N" />
+      <field name="CashSettlAgentAcctNum" required="N" />
+      <field name="CashSettlAgentAcctName" required="N" />
+      <field name="CashSettlAgentContactName" required="N" />
+      <field name="CashSettlAgentContactPhone" required="N" />
+      <field name="PaymentMethod" required="N" />
+      <field name="PaymentRef" required="N" />
+      <field name="CardHolderName" required="N" />
+      <field name="CardNumber" required="N" />
+      <field name="CardStartDate" required="N" />
+      <field name="CardExpDate" required="N" />
+      <field name="CardIssNo" required="N" />
+      <field name="PaymentDate" required="N" />
+      <field name="PaymentRemitterID" required="N" />
+    </message>
+    <message name="TradeCaptureReportRequest" msgtype="AD" msgcat="app">
+      <field name="TradeRequestID" required="Y" />
+      <field name="TradeRequestType" required="Y" />
+      <field name="SubscriptionRequestType" required="N" />
+      <field name="ExecID" required="N" />
+      <field name="OrderID" required="N" />
+      <field name="ClOrdID" required="N" />
+      <field name="MatchStatus" required="N" />
+      <component name="Parties" required="N" />
+      <component name="Instrument" required="N" />
+      <group name="NoDates" required="N">
+        <field name="TradeDate" required="N" />
+        <field name="TransactTime" required="N" />
+      </group>
+      <field name="Sid
