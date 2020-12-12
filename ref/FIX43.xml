@@ -1940,4 +1940,47 @@
         <field name="TradeDate" required="N" />
         <field name="TransactTime" required="N" />
       </group>
-      <field name="Sid
+      <field name="Side" required="N" />
+      <field name="Text" required="N" />
+      <field name="EncodedTextLen" required="N" />
+      <field name="EncodedText" required="N" />
+      <field name="TradeInputSource" required="N" />
+      <field name="TradeInputDevice" required="N" />
+    </message>
+    <message name="TradeCaptureReport" msgtype="AE" msgcat="app">
+      <field name="TradeReportID" required="Y" />
+      <field name="TradeReportTransType" required="N" />
+      <field name="TradeRequestID" required="N" />
+      <field name="ExecType" required="Y" />
+      <field name="TradeReportRefID" required="N" />
+      <field name="ExecID" required="N" />
+      <field name="SecondaryExecID" required="N" />
+      <field name="ExecRestatementReason" required="N" />
+      <field name="PreviouslyReported" required="Y" />
+      <component name="Instrument" required="Y" />
+      <component name="OrderQtyData" required="N" />
+      <field name="LastQty" required="Y" />
+      <field name="LastPx" required="Y" />
+      <field name="LastSpotRate" required="N" />
+      <field name="LastForwardPoints" required="N" />
+      <field name="LastMkt" required="N" />
+      <field name="TradeDate" required="Y" />
+      <field name="TransactTime" required="Y" />
+      <field name="SettlmntTyp" required="N" />
+      <field name="FutSettDate" required="N" />
+      <field name="MatchStatus" required="N" />
+      <field name="MatchType" required="N" />
+      <group name="NoSides" required="Y">
+        <field name="Side" required="Y" />
+        <field name="OrderID" required="Y" />
+        <field name="SecondaryOrderID" required="N" />
+        <field name="ClOrdID" required="N" />
+        <component name="Parties" required="N" />
+        <field name="Account" required="N" />
+        <field name="AccountType" required="N" />
+        <field name="ProcessCode" required="N" />
+        <field name="OddLot" required="N" />
+        <group name="NoClearingInstructions" required="N">
+          <field name="ClearingInstruction" required="N" />
+        </group>
+        <field name="ClearingFeeIndi
