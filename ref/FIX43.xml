@@ -2023,4 +2023,47 @@
           <field name="MiscFeeCurr" required="N" />
           <field name="MiscFeeType" required="N" />
         </group>
-      </gr
+      </group>
+    </message>
+    <message name="RegistrationInstructions" msgtype="o" msgcat="app">
+      <field name="RegistID" required="Y" />
+      <field name="RegistTransType" required="Y" />
+      <field name="RegistRefID" required="Y" />
+      <field name="ClOrdID" required="N" />
+      <component name="Parties" required="N" />
+      <field name="Account" required="N" />
+      <field name="RegistAcctType" required="N" />
+      <field name="TaxAdvantageType" required="N" />
+      <field name="OwnershipType" required="N" />
+      <group name="NoRegistDtls" required="N">
+        <field name="RegistDetls" required="N" />
+        <field name="RegistEmail" required="N" />
+        <field name="MailingDtls" required="N" />
+        <field name="MailingInst" required="N" />
+        <component name="NestedParties" required="N" />
+        <field name="OwnerType" required="N" />
+        <field name="DateOfBirth" required="N" />
+        <field name="InvestorCountryOfResidence" required="N" />
+      </group>
+      <group name="NoDistribInsts" required="N">
+        <field name="DistribPaymentMethod" required="N" />
+        <field name="DistribPercentage" required="N" />
+        <field name="CashDistribCurr" required="N" />
+        <field name="CashDistribAgentName" required="N" />
+        <field name="CashDistribAgentCode" required="N" />
+        <field name="CashDistribAgentAcctNumber" required="N" />
+        <field name="CashDistribPayRef" required="N" />
+        <field name="CashDistribAgentAcctName" required="N" />
+      </group>
+    </message>
+    <message name="RegistrationInstructionsResponse" msgtype="p" msgcat="app">
+      <field name="RegistID" required="Y" />
+      <field name="RegistTransType" required="Y" />
+      <field name="RegistRefID" required="Y" />
+      <field name="ClOrdID" required="N" />
+      <component name="Parties" required="N" />
+      <field name="Account" required="N" />
+      <field name="RegistStatus" required="Y" />
+      <field name="RegistRejReasonCode" required="N" />
+      <field name="RegistRejReasonText" required="N" />
+    </m
