@@ -1983,4 +1983,44 @@
         <group name="NoClearingInstructions" required="N">
           <field name="ClearingInstruction" required="N" />
         </group>
-        <field name="ClearingFeeIndi
+        <field name="ClearingFeeIndicator" required="N" />
+        <field name="TradeInputSource" required="N" />
+        <field name="TradeInputDevice" required="N" />
+        <field name="Currency" required="N" />
+        <field name="ComplianceID" required="N" />
+        <field name="SolicitedFlag" required="N" />
+        <field name="OrderCapacity" required="N" />
+        <field name="OrderRestrictions" required="N" />
+        <field name="CustOrderCapacity" required="N" />
+        <field name="TransBkdTime" required="N" />
+        <field name="TradingSessionID" required="N" />
+        <field name="TradingSessionSubID" required="N" />
+        <component name="CommissionData" required="N" />
+        <field name="GrossTradeAmt" required="N" />
+        <field name="NumDaysInterest" required="N" />
+        <field name="ExDate" required="N" />
+        <field name="AccruedInterestRate" required="N" />
+        <field name="AccruedInterestAmt" required="N" />
+        <field name="Concession" required="N" />
+        <field name="TotalTakedown" required="N" />
+        <field name="NetMoney" required="N" />
+        <field name="SettlCurrAmt" required="N" />
+        <field name="SettlCurrency" required="N" />
+        <field name="SettlCurrFxRate" required="N" />
+        <field name="SettlCurrFxRateCalc" required="N" />
+        <field name="PositionEffect" required="N" />
+        <field name="Text" required="N" />
+        <field name="EncodedTextLen" required="N" />
+        <field name="EncodedText" required="N" />
+        <field name="MultiLegReportingType" required="N" />
+        <group name="NoContAmts" required="N">
+          <field name="ContAmtType" required="N" />
+          <field name="ContAmtValue" required="N" />
+          <field name="ContAmtCurr" required="N" />        
+        </group>
+        <group name="NoMiscFees" required="N">
+          <field name="MiscFeeAmt" required="N" />
+          <field name="MiscFeeCurr" required="N" />
+          <field name="MiscFeeType" required="N" />
+        </group>
+      </gr
