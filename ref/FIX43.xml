@@ -2066,4 +2066,49 @@
       <field name="RegistStatus" required="Y" />
       <field name="RegistRejReasonCode" required="N" />
       <field name="RegistRejReasonText" required="N" />
-    </m
+    </message>
+  </messages>
+  <components>
+    <component name="Instrument">
+      <field name="Symbol" required="Y" />
+      <field name="SymbolSfx" required="N" />
+      <field name="SecurityID" required="N" />
+      <field name="SecurityIDSource" required="N" />
+      <group name="NoSecurityAltID" required="N">
+        <field name="SecurityAltID" required="N" />
+        <field name="SecurityAltIDSource" required="N" />
+      </group>
+      <field name="Product" required="N" />
+      <field name="CFICode" required="N" />
+      <field name="SecurityType" required="N" />
+      <field name="MaturityMonthYear" required="N" />
+      <field name="MaturityDate" required="N" />
+      <field name="CouponPaymentDate" required="N" />
+      <field name="IssueDate" required="N" />
+      <field name="RepoCollateralSecurityType" required="N" />
+      <field name="RepurchaseTerm" required="N" />
+      <field name="RepurchaseRate" required="N" />
+      <field name="Factor" required="N" />
+      <field name="CreditRating" required="N" />
+      <field name="InstrRegistry" required="N" />
+      <field name="CountryOfIssue" required="N" />
+      <field name="StateOrProvinceOfIssue" required="N" />
+      <field name="LocaleOfIssue" required="N" />
+      <field name="RedemptionDate" required="N" />
+      <field name="StrikePrice" required="N" />
+      <field name="OptAttribute" required="N" />
+      <field name="ContractMultiplier" required="N" />
+      <field name="CouponRate" required="N" />
+      <field name="SecurityExchange" required="N" />
+      <field name="Issuer" required="N" />
+      <field name="EncodedIssuerLen" required="N" />
+      <field name="EncodedIssuer" required="N" />
+      <field name="SecurityDesc" required="N" />
+      <field name="EncodedSecurityDescLen" required="N" />
+      <field name="EncodedSecurityDesc" required="N" />
+    </component>
+    <component name="InstrumentLeg">
+      <field name="LegSymbol" required="Y" />
+      <field name="LegSymbolSfx" required="N" />
+      <field name="LegSecurityID" required="N" />
+      <field n
