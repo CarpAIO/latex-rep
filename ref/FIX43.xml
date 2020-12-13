@@ -2111,4 +2111,44 @@
       <field name="LegSymbol" required="Y" />
       <field name="LegSymbolSfx" required="N" />
       <field name="LegSecurityID" required="N" />
-      <field n
+      <field name="LegSecurityIDSource" required="N" />
+      <group name="NoLegSecurityAltID" required="N">
+        <field name="LegSecurityAltID" required="N" />
+        <field name="LegSecurityAltIDSource" required="N" />
+      </group>
+      <field name="LegProduct" required="N" />
+      <field name="LegCFICode" required="N" />
+      <field name="LegSecurityType" required="N" />
+      <field name="LegMaturityMonthYear" required="N" />
+      <field name="LegMaturityDate" required="N" />
+      <field name="LegCouponPaymentDate" required="N" />
+      <field name="LegIssueDate" required="N" />
+      <field name="LegRepoCollateralSecurityType" required="N" />
+      <field name="LegRepurchaseTerm" required="N" />
+      <field name="LegRepurchaseRate" required="N" />
+      <field name="LegFactor" required="N" />
+      <field name="LegCreditRating" required="N" />
+      <field name="LegInstrRegistry" required="N" />
+      <field name="LegCountryOfIssue" required="N" />
+      <field name="LegStateOrProvinceOfIssue" required="N" />
+      <field name="LegLocaleOfIssue" required="N" />
+      <field name="LegRedemptionDate" required="N" />
+      <field name="LegStrikePrice" required="N" />
+      <field name="LegOptAttribute" required="N" />
+      <field name="LegContractMultiplier" required="N" />
+      <field name="LegCouponRate" required="N" />
+      <field name="LegSecurityExchange" required="N" />
+      <field name="LegIssuer" required="N" />
+      <field name="EncodedLegIssuerLen" required="N" />
+      <field name="EncodedLegIssuer" required="N" />
+      <field name="LegSecurityDesc" required="N" />
+      <field name="EncodedLegSecurityDescLen" required="N" />
+      <field name="EncodedLegSecurityDesc" required="N" />
+      <field name="LegRatioQty" required="N" />
+      <field name="LegSide" required="N" />
+    </component>
+    <component name="OrderQtyData">
+      <field name="OrderQty" required="N" />
+      <field name="CashOrderQty" required="N" />
+      <field name="OrderPercent" required="N" />
+      <field name="RoundingDirectio
