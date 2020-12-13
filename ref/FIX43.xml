@@ -2151,4 +2151,53 @@
       <field name="OrderQty" required="N" />
       <field name="CashOrderQty" required="N" />
       <field name="OrderPercent" required="N" />
-      <field name="RoundingDirectio
+      <field name="RoundingDirection" required="N" />
+      <field name="RoundingModulus" required="N" />
+    </component>
+    <component name="CommissionData">
+      <field name="Commission" required="N" />
+      <field name="CommType" required="N" />
+      <field name="CommCurrency" required="N" />
+      <field name="FundRenewWaiv" required="N" />
+    </component>
+    <component name="Parties">
+      <group name="NoPartyIDs" required="N">
+        <field name="PartyID" required="N" />
+        <field name="PartyIDSource" required="N" />
+        <field name="PartyRole" required="N" />
+        <field name="PartySubID" required="N" />
+      </group>
+    </component>
+    <component name="NestedParties">
+      <group name="NoNestedPartyIDs" required="N">
+        <field name="NestedPartyID" required="N" />
+        <field name="NestedPartyIDSource" required="N" />
+        <field name="NestedPartyRole" required="N" />
+        <field name="NestedPartySubID" required="N" />
+      </group>
+    </component>
+    <component name="SpreadOrBenchmarkCurveData">
+      <field name="Spread" required="N" />
+      <field name="BenchmarkCurveCurrency" required="N" />
+      <field name="BenchmarkCurveName" required="N" />
+      <field name="BenchmarkCurvePoint" required="N" />
+    </component>
+    <component name="Stipulations">
+      <group name="NoStipulations" required="N">
+        <field name="StipulationType" required="N" />
+        <field name="StipulationValue" required="N" />
+      </group>
+    </component>
+    <component name="YieldData">
+      <field name="YieldType" required="N" />
+      <field name="Yield" required="N" />
+    </component>
+    <component name="UnderlyingInstrument">
+      <field name="UnderlyingSymbol" required="Y" />
+      <field name="UnderlyingSymbolSfx" required="N" />
+      <field name="UnderlyingSecurityID" required="N" />
+      <field name="UnderlyingSecurityIDSource" required="N" />
+      <group name="NoUnderlyingSecurityAltID" required="N">
+        <field name="UnderlyingSecurityAltID" required="N" />
+        <field name="UnderlyingSecurityAltIDSource" required="N" />
+      </group
