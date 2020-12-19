@@ -2236,4 +2236,45 @@
     <field number="1" name="Account" type="STRING" />
     <field number="2" name="AdvId" type="STRING" />
     <field number="3" name="AdvRefID" type="STRING" />
-    <field number="4" name="AdvSid
+    <field number="4" name="AdvSide" type="CHAR">
+      <value enum="B" description="BUY" />
+      <value enum="S" description="SELL" />
+      <value enum="X" description="CROSS" />
+      <value enum="T" description="TRADE" />
+    </field>
+    <field number="5" name="AdvTransType" type="STRING">
+      <value enum="N" description="NEW" />
+      <value enum="C" description="CANCEL" />
+      <value enum="R" description="REPLACE" />
+    </field>
+    <field number="6" name="AvgPx" type="PRICE" />
+    <field number="7" name="BeginSeqNo" type="SEQNUM" />
+    <field number="8" name="BeginString" type="STRING" />
+    <field number="9" name="BodyLength" type="LENGTH" />
+    <field number="10" name="CheckSum" type="STRING" />
+    <field number="11" name="ClOrdID" type="STRING" />
+    <field number="12" name="Commission" type="AMT" />
+    <field number="13" name="CommType" type="CHAR">
+      <value enum="1" description="PER_SHARE" />
+      <value enum="2" description="PERCENTAGE" />
+      <value enum="3" description="ABSOLUTE" />
+      <value enum="4" description="PERCENTAGE_WAIVED_CASH_DISCOUNT" />
+      <value enum="5" description="PERCENTAGE_WAIVED_ENHANCED_UNITS" />
+      <value enum="6" description="PER_BOND" />
+    </field>
+    <field number="14" name="CumQty" type="QTY" />
+    <field number="15" name="Currency" type="CURRENCY" />
+    <field number="16" name="EndSeqNo" type="SEQNUM" />
+    <field number="17" name="ExecID" type="STRING" />
+    <field number="18" name="ExecInst" type="MULTIPLEVALUESTRING">
+      <value enum="1" description="NOT_HELD" />
+      <value enum="2" description="WORK" />
+      <value enum="3" description="GO_ALONG" />
+      <value enum="4" description="OVER_THE_DAY" />
+      <value enum="5" description="HELD" />
+      <value enum="6" description="PARTICIPATE_DONT_INITIATE" />
+      <value enum="7" description="STRICT_SCALE" />
+      <value enum="8" description="TRY_TO_SCALE" />
+      <value enum="9" description="STAY_ON_BIDSIDE" />
+      <value enum="0" description="STAY_ON_OFFERSIDE" />
+      <value enum="A" 
