@@ -2277,4 +2277,42 @@
       <value enum="8" description="TRY_TO_SCALE" />
       <value enum="9" description="STAY_ON_BIDSIDE" />
       <value enum="0" description="STAY_ON_OFFERSIDE" />
-      <value enum="A" 
+      <value enum="A" description="NO_CROSS" />
+      <value enum="B" description="OK_TO_CROSS" />
+      <value enum="C" description="CALL_FIRST" />
+      <value enum="D" description="PERCENT_OF_VOLUME" />
+      <value enum="E" description="DO_NOT_INCREASE" />
+      <value enum="F" description="DO_NOT_REDUCE" />
+      <value enum="G" description="ALL_OR_NONE" />
+      <value enum="H" description="REINSTATE_ON_SYSTEM_FAILURE" />
+      <value enum="I" description="INSTITUTIONS_ONLY" />
+      <value enum="J" description="REINSTATE_ON_TRADING_HALT" />
+      <value enum="K" description="CANCEL_ON_TRADING_HALT" />
+      <value enum="L" description="LAST_PEG" />
+      <value enum="M" description="MID_PRICE_PEG" />
+      <value enum="N" description="NON_NEGOTIABLE" />
+      <value enum="O" description="OPENING_PEG" />
+      <value enum="P" description="MARKET_PEG" />
+      <value enum="Q" description="CANCEL_ON_SYSTEM_FAILURE" />
+      <value enum="R" description="PRIMARY_PEG" />
+      <value enum="S" description="SUSPEND" />
+      <value enum="T" description="FIXED_PEG" />
+      <value enum="U" description="CUSTOMER_DISPLAY_INSTRUCTION" />
+      <value enum="V" description="NETTING" />
+      <value enum="W" description="PEG_TO_VWAP" />
+      <value enum="X" description="TRADE_ALONG" />
+      <value enum="Y" description="TRY_TO_STOP" />
+    </field>
+    <field number="19" name="ExecRefID" type="STRING" />
+    <field number="20" name="ExecTransType" type="CHAR">
+      <value enum="0" description="NEW" />
+      <value enum="1" description="CANCEL" />
+      <value enum="2" description="CORRECT" />
+      <value enum="3" description="STATUS" />
+    </field>
+    <field number="21" name="HandlInst" type="CHAR">
+      <value enum="1" description="AUTOMATED_EXECUTION_ORDER_PRIVATE" />
+      <value enum="2" description="AUTOMATED_EXECUTION_ORDER_PUBLIC" />
+      <value enum="3" description="MANUAL_ORDER" />
+    </field>
+    <fi
