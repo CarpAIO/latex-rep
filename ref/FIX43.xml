@@ -2393,4 +2393,39 @@
       <value enum="Z" description="QUOTE_CANCEL" />
       <value enum="a" description="QUOTE_STATUS_REQUEST" />
       <value enum="b" description="MASS_QUOTE_ACKNOWLEDGEMENT" />
-      <value enum="c" description="SECURITY_DEFINITION_REQUE
+      <value enum="c" description="SECURITY_DEFINITION_REQUEST" />
+      <value enum="d" description="SECURITY_DEFINITION" />
+      <value enum="e" description="SECURITY_STATUS_REQUEST" />
+      <value enum="f" description="SECURITY_STATUS" />
+      <value enum="g" description="TRADING_SESSION_STATUS_REQUEST" />
+      <value enum="h" description="TRADING_SESSION_STATUS" />
+      <value enum="i" description="MASS_QUOTE" />
+      <value enum="j" description="BUSINESS_MESSAGE_REJECT" />
+      <value enum="k" description="BID_REQUEST" />
+      <value enum="l" description="BID_RESPONSE" />
+      <value enum="m" description="LIST_STRIKE_PRICE" />
+      <value enum="n" description="XML_MESSAGE" />
+      <value enum="o" description="REGISTRATION_INSTRUCTIONS" />
+      <value enum="p" description="REGISTRATION_INSTRUCTIONS_RESPONSE" />
+      <value enum="q" description="ORDER_MASS_CANCEL_REQUEST" />
+      <value enum="r" description="ORDER_MASS_CANCEL_REPORT" />
+      <value enum="s" description="NEW_ORDER_CROSS" />
+      <value enum="t" description="CROSS_ORDER_CANCEL" />
+      <value enum="u" description="CROSS_ORDER_CANCEL_REQUEST" />
+      <value enum="v" description="SECURITY_TYPE_REQUEST" />
+      <value enum="w" description="SECURITY_TYPES" />
+      <value enum="x" description="SECURITY_LIST_REQUEST" />
+      <value enum="y" description="SECURITY_LIST" />
+      <value enum="z" description="DERIVATIVE_SECURITY_LIST_REQUEST" />
+      <value enum="AA" description="DERIVATIVE_SECURITY_LIST" />
+      <value enum="AB" description="NEW_ORDER_MULTILEG" />
+      <value enum="AC" description="MULTILEG_ORDER_CANCEL" />
+      <value enum="AD" description="TRADE_CAPTURE_REPORT_REQUEST" />
+      <value enum="AE" description="TRADE_CAPTURE_REPORT" />
+      <value enum="AF" description="ORDER_MASS_STATUS_REQUEST" />
+      <value enum="AG" description="QUOTE_REQUEST_REJECT" />
+      <value enum="AH" description="RFQ_REQUEST" />
+      <value enum="AI" description="QUOTE_STATUS_REPORT" />
+    </field>
+    <field number="36" name="NewSeqNo" type="SEQNUM" />
+    <field num
