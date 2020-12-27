@@ -2468,4 +2468,35 @@
       <value enum="I" description="FUNARI" />
       <value enum="J" description="MARKET_IF_TOUCHED" />
       <value enum="K" description="MARKET_WITH_LEFTOVER_AS_LIMIT" />
-      <value enum="L" description="PREVIOUS_FUND_VALUATION_POI
+      <value enum="L" description="PREVIOUS_FUND_VALUATION_POINT" />
+      <value enum="M" description="NEXT_FUND_VALUATION_POINT" />
+      <value enum="P" description="PEGGED" />
+    </field>
+    <field number="41" name="OrigClOrdID" type="STRING" />
+    <field number="42" name="OrigTime" type="UTCTIMESTAMP" />
+    <field number="43" name="PossDupFlag" type="BOOLEAN" />
+    <field number="44" name="Price" type="PRICE" />
+    <field number="45" name="RefSeqNum" type="SEQNUM" />
+    <field number="46" name="RelatdSym" type="STRING" />
+    <field type="CHAR" name="Rule80A" number="47">
+      <value enum="A" description="AGENCY_SINGLE_ORDER" />
+      <value enum="B" description="SHORT_EXEMPT_TRANSACTION_REFER_TO_A_TYPE" />
+      <value enum="C" description="PROGRAM_ORDER_NON_INDEX_ARB_FOR_MEMBER_FIRM" />
+      <value enum="D" description="PROGRAM_ORDER_INDEX_ARB_FOR_MEMBER_FIRM" />
+      <value enum="E" description="SHORT_EXEMPT_TRANSACTION_FOR_PRINCIPAL" />
+      <value enum="F" description="SHORT_EXEMPT_TRANSACTION_REFER_TO_W_TYPE" />
+      <value enum="H" description="SHORT_EXEMPT_TRANSACTION_REFER_TO_I_TYPE" />
+      <value enum="I" description="INDIVIDUAL_INVESTOR" />
+      <value enum="J" description="PROGRAM_ORDER_INDEX_ARB_FOR_INDIVIDUAL_CUSTOMER" />
+      <value enum="K" description="PROGRAM_ORDER_NON_INDEX_ARB_FOR_INDIVIDUAL_CUSTOMER" />
+      <value enum="L" description="SHORT_EXEMPT_AFFILIATED" />
+      <value enum="M" description="PROGRAM_ORDER_INDEX_ARB_FOR_OTHER_MEMBER" />
+      <value enum="N" description="PROGRAM_ORDER_NON_INDEX_ARB_FOR_OTHER_MEMBER" />
+      <value enum="O" description="PROPRIETARY_AFFILIATED" />
+      <value enum="P" description="PRINCIPAL" />
+      <value enum="R" description="TRANSACTIONS_NON_MEMBER" />
+      <value enum="S" description="SPECIALIST_TRADES" />
+      <value enum="T" description="TRANSACTIONS_UNAFFILIATED_MEMBER" />
+      <value enum="U" description="PROGRAM_ORDER_INDEX_ARB_FOR_OTHER_AGENCY" />
+      <value enum="W" description="ALL_OTHER_ORDERS_AS_AGENT_FOR_OTHER_MEMBER" />
+      <value enum="X" descripti
