@@ -2499,4 +2499,44 @@
       <value enum="T" description="TRANSACTIONS_UNAFFILIATED_MEMBER" />
       <value enum="U" description="PROGRAM_ORDER_INDEX_ARB_FOR_OTHER_AGENCY" />
       <value enum="W" description="ALL_OTHER_ORDERS_AS_AGENT_FOR_OTHER_MEMBER" />
-      <value enum="X" descripti
+      <value enum="X" description="SHORT_EXEMPT_NOT_AFFILIATED" />
+      <value enum="Y" description="PROGRAM_ORDER_NON_INDEX_ARB_FOR_OTHER_AGENCY" />
+      <value enum="Z" description="SHORT_EXEMPT_NONMEMBER" />
+    </field>
+    <field number="48" name="SecurityID" type="STRING" />
+    <field number="49" name="SenderCompID" type="STRING" />
+    <field number="50" name="SenderSubID" type="STRING" />
+    <field number="51" name="SendingDate" type="LOCALMKTDATE" />
+    <field number="52" name="SendingTime" type="UTCTIMESTAMP" />
+    <field number="53" name="Quantity" type="QTY" />
+    <field number="54" name="Side" type="CHAR">
+      <value enum="1" description="BUY" />
+      <value enum="2" description="SELL" />
+      <value enum="3" description="BUY_MINUS" />
+      <value enum="4" description="SELL_PLUS" />
+      <value enum="5" description="SELL_SHORT" />
+      <value enum="6" description="SELL_SHORT_EXEMPT" />
+      <value enum="7" description="UNDISCLOSED" />
+      <value enum="8" description="CROSS" />
+      <value enum="9" description="CROSS_SHORT" />
+      <value enum="A" description="CROSS_SHORT_EXEMPT" />
+      <value enum="B" description="AS_DEFINED" />
+      <value enum="C" description="OPPOSITE" />
+    </field>
+    <field number="55" name="Symbol" type="STRING" />
+    <field number="56" name="TargetCompID" type="STRING" />
+    <field number="57" name="TargetSubID" type="STRING" />
+    <field number="58" name="Text" type="STRING" />
+    <field number="59" name="TimeInForce" type="CHAR">
+      <value enum="0" description="DAY" />
+      <value enum="1" description="GOOD_TILL_CANCEL" />
+      <value enum="2" description="AT_THE_OPENING" />
+      <value enum="3" description="IMMEDIATE_OR_CANCEL" />
+      <value enum="4" description="FILL_OR_KILL" />
+      <value enum="5" description="GOOD_TILL_CROSSING" />
+      <value enum="6" description="GOOD_TILL_DATE" />
+      <value enum="7" description="AT_THE_CLOSE" />
+    </field>
+    <field number="60" name="TransactTime" type="UTCTIMESTAMP" />
+    <field number="61" name="Urgency" type="CHAR">
+ 
