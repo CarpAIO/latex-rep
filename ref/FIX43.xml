@@ -2539,4 +2539,43 @@
     </field>
     <field number="60" name="TransactTime" type="UTCTIMESTAMP" />
     <field number="61" name="Urgency" type="CHAR">
- 
+      <value enum="0" description="NORMAL" />
+      <value enum="1" description="FLASH" />
+      <value enum="2" description="BACKGROUND" />
+    </field>
+    <field number="62" name="ValidUntilTime" type="UTCTIMESTAMP" />
+    <field number="63" name="SettlmntTyp" type="CHAR">
+      <value enum="0" description="REGULAR" />
+      <value enum="1" description="CASH" />
+      <value enum="2" description="NEXT_DAY" />
+      <value description="T_PLUS_2" enum="3" />
+      <value description="T_PLUS_3" enum="4" />
+      <value description="T_PLUS_4" enum="5" />
+      <value enum="6" description="FUTURE" />
+      <value enum="7" description="WHEN_AND_IF_ISSUED" />
+      <value enum="8" description="SELLERS_OPTION" />
+      <value description="T_PLUS_5" enum="9" />
+      <value description="T_PLUS_1" enum="A" />
+    </field>
+    <field number="64" name="FutSettDate" type="LOCALMKTDATE" />
+    <field number="65" name="SymbolSfx" type="STRING" />
+    <field number="66" name="ListID" type="STRING" />
+    <field number="67" name="ListSeqNo" type="INT" />
+    <field number="68" name="TotNoOrders" type="INT" />
+    <field number="69" name="ListExecInst" type="STRING" />
+    <field number="70" name="AllocID" type="STRING" />
+    <field number="71" name="AllocTransType" type="CHAR">
+      <value enum="0" description="NEW" />
+      <value enum="1" description="REPLACE" />
+      <value enum="2" description="CANCEL" />
+      <value enum="3" description="PRELIMINARY" />
+      <value enum="4" description="CALCULATED" />
+      <value enum="5" description="CALCULATED_WITHOUT_PRELIMINARY" />
+    </field>
+    <field number="72" name="RefAllocID" type="STRING" />
+    <field number="73" name="NoOrders" type="NUMINGROUP" />
+    <field number="74" name="AvgPrxPrecision" type="INT" />
+    <field number="75" name="TradeDate" type="LOCALMKTDATE" />
+    <field number="76" name="ExecBroker" type="STRING" />
+    <field number="77" name="PositionEffect" type="CHAR" />
+    <field nu
