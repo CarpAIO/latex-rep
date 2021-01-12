@@ -2805,4 +2805,37 @@
       <value enum="CB" description="CONVERTABLE_BOND" />
       <value enum="DUAL" description="DUAL_CURRENCY" />
       <value enum="XLINKD" description="INDEX_LINKED" />
-      <value enum="STRUCT" description="STRUCTURE
+      <value enum="STRUCT" description="STRUCTURED_NOTES" />
+      <value enum="YANK" description="YANKEE_CORPORATE_BOND" />
+      <value enum="FOR" description="FOREIGN_EXCHANGE_CONTRACT" />
+      <value enum="CS" description="COMMON_STOCK" />
+      <value enum="PS" description="PREFERED_STOCK" />
+      <value enum="BRADY" description="BRADY_BOND" />
+      <value enum="TBOND" description="US_TREASURY_BOND" />
+      <value enum="TINT" description="INTEREST_STRIP_FROM_ANY_BOND_OR_NOTE" />
+      <value enum="TIPS" description="TREASURY_INFLATION_PROTECTED_SECURITIES" />
+      <value enum="TCAL" description="PRINCIPAL_STRIP_OF_A_CALLABLE_BOND_OR_NOTE" />
+      <value enum="TPRN" description="PRINCIPAL_STRIP_FROM_A_NON_CALLABLE_BOND_OR_NOTE" />
+      <value enum="UST" description="US_TREASURY_NOTE_BOND" />
+      <value enum="USTB" description="US_TREASURY_BILL" />
+      <value enum="TERM" description="TERM_LOAN" />
+      <value enum="RVLV" description="REVOLVER_LOAN" />
+      <value enum="RVLVTRM" description="REVOLVER_TERM_LOAN" />
+      <value enum="BRIDGE" description="BRIDGE_LOAN" />
+      <value enum="LOFC" description="LETTER_OF_CREDIT" />
+      <value enum="SWING" description="SWING_LINE_FACILITY" />
+      <value enum="DINP" description="DEBTOR_IN_POSSESSION" />
+      <value enum="DEFLTED" description="DEFAULTED" />
+      <value enum="WITHDRN" description="WITHDRAWN" />
+      <value enum="REPLACD" description="REPLACED" />
+      <value enum="MATURED" description="MATURED" />
+      <value enum="AMENDED" description="AMENDED_AND_RESTATED" />
+      <value enum="RETIRED" description="RETIRED" />
+      <value enum="BA" description="BANKERS_ACCEPTANCE" />
+      <value enum="BN" description="BANK_NOTES" />
+      <value enum="BOX" description="BILL_OF_EXCHANGES" />
+      <value enum="CD" description="CERTIFICATE_OF_DEPOSIT" />
+      <value enum="CL" description="CALL_LOANS" />
+      <value enum="CP" description="COMMERCIAL_PAPER" />
+      <value enum="DP" description="DEPOSIT_NOTES" />
+      <value enum="LQ
