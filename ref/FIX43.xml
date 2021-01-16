@@ -2979,4 +2979,34 @@
     <field number="229" name="TradeOriginationDate" type="UTCDATE" />
     <field number="230" name="ExDate" type="UTCDATE" />
     <field number="231" name="ContractMultiplier" type="FLOAT" />
-    <field number="232"
+    <field number="232" name="NoStipulations" type="NUMINGROUP" />
+    <field number="233" name="StipulationType" type="STRING" />
+    <field number="234" name="StipulationValue" type="STRING" />
+    <field number="235" name="YieldType" type="STRING">
+      <value enum="AFTERTAX" description="AFTER_TAX_YIELD" />
+      <value enum="ANNUAL" description="ANNUAL_YIELD" />
+      <value enum="ATISSUE" description="YIELD_AT_ISSUE" />
+      <value enum="AVGLIFE" description="YIELD_TO_AVERAGE_LIFE" />
+      <value enum="AVGMATURITY" description="YIELD_TO_AVERAGE_MATURITY" />
+      <value enum="BOOK" description="BOOK_YIELD" />
+      <value enum="CALL" description="YIELD_TO_NEXT_CALL" />
+      <value enum="CHANGE" description="YIELD_CHANGE_SINCE_CLOSE" />
+      <value enum="CLOSE" description="CLOSING_YIELD" />
+      <value enum="COMPOUND" description="COMPOUND_YIELD" />
+      <value enum="CURRENT" description="CURRENT_YIELD" />
+      <value enum="GROSS" description="TRUE_GROSS_YIELD" />
+      <value enum="GOVTEQUIV" description="GOVERNMENT_EQUIVALENT_YIELD" />
+      <value enum="INFLATION" description="YIELD_WITH_INFLATION_ASSUMPTION" />
+      <value enum="INVERSEFLOATER" description="INVERSE_FLOATER_BOND_YIELD" />
+      <value enum="LASTCLOSE" description="MOST_RECENT_CLOSING_YIELD" />
+      <value enum="LASTMONTH" description="CLOSING_YIELD_MOST_RECENT_MONTH" />
+      <value enum="LASTQUARTER" description="CLOSING_YIELD_MOST_RECENT_QUARTER" />
+      <value enum="LASTYEAR" description="CLOSING_YIELD_MOST_RECENT_YEAR" />
+      <value enum="LONGAVGLIFE" description="YIELD_TO_LONGEST_AVERAGE_LIFE" />
+      <value enum="LONGEST" description="YIELD_TO_LONGEST_AVERAGE" />
+      <value enum="MARK" description="MARK_TO_MARKET_YIELD" />
+      <value enum="MATURITY" description="YIELD_TO_MATURITY" />
+      <value enum="NEXTREFUND" description="YIELD_TO_NEXT_REFUND" />
+      <value enum="OPENAVG" description="OPEN_AVERAGE_YIELD" />
+      <value enum="PUT" description="YIELD_TO_NEXT_PUT" />
+      <value enum="PREVCLOSE" description="PREVIOUS_CLOSE_YIELD" />
