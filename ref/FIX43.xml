@@ -2942,4 +2942,41 @@
       <value enum="2" description="FORWARD" />
       <value enum="3" description="FORWARD_AND_MATCH" />
     </field>
-    <field number="
+    <field number="210" name="MaxShow" type="QTY" />
+    <field number="211" name="PegDifference" type="PRICEOFFSET" />
+    <field number="212" name="XmlDataLen" type="LENGTH" />
+    <field number="213" name="XmlData" type="DATA" />
+    <field number="214" name="SettlInstRefID" type="STRING" />
+    <field number="215" name="NoRoutingIDs" type="NUMINGROUP" />
+    <field number="216" name="RoutingType" type="INT">
+      <value enum="1" description="TARGET_FIRM" />
+      <value enum="2" description="TARGET_LIST" />
+      <value enum="3" description="BLOCK_FIRM" />
+      <value enum="4" description="BLOCK_LIST" />
+    </field>
+    <field number="217" name="RoutingID" type="STRING" />
+    <field number="218" name="Spread" type="PRICEOFFSET" />
+    <field number="219" name="Benchmark" type="CHAR">
+      <value enum="1" description="CURVE" />
+      <value enum="2" description="FIVEYR" />
+      <value enum="3" description="OLD5" />
+      <value enum="4" description="TENYR" />
+      <value enum="5" description="OLD10" />
+      <value enum="6" description="THIRTYYR" />
+      <value enum="7" description="OLD30" />
+      <value enum="8" description="THREEMOLIBOR" />
+      <value enum="9" description="SIXMOLIBOR" />
+    </field>
+    <field number="220" name="BenchmarkCurveCurrency" type="CURRENCY" />
+    <field number="221" name="BenchmarkCurveName" type="STRING" />
+    <field number="222" name="BenchmarkCurvePoint" type="STRING" />
+    <field number="223" name="CouponRate" type="PERCENTAGE" />
+    <field number="224" name="CouponPaymentDate" type="UTCDATE" />
+    <field number="225" name="IssueDate" type="UTCDATE" />
+    <field number="226" name="RepurchaseTerm" type="INT" />
+    <field number="227" name="RepurchaseRate" type="PERCENTAGE" />
+    <field number="228" name="Factor" type="FLOAT" />
+    <field number="229" name="TradeOriginationDate" type="UTCDATE" />
+    <field number="230" name="ExDate" type="UTCDATE" />
+    <field number="231" name="ContractMultiplier" type="FLOAT" />
+    <field number="232"
