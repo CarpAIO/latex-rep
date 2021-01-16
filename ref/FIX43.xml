@@ -2870,4 +2870,36 @@
       <value enum="SPCLT" description="SPECIAL_TAX" />
       <value enum="TAN" description="TAX_ANTICIPATION_NOTE" />
       <value enum="TAXA" description="TAX_ALLOCATION" />
-      <value enum=
+      <value enum="TECP" description="TAX_EXEMPT_COMMERCIAL_PAPER" />
+      <value enum="TRAN" description="TAX_AND_REVENUE_ANTICIPATION_NOTE" />
+      <value enum="VRDN" description="VARIABLE_RATE_DEMAND_NOTE" />
+      <value enum="WAR" description="WARRANT" />
+      <value enum="MF" description="MUTUAL_FUND" />
+      <value enum="MLEG" description="MULTI_LEG_INSTRUMENT" />
+      <value enum="NONE" description="NO_SECURITY_TYPE" />
+      <value description="WILDCARD" enum="?" />
+    </field>
+    <field number="168" name="EffectiveTime" type="UTCTIMESTAMP" />
+    <field number="169" name="StandInstDbType" type="INT">
+      <value enum="0" description="OTHER" />
+      <value enum="1" description="DTC_SID" />
+      <value enum="2" description="THOMSON_ALERT" />
+      <value enum="3" description="A_GLOBAL_CUSTODIAN" />
+    </field>
+    <field number="170" name="StandInstDbName" type="STRING" />
+    <field number="171" name="StandInstDbID" type="STRING" />
+    <field number="172" name="SettlDeliveryType" type="INT" />
+    <field number="173" name="SettlDepositoryCode" type="STRING" />
+    <field number="174" name="SettlBrkrCode" type="STRING" />
+    <field number="175" name="SettlInstCode" type="STRING" />
+    <field number="176" name="SecuritySettlAgentName" type="STRING" />
+    <field number="177" name="SecuritySettlAgentCode" type="STRING" />
+    <field number="178" name="SecuritySettlAgentAcctNum" type="STRING" />
+    <field number="179" name="SecuritySettlAgentAcctName" type="STRING" />
+    <field number="180" name="SecuritySettlAgentContactName" type="STRING" />
+    <field number="181" name="SecuritySettlAgentContactPhone" type="STRING" />
+    <field number="182" name="CashSettlAgentName" type="STRING" />
+    <field number="183" name="CashSettlAgentCode" type="STRING" />
+    <field number="184" name="CashSettlAgentAcctNum" type="STRING" />
+    <field number="185" name="CashSettlAgentAcctName" type="STRING" />
+    <field number="186" name="CashSettlAgentContactName" type
