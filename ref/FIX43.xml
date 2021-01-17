@@ -3080,4 +3080,43 @@
       <value enum="9" description="TRADING_SESSION_VWAP_PRICE" />
       <value enum="A" description="IMBALANCE" />
     </field>
-    <field number="270" name="MDEntryPx" ty
+    <field number="270" name="MDEntryPx" type="PRICE" />
+    <field number="271" name="MDEntrySize" type="QTY" />
+    <field number="272" name="MDEntryDate" type="UTCDATE" />
+    <field number="273" name="MDEntryTime" type="UTCTIMEONLY" />
+    <field number="274" name="TickDirection" type="CHAR">
+      <value enum="0" description="PLUS_TICK" />
+      <value enum="1" description="ZERO_PLUS_TICK" />
+      <value enum="2" description="MINUS_TICK" />
+      <value enum="3" description="ZERO_MINUS_TICK" />
+    </field>
+    <field number="275" name="MDMkt" type="EXCHANGE" />
+    <field number="276" name="QuoteCondition" type="MULTIPLEVALUESTRING">
+      <value enum="A" description="OPEN" />
+      <value enum="B" description="CLOSED" />
+      <value enum="C" description="EXCHANGE_BEST" />
+      <value enum="D" description="CONSOLIDATED_BEST" />
+      <value enum="E" description="LOCKED" />
+      <value enum="F" description="CROSSED" />
+      <value enum="G" description="DEPTH" />
+      <value enum="H" description="FAST_TRADING" />
+      <value enum="I" description="NON_FIRM" />
+    </field>
+    <field number="277" name="TradeCondition" type="MULTIPLEVALUESTRING">
+      <value enum="A" description="CASH" />
+      <value enum="B" description="AVERAGE_PRICE_TRADE" />
+      <value enum="C" description="CASH_TRADE" />
+      <value enum="D" description="NEXT_DAY" />
+      <value enum="E" description="OPENING" />
+      <value enum="F" description="INTRADAY_TRADE_DETAIL" />
+      <value enum="G" description="RULE_127_TRADE" />
+      <value enum="H" description="RULE_155_TRADE" />
+      <value enum="I" description="SOLD_LAST" />
+      <value enum="J" description="NEXT_DAY_TRADE" />
+      <value enum="K" description="OPENED" />
+      <value enum="L" description="SELLER" />
+      <value enum="M" description="SOLD" />
+      <value enum="N" description="STOPPED_STOCK" />
+      <value enum="P" description="IMBALANCE_MORE_BUYERS" />
+      <value enum="Q" description="IMBALANCE_MORE_SELLERS" />
+      <value enum="R" desc
