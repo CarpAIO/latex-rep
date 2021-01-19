@@ -3157,4 +3157,41 @@
       <value enum="3" description="EXPECTED_PRICE" />
       <value enum="4" description="PRICE_FROM_PREVIOUS_BUSINESS_DAY" />
     </field>
-    <field numbe
+    <field number="287" name="SellerDays" type="INT" />
+    <field number="288" name="MDEntryBuyer" type="STRING" />
+    <field number="289" name="MDEntrySeller" type="STRING" />
+    <field number="290" name="MDEntryPositionNo" type="INT" />
+    <field number="291" name="FinancialStatus" type="MULTIPLEVALUESTRING">
+      <value enum="1" description="BANKRUPT" />
+      <value enum="2" description="PENDING_DELISTING" />
+    </field>
+    <field number="292" name="CorporateAction" type="MULTIPLEVALUESTRING">
+      <value enum="A" description="EX_DIVIDEND" />
+      <value enum="B" description="EX_DISTRIBUTION" />
+      <value enum="C" description="EX_RIGHTS" />
+      <value enum="D" description="NEW" />
+      <value enum="E" description="EX_INTEREST" />
+    </field>
+    <field number="293" name="DefBidSize" type="QTY" />
+    <field number="294" name="DefOfferSize" type="QTY" />
+    <field number="295" name="NoQuoteEntries" type="NUMINGROUP" />
+    <field number="296" name="NoQuoteSets" type="NUMINGROUP" />
+    <field number="297" name="QuoteStatus" type="INT">
+      <value enum="0" description="ACCEPTED" />
+      <value enum="1" description="CANCELED_FOR_SYMBOL" />
+      <value enum="2" description="CANCELED_FOR_SECURITY_TYPE" />
+      <value enum="3" description="CANCELED_FOR_UNDERLYING" />
+      <value enum="4" description="CANCELED_ALL" />
+      <value enum="5" description="REJECTED" />
+      <value enum="6" description="REMOVED_FROM_MARKET" />
+      <value enum="7" description="EXPIRED" />
+      <value enum="8" description="QUERY" />
+      <value enum="9" description="QUOTE_NOT_FOUND" />
+      <value enum="10" description="PENDING" />
+    </field>
+    <field number="298" name="QuoteCancelType" type="INT" />
+    <field number="299" name="QuoteEntryID" type="STRING" />
+    <field number="300" name="QuoteRejectReason" type="INT" />
+    <field number="301" name="QuoteResponseLevel" type="INT" />
+    <field number="302" name="QuoteSetID" type="STRING" />
+    <field number="303" name="QuoteRequestType" type
