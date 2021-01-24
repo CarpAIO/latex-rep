@@ -3259,4 +3259,45 @@
     </field>
     <field number="327" name="HaltReason" type="CHAR">
       <value enum="I" description="ORDER_IMBALANCE" />
-      <value enum="X" de
+      <value enum="X" description="EQUIPMENT_CHANGEOVER" />
+      <value enum="P" description="NEWS_PENDING" />
+      <value enum="D" description="NEWS_DISSEMINATION" />
+      <value enum="E" description="ORDER_INFLUX" />
+      <value enum="M" description="ADDITIONAL_INFORMATION" />
+    </field>
+    <field number="328" name="InViewOfCommon" type="BOOLEAN" />
+    <field number="329" name="DueToRelated" type="BOOLEAN" />
+    <field number="330" name="BuyVolume" type="QTY" />
+    <field number="331" name="SellVolume" type="QTY" />
+    <field number="332" name="HighPx" type="PRICE" />
+    <field number="333" name="LowPx" type="PRICE" />
+    <field number="334" name="Adjustment" type="INT">
+      <value enum="1" description="CANCEL" />
+      <value enum="2" description="ERROR" />
+      <value enum="3" description="CORRECTION" />
+    </field>
+    <field number="335" name="TradSesReqID" type="STRING" />
+    <field number="336" name="TradingSessionID" type="STRING" />
+    <field number="337" name="ContraTrader" type="STRING" />
+    <field number="338" name="TradSesMethod" type="INT">
+      <value enum="1" description="ELECTRONIC" />
+      <value enum="2" description="OPEN_OUTCRY" />
+      <value enum="3" description="TWO_PARTY" />
+    </field>
+    <field number="339" name="TradSesMode" type="INT">
+      <value enum="1" description="TESTING" />
+      <value enum="2" description="SIMULATED" />
+      <value enum="3" description="PRODUCTION" />
+    </field>
+    <field number="340" name="TradSesStatus" type="INT">
+      <value enum="0" description="UNKNOWN" />
+      <value enum="1" description="HALTED" />
+      <value enum="2" description="OPEN" />
+      <value enum="3" description="CLOSED" />
+      <value enum="4" description="PRE_OPEN" />
+      <value enum="5" description="PRE_CLOSE" />
+      <value enum="6" description="REQUEST_REJECTED" />
+    </field>
+    <field number="341" name="TradSesStartTime" type="UTCTIMESTAMP" />
+    <field number="342" name="TradSesOpenTime" type="UTCTIMESTAMP" />
+    <
