@@ -3401,4 +3401,42 @@
     <field number="387" name="TotalVolumeTraded" type="QTY" />
     <field number="388" name="DiscretionInst" type="CHAR">
       <value enum="0" description="RELATED_TO_DISPLAYED_PRICE" />
-      <value enum="1"
+      <value enum="1" description="RELATED_TO_MARKET_PRICE" />
+      <value enum="2" description="RELATED_TO_PRIMARY_PRICE" />
+      <value enum="3" description="RELATED_TO_LOCAL_PRIMARY_PRICE" />
+      <value enum="4" description="RELATED_TO_MIDPOINT_PRICE" />
+      <value enum="5" description="RELATED_TO_LAST_TRADE_PRICE" />
+    </field>
+    <field number="389" name="DiscretionOffset" type="PRICEOFFSET" />
+    <field number="390" name="BidID" type="STRING" />
+    <field number="391" name="ClientBidID" type="STRING" />
+    <field number="392" name="ListName" type="STRING" />
+    <field number="393" name="TotalNumSecurities" type="INT" />
+    <field number="394" name="BidType" type="INT">
+      <value enum="1" description="NON_DISCLOSED_STYLE" />
+      <value enum="2" description="DISCLOSED_STYLE" />
+      <value enum="3" description="NO_BIDDING_PROCESS" />
+    </field>
+    <field number="395" name="NumTickets" type="INT" />
+    <field type="AMT" name="SideValue1" number="396" />
+    <field type="AMT" name="SideValue2" number="397" />
+    <field number="398" name="NoBidDescriptors" type="NUMINGROUP" />
+    <field number="399" name="BidDescriptorType" type="INT">
+      <value enum="1" description="SECTOR" />
+      <value enum="2" description="COUNTRY" />
+      <value enum="3" description="INDEX" />
+    </field>
+    <field number="400" name="BidDescriptor" type="STRING" />
+    <field number="401" name="SideValueInd" type="INT">
+      <value description="SIDEVALUE1" enum="1" />
+      <value description="SIDEVALUE_2" enum="2" />
+    </field>
+    <field number="402" name="LiquidityPctLow" type="PERCENTAGE" />
+    <field number="403" name="LiquidityPctHigh" type="PERCENTAGE" />
+    <field number="404" name="LiquidityValue" type="AMT" />
+    <field number="405" name="EFPTrackingError" type="PERCENTAGE" />
+    <field number="406" name="FairValue" type="AMT" />
+    <field number="407" name="OutsideIndexPct" type="PERCENTAGE" />
+    <field number="408" name="ValueOfFutures" type="AMT" />
+    <field number="409" name="LiquidityIndType" type="INT">
+ 
