@@ -3475,4 +3475,42 @@
       <value enum="D" description="OPEN" />
       <value enum="Z" description="OTHERS" />
     </field>
-    <fi
+    <field number="420" name="NoBidComponents" type="NUMINGROUP" />
+    <field number="421" name="Country" type="COUNTRY" />
+    <field number="422" name="TotNoStrikes" type="INT" />
+    <field number="423" name="PriceType" type="INT">
+      <value enum="1" description="PERCENTAGE" />
+      <value enum="2" description="PER_SHARE" />
+      <value enum="3" description="FIXED_AMOUNT" />
+      <value enum="4" description="DISCOUNT" />
+      <value enum="5" description="PREMIUM" />
+      <value enum="6" description="BASIS_POINTS_RELATIVE_TO_BENCHMARK" />
+      <value enum="7" description="TED_PRICE" />
+      <value enum="8" description="TED_YIELD" />
+    </field>
+    <field number="424" name="DayOrderQty" type="QTY" />
+    <field number="425" name="DayCumQty" type="QTY" />
+    <field number="426" name="DayAvgPx" type="PRICE" />
+    <field number="427" name="GTBookingInst" type="INT">
+      <value enum="0" description="BOOK_OUT_ALL_TRADES_ON_DAY_OF_EXECUTION" />
+      <value enum="1" description="ACCUMULATE_EXECUTIONS_UNTIL_ORDER_IS_FILLED_OR_EXPIRES" />
+      <value enum="2" description="ACCUMULATE_UNTIL_VERBALLY_NOTIFIED_OTHERWISE" />
+    </field>
+    <field number="428" name="NoStrikes" type="NUMINGROUP" />
+    <field number="429" name="ListStatusType" type="INT">
+      <value enum="1" description="ACK" />
+      <value enum="2" description="RESPONSE" />
+      <value enum="3" description="TIMED" />
+      <value enum="4" description="EXECSTARTED" />
+      <value enum="5" description="ALLDONE" />
+      <value enum="6" description="ALERT" />
+    </field>
+    <field number="430" name="NetGrossInd" type="INT">
+      <value enum="1" description="NET" />
+      <value enum="2" description="GROSS" />
+    </field>
+    <field number="431" name="ListOrderStatus" type="INT">
+      <value enum="1" description="INBIDDINGPROCESS" />
+      <value enum="2" description="RECEIVEDFOREXECUTION" />
+      <value enum="3" description="EXECUTING" />
+      <value enum="4" description=
