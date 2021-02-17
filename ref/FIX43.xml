@@ -3513,4 +3513,38 @@
       <value enum="1" description="INBIDDINGPROCESS" />
       <value enum="2" description="RECEIVEDFOREXECUTION" />
       <value enum="3" description="EXECUTING" />
-      <value enum="4" description=
+      <value enum="4" description="CANCELING" />
+      <value enum="5" description="ALERT" />
+      <value enum="6" description="ALL_DONE" />
+      <value enum="7" description="REJECT" />
+    </field>
+    <field number="432" name="ExpireDate" type="LOCALMKTDATE" />
+    <field number="433" name="ListExecInstType" type="CHAR">
+      <value enum="1" description="IMMEDIATE" />
+      <value enum="2" description="WAIT_FOR_EXECUTE_INSTRUCTION" />
+      <value enum="3" description="EXCHANGE_SWITCH_CIV_ORDER_SELL_DRIVEN" />
+      <value enum="4" description="EXCHANGE_SWITCH_CIV_ORDER_BUY_DRIVEN_CASH_TOP_UP" />
+      <value enum="5" description="EXCHANGE_SWITCH_CIV_ORDER_BUY_DRIVEN_CASH_WITHDRAW" />
+    </field>
+    <field number="434" name="CxlRejResponseTo" type="CHAR">
+      <value enum="1" description="ORDER_CANCEL_REQUEST" />
+      <value enum="2" description="ORDER_CANCEL_REPLACE_REQUEST" />
+    </field>
+    <field number="435" name="UnderlyingCouponRate" type="PERCENTAGE" />
+    <field number="436" name="UnderlyingContractMultiplier" type="FLOAT" />
+    <field number="437" name="ContraTradeQty" type="QTY" />
+    <field number="438" name="ContraTradeTime" type="UTCTIMESTAMP" />
+    <field number="439" name="ClearingFirm" type="STRING" />
+    <field number="440" name="ClearingAccount" type="STRING" />
+    <field number="441" name="LiquidityNumSecurities" type="INT" />
+    <field number="442" name="MultiLegReportingType" type="CHAR" />
+    <field number="443" name="StrikeTime" type="UTCTIMESTAMP" />
+    <field number="444" name="ListStatusText" type="STRING" />
+    <field number="445" name="EncodedListStatusTextLen" type="LENGTH" />
+    <field number="446" name="EncodedListStatusText" type="DATA" />
+    <field number="447" name="PartyIDSource" type="CHAR">
+      <value enum="B" description="BIC" />
+      <value enum="C" description="GENERALLY_ACCEPTED_MARKET_PARTICIPANT_IDENTIFIER" />
+      <value enum="D" description="PROPRIETARY" />
+      <value enum="E" description="ISO_COUNTRY_CODE" />
+      <value enum="F" description=
