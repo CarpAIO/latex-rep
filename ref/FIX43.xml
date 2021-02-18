@@ -3547,4 +3547,37 @@
       <value enum="C" description="GENERALLY_ACCEPTED_MARKET_PARTICIPANT_IDENTIFIER" />
       <value enum="D" description="PROPRIETARY" />
       <value enum="E" description="ISO_COUNTRY_CODE" />
-      <value enum="F" description=
+      <value enum="F" description="SETTLEMENT_ENTITY_LOCATION" />
+      <value enum="1" description="KOREAN_INVESTOR_ID" />
+      <value enum="2" description="TAIWANESE_QUALIFIED_FOREIGN_INVESTOR_ID_QFII" />
+      <value enum="3" description="TAIWANESE_TRADING_ACCOUNT" />
+      <value enum="4" description="MALAYSIAN_CENTRAL_DEPOSITORY" />
+      <value enum="5" description="CHINESE_B_SHARE" />
+      <value enum="6" description="UK_NATIONAL_INSURANCE_OR_PENSION_NUMBER" />
+      <value enum="7" description="US_SOCIAL_SECURITY_NUMBER" />
+      <value enum="8" description="US_EMPLOYER_IDENTIFICATION_NUMBER" />
+      <value enum="9" description="AUSTRALIAN_BUSINESS_NUMBER" />
+      <value enum="A" description="AUSTRALIAN_TAX_FILE_NUMBER" />
+    </field>
+    <field number="448" name="PartyID" type="STRING" />
+    <field number="449" name="TotalVolumeTradedDate" type="UTCDATE" />
+    <field number="450" name="TotalVolumeTradedTime" type="UTCTIMEONLY" />
+    <field number="451" name="NetChgPrevDay" type="PRICEOFFSET" />
+    <field number="452" name="PartyRole" type="INT">
+      <value enum="1" description="EXECUTING_FIRM" />
+      <value enum="2" description="BROKER_OF_CREDIT" />
+      <value enum="3" description="CLIENT_ID" />
+      <value enum="4" description="CLEARING_FIRM" />
+      <value enum="5" description="INVESTOR_ID" />
+      <value enum="6" description="INTRODUCING_FIRM" />
+      <value enum="7" description="ENTERING_FIRM" />
+      <value enum="8" description="LOCATE" />
+      <value enum="9" description="FUND_MANAGER_CLIENT_ID" />
+      <value enum="10" description="SETTLEMENT_LOCATION" />
+      <value enum="11" description="ORDER_ORIGINATION_TRADER" />
+      <value enum="12" description="EXECUTING_TRADER" />
+      <value enum="13" description="ORDER_ORIGINATION_FIRM" />
+      <value enum="14" description="GIVEUP_CLEARING_FIRM" />
+      <value enum="15" description="CORRESPONDANT_CLEARING_FIRM" />
+      <value enum="16" description="EXECUTING_SYSTEM" />
+      <value enum="17" descripti
