@@ -3580,4 +3580,42 @@
       <value enum="14" description="GIVEUP_CLEARING_FIRM" />
       <value enum="15" description="CORRESPONDANT_CLEARING_FIRM" />
       <value enum="16" description="EXECUTING_SYSTEM" />
-      <value enum="17" descripti
+      <value enum="17" description="CONTRA_FIRM" />
+      <value enum="18" description="CONTRA_CLEARING_FIRM" />
+      <value enum="19" description="SPONSORING_FIRM" />
+      <value enum="20" description="UNDERLYING_CONTRA_FIRM" />
+    </field>
+    <field number="453" name="NoPartyIDs" type="NUMINGROUP" />
+    <field number="454" name="NoSecurityAltID" type="NUMINGROUP" />
+    <field number="455" name="SecurityAltID" type="STRING" />
+    <field number="456" name="SecurityAltIDSource" type="STRING" />
+    <field number="457" name="NoUnderlyingSecurityAltID" type="NUMINGROUP" />
+    <field number="458" name="UnderlyingSecurityAltID" type="STRING" />
+    <field number="459" name="UnderlyingSecurityAltIDSource" type="STRING" />
+    <field number="460" name="Product" type="INT">
+      <value enum="1" description="AGENCY" />
+      <value enum="2" description="COMMODITY" />
+      <value enum="3" description="CORPORATE" />
+      <value enum="4" description="CURRENCY" />
+      <value enum="5" description="EQUITY" />
+      <value enum="6" description="GOVERNMENT" />
+      <value enum="7" description="INDEX" />
+      <value enum="8" description="LOAN" />
+      <value enum="9" description="MONEYMARKET" />
+      <value enum="10" description="MORTGAGE" />
+      <value enum="11" description="MUNICIPAL" />
+      <value enum="12" description="OTHER" />
+    </field>
+    <field number="461" name="CFICode" type="STRING" />
+    <field number="462" name="UnderlyingProduct" type="INT" />
+    <field number="463" name="UnderlyingCFICode" type="STRING" />
+    <field number="464" name="TestMessageIndicator" type="BOOLEAN" />
+    <field number="465" name="QuantityType" type="INT">
+      <value enum="1" description="SHARES" />
+      <value enum="2" description="BONDS" />
+      <value enum="3" description="CURRENTFACE" />
+      <value enum="4" description="ORIGINALFACE" />
+      <value enum="5" description="CURRENCY" />
+      <value enum="6" description="CONTRACTS" />
+      <value enum="7" description="OTHER" />
+   
