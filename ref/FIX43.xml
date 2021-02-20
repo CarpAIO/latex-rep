@@ -3653,4 +3653,38 @@
       <value enum="R" description="REPLACE" />
     </field>
     <field number="488" name="CardHolderName" type="STRING" />
-    <fi
+    <field number="489" name="CardNumber" type="STRING" />
+    <field number="490" name="CardExpDate" type="LOCALMKTDATE" />
+    <field number="491" name="CardIssNo" type="STRING" />
+    <field number="492" name="PaymentMethod" type="INT" />
+    <field number="493" name="RegistAcctType" type="STRING" />
+    <field number="494" name="Designation" type="STRING" />
+    <field number="495" name="TaxAdvantageType" type="INT" />
+    <field number="496" name="RegistRejReasonText" type="STRING" />
+    <field number="497" name="FundRenewWaiv" type="CHAR" />
+    <field number="498" name="CashDistribAgentName" type="STRING" />
+    <field number="499" name="CashDistribAgentCode" type="STRING" />
+    <field number="500" name="CashDistribAgentAcctNumber" type="STRING" />
+    <field number="501" name="CashDistribPayRef" type="STRING" />
+    <field number="502" name="CashDistribAgentAcctName" type="STRING" />
+    <field number="503" name="CardStartDate" type="LOCALMKTDATE" />
+    <field number="504" name="PaymentDate" type="LOCALMKTDATE" />
+    <field number="505" name="PaymentRemitterID" type="STRING" />
+    <field number="506" name="RegistStatus" type="CHAR" />
+    <field number="507" name="RegistRejReasonCode" type="INT" />
+    <field number="508" name="RegistRefID" type="STRING" />
+    <field number="509" name="RegistDetls" type="STRING" />
+    <field number="510" name="NoDistribInsts" type="NUMINGROUP" />
+    <field number="511" name="RegistEmail" type="STRING" />
+    <field number="512" name="DistribPercentage" type="PERCENTAGE" />
+    <field number="513" name="RegistID" type="STRING" />
+    <field number="514" name="RegistTransType" type="CHAR">
+      <value enum="0" description="NEW" />
+      <value enum="1" description="REPLACE" />
+      <value enum="2" description="CANCEL" />
+    </field>
+    <field number="515" name="ExecValuationPoint" type="UTCTIMESTAMP" />
+    <field number="516" name="OrderPercent" type="PERCENTAGE" />
+    <field number="517" name="OwnershipType" type="CHAR" />
+    <field number="518" name="NoContAmts" type="NUMINGROUP" />
+    <field number="519" n
