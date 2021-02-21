@@ -3723,4 +3723,36 @@
       <value enum="2" description="INDEX_ARBITRAGE" />
       <value enum="3" description="NON_INDEX_ARBITRAGE" />
       <value enum="4" description="COMPETING_MARKET_MAKER" />
-      <value enum="5" description="ACTING_AS_
+      <value enum="5" description="ACTING_AS_MARKET_MAKER_OR_SPECIALIST_IN_THE_SECURITY" />
+      <value enum="6" description="ACTING_AS_MARKET_MAKER_OR_SPECIALIST_IN_THE_UNDERLYING_SECURITY_OF_A_DERIVATIVE_SECURITY" />
+      <value enum="7" description="FOREIGN_ENTITY" />
+      <value enum="8" description="EXTERNAL_MARKET_PARTICIPANT" />
+      <value enum="9" description="EXTERNAL_INTER_CONNECTED_MARKET_LINKAGE" />
+      <value enum="A" description="RISKLESS_ARBITRAGE" />
+    </field>
+    <field number="530" name="MassCancelRequestType" type="CHAR">
+      <value enum="1" description="CANCEL_ORDERS_FOR_A_SECURITY" />
+      <value enum="2" description="CANCEL_ORDERS_FOR_AN_UNDERLYING_SECURITY" />
+      <value enum="3" description="CANCEL_ORDERS_FOR_A_PRODUCT" />
+      <value enum="4" description="CANCEL_ORDERS_FOR_A_CFICODE" />
+      <value enum="5" description="CANCEL_ORDERS_FOR_A_SECURITYTYPE" />
+      <value enum="6" description="CANCEL_ORDERS_FOR_A_TRADING_SESSION" />
+      <value enum="7" description="CANCEL_ALL_ORDERS" />
+    </field>
+    <field number="531" name="MassCancelResponse" type="CHAR">
+      <value enum="0" description="CANCEL_REQUEST_REJECTED" />
+      <value enum="1" description="CANCEL_ORDERS_FOR_A_SECURITY" />
+      <value enum="2" description="CANCEL_ORDERS_FOR_AN_UNDERLYING_SECURITY" />
+      <value enum="3" description="CANCEL_ORDERS_FOR_A_PRODUCT" />
+      <value enum="4" description="CANCEL_ORDERS_FOR_A_CFICODE" />
+      <value enum="5" description="CANCEL_ORDERS_FOR_A_SECURITYTYPE" />
+      <value enum="6" description="CANCEL_ORDERS_FOR_A_TRADING_SESSION" />
+      <value enum="7" description="CANCEL_ALL_ORDERS" />
+    </field>
+    <field number="532" name="MassCancelRejectReason" type="CHAR" />
+    <field number="533" name="TotalAffectedOrders" type="INT" />
+    <field number="534" name="NoAffectedOrders" type="INT" />
+    <field number="535" name="AffectedOrderID" type="STRING" />
+    <field number="536" name="AffectedSecondaryOrderID" type="STRING" />
+    <field number="537" name="QuoteType" type="INT">
+      <value enum="0" description="INDICATIVE"
