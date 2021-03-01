@@ -3826,4 +3826,37 @@
     <field number="568" name="TradeRequestID" type="STRING" />
     <field number="569" name="TradeRequestType" type="INT">
       <value enum="0" description="ALL_TRADES" />
-      <value enum="1" description="MATCHED_TRADES_MATCHING_CRITERIA
+      <value enum="1" description="MATCHED_TRADES_MATCHING_CRITERIA_PROVIDED_ON_REQUEST" />
+      <value enum="2" description="UNMATCHED_TRADES_THAT_MATCH_CRITERIA" />
+      <value enum="3" description="UNREPORTED_TRADES_THAT_MATCH_CRITERIA" />
+      <value enum="4" description="ADVISORIES_THAT_MATCH_CRITERIA" />
+    </field>
+    <field number="570" name="PreviouslyReported" type="BOOLEAN" />
+    <field number="571" name="TradeReportID" type="STRING" />
+    <field number="572" name="TradeReportRefID" type="STRING" />
+    <field number="573" name="MatchStatus" type="CHAR">
+      <value enum="0" description="COMPARED" />
+      <value enum="1" description="UNCOMPARED" />
+      <value enum="2" description="ADVISORY_OR_ALERT" />
+    </field>
+    <field number="574" name="MatchType" type="STRING">
+      <value enum="A1" description="EXACT_MATCH_PLUS_FOUR_BADGES_AND_EXECUTION_TIME" />
+      <value enum="A2" description="EXACT_MATCH_PLUS_FOUR_BADGES" />
+      <value enum="A3" description="EXACT_MATCH_PLUS_TWO_BADGES_AND_EXECUTION_TIME" />
+      <value enum="A4" description="EXACT_MATCH_PLUS_TWO_BADGES" />
+      <value enum="A5" description="EXACT_MATCH_PLUS_EXECUTION_TIME" />
+      <value enum="AQ" description="COMPARED_RECORDS_RESULTING_FROM_STAMPED_ADVISORIES_OR_SPECIALIST_ACCEPTS" />
+      <value description="SUMMARIZED_MATCH_USING_A1_TO_A5" enum="S5" />
+      <value enum="M1" description="EXACT_MATCH_MINUS_BADGES_AND_EXECUTION_TIME" />
+      <value enum="M2" description="SUMMARIZED_MATCH_MINUS_BADGES_AND_TIMES" />
+      <value enum="MT" description="OCS_LOCKED_IN" />
+      <value description="ACT_M1_MATCH" enum="M1" />
+      <value description="ACT_M2_MATCH" enum="M2" />
+      <value enum="M3" description="ACT_ACCEPTED_TRADE" />
+      <value enum="M4" description="ACT_DEFAULT_TRADE" />
+      <value description="ACT_DEFAULT_AFTER_M2" enum="M5" />
+      <value description="ACT_M6_MATCH" enum="M6" />
+      <value enum="MT" description="NON_ACT" />
+    </field>
+    <field number="575" name="OddLot" type="BOOLEAN" />
+    <fi
