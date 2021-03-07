@@ -3923,4 +3923,37 @@
     <field number="608" name="LegCFICode" type="STRING" />
     <field number="609" name="LegSecurityType" type="STRING" />
     <field number="610" name="LegMaturityMonthYear" type="MONTHYEAR" />
-    <field number="611" name="LegMaturityDat
+    <field number="611" name="LegMaturityDate" type="LOCALMKTDATE" />
+    <field number="612" name="LegStrikePrice" type="PRICE" />
+    <field number="613" name="LegOptAttribute" type="CHAR" />
+    <field number="614" name="LegContractMultiplier" type="FLOAT" />
+    <field number="615" name="LegCouponRate" type="PERCENTAGE" />
+    <field number="616" name="LegSecurityExchange" type="EXCHANGE" />
+    <field number="617" name="LegIssuer" type="STRING" />
+    <field number="618" name="EncodedLegIssuerLen" type="LENGTH" />
+    <field number="619" name="EncodedLegIssuer" type="DATA" />
+    <field number="620" name="LegSecurityDesc" type="STRING" />
+    <field number="621" name="EncodedLegSecurityDescLen" type="LENGTH" />
+    <field number="622" name="EncodedLegSecurityDesc" type="DATA" />
+    <field number="623" name="LegRatioQty" type="FLOAT" />
+    <field number="624" name="LegSide" type="CHAR" />
+    <field number="625" name="TradingSessionSubID" type="STRING" />
+    <field number="626" name="AllocType" type="INT">
+      <value enum="1" description="BUYSIDE_CALCULATED" />
+      <value enum="2" description="BUYSIDE_PRELIMINARY" />
+      <value enum="3" description="SELLSIDE_CALCULATED_USING_PRELIMINARY" />
+      <value enum="4" description="SELLSIDE_CALCULATED_WITHOUT_PRELIMINARY" />
+      <value enum="5" description="BUYSIDE_READY_TO_BOOK_SINGLE_ORDER" />
+      <value enum="6" description="BUYSIDE_READY_TO_BOOK_COMBINED_SET_OF_ORDERS" />
+    </field>
+    <field number="627" name="NoHops" type="NUMINGROUP" />
+    <field number="628" name="HopCompID" type="STRING" />
+    <field number="629" name="HopSendingTime" type="UTCTIMESTAMP" />
+    <field number="630" name="HopRefID" type="SEQNUM" />
+    <field number="631" name="MidPx" type="PRICE" />
+    <field number="632" name="BidYield" type="PERCENTAGE" />
+    <field number="633" name="MidYield" type="PERCENTAGE" />
+    <field number="634" name="OfferYield" type="PERCENTAGE" />
+    <field number="635" name="ClearingFeeIndicator" type="STRING" />
+    <field number="636" name="WorkingIndicator" type="BOOLEAN" />
+    <field number="637
