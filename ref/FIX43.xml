@@ -3892,4 +3892,35 @@
       <value enum="1" description="STATUS_FOR_ORDERS_FOR_A_SECURITY" />
       <value enum="2" description="STATUS_FOR_ORDERS_FOR_AN_UNDERLYING_SECURITY" />
       <value enum="3" description="STATUS_FOR_ORDERS_FOR_A_PRODUCT" />
-  
+      <value enum="4" description="STATUS_FOR_ORDERS_FOR_A_CFICODE" />
+      <value enum="5" description="STATUS_FOR_ORDERS_FOR_A_SECURITYTYPE" />
+      <value enum="6" description="STATUS_FOR_ORDERS_FOR_A_TRADING_SESSION" />
+      <value enum="7" description="STATUS_FOR_ALL_ORDERS" />
+      <value enum="8" description="STATUS_FOR_ORDERS_FOR_A_PARTYID" />
+    </field>
+    <field number="586" name="OrigOrdModTime" type="UTCTIMESTAMP" />
+    <field number="587" name="LegSettlmntTyp" type="CHAR" />
+    <field number="588" name="LegFutSettDate" type="LOCALMKTDATE" />
+    <field number="589" name="DayBookingInst" type="CHAR" />
+    <field number="590" name="BookingUnit" type="CHAR" />
+    <field number="591" name="PreallocMethod" type="CHAR" />
+    <field number="592" name="UnderlyingCountryOfIssue" type="COUNTRY" />
+    <field number="593" name="UnderlyingStateOrProvinceOfIssue" type="STRING" />
+    <field number="594" name="UnderlyingLocaleOfIssue" type="STRING" />
+    <field number="595" name="UnderlyingInstrRegistry" type="STRING" />
+    <field number="596" name="LegCountryOfIssue" type="COUNTRY" />
+    <field number="597" name="LegStateOrProvinceOfIssue" type="STRING" />
+    <field number="598" name="LegLocaleOfIssue" type="STRING" />
+    <field number="599" name="LegInstrRegistry" type="STRING" />
+    <field number="600" name="LegSymbol" type="STRING" />
+    <field number="601" name="LegSymbolSfx" type="STRING" />
+    <field number="602" name="LegSecurityID" type="STRING" />
+    <field number="603" name="LegSecurityIDSource" type="STRING" />
+    <field number="604" name="NoLegSecurityAltID" type="STRING" />
+    <field number="605" name="LegSecurityAltID" type="STRING" />
+    <field number="606" name="LegSecurityAltIDSource" type="STRING" />
+    <field number="607" name="LegProduct" type="INT" />
+    <field number="608" name="LegCFICode" type="STRING" />
+    <field number="609" name="LegSecurityType" type="STRING" />
+    <field number="610" name="LegMaturityMonthYear" type="MONTHYEAR" />
+    <field number="611" name="LegMaturityDat
