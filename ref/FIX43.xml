@@ -3956,4 +3956,37 @@
     <field number="634" name="OfferYield" type="PERCENTAGE" />
     <field number="635" name="ClearingFeeIndicator" type="STRING" />
     <field number="636" name="WorkingIndicator" type="BOOLEAN" />
-    <field number="637
+    <field number="637" name="LegLastPx" type="PRICE" />
+    <field number="638" name="PriorityIndicator" type="INT">
+      <value enum="0" description="PRIORITY_UNCHANGED" />
+      <value enum="1" description="LOST_PRIORITY_AS_RESULT_OF_ORDER_CHANGE" />
+    </field>
+    <field number="639" name="PriceImprovement" type="PRICEOFFSET" />
+    <field type="PRICE" name="Price2" number="640" />
+    <field type="PRICEOFFSET" name="LastForwardPoints2" number="641" />
+    <field type="PRICEOFFSET" name="BidForwardPoints2" number="642" />
+    <field type="PRICEOFFSET" name="OfferForwardPoints2" number="643" />
+    <field number="644" name="RFQReqID" type="STRING" />
+    <field number="645" name="MktBidPx" type="PRICE" />
+    <field number="646" name="MktOfferPx" type="PRICE" />
+    <field number="647" name="MinBidSize" type="QTY" />
+    <field number="648" name="MinOfferSize" type="QTY" />
+    <field number="649" name="QuoteStatusReqID" type="STRING" />
+    <field number="650" name="LegalConfirm" type="BOOLEAN" />
+    <field number="651" name="UnderlyingLastPx" type="PRICE" />
+    <field number="652" name="UnderlyingLastQty" type="QTY" />
+    <field number="653" name="SecDefStatus" type="INT">
+      <value enum="0" description="PENDING_APPROVAL" />
+      <value enum="1" description="APPROVED" />
+      <value enum="2" description="REJECTED" />
+      <value enum="3" description="UNAUTHORIZED_REQUEST" />
+      <value enum="4" description="INVALID_DEFINITION_REQUEST" />
+    </field>
+    <field number="654" name="LegRefID" type="STRING" />
+    <field number="655" name="ContraLegRefID" type="STRING" />
+    <field number="656" name="SettlCurrBidFxRate" type="FLOAT" />
+    <field number="657" name="SettlCurrOfferFxRate" type="FLOAT" />
+    <field number="658" name="QuoteRequestRejectReason" type="INT" />
+    <field number="659" name="SideComplianceID" type="STRING" />
+  </fields>
+</fix>

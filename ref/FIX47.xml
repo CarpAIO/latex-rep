@@ -1,0 +1,38 @@
+
+<fix major="4" minor="7">
+  <header>
+    <field name="BeginString" required="Y"/>
+    <field name="BodyLength" required="Y"/>
+    <field name="MsgType" required="Y"/>
+    <field name="SendingTime" required="Y"/>
+  </header>
+  <trailer>
+    <field name="SignatureLength" required="N"/>
+    <field name="Signature" required="N"/>
+    <field name="CheckSum" required="Y"/>
+  </trailer>
+  <messages>
+    <message name="OrderInfo" msgtype="NO" msgcat="app" description="Encapsulates the essential information for a single new, mod, and cancel orders.">
+      <component name="IDs" required="Y"/>
+      <component name="OrderData" required="Y"/>
+      <field name="RawLength" required="N"/>
+      <field name="Raw" required="N"/>
+    </message>
+    <message name="OrderExeInfo" msgtype="NE" msgcat="app">
+      <component name="IDs" required="Y"/>
+      <component name="OrderExeData" required="Y"/>
+      <field name="RawLength" required="N"/>
+      <field name="Raw" required="N"/>
+    </message>
+    <message name="OrderStatusInfo" msgtype="NS" msgcat="app">
+      <component name="IDs" required="Y"/>
+      <component name="OrderStatusData" required="Y"/>
+      <field name="RawLength" required="N"/>
+      <field name="Raw" required="N"/>
+    </message>
+    <message name="OrderAllInfo" msgtype="NA" msgcat="app">
+      <component name="IDs" required="Y"/>
+      <component name="OrderData" required="Y"/>
+      <group name="NoHistories" required="N">
+	<component name="OrderStatusData" required="Y"/>
+      </group>
