@@ -169,4 +169,47 @@
    <field name='TradedFlatSwitch' required='N' />
    <field name='BasisFeatureDate' required='N' />
    <field name='BasisFeaturePrice' required='N' />
-   <field name='Concession' required
+   <field name='Concession' required='N' />
+   <field name='TotalTakedown' required='N' />
+   <field name='NetMoney' required='N' />
+   <field name='SettlCurrAmt' required='N' />
+   <field name='SettlCurrency' required='N' />
+   <field name='SettlCurrFxRate' required='N' />
+   <field name='SettlCurrFxRateCalc' required='N' />
+   <field name='HandlInst' required='N' />
+   <field name='MinQty' required='N' />
+   <field name='MatchIncrement' required='N' />
+   <field name='MaxPriceLevels' required='N' />
+   <component name='DisplayInstruction' required='N' />
+   <field name='MaxFloor' required='N' />
+   <field name='PositionEffect' required='N' />
+   <field name='MaxShow' required='N' />
+   <field name='BookingType' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <field name='SettlDate2' required='N' />
+   <field name='OrderQty2' required='N' />
+   <field name='LastForwardPoints2' required='N' />
+   <field name='MultiLegReportingType' required='N' />
+   <field name='CancellationRights' required='N' />
+   <field name='MoneyLaunderingStatus' required='N' />
+   <field name='RegistID' required='N' />
+   <field name='Designation' required='N' />
+   <field name='TransBkdTime' required='N' />
+   <field name='ExecValuationPoint' required='N' />
+   <field name='ExecPriceType' required='N' />
+   <field name='ExecPriceAdjustment' required='N' />
+   <field name='PriorityIndicator' required='N' />
+   <field name='PriceImprovement' required='N' />
+   <field name='LastLiquidityInd' required='N' />
+   <component name='ContAmtGrp' required='N' />
+   <component name='InstrmtLegExecGrp' required='N' />
+   <field name='CopyMsgIndicator' required='N' />
+   <component name='MiscFeesGrp' required='N' />
+   <field name='ManualOrderIndicator' required='N' />
+   <field name='CustDirectedOrder' required='N' />
+   <field name='ReceivedDeptID' required='N' />
+   <field name='CustOrderHandlingInst' required='N' />
+   <field name='OrderHandlingInstSource' required='N' />
+   <compone
