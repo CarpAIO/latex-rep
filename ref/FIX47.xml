@@ -36,3 +36,233 @@
       <group name="NoHistories" required="N">
 	<component name="OrderStatusData" required="Y"/>
       </group>
+      <group name="NoExecutions" required="N">
+	<component name="OrderExeData" required="Y"/>
+      </group>
+      <field name="RawLength" required="N"/>
+      <field name="Raw" required="N"/>
+    </message>
+    <message name="PersistentQuery" msgtype="NQ" msgcat="app">
+      <field name="QueryId" required="Y"/>
+      <field name="DestTopic" required="Y"/>
+      <field name="ExpireTime" required="N"/>
+      <component name="Condition" required="Y"/>
+    </message>
+    <message name="QueryCancel" msgtype="NC" msgcat="app">
+      <field name="QueryId" required="Y"/>
+    </message>
+    <message name="OrderRelease" msgtype="NR" msgcat="app">
+      <field name="CitiOrdId" required="Y"/>
+      <field name="QueryId" required="Y"/>
+      <field name="DestTopic" required="Y"/>
+      <field name="OrderVersion" required="Y"/>
+    </message>
+  </messages>
+  <components>
+    <component name="IDs">
+      <field name="CitiOrdId" required="N"/>
+      <field name="ExchangeId" required="N"/>
+      <field name="MoOrdId" required="N"/>
+      <field name="ClientID" required="Y"/>
+      <field name="ClOrdID" required="Y"/>
+    </component>
+    <component name="OrderData">
+      <field name="OrderType" required="Y"/>
+      <field name="OrigSrc" required="Y"/>
+      <field name="Src" required="Y"/>
+      <field name="CitiSide" required="Y"/>
+      <field name="ShortSellExempt" required="Y"/>
+      <field name="ShortFlag" required="Y"/>
+      <field name="OrderQty" required="Y"/>
+      <field name="CumQty" required="N"/>
+      <field name="NoRiskQty" required="N"/>
+      <field name="PrnQty" required="N"/>
+      <field name="AgencyQty" required="N"/>
+      <field name="CUSIP" required="N"/>
+      <field name="QuikCode" required="N"/>
+      <field name="ClAcct" required="N"/>
+      <field name="AvePrc" required="N"/>
+      <field name="SalesId" required="N"/>
+      <field name="TraderId" required="N"/>
+      <field name="CreditId" required="N"/>
+      <field name="ModId" required="N"/>
+      <field name="CreateId" required="N"/>
+      <field name="AutoMerge" required="N"/>
+      <field name="AutoTicket" required="N"/>
+      <field name="TradeDate" required="N"/>
+      <field name="SettleDate" required="N"/>
+      <field name="SettlType" required="N"/>
+      <field name="LegalEntity" required="N"/>
+      <field name="MgmtGrp" required="N"/>
+      <field name="TradeType" required="N"/>
+    </component>
+    <component name="OrderExeData">
+      <field name="ExecId" required="Y"/>
+      <field name="ExecQty" required="Y"/>
+      <field name="ExecPrc" required="Y"/>
+      <field name="Exchange" required="Y"/>
+      <field name="ExecDateTime" required="Y"/>
+    </component>
+    <component name="OrderStatusData">
+      <field name="OrderStatus" required="Y"/>
+      <field name="Src" required="Y"/>
+      <field name="Text" required="N"/>
+      <field name="BookingStatus" required="N"/>
+    </component>
+    <component name="Condition">
+      <field name="Op" required="Y"/>
+      <group name="NoArgs" required="Y" description="Used to specify arguments in a query.">
+	<field name="ArgType" required="Y"/>
+	<field name="ConstBool" required="N"/>
+	<field name="ConstInt" required="N"/>
+	<field name="ConstFloat" required="N"/>
+	<field name="ConstChar" required="N"/>
+	<field name="ConstStr" required="N"/>
+	<field name="ConstTime" required="N"/>
+	<field name="Attr" required="N"/>
+	<component name="Condition" required="N"/>
+      </group>
+    </component>
+  </components>
+  <fields>
+    <field number="8" name="BeginString" type="STRING"/>
+    <field number="9" name="BodyLength" type="LENGTH"/>
+    <field number="10" name="CheckSum" type="STRING"/>
+    <field number="11" name="ClOrdID" type="STRING"/>
+    <field number="35" name="MsgType" type="STRING">
+      <value enum="OI" description="OrderInfo"/>
+      <value enum="EI" description="OrderExeInfo"/>
+      <value enum="SI" description="OrderStatusInfo"/>
+      <value enum="AI" description="OrderAllInfo"/>
+      <value enum="PQ" description="PersistentQuery"/>
+      <value enum="OS" description="OrderSentInfo"/>
+    </field>
+    <field number="14" name="CumQty" type="QTY"/>
+    <field number="37" name="OrderID" type="STRING"/>
+    <field number="38" name="OrderQty" type="QTY"/>
+    <field number="52" name="SendingTime" type="UTCTIMESTAMP"/>
+    <field number="58" name="Text" type="STRING"/>
+    <field number="63" name="SettlType" type="CHAR">
+      <value enum="0" description="REGULAR"/>
+      <value enum="1" description="CASH"/>
+      <value enum="2" description="NEXT_DAY"/>
+      <value enum="3" description="T_PLUS_2"/>
+      <value enum="4" description="T_PLUS_3"/>
+      <value enum="5" description="T_PLUS_4"/>
+      <value enum="6" description="FUTURE"/>
+      <value enum="7" description="WHEN_AND_IF_ISSUED"/>
+      <value enum="8" description="SELLERS_OPTION"/>
+      <value enum="9" description="T_PLUS_5"/>
+    </field>
+    <field number="89" name="Signature" type="DATA"/>
+    <field number="93" name="SignatureLength" type="LENGTH"/>
+    <field number="109" name="ClientID" type="STRING"/>
+    <field number="126" name="ExpireTime" type="UTCTIMESTAMP"/>
+    <field number="11500" name="LegalEntity" type="STRING" description="legal entity">
+      <value enum="CGMI" description="CGMI"/>
+      <value enum="CGML" description="CGML"/>
+      <value enum="NCL" description="NCL"/>
+    </field>
+    <field number="11501" name="TradeType" type="STRING">
+      <value enum="CA" description="CA"/>
+    </field>
+    <field number="11502" name="Exchange" type="STRING">
+      <value enum="JTSE" description="JTSE"/>
+      <value enum="OTC" description="OTC"/>
+      <value enum="OTIS" description="OTIS"/>
+      <value enum="TENT" description="TENT"/>
+      <value enum="NQJS" description="NQJS"/>
+    </field>
+    <field number="11503" name="ClientId" type="STRING"/>
+    <field number="11504" name="CitiSide" type="CHAR">
+      <value enum="B" description="BUY"/>
+      <value enum="S" description="SELL"/>
+    </field>
+    <field number="11505" name="OrderType" type="CHAR">
+      <value enum="N" description="NEW"/>
+      <value enum="R" description="REPLACE"/>
+      <value enum="C" description="CANCEL"/>
+    </field>
+    <field number="11506" name="CitiOrdId" type="STRING"/>
+    <field number="11507" name="MoOrdId" type="STRING"/>
+    <field number="11508" name="OrigSrc" type="STRING"/>
+    <field number="11509" name="Src" type="STRING"/>
+    <field number="11510" name="ShortSellExempt" type="BOOLEAN"/>
+    <field number="11511" name="ShortFlag" type="BOOLEAN"/>
+    <field number="11512" name="BalQty" type="QTY"/>
+    <field number="11513" name="NoRiskQty" type="QTY"/>
+    <field number="11514" name="PrnQty" type="QTY"/>
+    <field number="11515" name="AgencyQty" type="QTY"/>
+    <field number="11516" name="CUSIP" type="INT"/>
+    <field number="11517" name="QuikCode" type="STRING"/>
+    <field number="11518" name="ClAcct" type="STRING"/>
+    <field number="11519" name="AvePrc" type="PRICE"/>
+    <field number="11520" name="SalesId" type="STRING"/>
+    <field number="11521" name="TraderId" type="STRING"/>
+    <field number="11522" name="CreditId" type="STRING"/>
+    <field number="11523" name="ModId" type="STRING"/>
+    <field number="11524" name="CreateId" type="STRING"/>
+    <field number="11525" name="AutoMerge" type="BOOLEAN"/>
+    <field number="11526" name="AutoTicket" type="BOOLEAN"/>
+    <field number="11527" name="TradeDate" type="DATE"/>
+    <field number="11528" name="SettleDate" type="DATE"/>
+    <field number="11529" name="MgmtGrp" type="STRING"/>
+    <field number="11530" name="ExecId" type="STRING"/>
+    <field number="11531" name="ExecQty" type="QTY"/>
+    <field number="11532" name="ExecPrc" type="PRICE"/>
+    <field number="11533" name="ExecDateTime" type="UTCTIMESTAMP"/>
+    <field number="11534" name="RawLength" type="LENGTH"/>
+    <field number="11535" name="Raw" type="DATA"/>
+    <field number="11536" name="OrderStatus" type="CHAR">
+      <value enum="A" description="ACCEPTED"/>
+      <value enum="S" description="SENT"/>
+      <value enum="R" description="REJECTED"/>
+      <value enum="C" description="CANCELLED"/>
+      <value enum="D" description="DONE"/>
+      <value enum="E" description="ERROR"/>
+    </field>
+    <field number="11537" name="NoHistories" type="NUMINGROUP"/>
+    <field number="11538" name="NoExecutions" type="NUMINGROUP"/>
+    <field number="11539" name="BookingStatus" type="STRING"/>
+    <field number="11540" name="QueryId" type="STRING"/>
+    <field number="11541" name="DestTopic" type="STRING"/>
+    <field number="11542" name="OrderVersion" type="INT"/>
+    <field number="11543" name="Op" type="CHAR">
+      <value enum="&amp;" description="AND"/>
+      <value enum="|" description="OR"/>
+      <value enum="&lt;" description="LessThan"/>
+      <value enum="[" description="LessThanOrEqual"/>
+      <value enum="&gt;" description="GreaterThan"/>
+      <value enum="]" description="GreaterThanOrEqual"/>
+      <value enum="!" description="NOT"/>
+      <value enum="E" description="Exists"/>
+      <value enum="S" description="AlreadySent(version)"/>
+      <value enum="*" description="Multiple"/>
+      <value enum="/" description="Divide"/>
+      <value enum="+" description="Plus"/>
+      <value enum="-" description="Minus"/>
+    </field>
+    <field number="11544" name="NoArgs" type="NUMINGROUP"/>
+    <field number="11545" name="ArgType" type="CHAR">
+      <value enum="B" description="BOOLEAN"/>
+      <value enum="C" description="CHAR"/>
+      <value enum="I" description="INT"/>
+      <value enum="F" description="FLOAT"/>
+      <value enum="S" description="STRING"/>
+      <value enum="T" description="TIME"/>
+      <value enum="A" description="ATTR"/>
+      <value enum="X" description="CONDITION"/>
+    </field>
+    <field number="11546" name="ConstBool" type="BOOLEAN"/>
+    <field number="11547" name="ConstChar" type="CHAR"/>
+    <field number="11548" name="ConstInt" type="INT"/>
+    <field number="11549" name="ConstFloat" type="FLOAT"/>
+    <field number="11550" name="ConstStr" type="STRING"/>
+    <field number="11551" name="ConstTime" type="UTCTIMESTAMP"/>
+    <field number="11552" name="Attr" type="STRING">
+      <value enum="time" description="current time"/>
+      <value enum="order.client" description="client id"/>
+    </field>
+    <field number="11553" name="ExchangeId" type="STRING"/>
+  </fields>
+</fix>
