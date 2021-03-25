@@ -476,4 +476,48 @@
    <field name='PreTradeAnonymity' required='N' />
    <field name='CustOrderCapacity' required='N' />
    <field name='ForexReq' required='N' />
-   <field name=
+   <field name='SettlCurrency' required='N' />
+   <field name='BookingType' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <field name='SettlDate2' required='N' />
+   <field name='OrderQty2' required='N' />
+   <field name='Price2' required='N' />
+   <field name='PositionEffect' required='N' />
+   <field name='CoveredOrUncovered' required='N' />
+   <field name='MaxShow' required='N' />
+   <field name='LocateReqd' required='N' />
+   <field name='CancellationRights' required='N' />
+   <field name='MoneyLaunderingStatus' required='N' />
+   <field name='RegistID' required='N' />
+   <field name='Designation' required='N' />
+   <field name='ManualOrderIndicator' required='N' />
+   <field name='CustDirectedOrder' required='N' />
+   <field name='ReceivedDeptID' required='N' />
+   <field name='CustOrderHandlingInst' required='N' />
+   <field name='OrderHandlingInstSource' required='N' />
+   <component name='TrdRegTimestamps' required='N' />
+  </message>
+  <message name='OrderStatusRequest' msgcat='app' msgtype='H'>
+   <field name='OrderID' required='N' />
+   <field name='ClOrdID' required='Y' />
+   <field name='SecondaryClOrdID' required='N' />
+   <field name='ClOrdLinkID' required='N' />
+   <component name='Parties' required='N' />
+   <field name='OrdStatusReqID' required='N' />
+   <field name='Account' required='N' />
+   <field name='AcctIDSource' required='N' />
+   <component name='Instrument' required='Y' />
+   <component name='FinancingDetails' required='N' />
+   <component name='UndInstrmtGrp' required='N' />
+   <field name='Side' required='Y' />
+  </message>
+  <message name='AllocationInstruction' msgcat='app' msgtype='J'>
+   <field name='AllocID' required='Y' />
+   <field name='AllocTransType' required='Y' />
+   <field name='AllocType' required='Y' />
+   <field name='SecondaryAllocID' required='N' />
+   <field name='RefAllocID' required='N' />
+   <field name='AllocCancReplaceReason' required='N' />
+   
