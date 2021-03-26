@@ -562,4 +562,48 @@
    <field name='AutoAcceptIndicator' required='N' />
    <field name='Text' required='N' />
    <field name='EncodedTextLen' required='N' />
-   <field
+   <field name='EncodedText' required='N' />
+   <field name='NumDaysInterest' required='N' />
+   <field name='AccruedInterestRate' required='N' />
+   <field name='AccruedInterestAmt' required='N' />
+   <field name='TotalAccruedInterestAmt' required='N' />
+   <field name='InterestAtMaturity' required='N' />
+   <field name='EndAccruedInterestAmt' required='N' />
+   <field name='StartCash' required='N' />
+   <field name='EndCash' required='N' />
+   <field name='LegalConfirm' required='N' />
+   <component name='Stipulations' required='N' />
+   <component name='YieldData' required='N' />
+   <component name='PositionAmountData' required='N' />
+   <field name='TotNoAllocs' required='N' />
+   <field name='LastFragment' required='N' />
+   <component name='AllocGrp' required='N' />
+   <field name='AvgPxIndicator' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='TrdType' required='N' />
+   <field name='TrdSubType' required='N' />
+   <field name='CustOrderCapacity' required='N' />
+   <field name='TradeInputSource' required='N' />
+   <field name='MultiLegReportingType' required='N' />
+   <field name='MessageEventSource' required='N' />
+   <field name='RndPx' required='N' />
+  </message>
+  <message name='ListCancelRequest' msgcat='app' msgtype='K'>
+   <field name='ListID' required='Y' />
+   <component name='Parties' required='N' />
+   <field name='TransactTime' required='Y' />
+   <field name='TradeOriginationDate' required='N' />
+   <field name='TradeDate' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='ListExecute' msgcat='app' msgtype='L'>
+   <field name='ListID' required='Y' />
+   <field name='ClientBidID' required='N' />
+   <field name='BidID' required='N' />
+   <field name='TransactTime' required='Y' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </mes
