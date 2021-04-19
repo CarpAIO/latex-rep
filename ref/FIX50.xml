@@ -786,4 +786,49 @@
    <field name='MDFeedType' required='N' />
    <field name='TradeDate' required='N' />
    <field name='MDReqID' required='N' />
-   <component name='MDIncGrp' required
+   <component name='MDIncGrp' required='Y' />
+   <field name='ApplQueueDepth' required='N' />
+   <field name='ApplQueueResolution' required='N' />
+   <component name='RoutingGrp' required='N' />
+  </message>
+  <message name='MarketDataRequestReject' msgcat='app' msgtype='Y'>
+   <field name='MDReqID' required='Y' />
+   <field name='MDReqRejReason' required='N' />
+   <component name='MDRjctGrp' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='QuoteCancel' msgcat='app' msgtype='Z'>
+   <field name='QuoteReqID' required='N' />
+   <field name='QuoteID' required='N' />
+   <field name='QuoteCancelType' required='Y' />
+   <field name='QuoteResponseLevel' required='N' />
+   <component name='Parties' required='N' />
+   <field name='Account' required='N' />
+   <field name='AcctIDSource' required='N' />
+   <field name='AccountType' required='N' />
+   <field name='TradingSessionID' required='N' />
+   <field name='TradingSessionSubID' required='N' />
+   <component name='QuotCxlEntriesGrp' required='N' />
+  </message>
+  <message name='QuoteStatusRequest' msgcat='app' msgtype='a'>
+   <field name='QuoteStatusReqID' required='N' />
+   <field name='QuoteID' required='N' />
+   <component name='Instrument' required='Y' />
+   <component name='FinancingDetails' required='N' />
+   <component name='UndInstrmtGrp' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <component name='Parties' required='N' />
+   <field name='Account' required='N' />
+   <field name='AcctIDSource' required='N' />
+   <field name='AccountType' required='N' />
+   <field name='TradingSessionID' required='N' />
+   <field name='TradingSessionSubID' required='N' />
+   <field name='SubscriptionRequestType' required='N' />
+  </message>
+  <message name='MassQuoteAcknowledgement' msgcat='app' msgtype='b'>
+   <field name='QuoteReqID' required='N' />
+   <field name='QuoteID' required='N' />
+   <field name='QuoteStatus' required='Y' />
+   <field name='QuoteRejectReason' required='
