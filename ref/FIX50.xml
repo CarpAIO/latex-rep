@@ -914,4 +914,47 @@
    <field name='TransactTime' required='N' />
    <field name='Adjustment' required='N' />
    <field name='FirstPx' required='N' />
-   <field nam
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='TradingSessionStatusRequest' msgcat='app' msgtype='g'>
+   <field name='TradSesReqID' required='Y' />
+   <field name='TradingSessionID' required='N' />
+   <field name='TradingSessionSubID' required='N' />
+   <field name='TradSesMethod' required='N' />
+   <field name='TradSesMode' required='N' />
+   <field name='SubscriptionRequestType' required='Y' />
+   <field name='SecurityExchange' required='N' />
+  </message>
+  <message name='TradingSessionStatus' msgcat='app' msgtype='h'>
+   <field name='TradSesReqID' required='N' />
+   <field name='TradingSessionID' required='Y' />
+   <field name='TradingSessionSubID' required='N' />
+   <field name='TradSesMethod' required='N' />
+   <field name='TradSesMode' required='N' />
+   <field name='UnsolicitedIndicator' required='N' />
+   <field name='TradSesStatus' required='Y' />
+   <field name='TradSesStatusRejReason' required='N' />
+   <field name='TradSesStartTime' required='N' />
+   <field name='TradSesOpenTime' required='N' />
+   <field name='TradSesPreCloseTime' required='N' />
+   <field name='TradSesCloseTime' required='N' />
+   <field name='TradSesEndTime' required='N' />
+   <field name='TotalVolumeTraded' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <component name='Instrument' required='N' />
+  </message>
+  <message name='MassQuote' msgcat='app' msgtype='i'>
+   <field name='QuoteReqID' required='N' />
+   <field name='QuoteID' required='Y' />
+   <field name='QuoteType' required='N' />
+   <field name='QuoteResponseLevel' required='N' />
+   <component name='Parties' required='N' />
+   <field name='Account' required='N' />
+   <field name='AcctIDSource' required='N' />
+   <field name='AccountType' required='N' />
+   <field name='DefBidSize' required='N' />
+   <field name='DefOfferSize' requ
