@@ -1048,4 +1048,47 @@
    <component name='Instrument' required='N' />
    <component name='UnderlyingInstrument' required='N' />
    <field name='Side' required='N' />
-   <field name='TransactTime'
+   <field name='TransactTime' required='Y' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='OrderMassCancelReport' msgcat='app' msgtype='r'>
+   <field name='ClOrdID' required='N' />
+   <field name='SecondaryClOrdID' required='N' />
+   <field name='OrderID' required='Y' />
+   <field name='SecondaryOrderID' required='N' />
+   <field name='MassCancelRequestType' required='Y' />
+   <field name='MassCancelResponse' required='Y' />
+   <field name='MassCancelRejectReason' required='N' />
+   <field name='TotalAffectedOrders' required='N' />
+   <component name='AffectedOrdGrp' required='N' />
+   <field name='TradingSessionID' required='N' />
+   <field name='TradingSessionSubID' required='N' />
+   <component name='Parties' required='N' />
+   <component name='Instrument' required='N' />
+   <component name='UnderlyingInstrument' required='N' />
+   <field name='Side' required='N' />
+   <field name='TransactTime' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='NewOrderCross' msgcat='app' msgtype='s'>
+   <field name='CrossID' required='Y' />
+   <field name='CrossType' required='Y' />
+   <field name='CrossPrioritization' required='Y' />
+   <component name='RootParties' required='N' />
+   <component name='SideCrossOrdModGrp' required='Y' />
+   <component name='Instrument' required='Y' />
+   <component name='UndInstrmtGrp' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <field name='SettlType' required='N' />
+   <field name='SettlDate' required='N' />
+   <field name='HandlInst' required='N' />
+   <field name='ExecInst' required='N' />
+   <field name='MinQty' required='N' />
+   <field name='MatchIncrement' required='N' />
+   <field name='MaxPriceLevels' required='N' />
+   <component name='DisplayInstruction' required='N' />
+   <field name='MaxFloor' requir
