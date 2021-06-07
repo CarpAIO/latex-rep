@@ -1521,4 +1521,43 @@
    <field name='ExecID' required='N' />
    <field name='OrdStatus' required='N' />
    <field name='SecondaryExecID' required='N' />
-   <field name='ExecRestatementReason'
+   <field name='ExecRestatementReason' required='N' />
+   <field name='PreviouslyReported' required='N' />
+   <field name='PriceType' required='N' />
+   <component name='RootParties' required='N' />
+   <field name='AsOfIndicator' required='N' />
+   <field name='SettlSessID' required='N' />
+   <field name='SettlSessSubID' required='N' />
+   <component name='Instrument' required='Y' />
+   <component name='FinancingDetails' required='N' />
+   <component name='OrderQtyData' required='N' />
+   <field name='QtyType' required='N' />
+   <component name='YieldData' required='N' />
+   <component name='UndInstrmtGrp' required='N' />
+   <field name='UnderlyingTradingSessionID' required='N' />
+   <field name='UnderlyingTradingSessionSubID' required='N' />
+   <field name='LastQty' required='Y' />
+   <field name='LastPx' required='Y' />
+   <field name='CalculatedCcyLastQty' required='N' />
+   <field name='LastParPx' required='N' />
+   <field name='LastSpotRate' required='N' />
+   <field name='LastForwardPoints' required='N' />
+   <field name='LastSwapPoints' required='N' />
+   <field name='LastMkt' required='N' />
+   <field name='TradeDate' required='Y' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='AvgPx' required='N' />
+   <component name='SpreadOrBenchmarkCurveData' required='N' />
+   <field name='AvgPxIndicator' required='N' />
+   <component name='PositionAmountData' required='N' />
+   <field name='MultiLegReportingType' required='N' />
+   <field name='TradeLegRefID' required='N' />
+   <component name='TrdInstrmtLegGrp' required='N' />
+   <field name='TransactTime' required='N' />
+   <component name='TrdRegTimestamps' required='N' />
+   <field name='SettlType' required='N' />
+   <field name='SettlDate' required='N' />
+   <field name='UnderlyingSettlementDate' required='N' />
+   <field name='MatchStatus' required='N' />
+   <field name='MatchType' required='N' />
+   <field name
