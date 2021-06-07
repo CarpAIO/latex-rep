@@ -1560,4 +1560,49 @@
    <field name='UnderlyingSettlementDate' required='N' />
    <field name='MatchStatus' required='N' />
    <field name='MatchType' required='N' />
-   <field name
+   <field name='OrderCategory' required='N' />
+   <component name='TrdCapRptSideGrp' required='Y' />
+   <field name='CopyMsgIndicator' required='N' />
+   <field name='PublishTrdIndicator' required='N' />
+   <field name='ShortSaleReason' required='N' />
+   <field name='TierCode' required='N' />
+   <field name='MessageEventSource' required='N' />
+   <field name='LastUpdateTime' required='N' />
+   <field name='RndPx' required='N' />
+   <field name='TZTransactTime' required='N' />
+   <field name='ReportedPxDiff' required='N' />
+   <field name='GrossTradeAmt' required='N' />
+  </message>
+  <message name='OrderMassStatusRequest' msgcat='app' msgtype='AF'>
+   <field name='MassStatusReqID' required='Y' />
+   <field name='MassStatusReqType' required='Y' />
+   <component name='Parties' required='N' />
+   <field name='Account' required='N' />
+   <field name='AcctIDSource' required='N' />
+   <field name='TradingSessionID' required='N' />
+   <field name='TradingSessionSubID' required='N' />
+   <component name='Instrument' required='N' />
+   <component name='UnderlyingInstrument' required='N' />
+   <field name='Side' required='N' />
+  </message>
+  <message name='QuoteRequestReject' msgcat='app' msgtype='AG'>
+   <field name='QuoteReqID' required='Y' />
+   <field name='RFQReqID' required='N' />
+   <field name='QuoteRequestRejectReason' required='Y' />
+   <component name='QuotReqRjctGrp' required='Y' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='RFQRequest' msgcat='app' msgtype='AH'>
+   <field name='RFQReqID' required='Y' />
+   <component name='RFQReqGrp' required='Y' />
+   <field name='SubscriptionRequestType' required='N' />
+  </message>
+  <message name='QuoteStatusReport' msgcat='app' msgtype='AI'>
+   <field name='QuoteStatusReqID' required='N' />
+   <field name='QuoteReqID' required='N' />
+   <field name='QuoteID' required='Y' />
+   <field name='QuoteRespID' required='N' />
+   <field name='QuoteType' required='N' />
+   <componen
