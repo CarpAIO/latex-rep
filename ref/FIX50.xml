@@ -1995,4 +1995,46 @@
    <field name='TrdMatchID' required='N' />
    <field name='ExecID' required='N' />
    <field name='SecondaryExecID' required='N' />
-   <field name='OrdStatu
+   <field name='OrdStatus' required='N' />
+   <field name='ExecRestatementReason' required='N' />
+   <field name='PreviouslyReported' required='N' />
+   <field name='PriceType' required='N' />
+   <field name='UnderlyingTradingSessionID' required='N' />
+   <field name='UnderlyingTradingSessionSubID' required='N' />
+   <field name='SettlSessID' required='N' />
+   <field name='SettlSessSubID' required='N' />
+   <field name='QtyType' required='N' />
+   <field name='LastQty' required='N' />
+   <field name='LastPx' required='N' />
+   <component name='Instrument' required='Y' />
+   <field name='LastParPx' required='N' />
+   <field name='CalculatedCcyLastQty' required='N' />
+   <field name='LastSwapPoints' required='N' />
+   <field name='LastSpotRate' required='N' />
+   <field name='LastForwardPoints' required='N' />
+   <field name='LastMkt' required='N' />
+   <field name='TradeDate' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='AvgPx' required='N' />
+   <field name='AvgPxIndicator' required='N' />
+   <field name='MultiLegReportingType' required='N' />
+   <field name='TradeLegRefID' required='N' />
+   <field name='TransactTime' required='N' />
+   <field name='SettlType' required='N' />
+   <component name='UndInstrmtGrp' required='N' />
+   <field name='MatchStatus' required='N' />
+   <field name='MatchType' required='N' />
+   <field name='CopyMsgIndicator' required='N' />
+   <field name='PublishTrdIndicator' required='N' />
+   <field name='ShortSaleReason' required='N' />
+   <component name='TrdInstrmtLegGrp' required='N' />
+   <component name='TrdRegTimestamps' required='N' />
+   <field name='ResponseTransportType' required='N' />
+   <field name='ResponseDestination' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <field name='AsOfIndicator' required='N' />
+   <field name='ClearingFeeIndicator' required='N' />
+   <component name='PositionAmountData' required='N' />
+   <field name='TierCode' required='N' /
