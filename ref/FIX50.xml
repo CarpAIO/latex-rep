@@ -2037,4 +2037,46 @@
    <field name='AsOfIndicator' required='N' />
    <field name='ClearingFeeIndicator' required='N' />
    <component name='PositionAmountData' required='N' />
-   <field name='TierCode' required='N' /
+   <field name='TierCode' required='N' />
+   <field name='MessageEventSource' required='N' />
+   <field name='LastUpdateTime' required='N' />
+   <field name='RndPx' required='N' />
+   <component name='TrdCapRptAckSideGrp' required='N' />
+   <field name='RptSys' required='N' />
+   <field name='GrossTradeAmt' required='N' />
+   <field name='SettlDate' required='N' />
+  </message>
+  <message name='AllocationReport' msgcat='app' msgtype='AS'>
+   <field name='AllocReportID' required='Y' />
+   <field name='AllocID' required='N' />
+   <field name='AllocTransType' required='Y' />
+   <field name='AllocReportRefID' required='N' />
+   <field name='AllocCancReplaceReason' required='N' />
+   <field name='SecondaryAllocID' required='N' />
+   <field name='AllocReportType' required='Y' />
+   <field name='AllocStatus' required='Y' />
+   <field name='AllocRejCode' required='N' />
+   <field name='RefAllocID' required='N' />
+   <field name='AllocIntermedReqType' required='N' />
+   <field name='AllocLinkID' required='N' />
+   <field name='AllocLinkType' required='N' />
+   <field name='BookingRefID' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='TrdType' required='N' />
+   <field name='TrdSubType' required='N' />
+   <field name='MultiLegReportingType' required='N' />
+   <field name='CustOrderCapacity' required='N' />
+   <field name='TradeInputSource' required='N' />
+   <field name='RndPx' required='N' />
+   <field name='MessageEventSource' required='N' />
+   <field name='TradeInputDevice' required='N' />
+   <field name='AvgPxIndicator' required='N' />
+   <field name='AllocNoOrdersType' required='N' />
+   <component name='OrdAllocGrp' required='N' />
+   <component name='ExecAllocGrp' required='N' />
+   <field name='PreviouslyReported' required='N' />
+   <field name='ReversalIndicator' required='N' />
+   <field name='MatchType' required='N' />
+   <field name='Side' required='Y' />
+   <component name='Instrument' required='Y' />
+   <componen
