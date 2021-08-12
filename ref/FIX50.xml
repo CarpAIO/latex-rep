@@ -2726,4 +2726,48 @@
    <field name='LegCouponRate' required='N' />
    <field name='LegSecurityExchange' required='N' />
    <field name='LegIssuer' required='N' />
-   <field name='EncodedLegIssuerLe
+   <field name='EncodedLegIssuerLen' required='N' />
+   <field name='EncodedLegIssuer' required='N' />
+   <field name='LegSecurityDesc' required='N' />
+   <field name='EncodedLegSecurityDescLen' required='N' />
+   <field name='EncodedLegSecurityDesc' required='N' />
+   <field name='LegRatioQty' required='N' />
+   <field name='LegSide' required='N' />
+   <field name='LegCurrency' required='N' />
+   <field name='LegPool' required='N' />
+   <field name='LegDatedDate' required='N' />
+   <field name='LegContractSettlMonth' required='N' />
+   <field name='LegInterestAccrualDate' required='N' />
+   <field name='LegOptionRatio' required='N' />
+  </component>
+  <component name='InstrmtLegExecGrp'>
+   <group name='NoLegs' required='N'>
+    <component name='InstrumentLeg' required='N' />
+    <field name='LegQty' required='N' />
+    <field name='LegOrderQty' required='N' />
+    <field name='LegSwapType' required='N' />
+    <component name='LegStipulations' required='N' />
+    <field name='LegPositionEffect' required='N' />
+    <field name='LegCoveredOrUncovered' required='N' />
+    <component name='NestedParties' required='N' />
+    <field name='LegRefID' required='N' />
+    <field name='LegPrice' required='N' />
+    <field name='LegSettlType' required='N' />
+    <field name='LegSettlDate' required='N' />
+    <field name='LegLastPx' required='N' />
+    <field name='LegSettlCurrency' required='N' />
+    <field name='LegLastForwardPoints' required='N' />
+    <field name='LegCalculatedCcyLastQty' required='N' />
+    <field name='LegGrossTradeAmt' required='N' />
+   </group>
+  </component>
+  <component name='TrdCapRptSideGrp'>
+   <group name='NoSides' required='Y'>
+    <field name='Side' required='Y' />
+    <field name='OrderID' required='N' />
+    <field name='SecondaryOrderID' required='N' />
+    <field name='ClOrdID' required='N' />
+    <field name='ExecRefID' required='N' />
+    <field name='SecondaryClOrdID' required='N' />
+    <field name='ListID' required='N' />
+    <field nam
