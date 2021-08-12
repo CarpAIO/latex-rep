@@ -2637,4 +2637,48 @@
    <field name='InterestAtMaturity' required='N' />
    <field name='EndAccruedInterestAmt' required='N' />
    <field name='StartCash' required='N' />
-   <field name='EndCash' requir
+   <field name='EndCash' required='N' />
+   <field name='LegalConfirm' required='N' />
+   <component name='Stipulations' required='N' />
+   <component name='YieldData' required='N' />
+   <component name='PositionAmountData' required='N' />
+   <field name='TotNoAllocs' required='N' />
+   <field name='LastFragment' required='N' />
+   <component name='AllocGrp' required='N' />
+   <field name='AvgPxIndicator' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='TrdType' required='N' />
+   <field name='TrdSubType' required='N' />
+   <field name='CustOrderCapacity' required='N' />
+   <field name='TradeInputSource' required='N' />
+   <field name='MultiLegReportingType' required='N' />
+   <field name='MessageEventSource' required='N' />
+   <field name='RndPx' required='N' />
+  </message>
+  <message name='ExecutionAcknowledgement' msgcat='app' msgtype='BN'>
+   <field name='OrderID' required='Y' />
+   <field name='SecondaryOrderID' required='N' />
+   <field name='ClOrdID' required='N' />
+   <field name='ExecAckStatus' required='Y' />
+   <field name='ExecID' required='Y' />
+   <field name='DKReason' required='N' />
+   <component name='Instrument' required='Y' />
+   <component name='UndInstrmtGrp' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <field name='Side' required='Y' />
+   <component name='OrderQtyData' required='Y' />
+   <field name='LastQty' required='N' />
+   <field name='LastPx' required='N' />
+   <field name='PriceType' required='N' />
+   <field name='LastParPx' required='N' />
+   <field name='CumQty' required='N' />
+   <field name='AvgPx' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='TradingSessionList' msgcat='app' msgtype='BJ'>
+   <field name='TradSesReqID' required='N' />
+   <component name='TrdSessLstGrp' required='Y' />
+  </message>
+  <message name='TradingSessionListRequest' msgca
