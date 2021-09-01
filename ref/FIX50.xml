@@ -2813,4 +2813,52 @@
     <field name='NetMoney' required='N' />
     <field name='SettlCurrAmt' required='N' />
     <field name='SettlCurrency' required='N' />
-    <field
+    <field name='SettlCurrFxRate' required='N' />
+    <field name='SettlCurrFxRateCalc' required='N' />
+    <field name='PositionEffect' required='N' />
+    <field name='Text' required='N' />
+    <field name='EncodedTextLen' required='N' />
+    <field name='EncodedText' required='N' />
+    <field name='SideMultiLegReportingType' required='N' />
+    <component name='ContAmtGrp' required='N' />
+    <component name='Stipulations' required='N' />
+    <component name='MiscFeesGrp' required='N' />
+    <field name='ExchangeRule' required='N' />
+    <field name='TradeAllocIndicator' required='N' />
+    <field name='PreallocMethod' required='N' />
+    <field name='AllocID' required='N' />
+    <component name='TrdAllocGrp' required='N' />
+    <component name='SideTrdRegTS' required='N' />
+    <field name='SideGrossTradeAmt' required='N' />
+    <field name='AggressorIndicator' required='N' />
+    <field name='ExchangeSpecialInstructions' required='N' />
+   </group>
+  </component>
+  <component name='PositionAmountData'>
+   <group name='NoPosAmt' required='N'>
+    <field name='PosAmtType' required='N' />
+    <field name='PosAmt' required='N' />
+    <field name='PositionCurrency' required='N' />
+   </group>
+  </component>
+  <component name='Stipulations'>
+   <group name='NoStipulations' required='N'>
+    <field name='StipulationType' required='N' />
+    <field name='StipulationValue' required='N' />
+   </group>
+  </component>
+  <component name='MDReqGrp'>
+   <group name='NoMDEntryTypes' required='Y'>
+    <field name='MDEntryType' required='Y' />
+   </group>
+  </component>
+  <component name='TrdCapRptAckSideGrp'>
+   <group name='NoSides' required='Y'>
+    <field name='Side' required='Y' />
+    <field name='OrderID' required='N' />
+    <field name='SecondaryOrderID' required='N' />
+    <field name='ClOrdID' required='N' />
+    <field name='SecondaryClOrdID' required='N' />
+    <field name='ListID' required='N' />
+    <component name='Parties' required='N' />
+    <field name='Account' required='N' /
