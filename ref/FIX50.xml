@@ -2901,4 +2901,51 @@
     <field name='SettlCurrFxRateCalc' required='N' />
     <field name='PositionEffect' required='N' />
     <field name='SideMultiLegReportingType' required='N' />
-    <component name='ContAmtGrp'
+    <component name='ContAmtGrp' required='N' />
+    <component name='Stipulations' required='N' />
+    <component name='MiscFeesGrp' required='N' />
+    <field name='ExchangeRule' required='N' />
+    <field name='TradeAllocIndicator' required='N' />
+    <field name='PreallocMethod' required='N' />
+    <field name='AllocID' required='N' />
+    <component name='TrdAllocGrp' required='N' />
+    <field name='SideGrossTradeAmt' required='N' />
+    <field name='AggressorIndicator' required='N' />
+    <field name='SideQty' required='N' />
+    <field name='SideTradeReportID' required='N' />
+    <field name='SideFillStationCd' required='N' />
+    <field name='SideReasonCd' required='N' />
+    <field name='RptSeq' required='N' />
+    <field name='SideTrdSubTyp' required='N' />
+    <component name='SideTrdRegTS' required='N' />
+   </group>
+  </component>
+  <component name='SettlInstGrp'>
+   <group name='NoSettlInst' required='N'>
+    <field name='SettlInstID' required='N' />
+    <field name='SettlInstTransType' required='N' />
+    <field name='SettlInstRefID' required='N' />
+    <component name='Parties' required='N' />
+    <field name='Side' required='N' />
+    <field name='Product' required='N' />
+    <field name='SecurityType' required='N' />
+    <field name='CFICode' required='N' />
+    <field name='SettlCurrency' required='N' />
+    <field name='EffectiveTime' required='N' />
+    <field name='ExpireTime' required='N' />
+    <field name='LastUpdateTime' required='N' />
+    <component name='SettlInstructionsData' required='N' />
+    <field name='PaymentMethod' required='N' />
+    <field name='PaymentRef' required='N' />
+    <field name='CardHolderName' required='N' />
+    <field name='CardNumber' required='N' />
+    <field name='CardStartDate' required='N' />
+    <field name='CardExpDate' required='N' />
+    <field name='CardIssNum' required='N' />
+    <field name='PaymentDate' required='N' />
+    <field name='PaymentRemitterID' required='N' />
+   </group>
+  </component>
+  <component name='SecLstUpdRelSymGrp'>
+   <group name='NoRelatedSym' required='N'>
+    <component name='
