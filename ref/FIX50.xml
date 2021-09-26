@@ -2948,4 +2948,47 @@
   </component>
   <component name='SecLstUpdRelSymGrp'>
    <group name='NoRelatedSym' required='N'>
-    <component name='
+    <component name='Instrument' required='N' />
+    <component name='InstrumentExtension' required='N' />
+    <component name='FinancingDetails' required='N' />
+    <component name='UnderlyingInstrument' required='N' />
+    <field name='Currency' required='N' />
+    <component name='Stipulations' required='N' />
+    <component name='SecLstUpdRelSymsLegGrp' required='N' />
+    <component name='SpreadOrBenchmarkCurveData' required='N' />
+    <component name='YieldData' required='N' />
+    <field name='RoundLot' required='N' />
+    <field name='MinTradeVol' required='N' />
+    <field name='TradingSessionID' required='N' />
+    <field name='TradingSessionSubID' required='N' />
+    <field name='ExpirationCycle' required='N' />
+    <field name='Text' required='N' />
+    <field name='EncodedTextLen' required='N' />
+    <field name='EncodedText' required='N' />
+   </group>
+  </component>
+  <component name='SecAltIDGrp'>
+   <group name='NoSecurityAltID' required='N'>
+    <field name='SecurityAltID' required='N' />
+    <field name='SecurityAltIDSource' required='N' />
+   </group>
+  </component>
+  <component name='DiscretionInstructions'>
+   <field name='DiscretionInst' required='N' />
+   <field name='DiscretionOffsetValue' required='N' />
+   <field name='DiscretionMoveType' required='N' />
+   <field name='DiscretionOffsetType' required='N' />
+   <field name='DiscretionLimitType' required='N' />
+   <field name='DiscretionRoundDirection' required='N' />
+   <field name='DiscretionScope' required='N' />
+  </component>
+  <component name='BidCompReqGrp'>
+   <group name='NoBidComponents' required='N'>
+    <field name='ListID' required='N' />
+    <field name='Side' required='N' />
+    <field name='TradingSessionID' required='N' />
+    <field name='TradingSessionSubID' required='N' />
+    <field name='NetGrossInd' required='N' />
+    <field name='SettlType' required='N' />
+    <field name='SettlDate' required='N' />
+    <field name='Accou
