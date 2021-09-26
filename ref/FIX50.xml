@@ -3040,4 +3040,54 @@
    <field name='DeliveryType' required='N' />
    <field name='MarginRatio' required='N' />
   </component>
-  <component name='SettlPa
+  <component name='SettlParties'>
+   <group name='NoSettlPartyIDs' required='N'>
+    <field name='SettlPartyID' required='N' />
+    <field name='SettlPartyIDSource' required='N' />
+    <field name='SettlPartyRole' required='N' />
+    <component name='SettlPtysSubGrp' required='N' />
+   </group>
+  </component>
+  <component name='LegPreAllocGrp'>
+   <group name='NoLegAllocs' required='N'>
+    <field name='LegAllocAccount' required='N' />
+    <field name='LegIndividualAllocID' required='N' />
+    <component name='NestedParties2' required='N' />
+    <field name='LegAllocQty' required='N' />
+    <field name='LegAllocAcctIDSource' required='N' />
+    <field name='LegSettlCurrency' required='N' />
+   </group>
+  </component>
+  <component name='PreAllocMlegGrp'>
+   <group name='NoAllocs' required='N'>
+    <field name='AllocAccount' required='N' />
+    <field name='AllocAcctIDSource' required='N' />
+    <field name='AllocSettlCurrency' required='N' />
+    <field name='IndividualAllocID' required='N' />
+    <component name='NestedParties3' required='N' />
+    <field name='AllocQty' required='N' />
+   </group>
+  </component>
+  <component name='InstrmtLegIOIGrp'>
+   <group name='NoLegs' required='N'>
+    <component name='InstrumentLeg' required='N' />
+    <field name='LegIOIQty' required='N' />
+    <component name='LegStipulations' required='N' />
+   </group>
+  </component>
+  <component name='InstrumentExtension'>
+   <field name='DeliveryForm' required='N' />
+   <field name='PctAtRisk' required='N' />
+   <component name='AttrbGrp' required='N' />
+  </component>
+  <component name='LinesOfTextGrp'>
+   <group name='NoLinesOfText' required='Y'>
+    <field name='Text' required='Y' />
+    <field name='EncodedTextLen' required='N' />
+    <field name='EncodedText' required='N' />
+   </group>
+  </component>
+  <component name='BidDescReqGrp'>
+   <group name='NoBidDescriptors' required='N'>
+    <field name='BidDescriptorType' required='N' />
+    <field name='BidDescriptor' required='N' 
