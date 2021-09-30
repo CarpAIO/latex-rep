@@ -3363,4 +3363,45 @@
    <field name='UnderlyingIssuer' required='N' />
    <field name='EncodedUnderlyingIssuerLen' required='N' />
    <field name='EncodedUnderlyingIssuer' required='N' />
-   <field name='UnderlyingSecurityDesc' required='N'
+   <field name='UnderlyingSecurityDesc' required='N' />
+   <field name='EncodedUnderlyingSecurityDescLen' required='N' />
+   <field name='EncodedUnderlyingSecurityDesc' required='N' />
+   <field name='UnderlyingCPProgram' required='N' />
+   <field name='UnderlyingCPRegType' required='N' />
+   <field name='UnderlyingAllocationPercent' required='N' />
+   <field name='UnderlyingCurrency' required='N' />
+   <field name='UnderlyingQty' required='N' />
+   <field name='UnderlyingSettlementType' required='N' />
+   <field name='UnderlyingCashAmount' required='N' />
+   <field name='UnderlyingCashType' required='N' />
+   <field name='UnderlyingPx' required='N' />
+   <field name='UnderlyingDirtyPrice' required='N' />
+   <field name='UnderlyingEndPrice' required='N' />
+   <field name='UnderlyingStartValue' required='N' />
+   <field name='UnderlyingCurrentValue' required='N' />
+   <field name='UnderlyingEndValue' required='N' />
+   <component name='UnderlyingStipulations' required='N' />
+   <field name='UnderlyingAdjustedQuantity' required='N' />
+   <field name='UnderlyingFXRate' required='N' />
+   <field name='UnderlyingFXRateCalc' required='N' />
+   <field name='UnderlyingCapValue' required='N' />
+   <component name='UndlyInstrumentParties' required='N' />
+   <field name='UnderlyingSettlMethod' required='N' />
+  </component>
+  <component name='QuotSetGrp'>
+   <group name='NoQuoteSets' required='Y'>
+    <field name='QuoteSetID' required='Y' />
+    <component name='UnderlyingInstrument' required='N' />
+    <field name='QuoteSetValidUntilTime' required='N' />
+    <field name='TotNoQuoteEntries' required='Y' />
+    <field name='LastFragment' required='N' />
+    <component name='QuotEntryGrp' required='Y' />
+   </group>
+  </component>
+  <component name='AllocGrp'>
+   <group name='NoAllocs' required='N'>
+    <field name='AllocAccount' required='N' />
+    <field name='AllocAcctIDSource' required='N' />
+    <field name='MatchStatus' required='N' />
+    <field name='AllocPrice' required='N' />
+    <fie
