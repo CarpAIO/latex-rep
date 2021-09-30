@@ -3404,4 +3404,45 @@
     <field name='AllocAcctIDSource' required='N' />
     <field name='MatchStatus' required='N' />
     <field name='AllocPrice' required='N' />
-    <fie
+    <field name='AllocQty' required='N' />
+    <field name='IndividualAllocID' required='N' />
+    <field name='ProcessCode' required='N' />
+    <field name='SecondaryIndividualAllocID' required='N' />
+    <field name='AllocMethod' required='N' />
+    <field name='AllocCustomerCapacity' required='N' />
+    <field name='AllocPositionEffect' required='N' />
+    <field name='IndividualAllocType' required='N' />
+    <component name='NestedParties' required='N' />
+    <field name='NotifyBrokerOfCredit' required='N' />
+    <field name='AllocHandlInst' required='N' />
+    <field name='AllocText' required='N' />
+    <field name='EncodedAllocTextLen' required='N' />
+    <field name='EncodedAllocText' required='N' />
+    <component name='CommissionData' required='N' />
+    <field name='AllocAvgPx' required='N' />
+    <field name='AllocNetMoney' required='N' />
+    <field name='SettlCurrAmt' required='N' />
+    <field name='AllocSettlCurrAmt' required='N' />
+    <field name='SettlCurrency' required='N' />
+    <field name='AllocSettlCurrency' required='N' />
+    <field name='SettlCurrFxRate' required='N' />
+    <field name='SettlCurrFxRateCalc' required='N' />
+    <field name='AllocAccruedInterestAmt' required='N' />
+    <field name='AllocInterestAtMaturity' required='N' />
+    <component name='MiscFeesGrp' required='N' />
+    <component name='ClrInstGrp' required='N' />
+    <field name='ClearingFeeIndicator' required='N' />
+    <field name='AllocSettlInstType' required='N' />
+    <component name='SettlInstructionsData' required='N' />
+   </group>
+  </component>
+  <component name='SettlPtysSubGrp'>
+   <group name='NoSettlPartySubIDs' required='N'>
+    <field name='SettlPartySubID' required='N' />
+    <field name='SettlPartySubIDType' required='N' />
+   </group>
+  </component>
+  <component name='InstrumentPtysSubGrp'>
+   <group name='NoInstrumentPartySubIDs' required='N'>
+    <field name='InstrumentPartySubID' required='N' />
+    <field name='InstrumentPartySubIDType' required='N' />
