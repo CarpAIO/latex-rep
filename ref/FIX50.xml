@@ -3328,4 +3328,39 @@
    </group>
   </component>
   <component name='UnderlyingInstrument'>
-   <field
+   <field name='UnderlyingSymbol' required='N' />
+   <field name='UnderlyingSymbolSfx' required='N' />
+   <field name='UnderlyingSecurityID' required='N' />
+   <field name='UnderlyingSecurityIDSource' required='N' />
+   <component name='UndSecAltIDGrp' required='N' />
+   <field name='UnderlyingProduct' required='N' />
+   <field name='UnderlyingCFICode' required='N' />
+   <field name='UnderlyingSecurityType' required='N' />
+   <field name='UnderlyingSecuritySubType' required='N' />
+   <field name='UnderlyingMaturityMonthYear' required='N' />
+   <field name='UnderlyingMaturityDate' required='N' />
+   <field name='UnderlyingPutOrCall' required='N' />
+   <field name='UnderlyingCouponPaymentDate' required='N' />
+   <field name='UnderlyingIssueDate' required='N' />
+   <field name='UnderlyingRepoCollateralSecurityType' required='N' />
+   <field name='UnderlyingRepurchaseTerm' required='N' />
+   <field name='UnderlyingRepurchaseRate' required='N' />
+   <field name='UnderlyingFactor' required='N' />
+   <field name='UnderlyingCreditRating' required='N' />
+   <field name='UnderlyingInstrRegistry' required='N' />
+   <field name='UnderlyingCountryOfIssue' required='N' />
+   <field name='UnderlyingStateOrProvinceOfIssue' required='N' />
+   <field name='UnderlyingLocaleOfIssue' required='N' />
+   <field name='UnderlyingRedemptionDate' required='N' />
+   <field name='UnderlyingStrikePrice' required='N' />
+   <field name='UnderlyingStrikeCurrency' required='N' />
+   <field name='UnderlyingOptAttribute' required='N' />
+   <field name='UnderlyingContractMultiplier' required='N' />
+   <field name='UnderlyingUnitOfMeasure' required='N' />
+   <field name='UnderlyingTimeUnit' required='N' />
+   <field name='UnderlyingCouponRate' required='N' />
+   <field name='UnderlyingSecurityExchange' required='N' />
+   <field name='UnderlyingIssuer' required='N' />
+   <field name='EncodedUnderlyingIssuerLen' required='N' />
+   <field name='EncodedUnderlyingIssuer' required='N' />
+   <field name='UnderlyingSecurityDesc' required='N'
