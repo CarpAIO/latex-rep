@@ -3491,4 +3491,58 @@
     <field name='PriceType' required='N' />
     <field name='Price' required='N' />
     <field name='Price2' required='N' />
-    <component name='YieldData' required=
+    <component name='YieldData' required='N' />
+    <component name='Parties' required='N' />
+   </group>
+  </component>
+  <component name='QuotSetAckGrp'>
+   <group name='NoQuoteSets' required='N'>
+    <field name='QuoteSetID' required='N' />
+    <component name='UnderlyingInstrument' required='N' />
+    <field name='TotNoQuoteEntries' required='N' />
+    <field name='LastFragment' required='N' />
+    <component name='QuotEntryAckGrp' required='N' />
+   </group>
+  </component>
+  <component name='RFQReqGrp'>
+   <group name='NoRelatedSym' required='Y'>
+    <component name='Instrument' required='Y' />
+    <component name='UndInstrmtGrp' required='N' />
+    <component name='InstrmtLegGrp' required='N' />
+    <field name='PrevClosePx' required='N' />
+    <field name='QuoteRequestType' required='N' />
+    <field name='QuoteType' required='N' />
+    <field name='TradingSessionID' required='N' />
+    <field name='TradingSessionSubID' required='N' />
+   </group>
+  </component>
+  <component name='CpctyConfGrp'>
+   <group name='NoCapacities' required='Y'>
+    <field name='OrderCapacity' required='Y' />
+    <field name='OrderRestrictions' required='N' />
+    <field name='OrderCapacityQty' required='Y' />
+   </group>
+  </component>
+  <component name='UndInstrmtGrp'>
+   <group name='NoUnderlyings' required='N'>
+    <component name='UnderlyingInstrument' required='N' />
+   </group>
+  </component>
+  <component name='Parties'>
+   <group name='NoPartyIDs' required='N'>
+    <field name='PartyID' required='N' />
+    <field name='PartyIDSource' required='N' />
+    <field name='PartyRole' required='N' />
+    <component name='PtysSubGrp' required='N' />
+   </group>
+  </component>
+  <component name='UndlyInstrumentPtysSubGrp'>
+   <group name='NoUndlyInstrumentPartySubIDs' required='N'>
+    <field name='UndlyInstrumentPartySubID' required='N' />
+    <field name='UndlyInstrumentPartySubIDType' required='N' />
+   </group>
+  </component>
+  <component name='NestedParties'>
+   <group name='NoNestedPartyIDs' required='N'>
+    <field name='NestedPartyID' required='N' />
+    <field nam
