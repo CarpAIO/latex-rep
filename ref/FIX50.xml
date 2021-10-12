@@ -3545,4 +3545,54 @@
   <component name='NestedParties'>
    <group name='NoNestedPartyIDs' required='N'>
     <field name='NestedPartyID' required='N' />
-    <field nam
+    <field name='NestedPartyIDSource' required='N' />
+    <field name='NestedPartyRole' required='N' />
+    <component name='NstdPtysSubGrp' required='N' />
+   </group>
+  </component>
+  <component name='TrdgSesGrp'>
+   <group name='NoTradingSessions' required='N'>
+    <field name='TradingSessionID' required='N' />
+    <field name='TradingSessionSubID' required='N' />
+   </group>
+  </component>
+  <component name='AffectedOrdGrp'>
+   <group name='NoAffectedOrders' required='N'>
+    <field name='OrigClOrdID' required='N' />
+    <field name='AffectedOrderID' required='N' />
+    <field name='AffectedSecondaryOrderID' required='N' />
+   </group>
+  </component>
+  <component name='CommissionData'>
+   <field name='Commission' required='N' />
+   <field name='CommType' required='N' />
+   <field name='CommCurrency' required='N' />
+   <field name='FundRenewWaiv' required='N' />
+  </component>
+  <component name='LegOrdGrp'>
+   <group name='NoLegs' required='Y'>
+    <component name='InstrumentLeg' required='N' />
+    <field name='LegQty' required='N' />
+    <field name='LegSwapType' required='N' />
+    <component name='LegStipulations' required='N' />
+    <component name='LegPreAllocGrp' required='N' />
+    <field name='LegPositionEffect' required='N' />
+    <field name='LegCoveredOrUncovered' required='N' />
+    <component name='NestedParties' required='N' />
+    <field name='LegRefID' required='N' />
+    <field name='LegPrice' required='N' />
+    <field name='LegSettlType' required='N' />
+    <field name='LegSettlDate' required='N' />
+    <field name='LegOrderQty' required='N' />
+   </group>
+  </component>
+  <component name='RelSymDerivSecGrp'>
+   <group name='NoRelatedSym' required='N'>
+    <component name='Instrument' required='N' />
+    <field name='Currency' required='N' />
+    <field name='ExpirationCycle' required='N' />
+    <component name='InstrumentExtension' required='N' />
+    <component name='InstrmtLegGrp' required='N' />
+    <field name='TradingSessionID' required='N' />
+    <field name='TradingSessionSubID' required='N' />
+    <field name='Text' requir
