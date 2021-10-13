@@ -3595,4 +3595,57 @@
     <component name='InstrmtLegGrp' required='N' />
     <field name='TradingSessionID' required='N' />
     <field name='TradingSessionSubID' required='N' />
-    <field name='Text' requir
+    <field name='Text' required='N' />
+    <field name='EncodedTextLen' required='N' />
+    <field name='EncodedText' required='N' />
+   </group>
+  </component>
+  <component name='DlvyInstGrp'>
+   <group name='NoDlvyInst' required='N'>
+    <field name='SettlInstSource' required='N' />
+    <field name='DlvyInstType' required='N' />
+    <component name='SettlParties' required='N' />
+   </group>
+  </component>
+  <component name='InstrmtStrkPxGrp'>
+   <group name='NoStrikes' required='Y'>
+    <component name='Instrument' required='Y' />
+   </group>
+  </component>
+  <component name='ContraGrp'>
+   <group name='NoContraBrokers' required='N'>
+    <field name='ContraBroker' required='N' />
+    <field name='ContraTrader' required='N' />
+    <field name='ContraTradeQty' required='N' />
+    <field name='ContraTradeTime' required='N' />
+    <field name='ContraLegRefID' required='N' />
+   </group>
+  </component>
+  <component name='InstrmtGrp'>
+   <group name='NoRelatedSym' required='N'>
+    <component name='Instrument' required='N' />
+   </group>
+  </component>
+  <component name='SecListGrp'>
+   <group name='NoRelatedSym' required='N'>
+    <component name='Instrument' required='N' />
+    <component name='InstrumentExtension' required='N' />
+    <component name='FinancingDetails' required='N' />
+    <component name='UndInstrmtGrp' required='N' />
+    <field name='Currency' required='N' />
+    <component name='Stipulations' required='N' />
+    <component name='InstrmtLegSecListGrp' required='N' />
+    <component name='SpreadOrBenchmarkCurveData' required='N' />
+    <component name='YieldData' required='N' />
+    <field name='RoundLot' required='N' />
+    <field name='MinTradeVol' required='N' />
+    <field name='TradingSessionID' required='N' />
+    <field name='TradingSessionSubID' required='N' />
+    <field name='ExpirationCycle' required='N' />
+    <field name='Text' required='N' />
+    <field name='EncodedTextLen' required='N' />
+    <field name='EncodedText' required='N' />
+   </group>
+  </component>
+  <component name='UndInstrmtCollGrp'>
+ 
