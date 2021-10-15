@@ -3648,4 +3648,57 @@
    </group>
   </component>
   <component name='UndInstrmtCollGrp'>
- 
+   <group name='NoUnderlyings' required='N'>
+    <component name='UnderlyingInstrument' required='N' />
+    <field name='CollAction' required='N' />
+   </group>
+  </component>
+  <component name='CollInqQualGrp'>
+   <group name='NoCollInquiryQualifier' required='N'>
+    <field name='CollInquiryQualifier' required='N' />
+   </group>
+  </component>
+  <component name='CompIDStatGrp'>
+   <group name='NoCompIDs' required='Y'>
+    <field name='RefCompID' required='Y' />
+    <field name='RefSubID' required='N' />
+    <field name='LocationID' required='N' />
+    <field name='DeskID' required='N' />
+    <field name='StatusValue' required='Y' />
+    <field name='StatusText' required='N' />
+   </group>
+  </component>
+  <component name='LegStipulations'>
+   <group name='NoLegStipulations' required='N'>
+    <field name='LegStipulationType' required='N' />
+    <field name='LegStipulationValue' required='N' />
+   </group>
+  </component>
+  <component name='SpreadOrBenchmarkCurveData'>
+   <field name='Spread' required='N' />
+   <field name='BenchmarkCurveCurrency' required='N' />
+   <field name='BenchmarkCurveName' required='N' />
+   <field name='BenchmarkCurvePoint' required='N' />
+   <field name='BenchmarkPrice' required='N' />
+   <field name='BenchmarkPriceType' required='N' />
+   <field name='BenchmarkSecurityID' required='N' />
+   <field name='BenchmarkSecurityIDSource' required='N' />
+  </component>
+  <component name='QuotCxlEntriesGrp'>
+   <group name='NoQuoteEntries' required='N'>
+    <component name='Instrument' required='N' />
+    <component name='FinancingDetails' required='N' />
+    <component name='UndInstrmtGrp' required='N' />
+    <component name='InstrmtLegGrp' required='N' />
+   </group>
+  </component>
+  <component name='ContAmtGrp'>
+   <group name='NoContAmts' required='N'>
+    <field name='ContAmtType' required='N' />
+    <field name='ContAmtValue' required='N' />
+    <field name='ContAmtCurr' required='N' />
+   </group>
+  </component>
+  <component name='MDFullGrp'>
+   <group name='NoMDEntries' required='Y'>
+    <field name='MDEntryType' 
