@@ -3791,3 +3791,51 @@
     <field name='SecondaryOrderID' required='N' />
     <field name='QuoteEntryID' required='N' />
     <field name='MDEntryBuyer' required='N' />
+    <field name='MDEntrySeller' required='N' />
+    <field name='NumberOfOrders' required='N' />
+    <field name='MDEntryPositionNo' required='N' />
+    <field name='Scope' required='N' />
+    <field name='PriceDelta' required='N' />
+    <field name='NetChgPrevDay' required='N' />
+    <field name='Text' required='N' />
+    <field name='EncodedTextLen' required='N' />
+    <field name='EncodedText' required='N' />
+    <field name='MDPriceLevel' required='N' />
+    <field name='OrderCapacity' required='N' />
+    <field name='MDOriginType' required='N' />
+    <field name='HighPx' required='N' />
+    <field name='LowPx' required='N' />
+    <field name='TradeVolume' required='N' />
+    <field name='SettlType' required='N' />
+    <field name='SettlDate' required='N' />
+    <field name='MDQuoteType' required='N' />
+    <field name='RptSeq' required='N' />
+    <field name='DealingCapacity' required='N' />
+    <field name='MDEntrySpotRate' required='N' />
+    <field name='MDEntryForwardPoints' required='N' />
+    <component name='Parties' required='N' />
+   </group>
+  </component>
+  <component name='UnderlyingAmount'>
+   <group name='NoUnderlyingAmounts' required='N'>
+    <field name='UnderlyingPayAmount' required='N' />
+    <field name='UnderlyingCollectAmount' required='N' />
+    <field name='UnderlyingSettlementDate' required='N' />
+    <field name='UnderlyingSettlementStatus' required='N' />
+   </group>
+  </component>
+  <component name='TrdRegTimestamps'>
+   <group name='NoTrdRegTimestamps' required='N'>
+    <field name='TrdRegTimestamp' required='N' />
+    <field name='TrdRegTimestampType' required='N' />
+    <field name='TrdRegTimestampOrigin' required='N' />
+    <field name='DeskType' required='N' />
+    <field name='DeskTypeSource' required='N' />
+    <field name='DeskOrderHandlingInst' required='N' />
+   </group>
+  </component>
+  <component name='LegQuotStatGrp'>
+   <group name='NoLegs' required='N'>
+    <component name='InstrumentLeg' required='N' />
+    <field name='LegQty' required='N' />
+    <field name=
