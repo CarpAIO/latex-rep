@@ -3746,4 +3746,48 @@
     <field name='SettlType' required='N' />
     <field name='SettlDate' required='N' />
     <field name='MDQuoteType' required='N' />
-    <field name='RptSeq' r
+    <field name='RptSeq' required='N' />
+    <field name='DealingCapacity' required='N' />
+    <field name='MDEntrySpotRate' required='N' />
+    <field name='MDEntryForwardPoints' required='N' />
+    <component name='Parties' required='N' />
+   </group>
+  </component>
+  <component name='MDIncGrp'>
+   <group name='NoMDEntries' required='Y'>
+    <field name='MDUpdateAction' required='Y' />
+    <field name='DeleteReason' required='N' />
+    <field name='MDEntryType' required='N' />
+    <field name='MDEntryID' required='N' />
+    <field name='MDEntryRefID' required='N' />
+    <component name='Instrument' required='N' />
+    <component name='UndInstrmtGrp' required='N' />
+    <component name='InstrmtLegGrp' required='N' />
+    <field name='FinancialStatus' required='N' />
+    <field name='CorporateAction' required='N' />
+    <field name='MDEntryPx' required='N' />
+    <field name='OrdType' required='N' />
+    <field name='Currency' required='N' />
+    <field name='MDEntrySize' required='N' />
+    <field name='MDEntryDate' required='N' />
+    <field name='MDEntryTime' required='N' />
+    <field name='TickDirection' required='N' />
+    <field name='MDMkt' required='N' />
+    <field name='TradingSessionID' required='N' />
+    <field name='TradingSessionSubID' required='N' />
+    <field name='QuoteCondition' required='N' />
+    <field name='TradeCondition' required='N' />
+    <field name='MDEntryOriginator' required='N' />
+    <field name='LocationID' required='N' />
+    <field name='DeskID' required='N' />
+    <field name='OpenCloseSettlFlag' required='N' />
+    <field name='TimeInForce' required='N' />
+    <field name='ExpireDate' required='N' />
+    <field name='ExpireTime' required='N' />
+    <field name='MinQty' required='N' />
+    <field name='ExecInst' required='N' />
+    <field name='SellerDays' required='N' />
+    <field name='OrderID' required='N' />
+    <field name='SecondaryOrderID' required='N' />
+    <field name='QuoteEntryID' required='N' />
+    <field name='MDEntryBuyer' required='N' />
