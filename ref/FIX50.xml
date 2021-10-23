@@ -3883,4 +3883,51 @@
     <component name='SpreadOrBenchmarkCurveData' required='N' />
     <field name='PriceType' required='N' />
     <field name='Price' required='N' />
-    <field
+    <field name='Price2' required='N' />
+    <component name='YieldData' required='N' />
+    <component name='Parties' required='N' />
+   </group>
+  </component>
+  <component name='PegInstructions'>
+   <field name='PegOffsetValue' required='N' />
+   <field name='PegPriceType' required='N' />
+   <field name='PegMoveType' required='N' />
+   <field name='PegOffsetType' required='N' />
+   <field name='PegLimitType' required='N' />
+   <field name='PegRoundDirection' required='N' />
+   <field name='PegScope' required='N' />
+   <field name='PegSecurityIDSource' required='N' />
+   <field name='PegSecurityID' required='N' />
+   <field name='PegSymbol' required='N' />
+   <field name='PegSecurityDesc' required='N' />
+  </component>
+  <component name='InstrumentParties'>
+   <group name='NoInstrumentParties' required='N'>
+    <field name='InstrumentPartyID' required='N' />
+    <field name='InstrumentPartyIDSource' required='N' />
+    <field name='InstrumentPartyRole' required='N' />
+    <component name='InstrumentPtysSubGrp' required='N' />
+   </group>
+  </component>
+  <component name='LegQuotGrp'>
+   <group name='NoLegs' required='N'>
+    <component name='InstrumentLeg' required='N' />
+    <field name='LegQty' required='N' />
+    <field name='LegOrderQty' required='N' />
+    <field name='LegSwapType' required='N' />
+    <field name='LegSettlType' required='N' />
+    <field name='LegSettlDate' required='N' />
+    <component name='LegStipulations' required='N' />
+    <component name='NestedParties' required='N' />
+    <field name='LegPriceType' required='N' />
+    <field name='LegBidPx' required='N' />
+    <field name='LegOfferPx' required='N' />
+    <component name='LegBenchmarkCurveData' required='N' />
+    <field name='LegRefID' required='N' />
+    <field name='LegBidForwardPoints' required='N' />
+    <field name='LegOfferForwardPoints' required='N' />
+   </group>
+  </component>
+  <component name='ExecAllocGrp'>
+   <group name='NoExecs' required='N'>
+    <field name='LastQty' required='N'
