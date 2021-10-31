@@ -4033,4 +4033,50 @@
     <field name='ExecID' required='N' />
    </group>
   </component>
-  <component na
+  <component name='DisplayInstruction'>
+   <field name='DisplayQty' required='N' />
+   <field name='SecondaryDisplayQty' required='N' />
+   <field name='DisplayWhen' required='N' />
+   <field name='DisplayMethod' required='N' />
+   <field name='DisplayLowQty' required='N' />
+   <field name='DisplayHighQty' required='N' />
+   <field name='DisplayMinIncr' required='N' />
+   <field name='RefreshQty' required='N' />
+  </component>
+  <component name='QuotEntryGrp'>
+   <group name='NoQuoteEntries' required='Y'>
+    <field name='QuoteEntryID' required='Y' />
+    <component name='Instrument' required='N' />
+    <component name='InstrmtLegGrp' required='N' />
+    <field name='BidPx' required='N' />
+    <field name='OfferPx' required='N' />
+    <field name='BidSize' required='N' />
+    <field name='OfferSize' required='N' />
+    <field name='ValidUntilTime' required='N' />
+    <field name='BidSpotRate' required='N' />
+    <field name='OfferSpotRate' required='N' />
+    <field name='BidForwardPoints' required='N' />
+    <field name='OfferForwardPoints' required='N' />
+    <field name='MidPx' required='N' />
+    <field name='BidYield' required='N' />
+    <field name='MidYield' required='N' />
+    <field name='OfferYield' required='N' />
+    <field name='TransactTime' required='N' />
+    <field name='TradingSessionID' required='N' />
+    <field name='TradingSessionSubID' required='N' />
+    <field name='SettlDate' required='N' />
+    <field name='OrdType' required='N' />
+    <field name='SettlDate2' required='N' />
+    <field name='OrderQty2' required='N' />
+    <field name='BidForwardPoints2' required='N' />
+    <field name='OfferForwardPoints2' required='N' />
+    <field name='Currency' required='N' />
+   </group>
+  </component>
+  <component name='RgstDtlsGrp'>
+   <group name='NoRegistDtls' required='N'>
+    <field name='RegistDtls' required='N' />
+    <field name='RegistEmail' required='N' />
+    <field name='MailingDtls' required='N' />
+    <field name='MailingInst' required='N' />
+    <component name='NestedParties' required='N
