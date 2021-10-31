@@ -3930,4 +3930,55 @@
   </component>
   <component name='ExecAllocGrp'>
    <group name='NoExecs' required='N'>
-    <field name='LastQty' required='N'
+    <field name='LastQty' required='N' />
+    <field name='ExecID' required='N' />
+    <field name='SecondaryExecID' required='N' />
+    <field name='LastPx' required='N' />
+    <field name='LastParPx' required='N' />
+    <field name='LastCapacity' required='N' />
+    <field name='TradeID' required='N' />
+    <field name='FirmTradeID' required='N' />
+   </group>
+  </component>
+  <component name='TrdCapDtGrp'>
+   <group name='NoDates' required='N'>
+    <field name='TradeDate' required='N' />
+    <field name='LastUpdateTime' required='N' />
+    <field name='TransactTime' required='N' />
+   </group>
+  </component>
+  <component name='TriggeringInstruction'>
+   <field name='TriggerType' required='N' />
+   <field name='TriggerAction' required='N' />
+   <field name='TriggerPrice' required='N' />
+   <field name='TriggerSymbol' required='N' />
+   <field name='TriggerSecurityID' required='N' />
+   <field name='TriggerSecurityIDSource' required='N' />
+   <field name='TriggerSecurityDesc' required='N' />
+   <field name='TriggerPriceType' required='N' />
+   <field name='TriggerPriceTypeScope' required='N' />
+   <field name='TriggerPriceDirection' required='N' />
+   <field name='TriggerNewPrice' required='N' />
+   <field name='TriggerOrderType' required='N' />
+   <field name='TriggerNewQty' required='N' />
+   <field name='TriggerTradingSessionID' required='N' />
+   <field name='TriggerTradingSessionSubID' required='N' />
+  </component>
+  <component name='IOIQualGrp'>
+   <group name='NoIOIQualifiers' required='N'>
+    <field name='IOIQualifier' required='N' />
+   </group>
+  </component>
+  <component name='NstdPtysSubGrp'>
+   <group name='NoNestedPartySubIDs' required='N'>
+    <field name='NestedPartySubID' required='N' />
+    <field name='NestedPartySubIDType' required='N' />
+   </group>
+  </component>
+  <component name='PositionQty'>
+   <group name='NoPositions' required='N'>
+    <field name='PosType' required='N' />
+    <field name='LongQty' required='N' />
+    <field name='ShortQty' required='N' />
+    <field name='PosQtyStatus' required='N' />
+    <field name='QuantityDate' r
