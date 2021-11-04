@@ -4079,4 +4079,61 @@
     <field name='RegistEmail' required='N' />
     <field name='MailingDtls' required='N' />
     <field name='MailingInst' required='N' />
-    <component name='NestedParties' required='N
+    <component name='NestedParties' required='N' />
+    <field name='OwnerType' required='N' />
+    <field name='DateOfBirth' required='N' />
+    <field name='InvestorCountryOfResidence' required='N' />
+   </group>
+  </component>
+  <component name='NstdPtys3SubGrp'>
+   <group name='NoNested3PartySubIDs' required='N'>
+    <field name='Nested3PartySubID' required='N' />
+    <field name='Nested3PartySubIDType' required='N' />
+   </group>
+  </component>
+  <component name='EvntGrp'>
+   <group name='NoEvents' required='N'>
+    <field name='EventType' required='N' />
+    <field name='EventDate' required='N' />
+    <field name='EventPx' required='N' />
+    <field name='EventText' required='N' />
+   </group>
+  </component>
+  <component name='CompIDReqGrp'>
+   <group name='NoCompIDs' required='N'>
+    <field name='RefCompID' required='N' />
+    <field name='RefSubID' required='N' />
+    <field name='LocationID' required='N' />
+    <field name='DeskID' required='N' />
+   </group>
+  </component>
+  <component name='SecTypesGrp'>
+   <group name='NoSecurityTypes' required='N'>
+    <field name='SecurityType' required='N' />
+    <field name='SecuritySubType' required='N' />
+    <field name='Product' required='N' />
+    <field name='CFICode' required='N' />
+   </group>
+  </component>
+  <component name='AttrbGrp'>
+   <group name='NoInstrAttrib' required='N'>
+    <field name='InstrAttribType' required='N' />
+    <field name='InstrAttribValue' required='N' />
+   </group>
+  </component>
+  <component name='UnderlyingStipulations'>
+   <group name='NoUnderlyingStips' required='N'>
+    <field name='UnderlyingStipType' required='N' />
+    <field name='UnderlyingStipValue' required='N' />
+   </group>
+  </component>
+  <component name='MiscFeesGrp'>
+   <group name='NoMiscFees' required='N'>
+    <field name='MiscFeeAmt' required='N' />
+    <field name='MiscFeeCurr' required='N' />
+    <field name='MiscFeeType' required='N' />
+    <field name='MiscFeeBasis' required='N' />
+   </group>
+  </component>
+  <component name='RoutingGrp'>
+   <group name='NoRoutingIDs' required='
