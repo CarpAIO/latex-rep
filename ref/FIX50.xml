@@ -4223,4 +4223,50 @@
     <field name='ExpireDate' required='N' />
     <field name='ExpireTime' required='N' />
     <field name='GTBookingInst' required='N' />
-    <component name='CommissionData' r
+    <component name='CommissionData' required='N' />
+    <field name='OrderCapacity' required='N' />
+    <field name='OrderRestrictions' required='N' />
+    <field name='PreTradeAnonymity' required='N' />
+    <field name='CustOrderCapacity' required='N' />
+    <field name='ForexReq' required='N' />
+    <field name='SettlCurrency' required='N' />
+    <field name='BookingType' required='N' />
+    <field name='Text' required='N' />
+    <field name='EncodedTextLen' required='N' />
+    <field name='EncodedText' required='N' />
+    <field name='SettlDate2' required='N' />
+    <field name='OrderQty2' required='N' />
+    <field name='Price2' required='N' />
+    <field name='PositionEffect' required='N' />
+    <field name='CoveredOrUncovered' required='N' />
+    <field name='MaxShow' required='N' />
+    <component name='PegInstructions' required='N' />
+    <component name='DiscretionInstructions' required='N' />
+    <field name='TargetStrategy' required='N' />
+    <component name='StrategyParametersGrp' required='N' />
+    <field name='TargetStrategyParameters' required='N' />
+    <field name='ParticipationRate' required='N' />
+    <field name='Designation' required='N' />
+   </group>
+  </component>
+  <component name='PtysSubGrp'>
+   <group name='NoPartySubIDs' required='N'>
+    <field name='PartySubID' required='N' />
+    <field name='PartySubIDType' required='N' />
+   </group>
+  </component>
+  <component name='TrdInstrmtLegGrp'>
+   <group name='NoLegs' required='N'>
+    <component name='InstrumentLeg' required='N' />
+    <field name='LegQty' required='N' />
+    <field name='LegSwapType' required='N' />
+    <field name='LegReportID' required='N' />
+    <component name='LegStipulations' required='N' />
+    <field name='LegPositionEffect' required='N' />
+    <field name='LegCoveredOrUncovered' required='N' />
+    <component name='NestedParties' required='N' />
+    <field name='LegRefID' required='N' />
+    <field name='LegPrice' required='N' />
+    <field name='LegSettlType' required='N' />
+    <field name='LegSettlDate' required='N' />
+    <field name='LegLastPx' requ
