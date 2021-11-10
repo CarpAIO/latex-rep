@@ -4269,4 +4269,53 @@
     <field name='LegPrice' required='N' />
     <field name='LegSettlType' required='N' />
     <field name='LegSettlDate' required='N' />
-    <field name='LegLastPx' requ
+    <field name='LegLastPx' required='N' />
+    <field name='LegSettlCurrency' required='N' />
+    <field name='LegLastForwardPoints' required='N' />
+    <field name='LegCalculatedCcyLastQty' required='N' />
+    <field name='LegGrossTradeAmt' required='N' />
+   </group>
+  </component>
+  <component name='TrdAllocGrp'>
+   <group name='NoAllocs' required='N'>
+    <field name='AllocAccount' required='N' />
+    <field name='AllocAcctIDSource' required='N' />
+    <field name='AllocSettlCurrency' required='N' />
+    <field name='IndividualAllocID' required='N' />
+    <component name='NestedParties2' required='N' />
+    <field name='AllocQty' required='N' />
+    <field name='AllocCustomerCapacity' required='N' />
+    <field name='AllocMethod' required='N' />
+    <field name='SecondaryIndividualAllocID' required='N' />
+    <field name='AllocClearingFeeIndicator' required='N' />
+   </group>
+  </component>
+  <component name='LegBenchmarkCurveData'>
+   <field name='LegBenchmarkCurveCurrency' required='N' />
+   <field name='LegBenchmarkCurveName' required='N' />
+   <field name='LegBenchmarkCurvePoint' required='N' />
+   <field name='LegBenchmarkPrice' required='N' />
+   <field name='LegBenchmarkPriceType' required='N' />
+  </component>
+  <component name='ClrInstGrp'>
+   <group name='NoClearingInstructions' required='N'>
+    <field name='ClearingInstruction' required='N' />
+   </group>
+  </component>
+  <component name='OrdAllocGrp'>
+   <group name='NoOrders' required='N'>
+    <field name='ClOrdID' required='N' />
+    <field name='OrderID' required='N' />
+    <field name='SecondaryOrderID' required='N' />
+    <field name='SecondaryClOrdID' required='N' />
+    <field name='ListID' required='N' />
+    <component name='NestedParties2' required='N' />
+    <field name='OrderQty' required='N' />
+    <field name='OrderAvgPx' required='N' />
+    <field name='OrderBookingQty' required='N' />
+   </group>
+  </component>
+  <component name='OrdListStatGrp'>
+   <group name='NoOrders' required='Y'>
+    <field name='ClOrdID' required='Y' />
+    <field nam
