@@ -4461,4 +4461,42 @@
   </field>
   <field number='14' name='CumQty' type='QTY' />
   <field number='15' name='Currency' type='CURRENCY' />
-  <field number='16' nam
+  <field number='16' name='EndSeqNo' type='SEQNUM' />
+  <field number='17' name='ExecID' type='STRING' />
+  <field number='18' name='ExecInst' type='MULTIPLECHARVALUE'>
+   <value enum='0' description='STAY_ON_OFFER_SIDE' />
+   <value enum='1' description='NOT_HELD' />
+   <value enum='2' description='WORK' />
+   <value enum='3' description='GO_ALONG' />
+   <value enum='4' description='OVER_THE_DAY' />
+   <value enum='5' description='HELD' />
+   <value enum='6' description='PARTICIPATE_DONT_INITIATE' />
+   <value enum='7' description='STRICT_SCALE' />
+   <value enum='8' description='TRY_TO_SCALE' />
+   <value enum='9' description='STAY_ON_BID_SIDE' />
+   <value enum='A' description='NO_CROSS' />
+   <value enum='B' description='OK_TO_CROSS' />
+   <value enum='C' description='CALL_FIRST' />
+   <value enum='D' description='PERCENT_OF_VOLUME' />
+   <value enum='E' description='DO_NOT_INCREASE' />
+   <value enum='F' description='DO_NOT_REDUCE' />
+   <value enum='G' description='ALL_OR_NONE' />
+   <value enum='H' description='REINSTATE_ON_SYSTEM_FAILUE' />
+   <value enum='I' description='INSTITUTIONS_ONLY' />
+   <value enum='J' description='REINSTATE_ON_TRADING_HALT' />
+   <value enum='K' description='CANCEL_ON_TRADING_HALT' />
+   <value enum='L' description='LAST_PEG' />
+   <value enum='M' description='MID_PRICE_PEG' />
+   <value enum='N' description='NON_NEGOTIABLE' />
+   <value enum='O' description='OPENING_PEG' />
+   <value enum='P' description='MARKET_PEG' />
+   <value enum='Q' description='CANCEL_ON_SYSTEM_FAILURE' />
+   <value enum='R' description='PRIMARY_PEG' />
+   <value enum='S' description='SUSPEND' />
+   <value enum='T' description='FIXED_PEG_TO_LOCAL_BEST_BID_OR_OFFER_AT_TIME_OF_ORDER' />
+   <value enum='U' description='CUSTOMER_DISPLAY_INSTRUCTION' />
+   <value enum='V' description='NETTING' />
+   <value enum='W' description='PEG_TO_VWAP' />
+   <value enum='X' description='TRADE_ALONG' />
+   <value enum='Y' description='TRY_TO_STOP' />
+   <value enum='Z' descript
