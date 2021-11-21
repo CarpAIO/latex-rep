@@ -4414,4 +4414,51 @@
   <component name='UndlyInstrumentParties'>
    <group name='NoUndlyInstrumentParties' required='N'>
     <field name='UndlyInstrumentPartyID' required='N' />
-    <field name='UndlyIn
+    <field name='UndlyInstrumentPartyIDSource' required='N' />
+    <field name='UndlyInstrumentPartyRole' required='N' />
+    <component name='UndlyInstrumentPtysSubGrp' required='N' />
+   </group>
+  </component>
+  <component name='InstrmtLegSecListGrp'>
+   <group name='NoLegs' required='N'>
+    <component name='InstrumentLeg' required='N' />
+    <field name='LegSwapType' required='N' />
+    <field name='LegSettlType' required='N' />
+    <component name='LegStipulations' required='N' />
+    <component name='LegBenchmarkCurveData' required='N' />
+   </group>
+  </component>
+ </components>
+ <fields>
+  <field number='1' name='Account' type='STRING' />
+  <field number='2' name='AdvId' type='STRING' />
+  <field number='3' name='AdvRefID' type='STRING' />
+  <field number='4' name='AdvSide' type='CHAR'>
+   <value enum='B' description='BUY' />
+   <value enum='S' description='SELL' />
+   <value enum='T' description='TRADE' />
+   <value enum='X' description='CROSS' />
+  </field>
+  <field number='5' name='AdvTransType' type='STRING'>
+   <value enum='N' description='NEW' />
+   <value enum='C' description='CANCEL' />
+   <value enum='R' description='REPLACE' />
+  </field>
+  <field number='6' name='AvgPx' type='PRICE' />
+  <field number='7' name='BeginSeqNo' type='SEQNUM' />
+  <field number='8' name='BeginString' type='STRING' />
+  <field number='9' name='BodyLength' type='LENGTH' />
+  <field number='10' name='CheckSum' type='STRING' />
+  <field number='11' name='ClOrdID' type='STRING' />
+  <field number='12' name='Commission' type='AMT' />
+  <field number='13' name='CommType' type='CHAR'>
+   <value enum='1' description='PER_UNIT' />
+   <value enum='2' description='PERCENT' />
+   <value enum='3' description='ABSOLUTE' />
+   <value enum='4' description='PERCENTAGE_WAIVED_4' />
+   <value enum='5' description='PERCENTAGE_WAIVED_5' />
+   <value enum='6' description='POINTS_PER_BOND_OR_CONTRACT' />
+  </field>
+  <field number='14' name='CumQty' type='QTY' />
+  <field number='15' name='Currency' type='CURRENCY' />
+  <field number='16' nam
