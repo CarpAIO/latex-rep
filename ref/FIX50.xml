@@ -4537,4 +4537,47 @@
    <value enum='G' description='COMMON' />
    <value enum='H' description='CLEARING_HOUSE' />
    <value enum='I' description='ISDA_FPML_PRODUCT_SPECIFICATION' />
-   <value enum='J' description='OPTION_PRICE_REP
+   <value enum='J' description='OPTION_PRICE_REPORTING_AUTHORITY' />
+   <value enum='K' description='ISDA_FPML_PRODUCT_URL' />
+   <value enum='L' description='LETTER_OF_CREDIT' />
+  </field>
+  <field number='23' name='IOIID' type='STRING' />
+  <field number='25' name='IOIQltyInd' type='CHAR'>
+   <value enum='H' description='HIGH' />
+   <value enum='L' description='LOW' />
+   <value enum='M' description='MEDIUM' />
+  </field>
+  <field number='26' name='IOIRefID' type='STRING' />
+  <field number='27' name='IOIQty' type='STRING'>
+   <value enum='S' description='SMALL' />
+   <value enum='M' description='MEDIUM' />
+   <value enum='L' description='LARGE' />
+   <value enum='U' description='UNDISCLOSED_QUANTITY' />
+  </field>
+  <field number='28' name='IOITransType' type='CHAR'>
+   <value enum='N' description='NEW' />
+   <value enum='C' description='CANCEL' />
+   <value enum='R' description='REPLACE' />
+  </field>
+  <field number='29' name='LastCapacity' type='CHAR'>
+   <value enum='1' description='AGENT' />
+   <value enum='2' description='CROSS_AS_AGENT' />
+   <value enum='3' description='CROSS_AS_PRINCIPAL' />
+   <value enum='4' description='PRINCIPAL' />
+  </field>
+  <field number='30' name='LastMkt' type='EXCHANGE' />
+  <field number='31' name='LastPx' type='PRICE' />
+  <field number='32' name='LastQty' type='QTY' />
+  <field number='33' name='NoLinesOfText' type='NUMINGROUP' />
+  <field number='34' name='MsgSeqNum' type='SEQNUM' />
+  <field number='35' name='MsgType' type='STRING'>
+   <value enum='0' description='HEARTBEAT' />
+   <value enum='1' description='TEST_REQUEST' />
+   <value enum='2' description='RESEND_REQUEST' />
+   <value enum='3' description='REJECT' />
+   <value enum='4' description='SEQUENCE_RESET' />
+   <value enum='5' description='LOGOUT' />
+   <value enum='6' description='INDICATION_OF_INTEREST' />
+   <value enum='7' description='ADVERTISEMENT' />
+   <value enum='8' description='EXECUTION_REPORT' />
+   <value enum='9' de
