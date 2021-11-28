@@ -4652,4 +4652,40 @@
    <value enum='AT' description='ALLOCATION_REPORT_ACK' />
    <value enum='AU' description='CONFIRMATION_ACK' />
    <value enum='AV' description='SETTLEMENT_INSTRUCTION_REQUEST' />
-   
+   <value enum='AW' description='ASSIGNMENT_REPORT' />
+   <value enum='AX' description='COLLATERAL_REQUEST' />
+   <value enum='AY' description='COLLATERAL_ASSIGNMENT' />
+   <value enum='AZ' description='COLLATERAL_RESPONSE' />
+   <value enum='BA' description='COLLATERAL_REPORT' />
+   <value enum='BB' description='COLLATERAL_INQUIRY' />
+   <value enum='BC' description='NETWORK_COUNTERPARTY_SYSTEM_STATUS_REQUEST' />
+   <value enum='BD' description='NETWORK_COUNTERPARTY_SYSTEM_STATUS_RESPONSE' />
+   <value enum='BE' description='USER_REQUEST' />
+   <value enum='BF' description='USER_RESPONSE' />
+   <value enum='BG' description='COLLATERAL_INQUIRY_ACK' />
+   <value enum='BH' description='CONFIRMATION_REQUEST' />
+   <value enum='BI' description='TRADING_SESSION_LIST_REQUEST' />
+   <value enum='BJ' description='TRADING_SESSION_LIST' />
+   <value enum='BK' description='SECURITY_LIST_UPDATE_REPORT' />
+   <value enum='BL' description='ADJUSTED_POSITION_REPORT' />
+   <value enum='BM' description='ALLOCATION_INSTRUCTION_ALERT' />
+   <value enum='BN' description='EXECUTION_ACKNOWLEDGEMENT' />
+   <value enum='BO' description='CONTRARY_INTENTION_REPORT' />
+   <value enum='BP' description='SECURITY_DEFINITION_UPDATE_REPORT' />
+  </field>
+  <field number='36' name='NewSeqNo' type='SEQNUM' />
+  <field number='37' name='OrderID' type='STRING' />
+  <field number='38' name='OrderQty' type='QTY' />
+  <field number='39' name='OrdStatus' type='CHAR'>
+   <value enum='0' description='NEW' />
+   <value enum='1' description='PARTIALLY_FILLED' />
+   <value enum='2' description='FILLED' />
+   <value enum='3' description='DONE_FOR_DAY' />
+   <value enum='4' description='CANCELED' />
+   <value enum='5' description='REPLACED' />
+   <value enum='6' description='PENDING_CANCEL' />
+   <value enum='7' description='STOPPED' />
+   <value enum='8' description='REJECTED' />
+   <value enum='9' description='SUSPENDED' />
+   <value enum='A' description='PENDING_NEW' />
+   <value enum='B' description='CALCULATED' />
