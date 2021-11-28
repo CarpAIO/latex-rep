@@ -4617,4 +4617,39 @@
    <value enum='k' description='BID_REQUEST' />
    <value enum='l' description='BID_RESPONSE' />
    <value enum='m' description='LIST_STRIKE_PRICE' />
-   <value enum='n' descri
+   <value enum='n' description='XML_MESSAGE' />
+   <value enum='o' description='REGISTRATION_INSTRUCTIONS' />
+   <value enum='p' description='REGISTRATION_INSTRUCTIONS_RESPONSE' />
+   <value enum='q' description='ORDER_MASS_CANCEL_REQUEST' />
+   <value enum='r' description='ORDER_MASS_CANCEL_REPORT' />
+   <value enum='s' description='NEW_ORDER_s' />
+   <value enum='t' description='CROSS_ORDER_CANCEL_REPLACE_REQUEST' />
+   <value enum='u' description='CROSS_ORDER_CANCEL_REQUEST' />
+   <value enum='v' description='SECURITY_TYPE_REQUEST' />
+   <value enum='w' description='SECURITY_TYPES' />
+   <value enum='x' description='SECURITY_LIST_REQUEST' />
+   <value enum='y' description='SECURITY_LIST' />
+   <value enum='z' description='DERIVATIVE_SECURITY_LIST_REQUEST' />
+   <value enum='AA' description='DERIVATIVE_SECURITY_LIST' />
+   <value enum='AB' description='NEW_ORDER_AB' />
+   <value enum='AC' description='MULTILEG_ORDER_CANCEL_REPLACE' />
+   <value enum='AD' description='TRADE_CAPTURE_REPORT_REQUEST' />
+   <value enum='AE' description='TRADE_CAPTURE_REPORT' />
+   <value enum='AF' description='ORDER_MASS_STATUS_REQUEST' />
+   <value enum='AG' description='QUOTE_REQUEST_REJECT' />
+   <value enum='AH' description='RFQ_REQUEST' />
+   <value enum='AI' description='QUOTE_STATUS_REPORT' />
+   <value enum='AJ' description='QUOTE_RESPONSE' />
+   <value enum='AK' description='CONFIRMATION' />
+   <value enum='AL' description='POSITION_MAINTENANCE_REQUEST' />
+   <value enum='AM' description='POSITION_MAINTENANCE_REPORT' />
+   <value enum='AN' description='REQUEST_FOR_POSITIONS' />
+   <value enum='AO' description='REQUEST_FOR_POSITIONS_ACK' />
+   <value enum='AP' description='POSITION_REPORT' />
+   <value enum='AQ' description='TRADE_CAPTURE_REPORT_REQUEST_ACK' />
+   <value enum='AR' description='TRADE_CAPTURE_REPORT_ACK' />
+   <value enum='AS' description='ALLOCATION_REPORT' />
+   <value enum='AT' description='ALLOCATION_REPORT_ACK' />
+   <value enum='AU' description='CONFIRMATION_ACK' />
+   <value enum='AV' description='SETTLEMENT_INSTRUCTION_REQUEST' />
+   
