@@ -4580,4 +4580,41 @@
    <value enum='6' description='INDICATION_OF_INTEREST' />
    <value enum='7' description='ADVERTISEMENT' />
    <value enum='8' description='EXECUTION_REPORT' />
-   <value enum='9' de
+   <value enum='9' description='ORDER_CANCEL_REJECT' />
+   <value enum='A' description='LOGON' />
+   <value enum='B' description='NEWS' />
+   <value enum='C' description='EMAIL' />
+   <value enum='D' description='NEW_ORDER_D' />
+   <value enum='E' description='NEW_ORDER_E' />
+   <value enum='F' description='ORDER_CANCEL_REQUEST' />
+   <value enum='G' description='ORDER_CANCEL_REPLACE_REQUEST' />
+   <value enum='H' description='ORDER_STATUS_REQUEST' />
+   <value enum='J' description='ALLOCATION_INSTRUCTION' />
+   <value enum='K' description='LIST_CANCEL_REQUEST' />
+   <value enum='L' description='LIST_EXECUTE' />
+   <value enum='M' description='LIST_STATUS_REQUEST' />
+   <value enum='N' description='LIST_STATUS' />
+   <value enum='P' description='ALLOCATION_INSTRUCTION_ACK' />
+   <value enum='Q' description='DONT_KNOW_TRADE' />
+   <value enum='R' description='QUOTE_REQUEST' />
+   <value enum='S' description='QUOTE' />
+   <value enum='T' description='SETTLEMENT_INSTRUCTIONS' />
+   <value enum='V' description='MARKET_DATA_REQUEST' />
+   <value enum='W' description='MARKET_DATA_W' />
+   <value enum='X' description='MARKET_DATA_X' />
+   <value enum='Y' description='MARKET_DATA_REQUEST_REJECT' />
+   <value enum='Z' description='QUOTE_CANCEL' />
+   <value enum='a' description='QUOTE_STATUS_REQUEST' />
+   <value enum='b' description='MASS_QUOTE_ACKNOWLEDGEMENT' />
+   <value enum='c' description='SECURITY_DEFINITION_REQUEST' />
+   <value enum='d' description='SECURITY_DEFINITION' />
+   <value enum='e' description='SECURITY_STATUS_REQUEST' />
+   <value enum='f' description='SECURITY_STATUS' />
+   <value enum='g' description='TRADING_SESSION_STATUS_REQUEST' />
+   <value enum='h' description='TRADING_SESSION_STATUS' />
+   <value enum='i' description='MASS_QUOTE' />
+   <value enum='j' description='BUSINESS_MESSAGE_REJECT' />
+   <value enum='k' description='BID_REQUEST' />
+   <value enum='l' description='BID_RESPONSE' />
+   <value enum='m' description='LIST_STRIKE_PRICE' />
+   <value enum='n' descri
