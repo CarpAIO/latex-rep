@@ -4816,4 +4816,42 @@
   </field>
   <field number='78' name='NoAllocs' type='NUMINGROUP' />
   <field number='79' name='AllocAccount' type='STRING' />
-  <field number='80' name='AllocQty'
+  <field number='80' name='AllocQty' type='QTY' />
+  <field number='81' name='ProcessCode' type='CHAR'>
+   <value enum='0' description='REGULAR' />
+   <value enum='1' description='SOFT_DOLLAR' />
+   <value enum='2' description='STEP_IN' />
+   <value enum='3' description='STEP_OUT' />
+   <value enum='4' description='SOFT_DOLLAR_STEP_IN' />
+   <value enum='5' description='SOFT_DOLLAR_STEP_OUT' />
+   <value enum='6' description='PLAN_SPONSOR' />
+  </field>
+  <field number='82' name='NoRpts' type='INT' />
+  <field number='83' name='RptSeq' type='INT' />
+  <field number='84' name='CxlQty' type='QTY' />
+  <field number='85' name='NoDlvyInst' type='NUMINGROUP' />
+  <field number='87' name='AllocStatus' type='INT'>
+   <value enum='0' description='ACCEPTED' />
+   <value enum='1' description='BLOCK_LEVEL_REJECT' />
+   <value enum='2' description='ACCOUNT_LEVEL_REJECT' />
+   <value enum='3' description='RECEIVED' />
+   <value enum='4' description='INCOMPLETE' />
+   <value enum='5' description='REJECTED_BY_INTERMEDIARY' />
+   <value enum='6' description='ALLOCATION_PENDING' />
+   <value enum='7' description='REVERSED' />
+  </field>
+  <field number='88' name='AllocRejCode' type='INT'>
+   <value enum='0' description='UNKNOWN_ACCOUNT' />
+   <value enum='1' description='INCORRECT_QUANTITY' />
+   <value enum='2' description='INCORRECT_AVERAGEG_PRICE' />
+   <value enum='3' description='UNKNOWN_EXECUTING_BROKER_MNEMONIC' />
+   <value enum='4' description='COMMISSION_DIFFERENCE' />
+   <value enum='5' description='UNKNOWN_ORDERID' />
+   <value enum='6' description='UNKNOWN_LISTID' />
+   <value enum='7' description='OTHER' />
+   <value enum='8' description='INCORRECT_ALLOCATED_QUANTITY' />
+   <value enum='9' description='CALCULATION_DIFFERENCE' />
+   <value enum='10' description='UNKNOWN_OR_STALE_EXECID' />
+   <value enum='11' description='MISMATCHED_DATA' />
+   <value enum='12' description='UNKNOWN_CLORDID' />
+   <value enum='13' description='WAREHOUSE
