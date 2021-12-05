@@ -4774,4 +4774,46 @@
   <field number='63' name='SettlType' type='STRING'>
    <value enum='0' description='REGULAR' />
    <value enum='1' description='CASH' />
-   <value enu
+   <value enum='2' description='NEXT_DAY' />
+   <value enum='3' description='T_PLUS_2' />
+   <value enum='4' description='T_PLUS_3' />
+   <value enum='5' description='T_PLUS_4' />
+   <value enum='6' description='FUTURE' />
+   <value enum='7' description='WHEN_AND_IF_ISSUED' />
+   <value enum='8' description='SELLERS_OPTION' />
+   <value enum='9' description='T_PLUS_5' />
+   <value enum='B' description='BROKEN_DATE' />
+   <value enum='C' description='FX_SPOT_NEXT_SETTLEMENT' />
+  </field>
+  <field number='64' name='SettlDate' type='LOCALMKTDATE' />
+  <field number='65' name='SymbolSfx' type='STRING'>
+   <value enum='CD' description='EUCP_WITH_LUMP_SUM_INTEREST_RATHER_THAN_DISCOUNT_PRICE' />
+   <value enum='WI' description='WHEN_ISSUED_FOR_A_SECURITY_TO_BE_REISSUED_UNDER_AN_OLD_CUSIP_OR_ISIN' />
+  </field>
+  <field number='66' name='ListID' type='STRING' />
+  <field number='67' name='ListSeqNo' type='INT' />
+  <field number='68' name='TotNoOrders' type='INT' />
+  <field number='69' name='ListExecInst' type='STRING' />
+  <field number='70' name='AllocID' type='STRING' />
+  <field number='71' name='AllocTransType' type='CHAR'>
+   <value enum='0' description='NEW' />
+   <value enum='1' description='REPLACE' />
+   <value enum='2' description='CANCEL' />
+   <value enum='3' description='PRELIMINARY' />
+   <value enum='4' description='CALCULATED' />
+   <value enum='5' description='CALCULATED_WITHOUT_PRELIMINARY' />
+   <value enum='6' description='REVERSAL' />
+  </field>
+  <field number='72' name='RefAllocID' type='STRING' />
+  <field number='73' name='NoOrders' type='NUMINGROUP' />
+  <field number='74' name='AvgPxPrecision' type='INT' />
+  <field number='75' name='TradeDate' type='LOCALMKTDATE' />
+  <field number='77' name='PositionEffect' type='CHAR'>
+   <value enum='C' description='CLOSE' />
+   <value enum='F' description='FIFO' />
+   <value enum='O' description='OPEN' />
+   <value enum='R' description='ROLLED' />
+  </field>
+  <field number='78' name='NoAllocs' type='NUMINGROUP' />
+  <field number='79' name='AllocAccount' type='STRING' />
+  <field number='80' name='AllocQty'
