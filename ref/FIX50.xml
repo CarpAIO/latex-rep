@@ -5060,4 +5060,41 @@
   </field>
   <field number='161' name='AllocText' type='STRING' />
   <field number='162' name='SettlInstID' type='STRING' />
-  <field number='163' name='Settl
+  <field number='163' name='SettlInstTransType' type='CHAR'>
+   <value enum='N' description='NEW' />
+   <value enum='C' description='CANCEL' />
+   <value enum='R' description='REPLACE' />
+   <value enum='T' description='RESTATE' />
+  </field>
+  <field number='164' name='EmailThreadID' type='STRING' />
+  <field number='165' name='SettlInstSource' type='CHAR'>
+   <value enum='1' description='BROKERS_INSTRUCTIONS' />
+   <value enum='2' description='INSTITUTIONS_INSTRUCTIONS' />
+   <value enum='3' description='INVESTOR' />
+  </field>
+  <field number='167' name='SecurityType' type='STRING'>
+   <value enum='FUT' description='FUTURE' />
+   <value enum='OPT' description='OPTION' />
+   <value enum='UST' description='US_TREASURY_NOTE_UST' />
+   <value enum='USTB' description='US_TREASURY_BILL_USTB' />
+   <value enum='EUSUPRA' description='EURO_SUPRANATIONAL_COUPONS' />
+   <value enum='FAC' description='FEDERAL_AGENCY_COUPON' />
+   <value enum='FADN' description='FEDERAL_AGENCY_DISCOUNT_NOTE' />
+   <value enum='PEF' description='PRIVATE_EXPORT_FUNDING' />
+   <value enum='SUPRA' description='USD_SUPRANATIONAL_COUPONS' />
+   <value enum='CORP' description='CORPORATE_BOND' />
+   <value enum='CPP' description='CORPORATE_PRIVATE_PLACEMENT' />
+   <value enum='CB' description='CONVERTIBLE_BOND' />
+   <value enum='DUAL' description='DUAL_CURRENCY' />
+   <value enum='EUCORP' description='EURO_CORPORATE_BOND' />
+   <value enum='XLINKD' description='INDEXED_LINKED' />
+   <value enum='STRUCT' description='STRUCTURED_NOTES' />
+   <value enum='YANK' description='YANKEE_CORPORATE_BOND' />
+   <value enum='FOR' description='FOREIGN_EXCHANGE_CONTRACT' />
+   <value enum='CS' description='COMMON_STOCK' />
+   <value enum='PS' description='PREFERRED_STOCK' />
+   <value enum='REPO' description='REPURCHASE' />
+   <value enum='FORWARD' description='FORWARD' />
+   <value enum='BUYSELL' description='BUY_SELLBACK' />
+   <value enum='SECLOAN' description='SECURITIES_LOAN' />
+   <va
