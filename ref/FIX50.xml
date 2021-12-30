@@ -5206,4 +5206,47 @@
   <field number='199' name='NoIOIQualifiers' type='NUMINGROUP' />
   <field number='200' name='MaturityMonthYear' type='MONTHYEAR' />
   <field number='201' name='PutOrCall' type='INT'>
-   <value enum='0' des
+   <value enum='0' description='PUT' />
+   <value enum='1' description='CALL' />
+  </field>
+  <field number='202' name='StrikePrice' type='PRICE' />
+  <field number='203' name='CoveredOrUncovered' type='INT'>
+   <value enum='0' description='COVERED' />
+   <value enum='1' description='UNCOVERED' />
+  </field>
+  <field number='206' name='OptAttribute' type='CHAR' />
+  <field number='207' name='SecurityExchange' type='EXCHANGE' />
+  <field number='208' name='NotifyBrokerOfCredit' type='BOOLEAN'>
+   <value enum='N' description='NO' />
+   <value enum='Y' description='YES' />
+  </field>
+  <field number='209' name='AllocHandlInst' type='INT'>
+   <value enum='1' description='MATCH' />
+   <value enum='2' description='FORWARD' />
+   <value enum='3' description='FORWARD_AND_MATCH' />
+  </field>
+  <field number='210' name='MaxShow' type='QTY' />
+  <field number='211' name='PegOffsetValue' type='FLOAT' />
+  <field number='212' name='XmlDataLen' type='LENGTH' />
+  <field number='213' name='XmlData' type='DATA' />
+  <field number='214' name='SettlInstRefID' type='STRING' />
+  <field number='215' name='NoRoutingIDs' type='NUMINGROUP' />
+  <field number='216' name='RoutingType' type='INT'>
+   <value enum='1' description='TARGET_FIRM' />
+   <value enum='2' description='TARGET_LIST' />
+   <value enum='3' description='BLOCK_FIRM' />
+   <value enum='4' description='BLOCK_LIST' />
+  </field>
+  <field number='217' name='RoutingID' type='STRING' />
+  <field number='218' name='Spread' type='PRICEOFFSET' />
+  <field number='220' name='BenchmarkCurveCurrency' type='CURRENCY' />
+  <field number='221' name='BenchmarkCurveName' type='STRING'>
+   <value enum='EONIA' description='EONIA' />
+   <value enum='EUREPO' description='EUREPO' />
+   <value enum='Euribor' description='EURIBOR' />
+   <value enum='FutureSWAP' description='FUTURESWAP' />
+   <value enum='LIBID' description='LIBID' />
+   <value enum='LIBOR' description='LIBOR' />
+   <value enum='MuniAAA' description='MUNIAAA' />
+   <value enum='OTHER' description='OTHER' />
+   <value enum='Pfandbriefe' d
