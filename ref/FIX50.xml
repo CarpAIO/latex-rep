@@ -5283,4 +5283,38 @@
    <value enum='LOT' description='EXPLICIT_LOT_IDENTIFIER' />
    <value enum='LOTVAR' description='LOT_VARIANCE' />
    <value enum='MAT' description='MATURITY_YEAR_AND_MONTH' />
-   <value enum='MATURITY' description='MATU
+   <value enum='MATURITY' description='MATURITY_RANGE' />
+   <value enum='MAXSUBS' description='MAXIMUM_SUBSTITUTIONS' />
+   <value enum='MINDNOM' description='MINIMUM_DENOMINATION' />
+   <value enum='MININCR' description='MINIMUM_INCREMENT' />
+   <value enum='MINQTY' description='MINIMUM_QUANTITY' />
+   <value enum='PAYFREQ' description='PAYMENT_FREQUENCY_CALENDAR' />
+   <value enum='PIECES' description='NUMBER_OF_PIECES' />
+   <value enum='PMAX' description='POOLS_MAXIMUM' />
+   <value enum='PPL' description='POOLS_PER_LOT' />
+   <value enum='PPM' description='POOLS_PER_MILLION' />
+   <value enum='PPT' description='POOLS_PER_TRADE' />
+   <value enum='PRICE' description='PRICE_RANGE' />
+   <value enum='PRICEFREQ' description='PRICING_FREQUENCY' />
+   <value enum='PROD' description='PRODUCTION_YEAR' />
+   <value enum='PROTECT' description='CALL_PROTECTION' />
+   <value enum='PURPOSE' description='PURPOSE' />
+   <value enum='PXSOURCE' description='BENCHMARK_PRICE_SOURCE' />
+   <value enum='RATING' description='RATING_SOURCE_AND_RANGE' />
+   <value enum='REDEMPTION' description='TYPE_OF_REDEMPTION' />
+   <value enum='RESTRICTED' description='RESTRICTED' />
+   <value enum='SECTOR' description='MARKET_SECTOR' />
+   <value enum='SECTYPE' description='SECURITY_TYPE_INCLUDED_OR_EXCLUDED' />
+   <value enum='STRUCT' description='STRUCTURE' />
+   <value enum='SUBSFREQ' description='SUBSTITUTIONS_FREQUENCY' />
+   <value enum='SUBSLEFT' description='SUBSTITUTIONS_LEFT' />
+   <value enum='TEXT' description='FREEFORM_TEXT' />
+   <value enum='TRDVAR' description='TRADE_VARIANCE' />
+   <value enum='WAC' description='WEIGHTED_AVERAGE_COUPON' />
+   <value enum='WAL' description='WEIGHTED_AVERAGE_LIFE_COUPON' />
+   <value enum='WALA' description='WEIGHTED_AVERAGE_LOAN_AGE' />
+   <value enum='WAM' description='WEIGHTED_AVERAGE_MATURITY' />
+   <value enum='WHOLE' description='WHOLE_POOL' />
+   <value enum='YIELD' description='YIELD_RANGE' />
+   <value enum='ABS' description='ABSOLUTE_PREPAYMENT_SPEED' />
+   <value enum='CPP' description='CONSTANT_PREPAYM
