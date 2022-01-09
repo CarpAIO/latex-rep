@@ -5349,4 +5349,37 @@
    <value enum='LASTYEAR' description='CLOSING_YIELD_MOST_RECENT_YEAR' />
    <value enum='LONGAVGLIFE' description='YIELD_TO_LONGEST_AVERAGE_LIFE' />
    <value enum='MARK' description='MARK_TO_MARKET_YIELD' />
-   <value enum='MATURITY' descriptio
+   <value enum='MATURITY' description='YIELD_TO_MATURITY' />
+   <value enum='NEXTREFUND' description='YIELD_TO_NEXT_REFUND' />
+   <value enum='OPENAVG' description='OPEN_AVERAGE_YIELD' />
+   <value enum='PREVCLOSE' description='PREVIOUS_CLOSE_YIELD' />
+   <value enum='PROCEEDS' description='PROCEEDS_YIELD' />
+   <value enum='PUT' description='YIELD_TO_NEXT_PUT' />
+   <value enum='SEMIANNUAL' description='SEMI_ANNUAL_YIELD' />
+   <value enum='SHORTAVGLIFE' description='YIELD_TO_SHORTEST_AVERAGE_LIFE' />
+   <value enum='SIMPLE' description='SIMPLE_YIELD' />
+   <value enum='TAXEQUIV' description='TAX_EQUIVALENT_YIELD' />
+   <value enum='TENDER' description='YIELD_TO_TENDER_DATE' />
+   <value enum='TRUE' description='TRUE_YIELD' />
+   <value enum='VALUE1_32' description='YIELD_VALUE_OF_1_32' />
+   <value enum='WORST' description='YIELD_TO_WORST' />
+  </field>
+  <field number='236' name='Yield' type='PERCENTAGE' />
+  <field number='237' name='TotalTakedown' type='AMT' />
+  <field number='238' name='Concession' type='AMT' />
+  <field number='239' name='RepoCollateralSecurityType' type='STRING' />
+  <field number='240' name='RedemptionDate' type='LOCALMKTDATE' />
+  <field number='241' name='UnderlyingCouponPaymentDate' type='LOCALMKTDATE' />
+  <field number='242' name='UnderlyingIssueDate' type='LOCALMKTDATE' />
+  <field number='243' name='UnderlyingRepoCollateralSecurityType' type='STRING' />
+  <field number='244' name='UnderlyingRepurchaseTerm' type='INT' />
+  <field number='245' name='UnderlyingRepurchaseRate' type='PERCENTAGE' />
+  <field number='246' name='UnderlyingFactor' type='FLOAT' />
+  <field number='247' name='UnderlyingRedemptionDate' type='LOCALMKTDATE' />
+  <field number='248' name='LegCouponPaymentDate' type='LOCALMKTDATE' />
+  <field number='249' name='LegIssueDate' type='LOCALMKTDATE' />
+  <field number='250' name='LegRepoCollateralSecurityType' type='STRING' />
+  <field number='251' name='LegRepurchaseTerm' type='INT' />
+  <field number='252' name='LegRepurchaseRate' type='PERCENTAGE' />
+  <field number='253' name='LegFactor' type='FLOAT' />
+  <field number
