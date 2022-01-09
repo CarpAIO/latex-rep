@@ -5317,4 +5317,36 @@
    <value enum='WHOLE' description='WHOLE_POOL' />
    <value enum='YIELD' description='YIELD_RANGE' />
    <value enum='ABS' description='ABSOLUTE_PREPAYMENT_SPEED' />
-   <value enum='CPP' description='CONSTANT_PREPAYM
+   <value enum='CPP' description='CONSTANT_PREPAYMENT_PENALTY' />
+   <value enum='CPR' description='CONSTANT_PREPAYMENT_RATE' />
+   <value enum='CPY' description='CONSTANT_PREPAYMENT_YIELD' />
+   <value enum='HEP' description='FINAL_CPR_OF_HOME_EQUITY_PREPAYMENT_CURVE' />
+   <value enum='MHP' description='PERCENT_OF_MANUFACTURED_HOUSING_PREPAYMENT_CURVE' />
+   <value enum='MPR' description='MONTHLY_PREPAYMENT_RATE' />
+   <value enum='PPC' description='PERCENT_OF_PROSPECTUS_PREPAYMENT_CURVE' />
+   <value enum='PSA' description='PERCENT_OF_BMA_PREPAYMENT_CURVE' />
+   <value enum='SMM' description='SINGLE_MONTHLY_MORTALITY' />
+  </field>
+  <field number='234' name='StipulationValue' type='STRING' />
+  <field number='235' name='YieldType' type='STRING'>
+   <value enum='AFTERTAX' description='AFTER_TAX_YIELD' />
+   <value enum='ANNUAL' description='ANNUAL_YIELD' />
+   <value enum='ATISSUE' description='YIELD_AT_ISSUE' />
+   <value enum='AVGMATURITY' description='YIELD_TO_AVG_MATURITY' />
+   <value enum='BOOK' description='BOOK_YIELD' />
+   <value enum='CALL' description='YIELD_TO_NEXT_CALL' />
+   <value enum='CHANGE' description='YIELD_CHANGE_SINCE_CLOSE' />
+   <value enum='CLOSE' description='CLOSING_YIELD' />
+   <value enum='COMPOUND' description='COMPOUND_YIELD' />
+   <value enum='CURRENT' description='CURRENT_YIELD' />
+   <value enum='GOVTEQUIV' description='GVNT_EQUIVALENT_YIELD' />
+   <value enum='GROSS' description='TRUE_GROSS_YIELD' />
+   <value enum='INFLATION' description='YIELD_WITH_INFLATION_ASSUMPTION' />
+   <value enum='INVERSEFLOATER' description='INVERSE_FLOATER_BOND_YIELD' />
+   <value enum='LASTCLOSE' description='MOST_RECENT_CLOSING_YIELD' />
+   <value enum='LASTMONTH' description='CLOSING_YIELD_MOST_RECENT_MONTH' />
+   <value enum='LASTQUARTER' description='CLOSING_YIELD_MOST_RECENT_QUARTER' />
+   <value enum='LASTYEAR' description='CLOSING_YIELD_MOST_RECENT_YEAR' />
+   <value enum='LONGAVGLIFE' description='YIELD_TO_LONGEST_AVERAGE_LIFE' />
+   <value enum='MARK' description='MARK_TO_MARKET_YIELD' />
+   <value enum='MATURITY' descriptio
