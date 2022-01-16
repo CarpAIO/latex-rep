@@ -5421,4 +5421,43 @@
    <value enum='8' description='TRADING_SESSION_LOW_PRICE' />
    <value enum='9' description='TRADING_SESSION_VWAP_PRICE' />
    <value enum='A' description='IMBALANCE' />
-   <value enum='B' description
+   <value enum='B' description='TRADE_VOLUME' />
+   <value enum='C' description='OPEN_INTEREST' />
+   <value enum='D' description='COMPOSITE_UNDERLYING_PRICE' />
+   <value enum='E' description='SIMULATED_SELL_PRICE' />
+   <value enum='F' description='SIMULATED_BUY_PRICE' />
+   <value enum='G' description='MARGIN_RATE' />
+   <value enum='H' description='MID_PRICE' />
+   <value enum='J' description='EMPTY_BOOK' />
+   <value enum='K' description='SETTLE_HIGH_PRICE' />
+   <value enum='L' description='SETTLE_LOW_PRICE' />
+   <value enum='M' description='PRIOR_SETTLE_PRICE' />
+   <value enum='N' description='SESSION_HIGH_BID' />
+   <value enum='O' description='SESSION_LOW_OFFER' />
+   <value enum='P' description='EARLY_PRICES' />
+   <value enum='Q' description='AUCTION_CLEARING_PRICE' />
+  </field>
+  <field number='270' name='MDEntryPx' type='PRICE' />
+  <field number='271' name='MDEntrySize' type='QTY' />
+  <field number='272' name='MDEntryDate' type='UTCDATEONLY' />
+  <field number='273' name='MDEntryTime' type='UTCTIMEONLY' />
+  <field number='274' name='TickDirection' type='CHAR'>
+   <value enum='0' description='PLUS_TICK' />
+   <value enum='1' description='ZERO_PLUS_TICK' />
+   <value enum='2' description='MINUS_TICK' />
+   <value enum='3' description='ZERO_MINUS_TICK' />
+  </field>
+  <field number='275' name='MDMkt' type='EXCHANGE' />
+  <field number='276' name='QuoteCondition' type='MULTIPLESTRINGVALUE'>
+   <value enum='A' description='OPEN_ACTIVE' />
+   <value enum='B' description='CLOSED_INACTIVE' />
+   <value enum='C' description='EXCHANGE_BEST' />
+   <value enum='D' description='CONSOLIDATED_BEST' />
+   <value enum='E' description='LOCKED' />
+   <value enum='F' description='CROSSED' />
+   <value enum='G' description='DEPTH' />
+   <value enum='H' description='FAST_TRADING' />
+   <value enum='I' description='NON_FIRM' />
+   <value enum='L' description='MANUAL_SLOW_QUOTE' />
+   <value enum='J' description='OUTRIGHT_PRICE' />
+   <value enum=
