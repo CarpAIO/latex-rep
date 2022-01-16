@@ -5460,4 +5460,45 @@
    <value enum='I' description='NON_FIRM' />
    <value enum='L' description='MANUAL_SLOW_QUOTE' />
    <value enum='J' description='OUTRIGHT_PRICE' />
-   <value enum=
+   <value enum='K' description='IMPLIED_PRICE' />
+   <value enum='M' description='DEPTH_ON_OFFER' />
+   <value enum='N' description='DEPTH_ON_BID' />
+   <value enum='O' description='CLOSING' />
+   <value enum='P' description='NEWS_DISSEMINATION' />
+   <value enum='Q' description='TRADING_RANGE' />
+   <value enum='R' description='ORDER_INFLUX' />
+   <value enum='S' description='DUE_TO_RELATED' />
+   <value enum='T' description='NEWS_PENDING' />
+   <value enum='U' description='ADDITIONAL_INFO' />
+   <value enum='V' description='ADDITIONAL_INFO_DUE_TO_RELATED' />
+   <value enum='W' description='RESUME' />
+   <value enum='X' description='VIEW_OF_COMMON' />
+   <value enum='Y' description='VOLUME_ALERT' />
+   <value enum='Z' description='ORDER_IMBALANCE' />
+   <value enum='a' description='EQUIPMENT_CHANGEOVER' />
+   <value enum='b' description='NO_OPEN' />
+   <value enum='c' description='REGULAR_ETH' />
+   <value enum='d' description='AUTOMATIC_EXECUTION' />
+   <value enum='e' description='AUTOMATIC_EXECUTION_ETH' />
+   <value enum='f ' description='FAST_MARKET_ETH' />
+   <value enum='g' description='INACTIVE_ETH' />
+   <value enum='h' description='ROTATION' />
+   <value enum='i' description='ROTATION_ETH' />
+   <value enum='j' description='HALT' />
+   <value enum='k' description='HALT_ETH' />
+   <value enum='l' description='DUE_TO_NEWS_DISSEMINATION' />
+   <value enum='m' description='DUE_TO_NEWS_PENDING' />
+   <value enum='n' description='TRADING_RESUME' />
+   <value enum='o' description='OUT_OF_SEQUENCE' />
+   <value enum='p' description='BID_SPECIALIST' />
+   <value enum='q' description='OFFER_SPECIALIST' />
+   <value enum='r' description='BID_OFFER_SPECIALIST' />
+   <value enum='s' description='END_OF_DAY_SAM' />
+   <value enum='t' description='FORBIDDEN_SAM' />
+   <value enum='u' description='FROZEN_SAM' />
+   <value enum='v' description='PREOPENING_SAM' />
+   <value enum='w' description='OPENING_SAM' />
+   <value enum='x' description='OPEN_SAM' />
+   <value enum='y' description='SURVEILLANCE_SAM' />
+   <value enum='z' description='SUSPENDED_SAM' />
+   
