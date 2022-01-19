@@ -5541,4 +5541,45 @@
    <value enum='h' description='CANCEL_STOPPED' />
    <value enum='i' description='CANCEL_ETH' />
    <value enum='j' description='CANCEL_STOPPED_ETH' />
-   <value enum='k' descr
+   <value enum='k' description='OUT_OF_SEQUENCE_ETH' />
+   <value enum='l' description='CANCEL_LAST_ETH' />
+   <value enum='m' description='SOLD_LAST_SALE_ETH' />
+   <value enum='n' description='CANCEL_LAST' />
+   <value enum='o' description='SOLD_LAST_SALE' />
+   <value enum='p' description='CANCEL_OPEN' />
+   <value enum='q' description='CANCEL_OPEN_ETH' />
+   <value enum='r' description='OPENED_SALE_ETH' />
+   <value enum='s' description='CANCEL_ONLY' />
+   <value enum='t' description='CANCEL_ONLY_ETH' />
+   <value enum='u' description='LATE_OPEN_ETH' />
+   <value enum='v' description='AUTO_EXECUTION_ETH' />
+   <value enum='w' description='REOPEN' />
+   <value enum='x' description='REOPEN_ETH' />
+   <value enum='y' description='ADJUSTED' />
+   <value enum='z' description='ADJUSTED_ETH' />
+   <value enum='AA' description='SPREAD' />
+   <value enum='AB' description='SPREAD_ETH' />
+   <value enum='AC' description='STRADDLE' />
+   <value enum='AD' description='STRADDLE_ETH' />
+   <value enum='AE' description='STOPPED' />
+   <value enum='AF' description='STOPPED_ETH' />
+   <value enum='AG' description='REGULAR_ETH' />
+   <value enum='AH' description='COMBO' />
+   <value enum='AI' description='COMBO_ETH' />
+   <value enum='AJ' description='OFFICIAL_CLOSING_PRICE' />
+   <value enum='AK' description='PRIOR_REFERENCE_PRICE' />
+   <value enum='0' description='CANCEL' />
+   <value enum='AL' description='STOPPED_SOLD_LAST' />
+   <value enum='AM' description='STOPPED_OUT_OF_SEQUENCE' />
+   <value enum='AN' description='OFFICAL_CLOSING_PRICE' />
+   <value enum='AO' description='CROSSED_AO' />
+   <value enum='AP' description='FAST_MARKET' />
+   <value enum='AQ' description='AUTOMATIC_EXECUTION' />
+   <value enum='AR' description='FORM_T' />
+   <value enum='AS' description='BASKET_INDEX' />
+   <value enum='AT' description='BURST_BASKET' />
+  </field>
+  <field number='278' name='MDEntryID' type='STRING' />
+  <field number='279' name='MDUpdateAction' type='CHAR'>
+   <value enum='0' description='NEW' />
+   <va
