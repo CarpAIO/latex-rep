@@ -5699,4 +5699,35 @@
    <value enum='1' description='ACKNOWLEDGE_ONLY_NEGATIVE_OR_ERRONEOUS_QUOTES' />
    <value enum='2' description='ACKNOWLEDGE_EACH_QUOTE_MESSAGES' />
   </field>
-  <field number='302' name='QuoteSetID' ty
+  <field number='302' name='QuoteSetID' type='STRING' />
+  <field number='303' name='QuoteRequestType' type='INT'>
+   <value enum='1' description='MANUAL' />
+   <value enum='2' description='AUTOMATIC' />
+  </field>
+  <field number='304' name='TotNoQuoteEntries' type='INT' />
+  <field number='305' name='UnderlyingSecurityIDSource' type='STRING' />
+  <field number='306' name='UnderlyingIssuer' type='STRING' />
+  <field number='307' name='UnderlyingSecurityDesc' type='STRING' />
+  <field number='308' name='UnderlyingSecurityExchange' type='EXCHANGE' />
+  <field number='309' name='UnderlyingSecurityID' type='STRING' />
+  <field number='310' name='UnderlyingSecurityType' type='STRING' />
+  <field number='311' name='UnderlyingSymbol' type='STRING' />
+  <field number='312' name='UnderlyingSymbolSfx' type='STRING' />
+  <field number='313' name='UnderlyingMaturityMonthYear' type='MONTHYEAR' />
+  <field number='315' name='UnderlyingPutOrCall' type='INT' />
+  <field number='316' name='UnderlyingStrikePrice' type='PRICE' />
+  <field number='317' name='UnderlyingOptAttribute' type='CHAR' />
+  <field number='318' name='UnderlyingCurrency' type='CURRENCY' />
+  <field number='320' name='SecurityReqID' type='STRING' />
+  <field number='321' name='SecurityRequestType' type='INT'>
+   <value enum='0' description='REQUEST_SECURITY_IDENTITY_AND_SPECIFICATIONS' />
+   <value enum='1' description='REQUEST_SECURITY_IDENTITY_FOR_THE_SPECIFICATIONS_PROVIDED' />
+   <value enum='2' description='REQUEST_LIST_SECURITY_TYPES' />
+   <value enum='3' description='REQUEST_LIST_SECURITIES' />
+  </field>
+  <field number='322' name='SecurityResponseID' type='STRING' />
+  <field number='323' name='SecurityResponseType' type='INT'>
+   <value enum='1' description='ACCEPT_SECURITY_PROPOSAL_AS_IS' />
+   <value enum='2' description='ACCEPT_SECURITY_PROPOSAL_WITH_REVISIONS_AS_INDICATED_IN_THE_MESSAGE' />
+   <value enum='3' description='LIST_OF_SECURITY_TYPES_RETURNED_PER_REQUEST' />
+   <value enum='4' description='LIST_OF_SECURITIES_
