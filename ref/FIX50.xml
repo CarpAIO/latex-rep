@@ -6037,4 +6037,42 @@
   </field>
   <field number='430' name='NetGrossInd' type='INT'>
    <value enum='1' description='NET' />
-   <value e
+   <value enum='2' description='GROSS' />
+  </field>
+  <field number='431' name='ListOrderStatus' type='INT'>
+   <value enum='1' description='IN_BIDDING_PROCESS' />
+   <value enum='2' description='RECEIVED_FOR_EXECUTION' />
+   <value enum='3' description='EXECUTING' />
+   <value enum='4' description='CANCELLING' />
+   <value enum='5' description='ALERT' />
+   <value enum='6' description='ALL_DONE' />
+   <value enum='7' description='REJECT' />
+  </field>
+  <field number='432' name='ExpireDate' type='LOCALMKTDATE' />
+  <field number='433' name='ListExecInstType' type='CHAR'>
+   <value enum='1' description='IMMEDIATE' />
+   <value enum='2' description='WAIT_FOR_EXECUT_INSTRUCTION' />
+   <value enum='3' description='EXCHANGE_SWITCH_CIV_ORDER_3' />
+   <value enum='4' description='EXCHANGE_SWITCH_CIV_ORDER_4' />
+   <value enum='5' description='EXCHANGE_SWITCH_CIV_ORDER_5' />
+  </field>
+  <field number='434' name='CxlRejResponseTo' type='CHAR'>
+   <value enum='1' description='ORDER_CANCEL_REQUEST' />
+   <value enum='2' description='ORDER_CANCEL_REPLACE_REQUEST' />
+  </field>
+  <field number='435' name='UnderlyingCouponRate' type='PERCENTAGE' />
+  <field number='436' name='UnderlyingContractMultiplier' type='FLOAT' />
+  <field number='437' name='ContraTradeQty' type='QTY' />
+  <field number='438' name='ContraTradeTime' type='UTCTIMESTAMP' />
+  <field number='441' name='LiquidityNumSecurities' type='INT' />
+  <field number='442' name='MultiLegReportingType' type='CHAR'>
+   <value enum='1' description='SINGLE_SECURITY' />
+   <value enum='2' description='INDIVIDUAL_LEG_OF_A_MULTILEG_SECURITY' />
+   <value enum='3' description='MULTI_LEG_SECURITY' />
+  </field>
+  <field number='443' name='StrikeTime' type='UTCTIMESTAMP' />
+  <field number='444' name='ListStatusText' type='STRING' />
+  <field number='445' name='EncodedListStatusTextLen' type='LENGTH' />
+  <field number='446' name='EncodedListStatusText' type='DATA' />
+  <field number='447' name='PartyIDSource' type='CHAR'>
+   <value enum='6' description='UK_NATIONAL_INSU
