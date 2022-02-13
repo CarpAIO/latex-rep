@@ -6110,4 +6110,41 @@
    <value enum='11' description='ORDER_ORIGINATION_TRADER' />
    <value enum='12' description='EXECUTING_TRADER' />
    <value enum='13' description='ORDER_ORIGINATION_FIRM' />
-   <value en
+   <value enum='14' description='GIVEUP_CLEARING_FIRM' />
+   <value enum='15' description='CORRESPONDANT_CLEARING_FIRM' />
+   <value enum='16' description='EXECUTING_SYSTEM' />
+   <value enum='17' description='CONTRA_FIRM' />
+   <value enum='18' description='CONTRA_CLEARING_FIRM' />
+   <value enum='19' description='SPONSORING_FIRM' />
+   <value enum='20' description='UNDERLYING_CONTRA_FIRM' />
+   <value enum='21' description='CLEARING_ORGANIZATION' />
+   <value enum='22' description='EXCHANGE' />
+   <value enum='24' description='CUSTOMER_ACCOUNT' />
+   <value enum='25' description='CORRESPONDENT_CLEARING_ORGANIZATION' />
+   <value enum='26' description='CORRESPONDENT_BROKER' />
+   <value enum='27' description='BUYER_SELLER' />
+   <value enum='28' description='CUSTODIAN' />
+   <value enum='29' description='INTERMEDIARY' />
+   <value enum='30' description='AGENT' />
+   <value enum='31' description='SUB_CUSTODIAN' />
+   <value enum='32' description='BENEFICIARY' />
+   <value enum='33' description='INTERESTED_PARTY' />
+   <value enum='34' description='REGULATORY_BODY' />
+   <value enum='35' description='LIQUIDITY_PROVIDER' />
+   <value enum='36' description='ENTERING_TRADER' />
+   <value enum='37' description='CONTRA_TRADER' />
+   <value enum='38' description='POSITION_ACCOUNT' />
+   <value enum='39' description='CONTRA_INVESTOR_ID' />
+   <value enum='40' description='TRANSFER_TO_FIRM' />
+   <value enum='41' description='CONTRA_POSITION_ACCOUNT' />
+   <value enum='42' description='CONTRA_EXCHANGE' />
+   <value enum='43' description='INTERNAL_CARRY_ACCOUNT' />
+   <value enum='44' description='ORDER_ENTRY_OPERATOR_ID' />
+   <value enum='45' description='SECONDARY_ACCOUNT_NUMBER' />
+   <value enum='46' description='FORIEGN_FIRM' />
+   <value enum='47' description='THIRD_PARTY_ALLOCATION_FIRM' />
+   <value enum='48' description='CLAIMING_ACCOUNT' />
+   <value enum='49' description='ASSET_MANAGER' />
+   <value enum='50' description='PLEDGOR_ACCOUNT' />
+   <value enum='51' description='PLEDGEE_ACCOUNT' />
+   <value enum='52' desc
