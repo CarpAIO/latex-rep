@@ -6147,4 +6147,39 @@
    <value enum='49' description='ASSET_MANAGER' />
    <value enum='50' description='PLEDGOR_ACCOUNT' />
    <value enum='51' description='PLEDGEE_ACCOUNT' />
-   <value enum='52' desc
+   <value enum='52' description='LARGE_TRADER_REPORTABLE_ACCOUNT' />
+   <value enum='53' description='TRADER_MNEMONIC' />
+   <value enum='54' description='SENDER_LOCATION' />
+   <value enum='55' description='SESSION_ID' />
+   <value enum='56' description='ACCEPTABLE_COUNTERPARTY' />
+   <value enum='57' description='UNACCEPTABLE_COUNTERPARTY' />
+   <value enum='58' description='ENTERING_UNIT' />
+   <value enum='59' description='EXECUTING_UNIT' />
+   <value enum='60' description='INTRODUCING_BROKER' />
+   <value enum='61' description='QUOTE_ORIGINATOR' />
+   <value enum='62' description='REPORT_ORIGINATOR' />
+   <value enum='63' description='SYSTEMATIC_INTERNALISER' />
+   <value enum='64' description='MULTILATERAL_TRADING_FACILITY' />
+   <value enum='65' description='REGULATED_MARKET' />
+   <value enum='66' description='MARKET_MAKER' />
+   <value enum='67' description='INVESTMENT_FIRM' />
+   <value enum='68' description='HOST_COMPETENT_AUTHORITY' />
+   <value enum='69' description='HOME_COMPETENT_AUTHORITY' />
+   <value enum='70' description='COMPETENT_AUTHORITY_OF_THE_MOST_RELEVANT_MARKET_IN_TERMS_OF_LIQUIDITY' />
+   <value enum='71' description='COMPETENT_AUTHORITY_OF_THE_TRANSACTION' />
+   <value enum='72' description='REPORTING_INTERMEDIARY' />
+   <value enum='73' description='EXECUTION_VENUE' />
+   <value enum='74' description='MARKET_DATA_ENTRY_ORIGINATOR' />
+   <value enum='75' description='LOCATION_ID' />
+   <value enum='76' description='DESK_ID' />
+   <value enum='77' description='MARKET_DATA_MARKET' />
+   <value enum='78' description='ALLOCATION_ENTITY' />
+  </field>
+  <field number='453' name='NoPartyIDs' type='NUMINGROUP' />
+  <field number='454' name='NoSecurityAltID' type='NUMINGROUP' />
+  <field number='455' name='SecurityAltID' type='STRING' />
+  <field number='456' name='SecurityAltIDSource' type='STRING' />
+  <field number='457' name='NoUnderlyingSecurityAltID' type='NUMINGROUP' />
+  <field number='458' name='UnderlyingSecurityAltID' type='STRING' />
+  <field number='459' name='UnderlyingSecurityAltIDSource' type='STRING' />
+  <field number='460' name='Produ
