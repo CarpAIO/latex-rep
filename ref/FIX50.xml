@@ -6075,4 +6075,39 @@
   <field number='445' name='EncodedListStatusTextLen' type='LENGTH' />
   <field number='446' name='EncodedListStatusText' type='DATA' />
   <field number='447' name='PartyIDSource' type='CHAR'>
-   <value enum='6' description='UK_NATIONAL_INSU
+   <value enum='6' description='UK_NATIONAL_INSURANCE_OR_PENSION_NUMBER' />
+   <value enum='7' description='US_SOCIAL_SECURITY_NUMBER' />
+   <value enum='8' description='US_EMPLOYER_OR_TAX_ID_NUMBER' />
+   <value enum='9' description='AUSTRALIAN_BUSINESS_NUMBER' />
+   <value enum='A' description='AUSTRALIAN_TAX_FILE_NUMBER' />
+   <value enum='1' description='KOREAN_INVESTOR_ID' />
+   <value enum='2' description='TAIWANESE_QUALIFIED_FOREIGN_INVESTOR_ID_QFII_FID' />
+   <value enum='3' description='TAIWANESE_TRADING_ACCT' />
+   <value enum='4' description='MALAYSIAN_CENTRAL_DEPOSITORY' />
+   <value enum='5' description='CHINESE_INVESTOR_ID' />
+   <value enum='I' description='DIRECTED_BROKER_THREE_CHARACTER_ACRONYM_AS_DEFINED_IN_ISITC_ETC_BEST_PRACTICE_GUIDELINES_DOCUMENT' />
+   <value enum='B' description='BIC' />
+   <value enum='C' description='GENERALLY_ACCEPTED_MARKET_PARTICIPANT_IDENTIFIER' />
+   <value enum='D' description='PROPRIETARY' />
+   <value enum='E' description='ISO_COUNTRY_CODE' />
+   <value enum='F' description='SETTLEMENT_ENTITY_LOCATION' />
+   <value enum='G' description='MIC' />
+   <value enum='H' description='CSD_PARTICIPANT_MEMBER_CODE' />
+  </field>
+  <field number='448' name='PartyID' type='STRING' />
+  <field number='451' name='NetChgPrevDay' type='PRICEOFFSET' />
+  <field number='452' name='PartyRole' type='INT'>
+   <value enum='1' description='EXECUTING_FIRM' />
+   <value enum='2' description='BROKER_OF_CREDIT' />
+   <value enum='3' description='CLIENT_ID' />
+   <value enum='4' description='CLEARING_FIRM' />
+   <value enum='5' description='INVESTOR_ID' />
+   <value enum='6' description='INTRODUCING_FIRM' />
+   <value enum='7' description='ENTERING_FIRM' />
+   <value enum='8' description='LOCATE' />
+   <value enum='9' description='FUND_MANAGER_CLIENT_ID' />
+   <value enum='10' description='SETTLEMENT_LOCATION' />
+   <value enum='11' description='ORDER_ORIGINATION_TRADER' />
+   <value enum='12' description='EXECUTING_TRADER' />
+   <value enum='13' description='ORDER_ORIGINATION_FIRM' />
+   <value en
