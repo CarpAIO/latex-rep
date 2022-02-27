@@ -6182,4 +6182,46 @@
   <field number='457' name='NoUnderlyingSecurityAltID' type='NUMINGROUP' />
   <field number='458' name='UnderlyingSecurityAltID' type='STRING' />
   <field number='459' name='UnderlyingSecurityAltIDSource' type='STRING' />
-  <field number='460' name='Produ
+  <field number='460' name='Product' type='INT'>
+   <value enum='1' description='AGENCY' />
+   <value enum='2' description='COMMODITY' />
+   <value enum='3' description='CORPORATE' />
+   <value enum='4' description='CURRENCY' />
+   <value enum='5' description='EQUITY' />
+   <value enum='6' description='GOVERNMENT' />
+   <value enum='7' description='INDEX' />
+   <value enum='8' description='LOAN' />
+   <value enum='9' description='MONEYMARKET' />
+   <value enum='10' description='MORTGAGE' />
+   <value enum='11' description='MUNICIPAL' />
+   <value enum='12' description='OTHER' />
+   <value enum='13' description='FINANCING' />
+  </field>
+  <field number='461' name='CFICode' type='STRING' />
+  <field number='462' name='UnderlyingProduct' type='INT' />
+  <field number='463' name='UnderlyingCFICode' type='STRING' />
+  <field number='464' name='TestMessageIndicator' type='BOOLEAN'>
+   <value enum='N' description='NO' />
+   <value enum='Y' description='YES' />
+  </field>
+  <field number='466' name='BookingRefID' type='STRING' />
+  <field number='467' name='IndividualAllocID' type='STRING' />
+  <field number='468' name='RoundingDirection' type='CHAR'>
+   <value enum='0' description='ROUND_TO_NEAREST' />
+   <value enum='1' description='ROUND_DOWN' />
+   <value enum='2' description='ROUND_UP' />
+  </field>
+  <field number='469' name='RoundingModulus' type='FLOAT' />
+  <field number='470' name='CountryOfIssue' type='COUNTRY' />
+  <field number='471' name='StateOrProvinceOfIssue' type='STRING' />
+  <field number='472' name='LocaleOfIssue' type='STRING' />
+  <field number='473' name='NoRegistDtls' type='NUMINGROUP' />
+  <field number='474' name='MailingDtls' type='STRING' />
+  <field number='475' name='InvestorCountryOfResidence' type='COUNTRY' />
+  <field number='476' name='PaymentRef' type='STRING' />
+  <field number='477' name='DistribPaymentMethod' type='INT'>
+   <value enum='1' description='CREST' />
+   <value enum='2' description='NSCC' />
+   <value enum='3' description='EUROCLEAR' />
+   <value enum='4' description='CLEARSTREAM' />
+   <
