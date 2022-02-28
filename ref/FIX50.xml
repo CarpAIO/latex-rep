@@ -6343,4 +6343,36 @@
    <value enum='A' description='ACCEPTED' />
    <value enum='R' description='REJECTED' />
    <value enum='H' description='HELD' />
-   <value enum='N' description='RE
+   <value enum='N' description='REMINDER' />
+  </field>
+  <field number='507' name='RegistRejReasonCode' type='INT'>
+   <value enum='1' description='INVALID_UNACCEPTABLE_ACCOUNT_TYPE' />
+   <value enum='2' description='INVALID_UNACCEPTABLE_TAX_EXEMPT_TYPE' />
+   <value enum='3' description='INVALID_UNACCEPTABLE_OWNERSHIP_TYPE' />
+   <value enum='4' description='INVALID_UNACCEPTABLE_NO_REG_DETAILS' />
+   <value enum='5' description='INVALID_UNACCEPTABLE_REG_SEQ_NO' />
+   <value enum='6' description='INVALID_UNACCEPTABLE_REG_DETAILS' />
+   <value enum='7' description='INVALID_UNACCEPTABLE_MAILING_DETAILS' />
+   <value enum='8' description='INVALID_UNACCEPTABLE_MAILING_INSTRUCTIONS' />
+   <value enum='9' description='INVALID_UNACCEPTABLE_INVESTOR_ID' />
+   <value enum='10' description='INVALID_UNACEEPTABLE_INVESTOR_ID_SOURCE' />
+   <value enum='11' description='INVALID_UNACCEPTABLE_DATE_OF_BIRTH' />
+   <value enum='12' description='INVALID_UNACCEPTABLE_INVESTOR_COUNTRY_OF_RESIDENCE' />
+   <value enum='13' description='INVALID_UNACCEPTABLE_NO_DISTRIB_INSTNS' />
+   <value enum='14' description='INVALID_UNACCEPTABLE_DISTRIB_PERCENTAGE' />
+   <value enum='15' description='INVALID_UNACCEPTABLE_DISTRIB_PAYMENT_METHOD' />
+   <value enum='16' description='INVALID_UNACCEPTABLE_CASH_DISTRIB_AGENT_ACCT_NAME' />
+   <value enum='17' description='INVALID_UNACCEPTABLE_CASH_DISTRIB_AGENT_CODE' />
+   <value enum='18' description='INVALID_UNACCEPTABLE_CASH_DISTRIB_AGENT_ACCT_NUM' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='508' name='RegistRefID' type='STRING' />
+  <field number='509' name='RegistDtls' type='STRING' />
+  <field number='510' name='NoDistribInsts' type='NUMINGROUP' />
+  <field number='511' name='RegistEmail' type='STRING' />
+  <field number='512' name='DistribPercentage' type='PERCENTAGE' />
+  <field number='513' name='RegistID' type='STRING' />
+  <field number='514' name='RegistTransType' type='CHAR'>
+   <value enum='0' description='NEW' />
+   <value enum='2' description='CANCEL' />
+   <valu
