@@ -6413,4 +6413,40 @@
    <value enum='6' description='PENSION_PLAN' />
    <value enum='7' description='CUSTODIAN_UNDER_GIFTS_TO_MINORS_ACT' />
    <value enum='8' description='TRUSTS' />
-   <value enum='9' description='FIDUCIARI
+   <value enum='9' description='FIDUCIARIES' />
+   <value enum='10' description='NETWORKING_SUB_ACCOUNT' />
+   <value enum='11' description='NON_PROFIT_ORGANIZATION' />
+   <value enum='12' description='CORPORATE_BODY' />
+   <value enum='13' description='NOMINEE' />
+  </field>
+  <field number='523' name='PartySubID' type='STRING' />
+  <field number='524' name='NestedPartyID' type='STRING' />
+  <field number='525' name='NestedPartyIDSource' type='CHAR' />
+  <field number='526' name='SecondaryClOrdID' type='STRING' />
+  <field number='527' name='SecondaryExecID' type='STRING' />
+  <field number='528' name='OrderCapacity' type='CHAR'>
+   <value enum='A' description='AGENCY' />
+   <value enum='G' description='PROPRIETARY' />
+   <value enum='I' description='INDIVIDUAL' />
+   <value enum='P' description='PRINCIPAL' />
+   <value enum='R' description='RISKLESS_PRINCIPAL' />
+   <value enum='W' description='AGENT_FOR_OTHER_MEMBER' />
+  </field>
+  <field number='529' name='OrderRestrictions' type='MULTIPLECHARVALUE'>
+   <value enum='1' description='PROGRAM_TRADE' />
+   <value enum='2' description='INDEX_ARBITRAGE' />
+   <value enum='3' description='NON_INDEX_ARBITRAGE' />
+   <value enum='4' description='COMPETING_MARKET_MAKER' />
+   <value enum='5' description='ACTING_AS_MARKET_MAKER_OR_SPECIALIST_IN_THE_SECURITY' />
+   <value enum='6' description='ACTING_AS_MARKET_MAKER_OF_SPECIALIST_IN_THE_UNDERLYING_SECURITY_OF_A_DERIVATIVE_SEUCIRTY' />
+   <value enum='7' description='FOREIGN_ENTITY' />
+   <value enum='8' description='EXTERNAL_MARKET_PARTICIPANT' />
+   <value enum='9' description='EXTNERAL_INTER_CONNECTED_MARKET_LINKAGE' />
+   <value enum='A' description='RISKLESS_ARBITRAGE' />
+  </field>
+  <field number='530' name='MassCancelRequestType' type='CHAR'>
+   <value enum='1' description='CANCEL_ORDERS_FOR_A_SECURITY' />
+   <value enum='2' description='CANCEL_ORDERS_FOR_AN_UNDERLYING_SECURITY' />
+   <value enum='3' description='CANCEL_ORDERS_FOR_A_PRODUCT' />
+   <value enum='4' description='CANCEL_ORDERS_FOR_A_CFICODE' />
+   <value enum
