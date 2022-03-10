@@ -6589,4 +6589,32 @@
    <value enum='A1' description='EXACT_MATCH_ON_TRADE_DATE_STOCK_SYMBOL_QUANTITY_PRICE_TRADE_TYPE_AND_SPECIAL_TRADE_INDICATOR_PLUS_FOUR_BADGES_AND_EXECUTION_TIME' />
    <value enum='A2' description='EXACT_MATCH_ON_TRADE_DATE_STOCK_SYMBOL_QUANTITY_PRICE_TRADE_TYPE_AND_SPECIAL_TRADE_INDICATOR_PLUS_FOUR_BADGES' />
    <value enum='A3' description='EXACT_MATCH_ON_TRADE_DATE_STOCK_SYMBOL_QUANTITY_PRICE_TRADE_TYPE_AND_SPECIAL_TRADE_INDICATOR_PLUS_TWO_BADGES_AND_EXECUTION_TIME' />
-   <value enum='A4' description='EXACT_MATCH_ON_TRADE_DATE_STOCK_SYMBOL_QUANTITY_PRICE_TRADE_TYPE_AND_SPECIAL_TRADE_INDICATOR_PLUS_T
+   <value enum='A4' description='EXACT_MATCH_ON_TRADE_DATE_STOCK_SYMBOL_QUANTITY_PRICE_TRADE_TYPE_AND_SPECIAL_TRADE_INDICATOR_PLUS_TWO_BADGES' />
+   <value enum='A5' description='EXACT_MATCH_ON_TRADE_DATE_STOCK_SYMBOL_QUANTITY_PRICE_TRADETYPE_AND_SPECIAL_TRADE_INDICATOR_PLUS_EXECUTION_TIME' />
+   <value enum='AQ' description='COMPARED_RECORDS_RESULTING_FROM_STAMPED_ADVISORIES_OR_SPECIALIST_ACCEPTS_PAIR_OFFS' />
+   <value enum='S1' description='SUMMARIZED_MATCH_USING_A1_EXACT_MATCH_CRITERIA_EXCEPT_QUANTITY_IS_SUMMARIED' />
+   <value enum='S2' description='SUMMARIZED_MATCH_USING_A2_EXACT_MATCH_CRITERIA_EXCEPT_QUANTITY_IS_SUMMARIZED' />
+   <value enum='S3' description='SUMMARIZED_MATCH_USING_A3_EXACT_MATCH_CRITERIA_EXCEPT_QUANTITY_IS_SUMMARIZED' />
+   <value enum='S4' description='SUMMARIZED_MATCH_USING_A4_EXACT_MATCH_CRITERIA_EXCEPT_QUANTITY_IS_SUMMARIZED' />
+   <value enum='S5' description='SUMMARIZED_MATCH_USING_A5_EXACT_MATCH_CRITERIA_EXCEPT_QUANTITY_IS_SUMMARIZED' />
+   <value enum='M1' description='EXACT_MATCH_ON_TRADE_DATE_STOCK_SYMBOL_QUANTITY_PRICE_TRADE_TYPE_AND_SPECIAL_TRADE_INDICATOR_MINUS_BADGES_AND_TIMES_ACT_M1_MATCH' />
+   <value enum='M2' description='SUMMARIZED_MATCH_MINUS_BADGES_AND_TIMES_ACT_M2_MATCH' />
+   <value enum='MT' description='OCS_LOCKED_IN_NON_ACT' />
+   <value enum='1' description='ONE_PARTY_TRADE_REPORT' />
+   <value enum='2' description='TWO_PARTY_TRADE_REPORT' />
+   <value enum='3' description='CONFIRMED_TRADE_REPORT' />
+   <value enum='4' description='AUTO_MATCH' />
+   <value enum='5' description='CROSS_AUCTION_5' />
+   <value enum='6' description='COUNTER_ORDER_SELECTION_6' />
+   <value enum='7' description='CALL_AUCTION_7' />
+  </field>
+  <field number='575' name='OddLot' type='BOOLEAN'>
+   <value enum='N' description='NO' />
+   <value enum='Y' description='YES' />
+  </field>
+  <field number='576' name='NoClearingInstructions' type='NUMINGROUP' />
+  <field number='577' name='ClearingInstruction' type='INT'>
+   <value enum='0' description='PROCESS_NORMALLY' />
+   <value enum='1' description='EXCLUDE_FROM_ALL_NETTING' />
+   <value enum='2' description='BILATERAL_NETTING_ONLY' />
+   <
