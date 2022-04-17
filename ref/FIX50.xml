@@ -7251,4 +7251,39 @@
    <value enum='4' description='ALLOCATION_FROM_EXECUTOR' />
    <value enum='5' description='ALLOCATION_TO_CLAIM_ACCOUNT' />
   </field>
-  <field number=
+  <field number='827' name='ExpirationCycle' type='INT'>
+   <value enum='0' description='EXPIRE_ON_TRADING_SESSION_CLOSE' />
+   <value enum='1' description='EXPIRE_ON_TRADING_SESSION_OPEN' />
+  </field>
+  <field number='828' name='TrdType' type='INT'>
+   <value enum='0' description='REGULAR_TRADE' />
+   <value enum='1' description='BLOCK_TRADE_1' />
+   <value enum='2' description='EFP' />
+   <value enum='3' description='TRANSFER' />
+   <value enum='4' description='LATE_TRADE' />
+   <value enum='5' description='T_TRADE' />
+   <value enum='6' description='WEIGHTED_AVERAGE_PRICE_TRADE' />
+   <value enum='7' description='BUNCHED_TRADE' />
+   <value enum='8' description='LATE_BUNCHED_TRADE' />
+   <value enum='9' description='PRIOR_REFERENCE_PRICE_TRADE' />
+   <value enum='10' description='AFTER_HOURS_TRADE' />
+   <value enum='11' description='EXCHANGE_FOR_RISK' />
+   <value enum='12' description='EXCHANGE_FOR_SWAP' />
+   <value enum='13' description='EXCHANGE_OF_FUTURES_FOR' />
+   <value enum='14' description='EXCHANGE_OF_OPTIONS_FOR_OPTIONS' />
+   <value enum='15' description='TRADING_AT_SETTLEMENT' />
+   <value enum='16' description='ALL_OR_NONE' />
+   <value enum='17' description='FUTURES_LARGE_ORDER_EXECUTION' />
+   <value enum='18' description='EXCHANGE_OF_FUTURES_FOR_FUTURES' />
+   <value enum='19' description='OPTION_INTERIM_TRADE' />
+   <value enum='20' description='OPTION_CABINET_TRADE' />
+   <value enum='22' description='PRIVATELY_NEGOTIATED_TRADES' />
+   <value enum='23' description='SUBSTITUTION_OF_FUTURES_FOR_FORWARDS' />
+   <value enum='24' description='ERROR_TRADE' />
+   <value enum='25' description='SPECIAL_CUM_DIVIDEND' />
+   <value enum='26' description='SPECIAL_EX_DIVIDEND' />
+   <value enum='27' description='SPECIAL_CUM_COUPON' />
+   <value enum='28' description='SPECIAL_EX_COUPON' />
+   <value enum='29' description='CASH_SETTLEMENT' />
+   <value enum='30' description='SPECIAL_PRICE' />
+   <value enum='31' description='GUARANTEED_DELIVE
