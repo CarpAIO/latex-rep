@@ -7416,4 +7416,46 @@
    <value enum='2' description='SELLING_CUSTOMER_SOLD_SHORT' />
    <value enum='3' description='SELLING_CUSTOMER_SOLD_SHORT_EXEMPT' />
    <value enum='4' description='QUALIFIED_SERVICE_REPRESENTATIVE' />
-   <value enum='5' description='QSR_OR_AGU_CONTRA_SID
+   <value enum='5' description='QSR_OR_AGU_CONTRA_SIDE_SOLD_SHORT_EXEMPT' />
+  </field>
+  <field number='854' name='QtyType' type='INT'>
+   <value enum='0' description='UNITS' />
+   <value enum='1' description='CONTRACTS' />
+   <value enum='2' description='UNITS_OF_MEASURE_PER_TIME_UNIT' />
+  </field>
+  <field number='855' name='SecondaryTrdType' type='INT' />
+  <field number='856' name='TradeReportType' type='INT'>
+   <value enum='0' description='SUBMIT' />
+   <value enum='1' description='ALLEGED_1' />
+   <value enum='2' description='ACCEPT' />
+   <value enum='3' description='DECLINE' />
+   <value enum='4' description='ADDENDUM' />
+   <value enum='5' description='NO_WAS' />
+   <value enum='6' description='TRADE_REPORT_CANCEL' />
+   <value enum='7' description='7' />
+   <value enum='8' description='DEFAULTED' />
+   <value enum='9' description='INVALID_CMTA' />
+   <value enum='10' description='PENDED' />
+   <value enum='11' description='ALLEGED_NEW' />
+   <value enum='12' description='ALLEGED_ADDENDUM' />
+   <value enum='13' description='ALLEGED_NO_WAS' />
+   <value enum='14' description='ALLEGED_TRADE_REPORT_CANCEL' />
+   <value enum='15' description='ALLEGED_15' />
+  </field>
+  <field number='857' name='AllocNoOrdersType' type='INT'>
+   <value enum='0' description='NOT_SPECIFIED' />
+   <value enum='1' description='EXPLICIT_LIST_PROVIDED' />
+  </field>
+  <field number='858' name='SharedCommission' type='AMT' />
+  <field number='859' name='ConfirmReqID' type='STRING' />
+  <field number='860' name='AvgParPx' type='PRICE' />
+  <field number='861' name='ReportedPx' type='PRICE' />
+  <field number='862' name='NoCapacities' type='NUMINGROUP' />
+  <field number='863' name='OrderCapacityQty' type='QTY' />
+  <field number='864' name='NoEvents' type='NUMINGROUP' />
+  <field number='865' name='EventType' type='INT'>
+   <value enum='1' description='PUT' />
+   <value enum='2' description='CALL' />
+   <value enum='3' description='TENDER' />
+   <value enum='4' description='SINKING_FUND_CALL' />
+   <value enum
