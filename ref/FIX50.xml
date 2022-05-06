@@ -7692,4 +7692,45 @@
   <field number='952' name='NoNested3PartySubIDs' type='NUMINGROUP' />
   <field number='953' name='Nested3PartySubID' type='STRING' />
   <field number='954' name='Nested3PartySubIDType' type='INT' />
-  <field number='955' name='LegContr
+  <field number='955' name='LegContractSettlMonth' type='MONTHYEAR' />
+  <field number='956' name='LegInterestAccrualDate' type='LOCALMKTDATE' />
+  <field number='957' name='NoStrategyParameters' type='NUMINGROUP' />
+  <field number='958' name='StrategyParameterName' type='STRING' />
+  <field number='959' name='StrategyParameterType' type='INT'>
+   <value enum='1' description='INT' />
+   <value enum='2' description='LENGTH' />
+   <value enum='3' description='NUMINGROUP' />
+   <value enum='4' description='SEQNUM' />
+   <value enum='5' description='TAGNUM' />
+   <value enum='6' description='FLOAT' />
+   <value enum='7' description='QTY' />
+   <value enum='8' description='PRICE' />
+   <value enum='9' description='PRICEOFFSET' />
+   <value enum='10' description='AMT' />
+   <value enum='11' description='PERCENTAGE' />
+   <value enum='12' description='CHAR' />
+   <value enum='13' description='BOOLEAN' />
+   <value enum='14' description='STRING' />
+   <value enum='15' description='MULTIPLECHARVALUE' />
+   <value enum='16' description='CURRENCY' />
+   <value enum='17' description='EXCHANGE' />
+   <value enum='18' description='MONTHYEAR' />
+   <value enum='19' description='UTCTIMESTAMP' />
+   <value enum='20' description='UTCTIMEONLY' />
+   <value enum='21' description='LOCALMKTTIME' />
+   <value enum='22' description='UTCDATE' />
+   <value enum='23' description='DATA' />
+   <value enum='24' description='MULTIPLESTRINGVALUE' />
+  </field>
+  <field number='960' name='StrategyParameterValue' type='STRING' />
+  <field number='961' name='HostCrossID' type='STRING' />
+  <field number='962' name='SideTimeInForce' type='UTCTIMESTAMP' />
+  <field number='963' name='MDReportID' type='INT' />
+  <field number='964' name='SecurityReportID' type='INT' />
+  <field number='965' name='SecurityStatus' type='STRING'>
+   <value enum='1' description='ACTIVE' />
+   <value enum='2' description='INACTIVE' />
+  </field>
+  <field number='966' name='SettleOnOpenFlag' type='STRING' />
+  <field number='967' name='StrikeMultiplier' type='FLOAT' />
+  <field numbe
