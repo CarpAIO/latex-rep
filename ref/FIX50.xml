@@ -7733,4 +7733,42 @@
   </field>
   <field number='966' name='SettleOnOpenFlag' type='STRING' />
   <field number='967' name='StrikeMultiplier' type='FLOAT' />
-  <field numbe
+  <field number='968' name='StrikeValue' type='FLOAT' />
+  <field number='969' name='MinPriceIncrement' type='FLOAT' />
+  <field number='970' name='PositionLimit' type='INT' />
+  <field number='971' name='NTPositionLimit' type='INT' />
+  <field number='972' name='UnderlyingAllocationPercent' type='PERCENTAGE' />
+  <field number='973' name='UnderlyingCashAmount' type='AMT' />
+  <field number='974' name='UnderlyingCashType' type='STRING'>
+   <value enum='FIXED' description='FIXED' />
+   <value enum='DIFF' description='DIFF' />
+  </field>
+  <field number='975' name='UnderlyingSettlementType' type='INT'>
+   <value enum='2' description='T_PLUS_1' />
+   <value enum='4' description='T_PLUS_3' />
+   <value enum='5' description='T_PLUS_4' />
+  </field>
+  <field number='976' name='QuantityDate' type='LOCALMKTDATE' />
+  <field number='977' name='ContIntRptID' type='STRING' />
+  <field number='978' name='LateIndicator' type='BOOLEAN' />
+  <field number='979' name='InputSource' type='STRING' />
+  <field number='980' name='SecurityUpdateAction' type='CHAR'>
+   <value enum='A' description='ADD' />
+   <value enum='D' description='DELETE' />
+   <value enum='M' description='MODIFY' />
+  </field>
+  <field number='981' name='NoExpiration' type='NUMINGROUP' />
+  <field number='982' name='ExpType' type='INT'>
+   <value enum='1' description='AUTO_EXERCISE' />
+   <value enum='2' description='NON_AUTO_EXERCISE' />
+   <value enum='3' description='FINAL_WILL_BE_EXERCISED' />
+   <value enum='4' description='CONTRARY_INTENTION' />
+   <value enum='5' description='DIFFERENCE' />
+  </field>
+  <field number='983' name='ExpQty' type='QTY' />
+  <field number='984' name='NoUnderlyingAmounts' type='NUMINGROUP' />
+  <field number='985' name='UnderlyingPayAmount' type='AMT' />
+  <field number='986' name='UnderlyingCollectAmount' type='AMT' />
+  <field number='987' name='UnderlyingSettlementDate' type='LOCALMKTDATE' />
+  <field number='988' name='UnderlyingSettlementStatus' type='STRING' />
+  <field number='989' name='Secondar
