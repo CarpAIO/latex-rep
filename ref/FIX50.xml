@@ -7771,4 +7771,46 @@
   <field number='986' name='UnderlyingCollectAmount' type='AMT' />
   <field number='987' name='UnderlyingSettlementDate' type='LOCALMKTDATE' />
   <field number='988' name='UnderlyingSettlementStatus' type='STRING' />
-  <field number='989' name='Secondar
+  <field number='989' name='SecondaryIndividualAllocID' type='STRING' />
+  <field number='990' name='LegReportID' type='STRING' />
+  <field number='991' name='RndPx' type='PRICE' />
+  <field number='992' name='IndividualAllocType' type='INT'>
+   <value enum='1' description='SUB_ALLOCATE' />
+   <value enum='2' description='THIRD_PARTY_ALLOCATION' />
+  </field>
+  <field number='993' name='AllocCustomerCapacity' type='STRING' />
+  <field number='994' name='TierCode' type='STRING' />
+  <field number='996' name='UnitOfMeasure' type='STRING'>
+   <value enum='Bbl' description='BARRELS' />
+   <value enum='Bcf' description='BILLION_CUBIC_FEET' />
+   <value enum='Bu' description='BUSHELS' />
+   <value enum='lbs' description='POUNDS' />
+   <value enum='Gal' description='GALLONS' />
+   <value enum='MMbbl' description='MILLION_BARRELS' />
+   <value enum='MMBtu' description='ONE_MILLION_BTU' />
+   <value enum='MWh' description='MEGAWATT_HOURS' />
+   <value enum='oz_tr' description='TROY_OUNCES' />
+   <value enum='t' description='METRIC_TONS' />
+   <value enum='tn' description='TONS' />
+   <value enum='USD' description='US_DOLLARS' />
+  </field>
+  <field number='997' name='TimeUnit' type='STRING'>
+   <value enum='H' description='HOUR' />
+   <value enum='Min' description='MINUTE' />
+   <value enum='S' description='SECOND' />
+   <value enum='D' description='DAY' />
+   <value enum='Wk' description='WEEK' />
+   <value enum='Mo' description='MONTH' />
+   <value enum='Yr' description='YEAR' />
+  </field>
+  <field number='998' name='UnderlyingUnitOfMeasure' type='STRING' />
+  <field number='999' name='LegUnitOfMeasure' type='STRING' />
+  <field number='1000' name='UnderlyingTimeUnit' type='STRING' />
+  <field number='1001' name='LegTimeUnit' type='STRING' />
+  <field number='1002' name='AllocMethod' type='INT'>
+   <value enum='1' description='AUTOMATIC' />
+   <value enum='2' description='GUARANTOR' />
+   <value enum='3' description='MANUAL' />
+  </field>
+  <field number='1003' name='TradeID' type='STRING' />
+  <field number='1005' name='SideTradeReportID
