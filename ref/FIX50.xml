@@ -7813,4 +7813,42 @@
    <value enum='3' description='MANUAL' />
   </field>
   <field number='1003' name='TradeID' type='STRING' />
-  <field number='1005' name='SideTradeReportID
+  <field number='1005' name='SideTradeReportID' type='STRING' />
+  <field number='1006' name='SideFillStationCd' type='STRING' />
+  <field number='1007' name='SideReasonCd' type='STRING' />
+  <field number='1008' name='SideTrdSubTyp' type='INT' />
+  <field number='1009' name='SideQty' type='INT' />
+  <field number='1011' name='MessageEventSource' type='STRING' />
+  <field number='1012' name='SideTrdRegTimestamp' type='UTCTIMESTAMP' />
+  <field number='1013' name='SideTrdRegTimestampType' type='INT' />
+  <field number='1014' name='SideTrdRegTimestampSrc' type='STRING' />
+  <field number='1015' name='AsOfIndicator' type='CHAR'>
+   <value enum='0' description='FALSE' />
+   <value enum='1' description='TRUE' />
+  </field>
+  <field number='1016' name='NoSideTrdRegTS' type='NUMINGROUP' />
+  <field number='1017' name='LegOptionRatio' type='FLOAT' />
+  <field number='1018' name='NoInstrumentParties' type='NUMINGROUP' />
+  <field number='1019' name='InstrumentPartyID' type='STRING' />
+  <field number='1020' name='TradeVolume' type='QTY' />
+  <field number='1021' name='MDBookType' type='INT'>
+   <value enum='1' description='TOP_OF_BOOK' />
+   <value enum='2' description='PRICE_DEPTH' />
+   <value enum='3' description='ORDER_DEPTH' />
+  </field>
+  <field number='1022' name='MDFeedType' type='STRING' />
+  <field number='1023' name='MDPriceLevel' type='INT' />
+  <field number='1024' name='MDOriginType' type='INT'>
+   <value enum='0' description='BOOK' />
+   <value enum='1' description='OFF_BOOK' />
+   <value enum='2' description='CROSS' />
+  </field>
+  <field number='1025' name='FirstPx' type='PRICE' />
+  <field number='1026' name='MDEntrySpotRate' type='FLOAT' />
+  <field number='1027' name='MDEntryForwardPoints' type='PRICEOFFSET' />
+  <field number='1028' name='ManualOrderIndicator' type='BOOLEAN' />
+  <field number='1029' name='CustDirectedOrder' type='BOOLEAN' />
+  <field number='1030' name='ReceivedDeptID' type='STRING' />
+  <field number='1031' name='CustOrderHandlingInst' type='MULTIPLESTRINGVALUE'>
+   <value enum='ADD' description='ADD_ON_ORDER' />
+   <value enum='AON' 
