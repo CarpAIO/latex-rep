@@ -7930,4 +7930,40 @@
   <field number='1039' name='UnderlyingSettlMethod' type='STRING' />
   <field number='1040' name='SecondaryTradeID' type='STRING' />
   <field number='1041' name='FirmTradeID' type='STRING' />
-  <field number='1042' name='SecondaryFirmTradeI
+  <field number='1042' name='SecondaryFirmTradeID' type='STRING' />
+  <field number='1043' name='CollApplType' type='INT'>
+   <value enum='0' description='SPECIFIC_DEPOSIT' />
+   <value enum='1' description='GENERAL' />
+  </field>
+  <field number='1044' name='UnderlyingAdjustedQuantity' type='QTY' />
+  <field number='1045' name='UnderlyingFXRate' type='FLOAT' />
+  <field number='1046' name='UnderlyingFXRateCalc' type='CHAR'>
+   <value enum='D' description='DIVIDE' />
+   <value enum='M' description='MULTIPLY' />
+  </field>
+  <field number='1047' name='AllocPositionEffect' type='CHAR'>
+   <value enum='O' description='OPEN' />
+   <value enum='C' description='CLOSE' />
+   <value enum='R' description='ROLLED' />
+   <value enum='F' description='FIFO' />
+  </field>
+  <field number='1048' name='DealingCapacity' type='PRICEOFFSET' />
+  <field number='1049' name='InstrmtAssignmentMethod' type='CHAR' />
+  <field number='1050' name='InstrumentPartyIDSource' type='CHAR' />
+  <field number='1051' name='InstrumentPartyRole' type='INT' />
+  <field number='1052' name='NoInstrumentPartySubIDs' type='NUMINGROUP' />
+  <field number='1053' name='InstrumentPartySubID' type='STRING' />
+  <field number='1054' name='InstrumentPartySubIDType' type='INT' />
+  <field number='1055' name='PositionCurrency' type='STRING' />
+  <field number='1056' name='CalculatedCcyLastQty' type='QTY' />
+  <field number='1057' name='AggressorIndicator' type='BOOLEAN'>
+   <value enum='Y' description='YES' />
+   <value enum='N' description='NO' />
+  </field>
+  <field number='1058' name='NoUndlyInstrumentParties' type='NUMINGROUP' />
+  <field number='1059' name='UndlyInstrumentPartyID' type='STRING' />
+  <field number='1060' name='UndlyInstrumentPartyIDSource' type='CHAR' />
+  <field number='1061' name='UndlyInstrumentPartyRole' type='INT' />
+  <field number='1062' name='NoUndlyInstrumentPartySubIDs' type='NUMINGROUP' />
+  <field number='1063' name='UndlyInstrumentPartySubID' type='STRING' />
+  <field number='1064' name='UndlyInstrumentPart
