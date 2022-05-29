@@ -8121,4 +8121,17 @@
   <field number='1131' name='RefCstmApplVerID' type='STRING' />
   <field number='1132' name='TZTransactTime' type='TZTIMESTAMP' />
   <field number='1133' name='ExDestinationIDSource' type='CHAR'>
-   <value enum='B' description=
+   <value enum='B' description='BIC' />
+   <value enum='C' description='GENERALLY_ACCEPTED_MARKET_PARTICIPANT_IDENTIFIER' />
+   <value enum='D' description='PROPRIETARY' />
+   <value enum='E' description='ISO_COUNTRY_CODE' />
+   <value enum='G' description='MIC' />
+  </field>
+  <field number='1134' name='ReportedPxDiff' type='BOOLEAN' />
+  <field number='1135' name='RptSys' type='STRING' />
+  <field number='1136' name='AllocClearingFeeIndicator' type='STRING' />
+  <field number='1137' name='DefaultApplVerID' type='STRING' />
+  <field number='1138' name='DisplayQty' type='QTY' />
+  <field number='1139' name='ExchangeSpecialInstructions' type='STRING' />
+ </fields>
+</fix>
