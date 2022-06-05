@@ -1946,3 +1946,1982 @@
   </message>
   <message name='PositionMaintenanceRequest' msgcat='app' msgtype='AL'>
    <field name='PosReqID' required='N' />
+   <field name='PosTransType' required='Y' />
+   <field name='PosMaintAction' required='Y' />
+   <field name='OrigPosReqRefID' required='N' />
+   <field name='PosMaintRptRefID' required='N' />
+   <field name='ClearingBusinessDate' required='Y' />
+   <field name='SettlSessID' required='N' />
+   <field name='SettlSessSubID' required='N' />
+   <component name='Parties' required='Y' />
+   <field name='Account' required='N' />
+   <field name='AcctIDSource' required='N' />
+   <field name='AccountType' required='N' />
+   <component name='Instrument' required='Y' />
+   <field name='Currency' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <component name='UndInstrmtGrp' required='N' />
+   <component name='TrdgSesGrp' required='N' />
+   <field name='TransactTime' required='N' />
+   <component name='PositionQty' required='Y' />
+   <component name='PositionAmountData' required='N' />
+   <field name='AdjustmentType' required='N' />
+   <field name='ContraryInstructionIndicator' required='N' />
+   <field name='PriorSpreadIndicator' required='N' />
+   <field name='ThresholdAmount' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <field name='SettlCurrency' required='N' />
+  </message>
+  <message name='PositionMaintenanceReport' msgcat='app' msgtype='AM'>
+   <field name='PosMaintRptID' required='Y' />
+   <field name='PosTransType' required='Y' />
+   <field name='PosReqID' required='N' />
+   <field name='PosMaintAction' required='Y' />
+   <field name='OrigPosReqRefID' required='N' />
+   <field name='PosMaintStatus' required='Y' />
+   <field name='PosMaintResult' required='N' />
+   <field name='ClearingBusinessDate' required='Y' />
+   <field name='SettlSessID' required='N' />
+   <field name='SettlSessSubID' required='N' />
+   <component name='Parties' required='N' />
+   <field name='Account' required='N' />
+   <field name='AcctIDSource' required='N' />
+   <field name='AccountType' required='N' />
+   <field name='PosMaintRptRefID' required='N' />
+   <component name='Instrument' required='Y' />
+   <field name='Currency' required='N' />
+   <field name='SettlCurrency' required='N' />
+   <field name='ContraryInstructionIndicator' required='N' />
+   <field name='PriorSpreadIndicator' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <component name='UndInstrmtGrp' required='N' />
+   <component name='TrdgSesGrp' required='N' />
+   <field name='TransactTime' required='N' />
+   <component name='PositionQty' required='Y' />
+   <component name='PositionAmountData' required='N' />
+   <field name='AdjustmentType' required='N' />
+   <field name='ThresholdAmount' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='RequestForPositions' msgcat='app' msgtype='AN'>
+   <field name='PosReqID' required='Y' />
+   <field name='PosReqType' required='Y' />
+   <field name='MatchStatus' required='N' />
+   <field name='SubscriptionRequestType' required='N' />
+   <field name='SettlCurrency' required='N' />
+   <component name='Parties' required='Y' />
+   <field name='Account' required='N' />
+   <field name='AcctIDSource' required='N' />
+   <field name='AccountType' required='N' />
+   <component name='Instrument' required='N' />
+   <field name='Currency' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <component name='UndInstrmtGrp' required='N' />
+   <field name='ClearingBusinessDate' required='Y' />
+   <field name='SettlSessID' required='N' />
+   <field name='SettlSessSubID' required='N' />
+   <component name='TrdgSesGrp' required='N' />
+   <field name='TransactTime' required='Y' />
+   <field name='ResponseTransportType' required='N' />
+   <field name='ResponseDestination' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='RequestForPositionsAck' msgcat='app' msgtype='AO'>
+   <field name='PosMaintRptID' required='Y' />
+   <field name='PosReqID' required='N' />
+   <field name='TotalNumPosReports' required='N' />
+   <field name='UnsolicitedIndicator' required='N' />
+   <field name='PosReqResult' required='Y' />
+   <field name='PosReqStatus' required='Y' />
+   <field name='PosReqType' required='N' />
+   <field name='MatchStatus' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='SubscriptionRequestType' required='N' />
+   <field name='SettlSessID' required='N' />
+   <field name='SettlSessSubID' required='N' />
+   <field name='SettlCurrency' required='N' />
+   <component name='Parties' required='Y' />
+   <field name='Account' required='N' />
+   <field name='AcctIDSource' required='N' />
+   <field name='AccountType' required='N' />
+   <component name='Instrument' required='N' />
+   <field name='Currency' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <component name='UndInstrmtGrp' required='N' />
+   <field name='ResponseTransportType' required='N' />
+   <field name='ResponseDestination' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='PositionReport' msgcat='app' msgtype='AP'>
+   <component name='ApplicationSequenceControl' required='N' />
+   <field name='PosMaintRptID' required='Y' />
+   <field name='PosReqID' required='N' />
+   <field name='PosReqType' required='N' />
+   <field name='SubscriptionRequestType' required='N' />
+   <field name='TotalNumPosReports' required='N' />
+   <field name='PosReqResult' required='N' />
+   <field name='UnsolicitedIndicator' required='N' />
+   <field name='ClearingBusinessDate' required='Y' />
+   <field name='SettlSessID' required='N' />
+   <field name='SettlSessSubID' required='N' />
+   <field name='PriceType' required='N' />
+   <field name='SettlCurrency' required='N' />
+   <field name='MessageEventSource' required='N' />
+   <component name='Parties' required='Y' />
+   <field name='Account' required='N' />
+   <field name='AcctIDSource' required='N' />
+   <field name='AccountType' required='N' />
+   <component name='Instrument' required='N' />
+   <field name='Currency' required='N' />
+   <field name='SettlPrice' required='N' />
+   <field name='SettlPriceType' required='N' />
+   <field name='PriorSettlPrice' required='N' />
+   <field name='MatchStatus' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <component name='PosUndInstrmtGrp' required='N' />
+   <component name='PositionQty' required='N' />
+   <component name='PositionAmountData' required='N' />
+   <field name='RegistStatus' required='N' />
+   <field name='DeliveryDate' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <field name='ModelType' required='N' />
+   <field name='PriceDelta' required='N' />
+  </message>
+  <message name='TradeCaptureReportRequestAck' msgcat='app' msgtype='AQ'>
+   <field name='TradeRequestID' required='Y' />
+   <field name='TradeID' required='N' />
+   <field name='SecondaryTradeID' required='N' />
+   <field name='FirmTradeID' required='N' />
+   <field name='SecondaryFirmTradeID' required='N' />
+   <field name='TradeRequestType' required='Y' />
+   <field name='SubscriptionRequestType' required='N' />
+   <field name='TotNumTradeReports' required='N' />
+   <field name='TradeRequestResult' required='Y' />
+   <field name='TradeRequestStatus' required='Y' />
+   <component name='Instrument' required='N' />
+   <component name='UndInstrmtGrp' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <field name='MultiLegReportingType' required='N' />
+   <field name='ResponseTransportType' required='N' />
+   <field name='ResponseDestination' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <field name='MessageEventSource' required='N' />
+  </message>
+  <message name='TradeCaptureReportAck' msgcat='app' msgtype='AR'>
+   <field name='TradeReportID' required='N' />
+   <field name='TradeID' required='N' />
+   <field name='SecondaryTradeID' required='N' />
+   <field name='FirmTradeID' required='N' />
+   <field name='SecondaryFirmTradeID' required='N' />
+   <field name='TradeReportTransType' required='N' />
+   <field name='TradeReportType' required='N' />
+   <field name='TrdType' required='N' />
+   <field name='TrdSubType' required='N' />
+   <field name='SecondaryTrdType' required='N' />
+   <field name='TradeHandlingInstr' required='N' />
+   <field name='OrigTradeHandlingInstr' required='N' />
+   <field name='OrigTradeDate' required='N' />
+   <field name='OrigTradeID' required='N' />
+   <field name='OrigSecondaryTradeID' required='N' />
+   <field name='TransferReason' required='N' />
+   <component name='RootParties' required='N' />
+   <field name='ExecType' required='N' />
+   <field name='TradeReportRefID' required='N' />
+   <field name='SecondaryTradeReportRefID' required='N' />
+   <field name='TrdRptStatus' required='N' />
+   <field name='TradeReportRejectReason' required='N' />
+   <field name='SecondaryTradeReportID' required='N' />
+   <field name='SubscriptionRequestType' required='N' />
+   <field name='TradeLinkID' required='N' />
+   <field name='TrdMatchID' required='N' />
+   <field name='ExecID' required='N' />
+   <field name='SecondaryExecID' required='N' />
+   <field name='ExecRestatementReason' required='N' />
+   <field name='PreviouslyReported' required='N' />
+   <field name='PriceType' required='N' />
+   <field name='UnderlyingTradingSessionID' required='N' />
+   <field name='UnderlyingTradingSessionSubID' required='N' />
+   <field name='SettlSessID' required='N' />
+   <field name='SettlSessSubID' required='N' />
+   <field name='QtyType' required='N' />
+   <field name='LastQty' required='N' />
+   <field name='LastPx' required='N' />
+   <component name='Instrument' required='Y' />
+   <field name='LastParPx' required='N' />
+   <field name='CalculatedCcyLastQty' required='N' />
+   <field name='LastSwapPoints' required='N' />
+   <field name='Currency' required='N' />
+   <field name='SettlCurrency' required='N' />
+   <field name='LastSpotRate' required='N' />
+   <field name='LastForwardPoints' required='N' />
+   <field name='LastMkt' required='N' />
+   <field name='TradeDate' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='AvgPx' required='N' />
+   <field name='AvgPxIndicator' required='N' />
+   <field name='MultiLegReportingType' required='N' />
+   <field name='TradeLegRefID' required='N' />
+   <field name='TransactTime' required='N' />
+   <field name='SettlType' required='N' />
+   <component name='UndInstrmtGrp' required='N' />
+   <field name='MatchStatus' required='N' />
+   <field name='MatchType' required='N' />
+   <field name='CopyMsgIndicator' required='N' />
+   <component name='TrdRepIndicatorsGrp' required='N' />
+   <field name='PublishTrdIndicator' required='N' />
+   <field name='TradePublishIndicator' required='N' />
+   <field name='ShortSaleReason' required='N' />
+   <component name='TrdInstrmtLegGrp' required='N' />
+   <component name='TrdRegTimestamps' required='N' />
+   <field name='ResponseTransportType' required='N' />
+   <field name='ResponseDestination' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <field name='AsOfIndicator' required='N' />
+   <field name='ClearingFeeIndicator' required='N' />
+   <component name='PositionAmountData' required='N' />
+   <field name='TierCode' required='N' />
+   <field name='MessageEventSource' required='N' />
+   <field name='LastUpdateTime' required='N' />
+   <field name='RndPx' required='N' />
+   <component name='TrdCapRptAckSideGrp' required='N' />
+   <field name='RptSys' required='N' />
+   <field name='GrossTradeAmt' required='N' />
+   <field name='SettlDate' required='N' />
+   <field name='FeeMultiplier' required='N' />
+   <field name='VenueType' required='N' />
+   <field name='MarketSegmentID' required='N' />
+   <field name='MarketID' required='N' />
+  </message>
+  <message name='AllocationReport' msgcat='app' msgtype='AS'>
+   <field name='AllocReportID' required='Y' />
+   <field name='AllocID' required='N' />
+   <field name='AllocTransType' required='Y' />
+   <field name='AllocReportRefID' required='N' />
+   <field name='AllocCancReplaceReason' required='N' />
+   <field name='SecondaryAllocID' required='N' />
+   <field name='AllocReportType' required='Y' />
+   <field name='AllocStatus' required='Y' />
+   <field name='AllocRejCode' required='N' />
+   <field name='RefAllocID' required='N' />
+   <field name='AllocIntermedReqType' required='N' />
+   <field name='AllocLinkID' required='N' />
+   <field name='AllocLinkType' required='N' />
+   <field name='BookingRefID' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='TrdType' required='N' />
+   <field name='TrdSubType' required='N' />
+   <field name='MultiLegReportingType' required='N' />
+   <field name='CustOrderCapacity' required='N' />
+   <field name='TradeInputSource' required='N' />
+   <field name='RndPx' required='N' />
+   <field name='MessageEventSource' required='N' />
+   <field name='TradeInputDevice' required='N' />
+   <field name='AvgPxIndicator' required='N' />
+   <field name='AllocNoOrdersType' required='N' />
+   <component name='OrdAllocGrp' required='N' />
+   <component name='ExecAllocGrp' required='N' />
+   <field name='PreviouslyReported' required='N' />
+   <field name='ReversalIndicator' required='N' />
+   <field name='MatchType' required='N' />
+   <field name='Side' required='Y' />
+   <component name='Instrument' required='Y' />
+   <component name='InstrumentExtension' required='N' />
+   <component name='FinancingDetails' required='N' />
+   <component name='UndInstrmtGrp' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <field name='Quantity' required='Y' />
+   <field name='QtyType' required='N' />
+   <field name='LastMkt' required='N' />
+   <field name='TradeOriginationDate' required='N' />
+   <field name='TradingSessionID' required='N' />
+   <field name='TradingSessionSubID' required='N' />
+   <field name='PriceType' required='N' />
+   <field name='AvgPx' required='Y' />
+   <field name='AvgParPx' required='N' />
+   <component name='SpreadOrBenchmarkCurveData' required='N' />
+   <field name='Currency' required='N' />
+   <field name='AvgPxPrecision' required='N' />
+   <component name='Parties' required='N' />
+   <field name='TradeDate' required='Y' />
+   <field name='TransactTime' required='N' />
+   <field name='SettlType' required='N' />
+   <field name='SettlDate' required='N' />
+   <field name='BookingType' required='N' />
+   <field name='GrossTradeAmt' required='N' />
+   <field name='Concession' required='N' />
+   <field name='TotalTakedown' required='N' />
+   <field name='NetMoney' required='N' />
+   <field name='PositionEffect' required='N' />
+   <field name='AutoAcceptIndicator' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <field name='NumDaysInterest' required='N' />
+   <field name='AccruedInterestRate' required='N' />
+   <field name='AccruedInterestAmt' required='N' />
+   <field name='TotalAccruedInterestAmt' required='N' />
+   <field name='InterestAtMaturity' required='N' />
+   <field name='EndAccruedInterestAmt' required='N' />
+   <field name='StartCash' required='N' />
+   <field name='EndCash' required='N' />
+   <field name='LegalConfirm' required='N' />
+   <component name='Stipulations' required='N' />
+   <component name='YieldData' required='N' />
+   <component name='PositionAmountData' required='N' />
+   <field name='TotNoAllocs' required='N' />
+   <field name='LastFragment' required='N' />
+   <component name='AllocGrp' required='N' />
+   <component name='RateSource' required='N' />
+  </message>
+  <message name='AllocationReportAck' msgcat='app' msgtype='AT'>
+   <field name='AllocReportID' required='Y' />
+   <field name='AllocID' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='AvgPxIndicator' required='N' />
+   <field name='Quantity' required='N' />
+   <field name='AllocTransType' required='N' />
+   <component name='Parties' required='N' />
+   <field name='SecondaryAllocID' required='N' />
+   <field name='TradeDate' required='N' />
+   <field name='TransactTime' required='N' />
+   <field name='AllocStatus' required='N' />
+   <field name='AllocRejCode' required='N' />
+   <field name='AllocReportType' required='N' />
+   <field name='AllocIntermedReqType' required='N' />
+   <field name='MatchStatus' required='N' />
+   <field name='Product' required='N' />
+   <field name='SecurityType' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <component name='AllocAckGrp' required='N' />
+  </message>
+  <message name='ConfirmationAck' msgcat='app' msgtype='AU'>
+   <field name='ConfirmID' required='Y' />
+   <field name='TradeDate' required='Y' />
+   <field name='TransactTime' required='Y' />
+   <field name='AffirmStatus' required='Y' />
+   <field name='ConfirmRejReason' required='N' />
+   <field name='MatchStatus' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='SettlementInstructionRequest' msgcat='app' msgtype='AV'>
+   <field name='SettlInstReqID' required='Y' />
+   <field name='TransactTime' required='Y' />
+   <component name='Parties' required='N' />
+   <field name='AllocAccount' required='N' />
+   <field name='AllocAcctIDSource' required='N' />
+   <field name='Side' required='N' />
+   <field name='Product' required='N' />
+   <field name='SecurityType' required='N' />
+   <field name='CFICode' required='N' />
+   <field name='SettlCurrency' required='N' />
+   <field name='EffectiveTime' required='N' />
+   <field name='ExpireTime' required='N' />
+   <field name='LastUpdateTime' required='N' />
+   <field name='StandInstDbType' required='N' />
+   <field name='StandInstDbName' required='N' />
+   <field name='StandInstDbID' required='N' />
+  </message>
+  <message name='AssignmentReport' msgcat='app' msgtype='AW'>
+   <component name='ApplicationSequenceControl' required='N' />
+   <field name='AsgnRptID' required='Y' />
+   <field name='TotNumAssignmentReports' required='N' />
+   <field name='LastRptRequested' required='N' />
+   <component name='Parties' required='Y' />
+   <field name='Account' required='N' />
+   <field name='AccountType' required='N' />
+   <component name='Instrument' required='N' />
+   <field name='Currency' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <component name='UndInstrmtGrp' required='N' />
+   <component name='PositionQty' required='N' />
+   <component name='PositionAmountData' required='N' />
+   <field name='ThresholdAmount' required='N' />
+   <field name='SettlPrice' required='N' />
+   <field name='SettlPriceType' required='N' />
+   <field name='UnderlyingSettlPrice' required='N' />
+   <field name='PriorSettlPrice' required='N' />
+   <field name='ExpireDate' required='N' />
+   <field name='AssignmentMethod' required='N' />
+   <field name='AssignmentUnit' required='N' />
+   <field name='OpenInterest' required='N' />
+   <field name='ExerciseMethod' required='N' />
+   <field name='SettlSessID' required='N' />
+   <field name='SettlSessSubID' required='N' />
+   <field name='ClearingBusinessDate' required='Y' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <field name='PosReqID' required='N' />
+  </message>
+  <message name='CollateralRequest' msgcat='app' msgtype='AX'>
+   <field name='CollReqID' required='Y' />
+   <field name='CollAsgnReason' required='Y' />
+   <field name='TransactTime' required='Y' />
+   <field name='ExpireTime' required='N' />
+   <component name='Parties' required='N' />
+   <field name='Account' required='N' />
+   <field name='AccountType' required='N' />
+   <field name='ClOrdID' required='N' />
+   <field name='OrderID' required='N' />
+   <field name='SecondaryOrderID' required='N' />
+   <field name='SecondaryClOrdID' required='N' />
+   <component name='ExecCollGrp' required='N' />
+   <component name='TrdCollGrp' required='N' />
+   <component name='Instrument' required='N' />
+   <component name='FinancingDetails' required='N' />
+   <field name='SettlDate' required='N' />
+   <field name='Quantity' required='N' />
+   <field name='QtyType' required='N' />
+   <field name='Currency' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <component name='UndInstrmtCollGrp' required='N' />
+   <field name='MarginExcess' required='N' />
+   <field name='TotalNetValue' required='N' />
+   <field name='CashOutstanding' required='N' />
+   <component name='TrdRegTimestamps' required='N' />
+   <field name='Side' required='N' />
+   <component name='MiscFeesGrp' required='N' />
+   <field name='Price' required='N' />
+   <field name='PriceType' required='N' />
+   <field name='AccruedInterestAmt' required='N' />
+   <field name='EndAccruedInterestAmt' required='N' />
+   <field name='StartCash' required='N' />
+   <field name='EndCash' required='N' />
+   <component name='SpreadOrBenchmarkCurveData' required='N' />
+   <component name='Stipulations' required='N' />
+   <field name='TradingSessionID' required='N' />
+   <field name='TradingSessionSubID' required='N' />
+   <field name='SettlSessID' required='N' />
+   <field name='SettlSessSubID' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='CollateralAssignment' msgcat='app' msgtype='AY'>
+   <field name='CollAsgnID' required='Y' />
+   <field name='CollReqID' required='N' />
+   <field name='CollAsgnReason' required='Y' />
+   <field name='CollAsgnTransType' required='Y' />
+   <field name='CollAsgnRefID' required='N' />
+   <field name='TransactTime' required='Y' />
+   <field name='ExpireTime' required='N' />
+   <component name='Parties' required='N' />
+   <field name='Account' required='N' />
+   <field name='AccountType' required='N' />
+   <field name='ClOrdID' required='N' />
+   <field name='OrderID' required='N' />
+   <field name='SecondaryOrderID' required='N' />
+   <field name='SecondaryClOrdID' required='N' />
+   <component name='ExecCollGrp' required='N' />
+   <component name='TrdCollGrp' required='N' />
+   <component name='Instrument' required='N' />
+   <component name='FinancingDetails' required='N' />
+   <field name='SettlDate' required='N' />
+   <field name='Quantity' required='N' />
+   <field name='QtyType' required='N' />
+   <field name='Currency' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <component name='UndInstrmtCollGrp' required='N' />
+   <field name='MarginExcess' required='N' />
+   <field name='TotalNetValue' required='N' />
+   <field name='CashOutstanding' required='N' />
+   <component name='TrdRegTimestamps' required='N' />
+   <field name='Side' required='N' />
+   <component name='MiscFeesGrp' required='N' />
+   <field name='Price' required='N' />
+   <field name='PriceType' required='N' />
+   <field name='AccruedInterestAmt' required='N' />
+   <field name='EndAccruedInterestAmt' required='N' />
+   <field name='StartCash' required='N' />
+   <field name='EndCash' required='N' />
+   <component name='SpreadOrBenchmarkCurveData' required='N' />
+   <component name='Stipulations' required='N' />
+   <component name='SettlInstructionsData' required='N' />
+   <field name='TradingSessionID' required='N' />
+   <field name='TradingSessionSubID' required='N' />
+   <field name='SettlSessID' required='N' />
+   <field name='SettlSessSubID' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='CollateralResponse' msgcat='app' msgtype='AZ'>
+   <field name='CollRespID' required='Y' />
+   <field name='CollAsgnID' required='N' />
+   <field name='CollReqID' required='N' />
+   <field name='CollAsgnReason' required='N' />
+   <field name='CollAsgnTransType' required='N' />
+   <field name='CollAsgnRespType' required='Y' />
+   <field name='CollAsgnRejectReason' required='N' />
+   <field name='TransactTime' required='Y' />
+   <field name='CollApplType' required='N' />
+   <field name='FinancialStatus' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <component name='Parties' required='N' />
+   <field name='Account' required='N' />
+   <field name='AccountType' required='N' />
+   <field name='ClOrdID' required='N' />
+   <field name='OrderID' required='N' />
+   <field name='SecondaryOrderID' required='N' />
+   <field name='SecondaryClOrdID' required='N' />
+   <component name='ExecCollGrp' required='N' />
+   <component name='TrdCollGrp' required='N' />
+   <component name='Instrument' required='N' />
+   <component name='FinancingDetails' required='N' />
+   <field name='SettlDate' required='N' />
+   <field name='Quantity' required='N' />
+   <field name='QtyType' required='N' />
+   <field name='Currency' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <component name='UndInstrmtCollGrp' required='N' />
+   <field name='MarginExcess' required='N' />
+   <field name='TotalNetValue' required='N' />
+   <field name='CashOutstanding' required='N' />
+   <component name='TrdRegTimestamps' required='N' />
+   <field name='Side' required='N' />
+   <component name='MiscFeesGrp' required='N' />
+   <field name='Price' required='N' />
+   <field name='PriceType' required='N' />
+   <field name='AccruedInterestAmt' required='N' />
+   <field name='EndAccruedInterestAmt' required='N' />
+   <field name='StartCash' required='N' />
+   <field name='EndCash' required='N' />
+   <component name='SpreadOrBenchmarkCurveData' required='N' />
+   <component name='Stipulations' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='CollateralReport' msgcat='app' msgtype='BA'>
+   <field name='CollRptID' required='Y' />
+   <field name='CollInquiryID' required='N' />
+   <field name='TransactTime' required='N' />
+   <field name='CollApplType' required='N' />
+   <field name='FinancialStatus' required='N' />
+   <field name='CollStatus' required='Y' />
+   <field name='TotNumReports' required='N' />
+   <field name='LastRptRequested' required='N' />
+   <component name='Parties' required='N' />
+   <field name='Account' required='N' />
+   <field name='AccountType' required='N' />
+   <field name='ClOrdID' required='N' />
+   <field name='OrderID' required='N' />
+   <field name='SecondaryOrderID' required='N' />
+   <field name='SecondaryClOrdID' required='N' />
+   <component name='ExecCollGrp' required='N' />
+   <component name='TrdCollGrp' required='N' />
+   <component name='Instrument' required='N' />
+   <component name='FinancingDetails' required='N' />
+   <field name='SettlDate' required='N' />
+   <field name='Quantity' required='N' />
+   <field name='QtyType' required='N' />
+   <field name='Currency' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <component name='UndInstrmtGrp' required='N' />
+   <field name='MarginExcess' required='N' />
+   <field name='TotalNetValue' required='N' />
+   <field name='CashOutstanding' required='N' />
+   <component name='TrdRegTimestamps' required='N' />
+   <field name='Side' required='N' />
+   <component name='MiscFeesGrp' required='N' />
+   <field name='Price' required='N' />
+   <field name='PriceType' required='N' />
+   <field name='AccruedInterestAmt' required='N' />
+   <field name='EndAccruedInterestAmt' required='N' />
+   <field name='StartCash' required='N' />
+   <field name='EndCash' required='N' />
+   <component name='SpreadOrBenchmarkCurveData' required='N' />
+   <component name='Stipulations' required='N' />
+   <component name='SettlInstructionsData' required='N' />
+   <field name='TradingSessionID' required='N' />
+   <field name='TradingSessionSubID' required='N' />
+   <field name='SettlSessID' required='N' />
+   <field name='SettlSessSubID' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='CollateralInquiry' msgcat='app' msgtype='BB'>
+   <field name='CollInquiryID' required='Y' />
+   <component name='CollInqQualGrp' required='N' />
+   <field name='SubscriptionRequestType' required='N' />
+   <field name='ResponseTransportType' required='N' />
+   <field name='ResponseDestination' required='N' />
+   <component name='Parties' required='N' />
+   <field name='Account' required='N' />
+   <field name='AccountType' required='N' />
+   <field name='ClOrdID' required='N' />
+   <field name='OrderID' required='N' />
+   <field name='SecondaryOrderID' required='N' />
+   <field name='SecondaryClOrdID' required='N' />
+   <component name='ExecCollGrp' required='N' />
+   <component name='TrdCollGrp' required='N' />
+   <component name='Instrument' required='N' />
+   <component name='FinancingDetails' required='N' />
+   <field name='SettlDate' required='N' />
+   <field name='Quantity' required='N' />
+   <field name='QtyType' required='N' />
+   <field name='Currency' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <component name='UndInstrmtGrp' required='N' />
+   <field name='MarginExcess' required='N' />
+   <field name='TotalNetValue' required='N' />
+   <field name='CashOutstanding' required='N' />
+   <component name='TrdRegTimestamps' required='N' />
+   <field name='Side' required='N' />
+   <field name='Price' required='N' />
+   <field name='PriceType' required='N' />
+   <field name='AccruedInterestAmt' required='N' />
+   <field name='EndAccruedInterestAmt' required='N' />
+   <field name='StartCash' required='N' />
+   <field name='EndCash' required='N' />
+   <component name='SpreadOrBenchmarkCurveData' required='N' />
+   <component name='Stipulations' required='N' />
+   <component name='SettlInstructionsData' required='N' />
+   <field name='TradingSessionID' required='N' />
+   <field name='TradingSessionSubID' required='N' />
+   <field name='SettlSessID' required='N' />
+   <field name='SettlSessSubID' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='NetworkCounterpartySystemStatusRequest' msgcat='app' msgtype='BC'>
+   <field name='NetworkRequestType' required='Y' />
+   <field name='NetworkRequestID' required='Y' />
+   <component name='CompIDReqGrp' required='N' />
+  </message>
+  <message name='NetworkCounterpartySystemStatusResponse' msgcat='app' msgtype='BD'>
+   <field name='NetworkStatusResponseType' required='Y' />
+   <field name='NetworkRequestID' required='N' />
+   <field name='NetworkResponseID' required='Y' />
+   <field name='LastNetworkResponseID' required='N' />
+   <component name='CompIDStatGrp' required='Y' />
+  </message>
+  <message name='UserRequest' msgcat='app' msgtype='BE'>
+   <field name='UserRequestID' required='Y' />
+   <field name='UserRequestType' required='Y' />
+   <field name='Username' required='Y' />
+   <field name='Password' required='N' />
+   <field name='NewPassword' required='N' />
+   <field name='EncryptedPasswordMethod' required='N' />
+   <field name='EncryptedPasswordLen' required='N' />
+   <field name='EncryptedPassword' required='N' />
+   <field name='EncryptedNewPasswordLen' required='N' />
+   <field name='EncryptedNewPassword' required='N' />
+   <field name='RawDataLength' required='N' />
+   <field name='RawData' required='N' />
+  </message>
+  <message name='UserResponse' msgcat='app' msgtype='BF'>
+   <field name='UserRequestID' required='Y' />
+   <field name='Username' required='Y' />
+   <field name='UserStatus' required='N' />
+   <field name='UserStatusText' required='N' />
+  </message>
+  <message name='CollateralInquiryAck' msgcat='app' msgtype='BG'>
+   <field name='CollInquiryID' required='Y' />
+   <field name='CollInquiryStatus' required='Y' />
+   <field name='CollInquiryResult' required='N' />
+   <component name='CollInqQualGrp' required='N' />
+   <field name='TotNumReports' required='N' />
+   <component name='Parties' required='N' />
+   <field name='Account' required='N' />
+   <field name='AccountType' required='N' />
+   <field name='ClOrdID' required='N' />
+   <field name='OrderID' required='N' />
+   <field name='SecondaryOrderID' required='N' />
+   <field name='SecondaryClOrdID' required='N' />
+   <component name='ExecCollGrp' required='N' />
+   <component name='TrdCollGrp' required='N' />
+   <component name='Instrument' required='N' />
+   <component name='FinancingDetails' required='N' />
+   <field name='SettlDate' required='N' />
+   <field name='Quantity' required='N' />
+   <field name='QtyType' required='N' />
+   <field name='Currency' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <component name='UndInstrmtGrp' required='N' />
+   <field name='TradingSessionID' required='N' />
+   <field name='TradingSessionSubID' required='N' />
+   <field name='SettlSessID' required='N' />
+   <field name='SettlSessSubID' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='ResponseTransportType' required='N' />
+   <field name='ResponseDestination' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='ConfirmationRequest' msgcat='app' msgtype='BH'>
+   <field name='ConfirmReqID' required='Y' />
+   <field name='ConfirmType' required='Y' />
+   <component name='OrdAllocGrp' required='N' />
+   <field name='AllocID' required='N' />
+   <field name='SecondaryAllocID' required='N' />
+   <field name='IndividualAllocID' required='N' />
+   <field name='TransactTime' required='Y' />
+   <field name='AllocAccount' required='N' />
+   <field name='AllocAcctIDSource' required='N' />
+   <field name='AllocAccountType' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='ContraryIntentionReport' msgcat='app' msgtype='BO'>
+   <component name='ApplicationSequenceControl' required='N' />
+   <field name='ContIntRptID' required='Y' />
+   <field name='TransactTime' required='N' />
+   <field name='LateIndicator' required='N' />
+   <field name='InputSource' required='N' />
+   <field name='ClearingBusinessDate' required='Y' />
+   <component name='Parties' required='Y' />
+   <component name='ExpirationQty' required='Y' />
+   <component name='Instrument' required='Y' />
+   <component name='UndInstrmtGrp' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='SecurityDefinitionUpdateReport' msgcat='app' msgtype='BP'>
+   <component name='ApplicationSequenceControl' required='N' />
+   <field name='SecurityReportID' required='N' />
+   <field name='SecurityReqID' required='N' />
+   <field name='SecurityResponseID' required='N' />
+   <field name='SecurityResponseType' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='SecurityUpdateAction' required='N' />
+   <field name='CorporateAction' required='N' />
+   <component name='Instrument' required='N' />
+   <component name='InstrumentExtension' required='N' />
+   <component name='UndInstrmtGrp' required='N' />
+   <field name='Currency' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <component name='Stipulations' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <component name='SpreadOrBenchmarkCurveData' required='N' />
+   <component name='YieldData' required='N' />
+   <component name='MarketSegmentGrp' required='N' />
+   <field name='TransactTime' required='N' />
+  </message>
+  <message name='SecurityListUpdateReport' msgcat='app' msgtype='BK'>
+   <component name='ApplicationSequenceControl' required='N' />
+   <field name='SecurityReportID' required='N' />
+   <field name='SecurityReqID' required='N' />
+   <field name='SecurityResponseID' required='N' />
+   <field name='SecurityRequestResult' required='N' />
+   <field name='TotNoRelatedSym' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='SecurityUpdateAction' required='N' />
+   <field name='CorporateAction' required='N' />
+   <field name='MarketID' required='N' />
+   <field name='MarketSegmentID' required='N' />
+   <field name='LastFragment' required='N' />
+   <component name='SecLstUpdRelSymGrp' required='N' />
+   <field name='SecurityListID' required='N' />
+   <field name='SecurityListRefID' required='N' />
+   <field name='SecurityListDesc' required='N' />
+   <field name='EncodedSecurityListDescLen' required='N' />
+   <field name='EncodedSecurityListDesc' required='N' />
+   <field name='SecurityListType' required='N' />
+   <field name='SecurityListTypeSource' required='N' />
+   <field name='TransactTime' required='N' />
+  </message>
+  <message name='AdjustedPositionReport' msgcat='app' msgtype='BL'>
+   <field name='PosMaintRptID' required='Y' />
+   <field name='PosReqType' required='N' />
+   <field name='ClearingBusinessDate' required='Y' />
+   <field name='SettlSessID' required='N' />
+   <field name='PosMaintRptRefID' required='N' />
+   <component name='Parties' required='Y' />
+   <component name='PositionQty' required='Y' />
+   <component name='InstrmtGrp' required='N' />
+   <field name='SettlPrice' required='N' />
+   <field name='PriorSettlPrice' required='N' />
+  </message>
+  <message name='AllocationInstructionAlert' msgcat='app' msgtype='BM'>
+   <field name='AllocID' required='Y' />
+   <field name='AllocTransType' required='Y' />
+   <field name='AllocType' required='Y' />
+   <field name='SecondaryAllocID' required='N' />
+   <field name='RefAllocID' required='N' />
+   <field name='AllocCancReplaceReason' required='N' />
+   <field name='AllocIntermedReqType' required='N' />
+   <field name='AllocLinkID' required='N' />
+   <field name='AllocLinkType' required='N' />
+   <field name='BookingRefID' required='N' />
+   <field name='AllocNoOrdersType' required='N' />
+   <component name='OrdAllocGrp' required='N' />
+   <component name='ExecAllocGrp' required='N' />
+   <field name='PreviouslyReported' required='N' />
+   <field name='ReversalIndicator' required='N' />
+   <field name='MatchType' required='N' />
+   <field name='Side' required='Y' />
+   <component name='Instrument' required='Y' />
+   <component name='InstrumentExtension' required='N' />
+   <component name='FinancingDetails' required='N' />
+   <component name='UndInstrmtGrp' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <field name='Quantity' required='Y' />
+   <field name='QtyType' required='N' />
+   <field name='LastMkt' required='N' />
+   <field name='TradeOriginationDate' required='N' />
+   <field name='TradingSessionID' required='N' />
+   <field name='TradingSessionSubID' required='N' />
+   <field name='PriceType' required='N' />
+   <field name='AvgPx' required='N' />
+   <field name='AvgParPx' required='N' />
+   <component name='SpreadOrBenchmarkCurveData' required='N' />
+   <field name='Currency' required='N' />
+   <field name='AvgPxPrecision' required='N' />
+   <component name='Parties' required='N' />
+   <field name='TradeDate' required='Y' />
+   <field name='TransactTime' required='N' />
+   <field name='SettlType' required='N' />
+   <field name='SettlDate' required='N' />
+   <field name='BookingType' required='N' />
+   <field name='GrossTradeAmt' required='N' />
+   <field name='Concession' required='N' />
+   <field name='TotalTakedown' required='N' />
+   <field name='NetMoney' required='N' />
+   <field name='PositionEffect' required='N' />
+   <field name='AutoAcceptIndicator' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <field name='NumDaysInterest' required='N' />
+   <field name='AccruedInterestRate' required='N' />
+   <field name='AccruedInterestAmt' required='N' />
+   <field name='TotalAccruedInterestAmt' required='N' />
+   <field name='InterestAtMaturity' required='N' />
+   <field name='EndAccruedInterestAmt' required='N' />
+   <field name='StartCash' required='N' />
+   <field name='EndCash' required='N' />
+   <field name='LegalConfirm' required='N' />
+   <component name='Stipulations' required='N' />
+   <component name='YieldData' required='N' />
+   <component name='PositionAmountData' required='N' />
+   <field name='TotNoAllocs' required='N' />
+   <field name='LastFragment' required='N' />
+   <component name='AllocGrp' required='N' />
+   <field name='AvgPxIndicator' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='TrdType' required='N' />
+   <field name='TrdSubType' required='N' />
+   <field name='CustOrderCapacity' required='N' />
+   <field name='TradeInputSource' required='N' />
+   <field name='MultiLegReportingType' required='N' />
+   <field name='MessageEventSource' required='N' />
+   <field name='RndPx' required='N' />
+  </message>
+  <message name='ExecutionAcknowledgement' msgcat='app' msgtype='BN'>
+   <field name='OrderID' required='Y' />
+   <field name='SecondaryOrderID' required='N' />
+   <field name='ClOrdID' required='N' />
+   <field name='ExecAckStatus' required='Y' />
+   <field name='ExecID' required='Y' />
+   <field name='DKReason' required='N' />
+   <component name='Instrument' required='Y' />
+   <component name='UndInstrmtGrp' required='N' />
+   <component name='InstrmtLegGrp' required='N' />
+   <field name='Side' required='Y' />
+   <component name='OrderQtyData' required='Y' />
+   <field name='LastQty' required='N' />
+   <field name='LastPx' required='N' />
+   <field name='PriceType' required='N' />
+   <field name='LastParPx' required='N' />
+   <field name='CumQty' required='N' />
+   <field name='AvgPx' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='TradingSessionList' msgcat='app' msgtype='BJ'>
+   <component name='ApplicationSequenceControl' required='N' />
+   <field name='TradSesReqID' required='N' />
+   <component name='TrdSessLstGrp' required='Y' />
+  </message>
+  <message name='TradingSessionListRequest' msgcat='app' msgtype='BI'>
+   <field name='TradSesReqID' required='Y' />
+   <field name='MarketID' required='N' />
+   <field name='MarketSegmentID' required='N' />
+   <field name='TradingSessionID' required='N' />
+   <field name='TradingSessionSubID' required='N' />
+   <field name='SecurityExchange' required='N' />
+   <field name='TradSesMethod' required='N' />
+   <field name='TradSesMode' required='N' />
+   <field name='SubscriptionRequestType' required='Y' />
+  </message>
+  <message name='SettlementObligationReport' msgcat='app' msgtype='BQ'>
+   <component name='ApplicationSequenceControl' required='N' />
+   <field name='ClearingBusinessDate' required='N' />
+   <field name='SettlementCycleNo' required='N' />
+   <field name='SettlObligMsgID' required='Y' />
+   <field name='SettlObligMode' required='Y' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <field name='TransactTime' required='N' />
+   <component name='SettlObligationInstructions' required='Y' />
+  </message>
+  <message name='DerivativeSecurityListUpdateReport' msgcat='app' msgtype='BR'>
+   <component name='ApplicationSequenceControl' required='N' />
+   <field name='SecurityReqID' required='N' />
+   <field name='SecurityResponseID' required='N' />
+   <field name='SecurityRequestResult' required='N' />
+   <field name='SecurityUpdateAction' required='N' />
+   <component name='UnderlyingInstrument' required='N' />
+   <component name='DerivativeSecurityDefinition' required='N' />
+   <field name='TotNoRelatedSym' required='N' />
+   <field name='LastFragment' required='N' />
+   <component name='RelSymDerivSecUpdGrp' required='N' />
+   <field name='TransactTime' required='N' />
+  </message>
+  <message name='TradingSessionListUpdateReport' msgcat='app' msgtype='BS'>
+   <component name='ApplicationSequenceControl' required='N' />
+   <field name='TradSesReqID' required='N' />
+   <component name='TrdSessLstGrp' required='Y' />
+  </message>
+  <message name='MarketDefinitionRequest' msgcat='app' msgtype='BT'>
+   <field name='MarketReqID' required='Y' />
+   <field name='SubscriptionRequestType' required='Y' />
+   <field name='MarketID' required='N' />
+   <field name='MarketSegmentID' required='N' />
+   <field name='ParentMktSegmID' required='N' />
+  </message>
+  <message name='MarketDefinition' msgcat='app' msgtype='BU'>
+   <component name='ApplicationSequenceControl' required='N' />
+   <field name='MarketReportID' required='Y' />
+   <field name='MarketReqID' required='N' />
+   <field name='MarketID' required='Y' />
+   <field name='MarketSegmentID' required='N' />
+   <field name='MarketSegmentDesc' required='N' />
+   <field name='EncodedMktSegmDescLen' required='N' />
+   <field name='EncodedMktSegmDesc' required='N' />
+   <field name='ParentMktSegmID' required='N' />
+   <field name='Currency' required='N' />
+   <component name='BaseTradingRules' required='N' />
+   <component name='OrdTypeRules' required='N' />
+   <component name='TimeInForceRules' required='N' />
+   <component name='ExecInstRules' required='N' />
+   <field name='TransactTime' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='MarketDefinitionUpdateReport' msgcat='app' msgtype='BV'>
+   <component name='ApplicationSequenceControl' required='N' />
+   <field name='MarketReportID' required='Y' />
+   <field name='MarketReqID' required='N' />
+   <field name='MarketUpdateAction' required='N' />
+   <field name='MarketID' required='Y' />
+   <field name='MarketSegmentID' required='N' />
+   <field name='MarketSegmentDesc' required='N' />
+   <field name='EncodedMktSegmDescLen' required='N' />
+   <field name='EncodedMktSegmDesc' required='N' />
+   <field name='ParentMktSegmID' required='N' />
+   <field name='Currency' required='N' />
+   <component name='BaseTradingRules' required='N' />
+   <component name='OrdTypeRules' required='N' />
+   <component name='TimeInForceRules' required='N' />
+   <component name='ExecInstRules' required='N' />
+   <field name='TransactTime' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='ApplicationMessageRequest' msgcat='app' msgtype='BW'>
+   <field name='ApplReqID' required='Y' />
+   <field name='ApplReqType' required='Y' />
+   <component name='ApplIDRequestGrp' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <component name='Parties' required='N' />
+  </message>
+  <message name='ApplicationMessageRequestAck' msgcat='app' msgtype='BX'>
+   <field name='ApplResponseID' required='Y' />
+   <field name='ApplReqID' required='N' />
+   <field name='ApplReqType' required='N' />
+   <field name='ApplResponseType' required='N' />
+   <field name='ApplTotalMessageCount' required='N' />
+   <component name='ApplIDRequestAckGrp' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <component name='Parties' required='N' />
+  </message>
+  <message name='ApplicationMessageReport' msgcat='app' msgtype='BY'>
+   <field name='ApplReportID' required='Y' />
+   <field name='ApplReportType' required='Y' />
+   <component name='ApplIDReportGrp' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <field name='ApplReqID' required='N' />
+  </message>
+  <message name='OrderMassActionReport' msgcat='app' msgtype='BZ'>
+   <field name='ClOrdID' required='N' />
+   <field name='SecondaryClOrdID' required='N' />
+   <field name='MassActionReportID' required='Y' />
+   <field name='MassActionType' required='Y' />
+   <field name='MassActionScope' required='Y' />
+   <field name='MassActionResponse' required='Y' />
+   <field name='MassActionRejectReason' required='N' />
+   <field name='TotalAffectedOrders' required='N' />
+   <component name='AffectedOrdGrp' required='N' />
+   <component name='NotAffectedOrdersGrp' required='N' />
+   <field name='MarketID' required='N' />
+   <field name='MarketSegmentID' required='N' />
+   <field name='TradingSessionID' required='N' />
+   <field name='TradingSessionSubID' required='N' />
+   <component name='Parties' required='N' />
+   <component name='Instrument' required='N' />
+   <component name='UnderlyingInstrument' required='N' />
+   <field name='Side' required='N' />
+   <field name='TransactTime' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <component name='TargetParties' required='N' />
+  </message>
+  <message name='OrderMassActionRequest' msgcat='app' msgtype='CA'>
+   <field name='ClOrdID' required='Y' />
+   <field name='SecondaryClOrdID' required='N' />
+   <field name='MassActionType' required='Y' />
+   <field name='MassActionScope' required='Y' />
+   <field name='MarketID' required='N' />
+   <field name='MarketSegmentID' required='N' />
+   <field name='TradingSessionID' required='N' />
+   <field name='TradingSessionSubID' required='N' />
+   <component name='Parties' required='N' />
+   <component name='Instrument' required='N' />
+   <component name='UnderlyingInstrument' required='N' />
+   <field name='Side' required='N' />
+   <field name='TransactTime' required='Y' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+   <component name='TargetParties' required='N' />
+  </message>
+  <message name='UserNotification' msgcat='app' msgtype='CB'>
+   <component name='UsernameGrp' required='N' />
+   <field name='UserStatus' required='Y' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='StreamAssignmentRequest' msgcat='app' msgtype='CC'>
+   <field name='StreamAsgnReqID' required='Y' />
+   <field name='StreamAsgnReqType' required='Y' />
+   <component name='StrmAsgnReqGrp' required='Y' />
+  </message>
+  <message name='StreamAssignmentReport' msgcat='app' msgtype='CD'>
+   <field name='StreamAsgnRptID' required='Y' />
+   <field name='StreamAsgnReqType' required='N' />
+   <field name='StreamAsgnReqID' required='N' />
+   <component name='StrmAsgnRptGrp' required='N' />
+  </message>
+  <message name='StreamAssignmentReportACK' msgcat='app' msgtype='CE'>
+   <field name='StreamAsgnAckType' required='Y' />
+   <field name='StreamAsgnRptID' required='Y' />
+   <field name='StreamAsgnRejReason' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+ </messages>
+ <trailer />
+ <components>
+  <component name='DerivativeSecurityXML'>
+   <field name='DerivativeSecurityXMLLen' required='N' />
+   <field name='DerivativeSecurityXML' required='N' />
+   <field name='DerivativeSecurityXMLSchema' required='N' />
+  </component>
+  <component name='InstrumentLeg'>
+   <field name='LegSymbol' required='N' />
+   <field name='LegSymbolSfx' required='N' />
+   <field name='LegSecurityID' required='N' />
+   <field name='LegSecurityIDSource' required='N' />
+   <component name='LegSecAltIDGrp' required='N' />
+   <field name='LegProduct' required='N' />
+   <field name='LegCFICode' required='N' />
+   <field name='LegSecurityType' required='N' />
+   <field name='LegSecuritySubType' required='N' />
+   <field name='LegMaturityMonthYear' required='N' />
+   <field name='LegMaturityDate' required='N' />
+   <field name='LegMaturityTime' required='N' />
+   <field name='LegCouponPaymentDate' required='N' />
+   <field name='LegIssueDate' required='N' />
+   <field name='LegRepoCollateralSecurityType' required='N' />
+   <field name='LegRepurchaseTerm' required='N' />
+   <field name='LegRepurchaseRate' required='N' />
+   <field name='LegFactor' required='N' />
+   <field name='LegCreditRating' required='N' />
+   <field name='LegInstrRegistry' required='N' />
+   <field name='LegCountryOfIssue' required='N' />
+   <field name='LegStateOrProvinceOfIssue' required='N' />
+   <field name='LegLocaleOfIssue' required='N' />
+   <field name='LegRedemptionDate' required='N' />
+   <field name='LegStrikePrice' required='N' />
+   <field name='LegStrikeCurrency' required='N' />
+   <field name='LegOptAttribute' required='N' />
+   <field name='LegContractMultiplier' required='N' />
+   <field name='LegUnitOfMeasure' required='N' />
+   <field name='LegUnitOfMeasureQty' required='N' />
+   <field name='LegPriceUnitOfMeasure' required='N' />
+   <field name='LegPriceUnitOfMeasureQty' required='N' />
+   <field name='LegTimeUnit' required='N' />
+   <field name='LegExerciseStyle' required='N' />
+   <field name='LegCouponRate' required='N' />
+   <field name='LegSecurityExchange' required='N' />
+   <field name='LegIssuer' required='N' />
+   <field name='EncodedLegIssuerLen' required='N' />
+   <field name='EncodedLegIssuer' required='N' />
+   <field name='LegSecurityDesc' required='N' />
+   <field name='EncodedLegSecurityDescLen' required='N' />
+   <field name='EncodedLegSecurityDesc' required='N' />
+   <field name='LegRatioQty' required='N' />
+   <field name='LegSide' required='N' />
+   <field name='LegCurrency' required='N' />
+   <field name='LegPool' required='N' />
+   <field name='LegDatedDate' required='N' />
+   <field name='LegContractSettlMonth' required='N' />
+   <field name='LegInterestAccrualDate' required='N' />
+   <field name='LegPutOrCall' required='N' />
+   <field name='LegOptionRatio' required='N' />
+   <field name='LegContractMultiplierUnit' required='N' />
+   <field name='LegFlowScheduleType' required='N' />
+  </component>
+  <component name='InstrmtLegExecGrp'>
+   <group name='NoLegs' required='N'>
+    <component name='InstrumentLeg' required='N' />
+    <field name='LegQty' required='N' />
+    <field name='LegOrderQty' required='N' />
+    <field name='LegSwapType' required='N' />
+    <component name='LegStipulations' required='N' />
+    <field name='LegAllocID' required='N' />
+    <component name='LegPreAllocGrp' required='N' />
+    <field name='LegPositionEffect' required='N' />
+    <field name='LegCoveredOrUncovered' required='N' />
+    <component name='NestedParties3' required='N' />
+    <field name='LegRefID' required='N' />
+    <field name='LegSettlType' required='N' />
+    <field name='LegSettlDate' required='N' />
+    <field name='LegLastPx' required='N' />
+    <field name='LegSettlCurrency' required='N' />
+    <field name='LegLastForwardPoints' required='N' />
+    <field name='LegCalculatedCcyLastQty' required='N' />
+    <field name='LegGrossTradeAmt' required='N' />
+    <field name='LegVolatility' required='N' />
+    <field name='LegDividendYield' required='N' />
+    <field name='LegCurrencyRatio' required='N' />
+    <field name='LegExecInst' required='N' />
+    <field name='LegLastQty' required='N' />
+   </group>
+  </component>
+  <component name='TrdCapRptSideGrp'>
+   <group name='NoSides' required='Y'>
+    <field name='Side' required='Y' />
+    <field name='SideLastQty' required='N' />
+    <field name='SideTradeReportID' required='N' />
+    <field name='SideFillStationCd' required='N' />
+    <field name='SideReasonCd' required='N' />
+    <field name='RptSeq' required='N' />
+    <field name='SideTrdSubTyp' required='N' />
+    <field name='NetGrossInd' required='N' />
+    <field name='SideCurrency' required='N' />
+    <field name='SideSettlCurrency' required='N' />
+    <component name='Parties' required='N' />
+    <field name='Account' required='N' />
+    <field name='AcctIDSource' required='N' />
+    <field name='AccountType' required='N' />
+    <field name='ProcessCode' required='N' />
+    <field name='OddLot' required='N' />
+    <component name='ClrInstGrp' required='N' />
+    <field name='TradeInputSource' required='N' />
+    <field name='TradeInputDevice' required='N' />
+    <field name='ComplianceID' required='N' />
+    <field name='SolicitedFlag' required='N' />
+    <field name='CustOrderCapacity' required='N' />
+    <field name='TradingSessionID' required='N' />
+    <field name='TradingSessionSubID' required='N' />
+    <field name='TimeBracket' required='N' />
+    <component name='CommissionData' required='N' />
+    <field name='NumDaysInterest' required='N' />
+    <field name='ExDate' required='N' />
+    <field name='AccruedInterestRate' required='N' />
+    <field name='AccruedInterestAmt' required='N' />
+    <field name='InterestAtMaturity' required='N' />
+    <field name='EndAccruedInterestAmt' required='N' />
+    <field name='StartCash' required='N' />
+    <field name='EndCash' required='N' />
+    <field name='Concession' required='N' />
+    <field name='TotalTakedown' required='N' />
+    <field name='NetMoney' required='N' />
+    <field name='SettlCurrAmt' required='N' />
+    <field name='SettlCurrFxRate' required='N' />
+    <field name='SettlCurrFxRateCalc' required='N' />
+    <field name='PositionEffect' required='N' />
+    <field name='Text' required='N' />
+    <field name='EncodedTextLen' required='N' />
+    <field name='EncodedText' required='N' />
+    <field name='SideMultiLegReportingType' required='N' />
+    <component name='ContAmtGrp' required='N' />
+    <component name='Stipulations' required='N' />
+    <component name='MiscFeesGrp' required='N' />
+    <field name='ExchangeRule' required='N' />
+    <field name='TradeAllocIndicator' required='N' />
+    <field name='PreallocMethod' required='N' />
+    <field name='AllocID' required='N' />
+    <component name='TrdAllocGrp' required='N' />
+    <component name='SideTrdRegTS' required='N' />
+    <component name='SettlDetails' required='N' />
+    <field name='SideGrossTradeAmt' required='N' />
+    <field name='AggressorIndicator' required='N' />
+    <field name='ExchangeSpecialInstructions' required='N' />
+    <field name='OrderCategory' required='N' />
+    <component name='TradeReportOrderDetail' required='N' />
+    <field name='SideExecID' required='N' />
+    <field name='OrderDelay' required='N' />
+    <field name='OrderDelayUnit' required='N' />
+    <field name='SideLiquidityInd' required='N' />
+   </group>
+  </component>
+  <component name='PositionAmountData'>
+   <group name='NoPosAmt' required='N'>
+    <field name='PosAmtType' required='N' />
+    <field name='PosAmt' required='N' />
+    <field name='PositionCurrency' required='N' />
+   </group>
+  </component>
+  <component name='ApplicationSequenceControl'>
+   <field name='ApplID' required='N' />
+   <field name='ApplSeqNum' required='N' />
+   <field name='ApplLastSeqNum' required='N' />
+   <field name='ApplResendFlag' required='N' />
+  </component>
+  <component name='Stipulations'>
+   <group name='NoStipulations' required='N'>
+    <field name='StipulationType' required='N' />
+    <field name='StipulationValue' required='N' />
+   </group>
+  </component>
+  <component name='MDReqGrp'>
+   <group name='NoMDEntryTypes' required='Y'>
+    <field name='MDEntryType' required='Y' />
+   </group>
+  </component>
+  <component name='TrdCapRptAckSideGrp'>
+   <group name='NoSides' required='Y'>
+    <field name='Side' required='Y' />
+    <component name='Parties' required='N' />
+    <field name='Account' required='N' />
+    <field name='AcctIDSource' required='N' />
+    <field name='AccountType' required='N' />
+    <field name='ProcessCode' required='N' />
+    <field name='OddLot' required='N' />
+    <component name='ClrInstGrp' required='N' />
+    <field name='TradeInputSource' required='N' />
+    <field name='TradeInputDevice' required='N' />
+    <field name='ComplianceID' required='N' />
+    <field name='SolicitedFlag' required='N' />
+    <field name='CustOrderCapacity' required='N' />
+    <field name='TradingSessionID' required='N' />
+    <field name='TradingSessionSubID' required='N' />
+    <field name='TimeBracket' required='N' />
+    <field name='NetGrossInd' required='N' />
+    <field name='SideCurrency' required='N' />
+    <field name='SideSettlCurrency' required='N' />
+    <component name='CommissionData' required='N' />
+    <field name='NumDaysInterest' required='N' />
+    <field name='ExDate' required='N' />
+    <field name='AccruedInterestRate' required='N' />
+    <field name='AccruedInterestAmt' required='N' />
+    <field name='InterestAtMaturity' required='N' />
+    <field name='EndAccruedInterestAmt' required='N' />
+    <field name='StartCash' required='N' />
+    <field name='EndCash' required='N' />
+    <field name='Concession' required='N' />
+    <field name='TotalTakedown' required='N' />
+    <field name='NetMoney' required='N' />
+    <field name='SettlCurrAmt' required='N' />
+    <field name='SettlCurrFxRate' required='N' />
+    <field name='SettlCurrFxRateCalc' required='N' />
+    <field name='PositionEffect' required='N' />
+    <field name='SideMultiLegReportingType' required='N' />
+    <component name='ContAmtGrp' required='N' />
+    <component name='Stipulations' required='N' />
+    <component name='MiscFeesGrp' required='N' />
+    <field name='ExchangeRule' required='N' />
+    <component name='SettlDetails' required='N' />
+    <field name='TradeAllocIndicator' required='N' />
+    <field name='PreallocMethod' required='N' />
+    <field name='AllocID' required='N' />
+    <component name='TrdAllocGrp' required='N' />
+    <field name='SideGrossTradeAmt' required='N' />
+    <field name='AggressorIndicator' required='N' />
+    <field name='SideLastQty' required='N' />
+    <field name='SideTradeReportID' required='N' />
+    <field name='SideFillStationCd' required='N' />
+    <field name='SideReasonCd' required='N' />
+    <field name='RptSeq' required='N' />
+    <field name='SideTrdSubTyp' required='N' />
+    <component name='SideTrdRegTS' required='N' />
+    <field name='SideExecID' required='N' />
+    <field name='OrderDelay' required='N' />
+    <field name='OrderDelayUnit' required='N' />
+    <field name='OrderCategory' required='N' />
+    <component name='TradeReportOrderDetail' required='N' />
+   </group>
+  </component>
+  <component name='SettlInstGrp'>
+   <group name='NoSettlInst' required='N'>
+    <field name='SettlInstID' required='N' />
+    <field name='SettlInstTransType' required='N' />
+    <field name='SettlInstRefID' required='N' />
+    <component name='Parties' required='N' />
+    <field name='Side' required='N' />
+    <field name='Product' required='N' />
+    <field name='SecurityType' required='N' />
+    <field name='CFICode' required='N' />
+    <field name='SettlCurrency' required='N' />
+    <field name='EffectiveTime' required='N' />
+    <field name='ExpireTime' required='N' />
+    <field name='LastUpdateTime' required='N' />
+    <component name='SettlInstructionsData' required='N' />
+    <field name='PaymentMethod' required='N' />
+    <field name='PaymentRef' required='N' />
+    <field name='CardHolderName' required='N' />
+    <field name='CardNumber' required='N' />
+    <field name='CardStartDate' required='N' />
+    <field name='CardExpDate' required='N' />
+    <field name='CardIssNum' required='N' />
+    <field name='PaymentDate' required='N' />
+    <field name='PaymentRemitterID' required='N' />
+   </group>
+  </component>
+  <component name='SecLstUpdRelSymGrp'>
+   <group name='NoRelatedSym' required='N'>
+    <field name='ListUpdateAction' required='N' />
+    <component name='Instrument' required='N' />
+    <component name='InstrumentExtension' required='N' />
+    <component name='FinancingDetails' required='N' />
+    <component name='SecurityTradingRules' required='N' />
+    <component name='StrikeRules' required='N' />
+    <component name='UndInstrmtGrp' required='N' />
+    <field name='Currency' required='N' />
+    <component name='Stipulations' required='N' />
+    <component name='SecLstUpdRelSymsLegGrp' required='N' />
+    <component name='SpreadOrBenchmarkCurveData' required='N' />
+    <component name='YieldData' required='N' />
+    <field name='Text' required='N' />
+    <field name='EncodedTextLen' required='N' />
+    <field name='EncodedText' required='N' />
+    <field name='RelSymTransactTime' required='N' />
+   </group>
+  </component>
+  <component name='SecAltIDGrp'>
+   <group name='NoSecurityAltID' required='N'>
+    <field name='SecurityAltID' required='N' />
+    <field name='SecurityAltIDSource' required='N' />
+   </group>
+  </component>
+  <component name='DiscretionInstructions'>
+   <field name='DiscretionInst' required='N' />
+   <field name='DiscretionOffsetValue' required='N' />
+   <field name='DiscretionMoveType' required='N' />
+   <field name='DiscretionOffsetType' required='N' />
+   <field name='DiscretionLimitType' required='N' />
+   <field name='DiscretionRoundDirection' required='N' />
+   <field name='DiscretionScope' required='N' />
+  </component>
+  <component name='MatchRules'>
+   <group name='NoMatchRules' required='N'>
+    <field name='MatchAlgorithm' required='N' />
+    <field name='MatchType' required='N' />
+   </group>
+  </component>
+  <component name='LotTypeRules'>
+   <group name='NoLotTypeRules' required='N'>
+    <field name='LotType' required='N' />
+    <field name='MinLotSize' required='N' />
+   </group>
+  </component>
+  <component name='BidCompReqGrp'>
+   <group name='NoBidComponents' required='N'>
+    <field name='ListID' required='N' />
+    <field name='Side' required='N' />
+    <field name='TradingSessionID' required='N' />
+    <field name='TradingSessionSubID' required='N' />
+    <field name='NetGrossInd' required='N' />
+    <field name='SettlType' required='N' />
+    <field name='SettlDate' required='N' />
+    <field name='Account' required='N' />
+    <field name='AcctIDSource' required='N' />
+   </group>
+  </component>
+  <component name='TargetParties'>
+   <group name='NoTargetPartyIDs' required='N'>
+    <field name='TargetPartyID' required='N' />
+    <field name='TargetPartyIDSource' required='N' />
+    <field name='TargetPartyRole' required='N' />
+   </group>
+  </component>
+  <component name='TimeInForceRules'>
+   <group name='NoTimeInForceRules' required='N'>
+    <field name='TimeInForce' required='N' />
+   </group>
+  </component>
+  <component name='TrdSessLstGrp'>
+   <group name='NoTradingSessions' required='Y'>
+    <field name='TradingSessionID' required='Y' />
+    <field name='TradingSessionSubID' required='N' />
+    <field name='SecurityExchange' required='N' />
+    <field name='MarketID' required='N' />
+    <field name='MarketSegmentID' required='N' />
+    <field name='TradingSessionDesc' required='N' />
+    <field name='TradSesMethod' required='N' />
+    <field name='TradSesMode' required='N' />
+    <field name='UnsolicitedIndicator' required='N' />
+    <field name='TradSesStatus' required='Y' />
+    <field name='TradSesStatusRejReason' required='N' />
+    <field name='TradSesStartTime' required='N' />
+    <field name='TradSesOpenTime' required='N' />
+    <field name='TradSesPreCloseTime' required='N' />
+    <field name='TradSesCloseTime' required='N' />
+    <field name='TradSesEndTime' required='N' />
+    <field name='TotalVolumeTraded' required='N' />
+    <component name='TradingSessionRules' required='N' />
+    <field name='Text' required='N' />
+    <field name='EncodedTextLen' required='N' />
+    <field name='EncodedText' required='N' />
+    <field name='TransactTime' required='N' />
+    <field name='TradSesUpdateAction' required='N' />
+   </group>
+  </component>
+  <component name='YieldData'>
+   <field name='YieldType' required='N' />
+   <field name='Yield' required='N' />
+   <field name='YieldCalcDate' required='N' />
+   <field name='YieldRedemptionDate' required='N' />
+   <field name='YieldRedemptionPrice' required='N' />
+   <field name='YieldRedemptionPriceType' required='N' />
+  </component>
+  <component name='ApplIDRequestAckGrp'>
+   <group name='NoApplIDs' required='N'>
+    <field name='RefApplID' required='N' />
+    <field name='ApplBegSeqNum' required='N' />
+    <field name='ApplEndSeqNum' required='N' />
+    <field name='RefApplLastSeqNum' required='N' />
+    <field name='ApplResponseError' required='N' />
+    <component name='NestedParties' required='N' />
+    <field name='RefApplReqID' required='N' />
+   </group>
+  </component>
+  <component name='UsernameGrp'>
+   <field name='Username' required='N' />
+  </component>
+  <component name='FinancingDetails'>
+   <field name='AgreementDesc' required='N' />
+   <field name='AgreementID' required='N' />
+   <field name='AgreementDate' required='N' />
+   <field name='AgreementCurrency' required='N' />
+   <field name='TerminationType' required='N' />
+   <field name='StartDate' required='N' />
+   <field name='EndDate' required='N' />
+   <field name='DeliveryType' required='N' />
+   <field name='MarginRatio' required='N' />
+  </component>
+  <component name='SettlParties'>
+   <group name='NoSettlPartyIDs' required='N'>
+    <field name='SettlPartyID' required='N' />
+    <field name='SettlPartyIDSource' required='N' />
+    <field name='SettlPartyRole' required='N' />
+    <component name='SettlPtysSubGrp' required='N' />
+   </group>
+  </component>
+  <component name='LegPreAllocGrp'>
+   <group name='NoLegAllocs' required='N'>
+    <field name='LegAllocAccount' required='N' />
+    <field name='LegIndividualAllocID' required='N' />
+    <component name='NestedParties2' required='N' />
+    <field name='LegAllocQty' required='N' />
+    <field name='LegAllocAcctIDSource' required='N' />
+    <field name='LegAllocSettlCurrency' required='N' />
+   </group>
+  </component>
+  <component name='PreAllocMlegGrp'>
+   <group name='NoAllocs' required='N'>
+    <field name='AllocAccount' required='N' />
+    <field name='AllocAcctIDSource' required='N' />
+    <field name='AllocSettlCurrency' required='N' />
+    <field name='IndividualAllocID' required='N' />
+    <component name='NestedParties3' required='N' />
+    <field name='AllocQty' required='N' />
+   </group>
+  </component>
+  <component name='InstrmtLegIOIGrp'>
+   <group name='NoLegs' required='N'>
+    <component name='InstrumentLeg' required='N' />
+    <field name='LegIOIQty' required='N' />
+    <component name='LegStipulations' required='N' />
+   </group>
+  </component>
+  <component name='BaseTradingRules'>
+   <component name='TickRules' required='N' />
+   <component name='LotTypeRules' required='N' />
+   <component name='PriceLimits' required='N' />
+   <field name='ExpirationCycle' required='N' />
+   <field name='MinTradeVol' required='N' />
+   <field name='MaxTradeVol' required='N' />
+   <field name='MaxPriceVariation' required='N' />
+   <field name='ImpliedMarketIndicator' required='N' />
+   <field name='TradingCurrency' required='N' />
+   <field name='RoundLot' required='N' />
+   <field name='MultilegModel' required='N' />
+   <field name='MultilegPriceMethod' required='N' />
+   <field name='PriceType' required='N' />
+  </component>
+  <component name='InstrumentExtension'>
+   <field name='DeliveryForm' required='N' />
+   <field name='PctAtRisk' required='N' />
+   <component name='AttrbGrp' required='N' />
+  </component>
+  <component name='LinesOfTextGrp'>
+   <group name='NoLinesOfText' required='Y'>
+    <field name='Text' required='Y' />
+    <field name='EncodedTextLen' required='N' />
+    <field name='EncodedText' required='N' />
+   </group>
+  </component>
+  <component name='BidDescReqGrp'>
+   <group name='NoBidDescriptors' required='N'>
+    <field name='BidDescriptorType' required='N' />
+    <field name='BidDescriptor' required='N' />
+    <field name='SideValueInd' required='N' />
+    <field name='LiquidityValue' required='N' />
+    <field name='LiquidityNumSecurities' required='N' />
+    <field name='LiquidityPctLow' required='N' />
+    <field name='LiquidityPctHigh' required='N' />
+    <field name='EFPTrackingError' required='N' />
+    <field name='FairValue' required='N' />
+    <field name='OutsideIndexPct' required='N' />
+    <field name='ValueOfFutures' required='N' />
+   </group>
+  </component>
+  <component name='MaturityRules'>
+   <group name='NoMaturityRules' required='N'>
+    <field name='MaturityRuleID' required='N' />
+    <field name='MaturityMonthYearFormat' required='N' />
+    <field name='MaturityMonthYearIncrementUnits' required='N' />
+    <field name='StartMaturityMonthYear' required='N' />
+    <field name='EndMaturityMonthYear' required='N' />
+    <field name='MaturityMonthYearIncrement' required='N' />
+   </group>
+  </component>
+  <component name='StrikeRules'>
+   <group name='NoStrikeRules' required='N'>
+    <field name='StrikeRuleID' required='N' />
+    <field name='StartStrikePxRange' required='N' />
+    <field name='EndStrikePxRange' required='N' />
+    <field name='StrikeIncrement' required='N' />
+    <field name='StrikeExerciseStyle' required='N' />
+    <component name='MaturityRules' required='N' />
+   </group>
+  </component>
+  <component name='QuotQualGrp'>
+   <group name='NoQuoteQualifiers' required='N'>
+    <field name='QuoteQualifier' required='N' />
+   </group>
+  </component>
+  <component name='PreAllocGrp'>
+   <group name='NoAllocs' required='N'>
+    <field name='AllocAccount' required='N' />
+    <field name='AllocAcctIDSource' required='N' />
+    <field name='AllocSettlCurrency' required='N' />
+    <field name='IndividualAllocID' required='N' />
+    <component name='NestedParties' required='N' />
+    <field name='AllocQty' required='N' />
+   </group>
+  </component>
+  <component name='MDRjctGrp'>
+   <group name='NoAltMDSource' required='N'>
+    <field name='AltMDSourceID' required='N' />
+   </group>
+  </component>
+  <component name='Instrument'>
+   <field name='Symbol' required='N' />
+   <field name='SymbolSfx' required='N' />
+   <field name='SecurityID' required='N' />
+   <field name='SecurityIDSource' required='N' />
+   <component name='SecAltIDGrp' required='N' />
+   <field name='Product' required='N' />
+   <field name='ProductComplex' required='N' />
+   <field name='SecurityGroup' required='N' />
+   <field name='CFICode' required='N' />
+   <field name='SecurityType' required='N' />
+   <field name='SecuritySubType' required='N' />
+   <field name='MaturityMonthYear' required='N' />
+   <field name='MaturityDate' required='N' />
+   <field name='MaturityTime' required='N' />
+   <field name='SettleOnOpenFlag' required='N' />
+   <field name='InstrmtAssignmentMethod' required='N' />
+   <field name='SecurityStatus' required='N' />
+   <field name='CouponPaymentDate' required='N' />
+   <field name='IssueDate' required='N' />
+   <field name='RepoCollateralSecurityType' required='N' />
+   <field name='RepurchaseTerm' required='N' />
+   <field name='RepurchaseRate' required='N' />
+   <field name='Factor' required='N' />
+   <field name='CreditRating' required='N' />
+   <field name='InstrRegistry' required='N' />
+   <field name='CountryOfIssue' required='N' />
+   <field name='StateOrProvinceOfIssue' required='N' />
+   <field name='LocaleOfIssue' required='N' />
+   <field name='RedemptionDate' required='N' />
+   <field name='StrikePrice' required='N' />
+   <field name='StrikeCurrency' required='N' />
+   <field name='StrikeMultiplier' required='N' />
+   <field name='StrikeValue' required='N' />
+   <field name='OptAttribute' required='N' />
+   <field name='ContractMultiplier' required='N' />
+   <field name='MinPriceIncrement' required='N' />
+   <field name='MinPriceIncrementAmount' required='N' />
+   <field name='UnitOfMeasure' required='N' />
+   <field name='UnitOfMeasureQty' required='N' />
+   <field name='PriceUnitOfMeasure' required='N' />
+   <field name='PriceUnitOfMeasureQty' required='N' />
+   <field name='SettlMethod' required='N' />
+   <field name='ExerciseStyle' required='N' />
+   <field name='OptPayoutAmount' required='N' />
+   <field name='PriceQuoteMethod' required='N' />
+   <field name='ValuationMethod' required='N' />
+   <field name='ListMethod' required='N' />
+   <field name='CapPrice' required='N' />
+   <field name='FloorPrice' required='N' />
+   <field name='PutOrCall' required='N' />
+   <field name='FlexibleIndicator' required='N' />
+   <field name='FlexProductEligibilityIndicator' required='N' />
+   <field name='TimeUnit' required='N' />
+   <field name='CouponRate' required='N' />
+   <field name='SecurityExchange' required='N' />
+   <field name='PositionLimit' required='N' />
+   <field name='NTPositionLimit' required='N' />
+   <field name='Issuer' required='N' />
+   <field name='EncodedIssuerLen' required='N' />
+   <field name='EncodedIssuer' required='N' />
+   <field name='SecurityDesc' required='N' />
+   <field name='EncodedSecurityDescLen' required='N' />
+   <field name='EncodedSecurityDesc' required='N' />
+   <component name='SecurityXML' required='N' />
+   <field name='Pool' required='N' />
+   <field name='ContractSettlMonth' required='N' />
+   <field name='CPProgram' required='N' />
+   <field name='CPRegType' required='N' />
+   <component name='EvntGrp' required='N' />
+   <field name='DatedDate' required='N' />
+   <field name='InterestAccrualDate' required='N' />
+   <component name='InstrumentParties' required='N' />
+   <field name='ContractMultiplierUnit' required='N' />
+   <field name='FlowScheduleType' required='N' />
+   <field name='RestructuringType' required='N' />
+   <field name='Seniority' required='N' />
+   <field name='NotionalPercentageOutstanding' required='N' />
+   <field name='OriginalNotionalPercentageOutstanding' required='N' />
+   <field name='AttachmentPoint' required='N' />
+   <field name='DetachmentPoint' required='N' />
+   <field name='StrikePriceDeterminationMethod' required='N' />
+   <field name='StrikePriceBoundaryMethod' required='N' />
+   <field name='StrikePriceBoundaryPrecision' required='N' />
+   <field name='UnderlyingPriceDeterminationMethod' required='N' />
+   <field name='OptPayoutType' required='N' />
+   <component name='ComplexEvents' required='N' />
+  </component>
+  <component name='TradeCapLegUnderlyingsGrp'>
+   <group name='NoOfLegUnderlyings' required='N'>
+    <component name='UnderlyingLegInstrument' required='N' />
+   </group>
+  </component>
+  <component name='HopGrp'>
+   <group name='NoHops' required='N'>
+    <field name='HopCompID' required='N' />
+    <field name='HopSendingTime' required='N' />
+    <field name='HopRefID' required='N' />
+   </group>
+  </component>
+  <component name='AllocAckGrp'>
+   <group name='NoAllocs' required='N'>
+    <field name='AllocAccount' required='N' />
+    <field name='AllocAcctIDSource' required='N' />
+    <field name='AllocPrice' required='N' />
+    <field name='AllocPositionEffect' required='N' />
+    <field name='IndividualAllocID' required='N' />
+    <field name='IndividualAllocRejCode' required='N' />
+    <component name='NestedParties' required='N' />
+    <field name='AllocText' required='N' />
+    <field name='EncodedAllocTextLen' required='N' />
+    <field name='EncodedAllocText' required='N' />
+    <field name='SecondaryIndividualAllocID' required='N' />
+    <field name='AllocCustomerCapacity' required='N' />
+    <field name='IndividualAllocType' required='N' />
+    <field name='AllocQty' required='N' />
+   </group>
+  </component>
+  <component name='QuotReqLegsGrp'>
+   <group name='NoLegs' required='N'>
+    <component name='InstrumentLeg' required='N' />
+    <field name='LegQty' required='N' />
+    <field name='LegOrderQty' required='N' />
+    <field name='LegSwapType' required='N' />
+    <field name='LegSettlType' required='N' />
+    <field name='LegSettlDate' required='N' />
+    <component name='LegStipulations' required='N' />
+    <component name='NestedParties' required='N' />
+    <component name='LegBenchmarkCurveData' required='N' />
+    <field name='LegRefID' required='N' />
+   </group>
+  </component>
+  <component name='NestedParties2'>
+   <group name='NoNested2PartyIDs' required='N'>
+    <field name='Nested2PartyID' required='N' />
+    <field name='Nested2PartyIDSource' required='N' />
+    <field name='Nested2PartyRole' required='N' />
+    <component name='NstdPtys2SubGrp' required='N' />
+   </group>
+  </component>
+  <component name='InstrmtMDReqGrp'>
+   <group name='NoRelatedSym' required='Y'>
+    <component name='Instrument' required='Y' />
+    <component name='UndInstrmtGrp' required='N' />
+    <component name='InstrmtLegGrp' required='N' />
+    <field name='Currency' required='N' />
+    <field name='QuoteType' required='N' />
+    <field name='SettlType' required='N' />
+    <field name='SettlDate' required='N' />
+    <field name='MDEntrySize' required='N' />
+    <field name='MDStreamID' required='N' />
+   </group>
+  </component>
+  <component name='SideCrossOrdModGrp'>
+   <group name='NoSides' required='Y'>
+    <field name='Side' required='Y' />
+    <field name='OrigClOrdID' required='N' />
+    <field name='ClOrdID' required='Y' />
+    <field name='SecondaryClOrdID' required='N' />
+    <field name='ClOrdLinkID' required='N' />
+    <component name='Parties' required='N' />
+    <field name='TradeOriginationDate' required='N' />
+    <field name='TradeDate' required='N' />
+    <field name='Account' required='N' />
+    <field name='AcctIDSource' required='N' />
+    <field name='AccountType' required='N' />
+    <field name='DayBookingInst' required='N' />
+    <field name='BookingUnit' required='N' />
+    <field name='PreallocMethod' required='N' />
+    <field name='AllocID' required='N' />
+    <component name='PreAllocGrp' required='N' />
+    <field name='QtyType' required='N' />
+    <component name='OrderQtyData' required='Y' />
+    <component name='CommissionData' required='N' />
+    <field name='OrderCapacity' required='N' />
+    <field name='OrderRestrictions' required='N' />
+    <field name='PreTradeAnonymity' required='N' />
+    <field name='CustOrderCapacity' required='N' />
+    <field name='ForexReq' required='N' />
+    <field name='SettlCurrency' required='N' />
+    <field name='BookingType' required='N' />
+    <field name='Text' required='N' />
+    <field name='EncodedTextLen' required='N' />
+    <field name='EncodedText' required='N' />
+    <field name='PositionEffect' required='N' />
+    <field name='CoveredOrUncovered' required='N' />
+    <field name='CashMargin' required='N' />
+    <field name='ClearingFeeIndicator' required='N' />
+    <field name='SolicitedFlag' required='N' />
+    <field name='SideComplianceID' required='N' />
+    <field name='SideTimeInForce' required='N' />
+   </group>
+  </component>
+  <component name='RootSubParties'>
+   <group name='NoRootPartySubIDs' required='N'>
+    <field name='RootPartySubID' required='N' />
+    <field name='RootPartySubIDType' required='N' />
+   </group>
+  </component>
+  <component name='TrdCollGrp'>
+   <group name='NoTrades' required='N'>
+    <field name='TradeReportID' required='N' />
+    <field name='SecondaryTradeReportID' required='N' />
+   </group>
+  </component>
+  <component name='NestedParties3'>
+   <group name='NoNested3PartyIDs' required='N'>
+    <field name='Nested3PartyID' required='N' />
+    <field name='Nested3PartyIDSource' required='N' />
+    <field name='Nested3PartyRole' required='N' />
+    <component name='NstdPtys3SubGrp' required='N' />
+   </group>
+  </component>
+  <component name='StrategyParametersGrp'>
+   <group name='NoStrategyParameters' required='N'>
+    <field name='StrategyParameterName' required='N' />
+    <field name='StrategyParameterType' required='N' />
+    <field name='StrategyParameterValue' required='N' />
+   </group>
+  </component>
+  <component name='StrmAsgnRptInstrmtGrp'>
+   <group name='NoRelatedSym' required='N'>
+    <component name='Instrument' required='N' />
+    <field name='SettlType' required='N' />
+    <field name='StreamAsgnType' required='N' />
+    <field name='MDStreamID' required='N' />
+    <field name='StreamAsgnRejReason' required='N' />
+    <field name='Text' required='N' />
+    <field name='EncodedTextLen' required='N' />
+    <field name='EncodedText' required='N' />
+   </group>
+  </component>
+  <component name='StrmAsgnReqInstrmtGrp'>
+   <group name='NoRelatedSym' required='N'>
+    <component name='Instrument' required='N' />
+    <field name='SettlType' required='N' />
+    <field name='MDEntrySize' required='N' />
+    <field name='MDStreamID' required='N' />
+   </group>
+  </component>
+  <component name='NestedParties4'>
+   <group name='NoNested4PartyIDs' required='N'>
+    <field name='Nested4PartyID' required='N' />
+    <field name='Nested4PartyIDSource' required='N' />
+    <field name='Nested4PartyRole' required='N' />
+    <component name='NstdPtys4SubGrp' required='N' />
+   </group>
+  </component>
+  <component name='TrdRepIndicatorsGrp'>
+   <group name='NoTrdRepIndicators' required='N'>
+    <field name='TrdRepPartyRole' required='N' />
+    <field name='TrdRepIndicator' required='N' />
+   </group>
+  </component>
+  <component name='RelSymDerivSecUpdGrp'>
+   <group name='NoRelatedSym' required='N'>
+    <field name='ListUpdateAction' required='N' />
+    <field name='CorporateAction' required='N' />
+    <component name='Instrument' required='N' />
+    <component name='InstrumentExtension' required='N' />
+    <component name='SecondaryPriceLimits' required='N' />
+    <field name='Currency' required='N' />
+    <component name='InstrmtLegGrp' required='N' />
+    <field name='Text' required='N' />
+    <field name='EncodedTextLen' required='N' />
+    <field name='EncodedText' required='N' />
+    <field name='RelSymTransactTime' required='N' />
+   </group>
+  </component>
+  <component name='DerivativeInstrumentParties'>
+   <group name='NoDerivativeInstrumentParties' required='N'>
+    <field name='DerivativeInstrumentPartyID' required='N' />
+    <field name='DerivativeInstrumentPartyIDSource' required='N' />
+    <field name='DerivativeInstrumentPartyRole' required='N' />
+    <component name='DerivativeInstrumentPartySubIDsGrp' required='N' />
+   </group>
+  </component>
+  <component name='MarketDataFeedTypes'>
+   <group name='NoMDFeedTypes' required='N'>
+    <field name='MDFeedType' required='N' />
+    <field name='MarketDepth' required='N' />
+    <field name='MDBookType' required='N' />
+   </group>
+  </component>
+  <component name='TickRules'>
+   <group name='NoTickRules' required='N'>
+    <field name='StartTickPriceRange' required='N' />
+    <field name='EndTickPriceRange' required='N' />
+    <field name='TickIncrement' required='N' />
+    <field name='TickRuleType' required='N' />
+   </group>
+  </component>
+  <component name='RootParties'>
+   <group name='NoRootPartyIDs' required='N'>
+    <field name='RootPartyID' required='N' />
+    <field name='RootPartyIDSource' required='N' />
+    <field name='RootPartyRole' required='N' />
+    <component name='RootSubParties' required='N' />
+   </group>
+  </component>
+  <component name='UnderlyingInstrument'>
+   <field name='UnderlyingSymbol' required='N' />
+   <field name='UnderlyingSymbolSfx' required='N' />
+   <field name='UnderlyingSecurityID' required='N' />
+   <field name='UnderlyingSecurityIDSource' required='N' />
+   <component name='UndSecAltIDGrp' required='N' />
+   <field name='UnderlyingProduct' required='N' />
+   <field name='UnderlyingCFICode' required='N' />
+   <field name='UnderlyingSecurityType' required='N' />
+   <field name='UnderlyingSecuritySubType' required='N' />
+   <field name='UnderlyingMaturityMonthYear' required='N' />
+   <field name='UnderlyingMaturityDate' required='N' />
+   <field name='UnderlyingMaturityTime' required='N' />
+   <field name='UnderlyingCouponPaymentDate' required='N' />
+   <field name='UnderlyingIssueDate' required='N' />
+   <field name='UnderlyingRepoCollateralSecurityType' required='N' />
+   <field name='UnderlyingRepurchaseTerm' required='N' />
+   <field name='UnderlyingRepurchaseRate' required='N' />
+   <field name='UnderlyingFactor' required='N' />
+   <field name='UnderlyingCreditRating' required='N' />
+   <field name='UnderlyingInstrRegistry' required='N' />
+   <field name='UnderlyingCountryOfIssue' required='N' />
+   <field name='UnderlyingStateOrProvinceOfIssue' required='N' />
+   <field name='UnderlyingLocaleOfIssue' required='N' />
+   <field name='UnderlyingRedemptionDate' required='N' />
+   <field name='UnderlyingStrikePrice' required='N' />
+   <field name='UnderlyingStrikeCurrency' required='N' />
+   <field name='UnderlyingOptAttribute' required='N' />
+   <field name='UnderlyingContractMultiplier' required='N' />
+   <field name='UnderlyingUnitOfMeasure' required='N' />
+   <field name='UnderlyingUnitOfMeasureQty' required='N' />
+   <field name='UnderlyingPriceUnitOfMeasure' required='N' />
+   <field name='UnderlyingPriceUnitOfMeasureQty' required='N' />
+   <field name='UnderlyingTimeUnit' required='N' />
+   <field name='UnderlyingExerciseStyle' required='N' />
+   <field name='UnderlyingCouponRate' required='N' />
+   <field name='UnderlyingSecurityExchange' required='N' />
+   <field name='UnderlyingIssuer' required='N' />
+   <field name='EncodedUnderlyingIssuerLen' required='N' />
+   <field name='EncodedUnderlyingIssuer' required='N' />
+   <field name='UnderlyingSecurityDesc' required='N' />
+   <field name='EncodedUnderlyingSecurityDescLen' required='N' />
+   <field name='EncodedUnderlyingSecurityDesc' required='N' />
+   <field name='UnderlyingCPProgram' required='N' />
+   <field name='UnderlyingCPRegType' required='N' />
+   <field name='UnderlyingAllocationPercent' required='N' />
+   <field name='UnderlyingCurrency' required='N' />
+   <field name='UnderlyingQty' required='N' />
+   <field name='UnderlyingSettlementType' required='N' />
+   <field name='UnderlyingCashAmount' required='N' />
+   <field name='UnderlyingCashType' required='N' />
+   <field name='UnderlyingPx' required='N' />
