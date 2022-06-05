@@ -7398,3 +7398,2043 @@
    <value enum='0' description='REPORT_BY_MULITLEG_SECURITY_ONLY' />
    <value enum='1' description='REPORT_BY_MULTILEG_SECURITY_AND_BY_INSTRUMENT_LEGS_BELONGING_TO_THE_MULTILEG_SECURITY' />
    <value enum='2' description='REPORT_BY_INSTRUMENT_LEGS_BELONGING_TO_THE_MULTILEG_SECURITY_ONLY' />
+  </field>
+  <field number='564' name='LegPositionEffect' type='CHAR' />
+  <field number='565' name='LegCoveredOrUncovered' type='INT' />
+  <field number='566' name='LegPrice' type='PRICE' />
+  <field number='567' name='TradSesStatusRejReason' type='INT'>
+   <value enum='1' description='UNKNOWN_OR_INVALID_TRADINGSESSIONID' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='568' name='TradeRequestID' type='STRING' />
+  <field number='569' name='TradeRequestType' type='INT'>
+   <value enum='0' description='ALL_TRADES' />
+   <value enum='1' description='MATCHED_TRADES_MATCHING_CRITERIA_PROVIDED_ON_REQUEST' />
+   <value enum='2' description='UNMATCHED_TRADES_THAT_MATCH_CRITERIA' />
+   <value enum='3' description='UNREPORTED_TRADES_THAT_MATCH_CRITERIA' />
+   <value enum='4' description='ADVISORIES_THAT_MATCH_CRITERIA' />
+  </field>
+  <field number='570' name='PreviouslyReported' type='BOOLEAN'>
+   <value enum='N' description='NO' />
+   <value enum='Y' description='YES' />
+  </field>
+  <field number='571' name='TradeReportID' type='STRING' />
+  <field number='572' name='TradeReportRefID' type='STRING' />
+  <field number='573' name='MatchStatus' type='CHAR'>
+   <value enum='0' description='COMPARED_MATCHED_OR_AFFIRMED' />
+   <value enum='1' description='UNCOMPARED_UNMATCHED_OR_UNAFFIRED' />
+   <value enum='2' description='ADVISORY_OR_ALERT' />
+  </field>
+  <field number='574' name='MatchType' type='STRING'>
+   <value enum='1' description='ONE_PARTY_TRADE_REPORT' />
+   <value enum='2' description='TWO_PARTY_TRADE_REPORT' />
+   <value enum='3' description='CONFIRMED_TRADE_REPORT' />
+   <value enum='4' description='AUTO_MATCH' />
+   <value enum='5' description='CROSS_AUCTION' />
+   <value enum='6' description='COUNTER_ORDER_SELECTION' />
+   <value enum='7' description='CALL_AUCTION' />
+   <value enum='8' description='ISSUING_BUY_BACK_AUCTION' />
+   <value enum='M3' description='ACT_ACCEPTED_TRADE' />
+   <value enum='M4' description='ACT_DEFAULT_TRADE' />
+   <value enum='M5' description='ACT_DEFAULT_AFTER_M2' />
+   <value enum='M6' description='ACT_M6_MATCH' />
+   <value enum='A1' description='EXACT_MATCH_ON_TRADE_DATE_STOCK_SYMBOL_QUANTITY_PRICE_TRADE_TYPE_AND_SPECIAL_TRADE_INDICATOR_PLUS_FOUR_BADGES_AND_EXECUTION_TIME' />
+   <value enum='A2' description='EXACT_MATCH_ON_TRADE_DATE_STOCK_SYMBOL_QUANTITY_PRICE_TRADE_TYPE_AND_SPECIAL_TRADE_INDICATOR_PLUS_FOUR_BADGES' />
+   <value enum='A3' description='EXACT_MATCH_ON_TRADE_DATE_STOCK_SYMBOL_QUANTITY_PRICE_TRADE_TYPE_AND_SPECIAL_TRADE_INDICATOR_PLUS_TWO_BADGES_AND_EXECUTION_TIME' />
+   <value enum='A4' description='EXACT_MATCH_ON_TRADE_DATE_STOCK_SYMBOL_QUANTITY_PRICE_TRADE_TYPE_AND_SPECIAL_TRADE_INDICATOR_PLUS_TWO_BADGES' />
+   <value enum='A5' description='EXACT_MATCH_ON_TRADE_DATE_STOCK_SYMBOL_QUANTITY_PRICE_TRADETYPE_AND_SPECIAL_TRADE_INDICATOR_PLUS_EXECUTION_TIME' />
+   <value enum='AQ' description='COMPARED_RECORDS_RESULTING_FROM_STAMPED_ADVISORIES_OR_SPECIALIST_ACCEPTS_PAIR_OFFS' />
+   <value enum='S1' description='SUMMARIZED_MATCH_USING_A1_EXACT_MATCH_CRITERIA_EXCEPT_QUANTITY_IS_SUMMARIED' />
+   <value enum='S2' description='SUMMARIZED_MATCH_USING_A2_EXACT_MATCH_CRITERIA_EXCEPT_QUANTITY_IS_SUMMARIZED' />
+   <value enum='S3' description='SUMMARIZED_MATCH_USING_A3_EXACT_MATCH_CRITERIA_EXCEPT_QUANTITY_IS_SUMMARIZED' />
+   <value enum='S4' description='SUMMARIZED_MATCH_USING_A4_EXACT_MATCH_CRITERIA_EXCEPT_QUANTITY_IS_SUMMARIZED' />
+   <value enum='S5' description='SUMMARIZED_MATCH_USING_A5_EXACT_MATCH_CRITERIA_EXCEPT_QUANTITY_IS_SUMMARIZED' />
+   <value enum='M1' description='EXACT_MATCH_ON_TRADE_DATE_STOCK_SYMBOL_QUANTITY_PRICE_TRADE_TYPE_AND_SPECIAL_TRADE_INDICATOR_MINUS_BADGES_AND_TIMES_ACT_M1_MATCH' />
+   <value enum='M2' description='SUMMARIZED_MATCH_MINUS_BADGES_AND_TIMES_ACT_M2_MATCH' />
+   <value enum='MT' description='OCS_LOCKED_IN_NON_ACT' />
+  </field>
+  <field number='575' name='OddLot' type='BOOLEAN'>
+   <value enum='N' description='NO' />
+   <value enum='Y' description='YES' />
+  </field>
+  <field number='576' name='NoClearingInstructions' type='NUMINGROUP' />
+  <field number='577' name='ClearingInstruction' type='INT'>
+   <value enum='0' description='PROCESS_NORMALLY' />
+   <value enum='1' description='EXCLUDE_FROM_ALL_NETTING' />
+   <value enum='2' description='BILATERAL_NETTING_ONLY' />
+   <value enum='3' description='EX_CLEARING' />
+   <value enum='4' description='SPECIAL_TRADE' />
+   <value enum='5' description='MULTILATERAL_NETTING' />
+   <value enum='6' description='CLEAR_AGAINST_CENTRAL_COUNTERPARTY' />
+   <value enum='7' description='EXCLUDE_FROM_CENTRAL_COUNTERPARTY' />
+   <value enum='8' description='MANUAL_MODE' />
+   <value enum='9' description='AUTOMATIC_POSTING_MODE' />
+   <value enum='10' description='AUTOMATIC_GIVE_UP_MODE' />
+   <value enum='11' description='QUALIFIED_SERVICE_REPRESENTATIVE_QSR' />
+   <value enum='12' description='CUSTOMER_TRADE' />
+   <value enum='13' description='SELF_CLEARING' />
+  </field>
+  <field number='578' name='TradeInputSource' type='STRING' />
+  <field number='579' name='TradeInputDevice' type='STRING' />
+  <field number='580' name='NoDates' type='NUMINGROUP' />
+  <field number='581' name='AccountType' type='INT'>
+   <value enum='1' description='ACCOUNT_IS_CARRIED_ON_CUSTOMER_SIDE_OF_THE_BOOKS' />
+   <value enum='2' description='ACCOUNT_IS_CARRIED_ON_NON_CUSTOMER_SIDE_OF_BOOKS' />
+   <value enum='3' description='HOUSE_TRADER' />
+   <value enum='4' description='FLOOR_TRADER' />
+   <value enum='6' description='ACCOUNT_IS_CARRIED_ON_NON_CUSTOMER_SIDE_OF_BOOKS_AND_IS_CROSS_MARGINED' />
+   <value enum='7' description='ACCOUNT_IS_HOUSE_TRADER_AND_IS_CROSS_MARGINED' />
+   <value enum='8' description='JOINT_BACK_OFFICE_ACCOUNT' />
+  </field>
+  <field number='582' name='CustOrderCapacity' type='INT'>
+   <value enum='1' description='MEMBER_TRADING_FOR_THEIR_OWN_ACCOUNT' />
+   <value enum='2' description='CLEARING_FIRM_TRADING_FOR_ITS_PROPRIETARY_ACCOUNT' />
+   <value enum='3' description='MEMBER_TRADING_FOR_ANOTHER_MEMBER' />
+   <value enum='4' description='ALL_OTHER' />
+  </field>
+  <field number='583' name='ClOrdLinkID' type='STRING' />
+  <field number='584' name='MassStatusReqID' type='STRING' />
+  <field number='585' name='MassStatusReqType' type='INT'>
+   <value enum='1' description='STATUS_FOR_ORDERS_FOR_A_SECURITY' />
+   <value enum='2' description='STATUS_FOR_ORDERS_FOR_AN_UNDERLYING_SECURITY' />
+   <value enum='3' description='STATUS_FOR_ORDERS_FOR_A_PRODUCT' />
+   <value enum='4' description='STATUS_FOR_ORDERS_FOR_A_CFICODE' />
+   <value enum='5' description='STATUS_FOR_ORDERS_FOR_A_SECURITYTYPE' />
+   <value enum='6' description='STATUS_FOR_ORDERS_FOR_A_TRADING_SESSION' />
+   <value enum='7' description='STATUS_FOR_ALL_ORDERS' />
+   <value enum='8' description='STATUS_FOR_ORDERS_FOR_A_PARTYID' />
+  </field>
+  <field number='586' name='OrigOrdModTime' type='UTCTIMESTAMP' />
+  <field number='587' name='LegSettlType' type='CHAR' />
+  <field number='588' name='LegSettlDate' type='LOCALMKTDATE' />
+  <field number='589' name='DayBookingInst' type='CHAR'>
+   <value enum='0' description='CAN_TRIGGER_BOOKING_WITHOUT_REFERENCE_TO_THE_ORDER_INITIATOR' />
+   <value enum='1' description='SPEAK_WITH_ORDER_INITIATOR_BEFORE_BOOKING' />
+   <value enum='2' description='ACCUMULATE' />
+  </field>
+  <field number='590' name='BookingUnit' type='CHAR'>
+   <value enum='0' description='EACH_PARTIAL_EXECUTION_IS_A_BOOKABLE_UNIT' />
+   <value enum='1' description='AGGREGATE_PARTIAL_EXECUTIONS_ON_THIS_ORDER_AND_BOOK_ONE_TRADE_PER_ORDER' />
+   <value enum='2' description='AGGREGATE_EXECUTIONS_FOR_THIS_SYMBOL_SIDE_AND_SETTLEMENT_DATE' />
+  </field>
+  <field number='591' name='PreallocMethod' type='CHAR'>
+   <value enum='0' description='PRO_RATA' />
+   <value enum='1' description='DO_NOT_PRO_RATA' />
+  </field>
+  <field number='592' name='UnderlyingCountryOfIssue' type='COUNTRY' />
+  <field number='593' name='UnderlyingStateOrProvinceOfIssue' type='STRING' />
+  <field number='594' name='UnderlyingLocaleOfIssue' type='STRING' />
+  <field number='595' name='UnderlyingInstrRegistry' type='STRING' />
+  <field number='596' name='LegCountryOfIssue' type='COUNTRY' />
+  <field number='597' name='LegStateOrProvinceOfIssue' type='STRING' />
+  <field number='598' name='LegLocaleOfIssue' type='STRING' />
+  <field number='599' name='LegInstrRegistry' type='STRING' />
+  <field number='600' name='LegSymbol' type='STRING' />
+  <field number='601' name='LegSymbolSfx' type='STRING' />
+  <field number='602' name='LegSecurityID' type='STRING' />
+  <field number='603' name='LegSecurityIDSource' type='STRING' />
+  <field number='604' name='NoLegSecurityAltID' type='NUMINGROUP' />
+  <field number='605' name='LegSecurityAltID' type='STRING' />
+  <field number='606' name='LegSecurityAltIDSource' type='STRING' />
+  <field number='607' name='LegProduct' type='INT' />
+  <field number='608' name='LegCFICode' type='STRING' />
+  <field number='609' name='LegSecurityType' type='STRING' />
+  <field number='610' name='LegMaturityMonthYear' type='MONTHYEAR' />
+  <field number='611' name='LegMaturityDate' type='LOCALMKTDATE' />
+  <field number='612' name='LegStrikePrice' type='PRICE' />
+  <field number='613' name='LegOptAttribute' type='CHAR' />
+  <field number='614' name='LegContractMultiplier' type='FLOAT' />
+  <field number='615' name='LegCouponRate' type='PERCENTAGE' />
+  <field number='616' name='LegSecurityExchange' type='EXCHANGE' />
+  <field number='617' name='LegIssuer' type='STRING' />
+  <field number='618' name='EncodedLegIssuerLen' type='LENGTH' />
+  <field number='619' name='EncodedLegIssuer' type='DATA' />
+  <field number='620' name='LegSecurityDesc' type='STRING' />
+  <field number='621' name='EncodedLegSecurityDescLen' type='LENGTH' />
+  <field number='622' name='EncodedLegSecurityDesc' type='DATA' />
+  <field number='623' name='LegRatioQty' type='FLOAT' />
+  <field number='624' name='LegSide' type='CHAR' />
+  <field number='625' name='TradingSessionSubID' type='STRING'>
+   <value enum='1' description='PRE_TRADING' />
+   <value enum='2' description='OPENING_OR_OPENING_AUCTION' />
+   <value enum='3' description='3' />
+   <value enum='4' description='CLOSING_OR_CLOSING_AUCTION' />
+   <value enum='5' description='POST_TRADING' />
+   <value enum='6' description='INTRADAY_AUCTION' />
+   <value enum='7' description='QUIESCENT' />
+  </field>
+  <field number='626' name='AllocType' type='INT'>
+   <value enum='1' description='CALCULATED' />
+   <value enum='2' description='PRELIMINARY' />
+   <value enum='3' description='SELLSIDE_CALCULATED_USING_PRELIMINARY' />
+   <value enum='4' description='SELLSIDE_CALCULATED_WITHOUT_PRELIMINARY' />
+   <value enum='5' description='READY_TO_BOOK' />
+   <value enum='6' description='BUYSIDE_READY_TO_BOOK' />
+   <value enum='7' description='WAREHOUSE_INSTRUCTION' />
+   <value enum='8' description='REQUEST_TO_INTERMEDIARY' />
+   <value enum='9' description='ACCEPT' />
+   <value enum='10' description='REJECT' />
+   <value enum='11' description='ACCEPT_PENDING' />
+   <value enum='12' description='INCOMPLETE_GROUP' />
+   <value enum='13' description='COMPLETE_GROUP' />
+   <value enum='14' description='REVERSAL_PENDING' />
+  </field>
+  <field number='627' name='NoHops' type='NUMINGROUP' />
+  <field number='628' name='HopCompID' type='STRING' />
+  <field number='629' name='HopSendingTime' type='UTCTIMESTAMP' />
+  <field number='630' name='HopRefID' type='SEQNUM' />
+  <field number='631' name='MidPx' type='PRICE' />
+  <field number='632' name='BidYield' type='PERCENTAGE' />
+  <field number='633' name='MidYield' type='PERCENTAGE' />
+  <field number='634' name='OfferYield' type='PERCENTAGE' />
+  <field number='635' name='ClearingFeeIndicator' type='STRING'>
+   <value enum='1' description='1ST_YEAR_DELEGATE_TRADING_FOR_OWN_ACCOUNT' />
+   <value enum='2' description='2ND_YEAR_DELEGATE_TRADING_FOR_OWN_ACCOUNT' />
+   <value enum='3' description='3RD_YEAR_DELEGATE_TRADING_FOR_OWN_ACCOUNT' />
+   <value enum='4' description='4TH_YEAR_DELEGATE_TRADING_FOR_OWN_ACCOUNT' />
+   <value enum='5' description='5TH_YEAR_DELEGATE_TRADING_FOR_OWN_ACCOUNT' />
+   <value enum='9' description='6TH_YEAR_DELEGATE_TRADING_FOR_OWN_ACCOUNT' />
+   <value enum='B' description='CBOE_MEMBER' />
+   <value enum='C' description='NON_MEMBER_AND_CUSTOMER' />
+   <value enum='E' description='EQUITY_MEMBER_AND_CLEARING_MEMBER' />
+   <value enum='F' description='FULL_AND_ASSOCIATE_MEMBER_TRADING_FOR_OWN_ACCOUNT_AND_AS_FLOOR_BROKERS' />
+   <value enum='H' description='106H_AND_106J_FIRMS' />
+   <value enum='I' description='GIM_IDEM_AND_COM_MEMBERSHIP_INTEREST_HOLDERS' />
+   <value enum='L' description='LESSEE_106F_EMPLOYEES' />
+   <value enum='M' description='ALL_OTHER_OWNERSHIP_TYPES' />
+  </field>
+  <field number='636' name='WorkingIndicator' type='BOOLEAN'>
+   <value enum='N' description='NO' />
+   <value enum='Y' description='YES' />
+  </field>
+  <field number='637' name='LegLastPx' type='PRICE' />
+  <field number='638' name='PriorityIndicator' type='INT'>
+   <value enum='0' description='PRIORITY_UNCHANGED' />
+   <value enum='1' description='LOST_PRIORITY_AS_RESULT_OF_ORDER_CHANGE' />
+  </field>
+  <field number='639' name='PriceImprovement' type='PRICEOFFSET' />
+  <field number='640' name='Price2' type='PRICE' />
+  <field number='641' name='LastForwardPoints2' type='PRICEOFFSET' />
+  <field number='642' name='BidForwardPoints2' type='PRICEOFFSET' />
+  <field number='643' name='OfferForwardPoints2' type='PRICEOFFSET' />
+  <field number='644' name='RFQReqID' type='STRING' />
+  <field number='645' name='MktBidPx' type='PRICE' />
+  <field number='646' name='MktOfferPx' type='PRICE' />
+  <field number='647' name='MinBidSize' type='QTY' />
+  <field number='648' name='MinOfferSize' type='QTY' />
+  <field number='649' name='QuoteStatusReqID' type='STRING' />
+  <field number='650' name='LegalConfirm' type='BOOLEAN'>
+   <value enum='N' description='NO' />
+   <value enum='Y' description='YES' />
+  </field>
+  <field number='651' name='UnderlyingLastPx' type='PRICE' />
+  <field number='652' name='UnderlyingLastQty' type='QTY' />
+  <field number='654' name='LegRefID' type='STRING' />
+  <field number='655' name='ContraLegRefID' type='STRING' />
+  <field number='656' name='SettlCurrBidFxRate' type='FLOAT' />
+  <field number='657' name='SettlCurrOfferFxRate' type='FLOAT' />
+  <field number='658' name='QuoteRequestRejectReason' type='INT'>
+   <value enum='1' description='UNKNOWN_SYMBOL' />
+   <value enum='2' description='EXCHANGE' />
+   <value enum='3' description='QUOTE_REQUEST_EXCEEDS_LIMIT' />
+   <value enum='4' description='TOO_LATE_TO_ENTER' />
+   <value enum='5' description='INVALID_PRICE' />
+   <value enum='6' description='NOT_AUTHORIZED_TO_REQUEST_QUOTE' />
+   <value enum='7' description='NO_MATCH_FOR_INQUIRY' />
+   <value enum='8' description='NO_MARKET_FOR_INSTRUMENT' />
+   <value enum='9' description='NO_INVENTORY' />
+   <value enum='10' description='PASS' />
+   <value enum='11' description='INSUFFICIENT_CREDIT' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='659' name='SideComplianceID' type='STRING' />
+  <field number='660' name='AcctIDSource' type='INT'>
+   <value enum='1' description='BIC' />
+   <value enum='2' description='SID_CODE' />
+   <value enum='3' description='TFM' />
+   <value enum='4' description='OMGEO' />
+   <value enum='5' description='DTCC_CODE' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='661' name='AllocAcctIDSource' type='INT' />
+  <field number='662' name='BenchmarkPrice' type='PRICE' />
+  <field number='663' name='BenchmarkPriceType' type='INT' />
+  <field number='664' name='ConfirmID' type='STRING' />
+  <field number='665' name='ConfirmStatus' type='INT'>
+   <value enum='1' description='RECEIVED' />
+   <value enum='2' description='MISMATCHED_ACCOUNT' />
+   <value enum='3' description='MISSING_SETTLEMENT_INSTRUCTIONS' />
+   <value enum='4' description='CONFIRMED' />
+   <value enum='5' description='REQUEST_REJECTED' />
+  </field>
+  <field number='666' name='ConfirmTransType' type='INT'>
+   <value enum='0' description='NEW' />
+   <value enum='1' description='REPLACE' />
+   <value enum='2' description='CANCEL' />
+  </field>
+  <field number='667' name='ContractSettlMonth' type='MONTHYEAR' />
+  <field number='668' name='DeliveryForm' type='INT'>
+   <value enum='1' description='BOOK_ENTRY' />
+   <value enum='2' description='BEARER' />
+  </field>
+  <field number='669' name='LastParPx' type='PRICE' />
+  <field number='670' name='NoLegAllocs' type='NUMINGROUP' />
+  <field number='671' name='LegAllocAccount' type='STRING' />
+  <field number='672' name='LegIndividualAllocID' type='STRING' />
+  <field number='673' name='LegAllocQty' type='QTY' />
+  <field number='674' name='LegAllocAcctIDSource' type='STRING' />
+  <field number='675' name='LegSettlCurrency' type='CURRENCY' />
+  <field number='676' name='LegBenchmarkCurveCurrency' type='CURRENCY' />
+  <field number='677' name='LegBenchmarkCurveName' type='STRING' />
+  <field number='678' name='LegBenchmarkCurvePoint' type='STRING' />
+  <field number='679' name='LegBenchmarkPrice' type='PRICE' />
+  <field number='680' name='LegBenchmarkPriceType' type='INT' />
+  <field number='681' name='LegBidPx' type='PRICE' />
+  <field number='682' name='LegIOIQty' type='STRING' />
+  <field number='683' name='NoLegStipulations' type='NUMINGROUP' />
+  <field number='684' name='LegOfferPx' type='PRICE' />
+  <field number='685' name='LegOrderQty' type='QTY' />
+  <field number='686' name='LegPriceType' type='INT' />
+  <field number='687' name='LegQty' type='QTY' />
+  <field number='688' name='LegStipulationType' type='STRING' />
+  <field number='689' name='LegStipulationValue' type='STRING' />
+  <field number='690' name='LegSwapType' type='INT'>
+   <value enum='1' description='PAR_FOR_PAR' />
+   <value enum='2' description='MODIFIED_DURATION' />
+   <value enum='4' description='RISK' />
+   <value enum='5' description='PROCEEDS' />
+  </field>
+  <field number='691' name='Pool' type='STRING' />
+  <field number='692' name='QuotePriceType' type='INT'>
+   <value enum='1' description='PERCENT' />
+   <value enum='2' description='PER_SHARE' />
+   <value enum='3' description='FIXED_AMOUNT' />
+   <value enum='4' description='DISCOUNT' />
+   <value enum='5' description='PREMIUM' />
+   <value enum='6' description='SPREAD' />
+   <value enum='7' description='TED_PRICE' />
+   <value enum='8' description='TED_YIELD' />
+   <value enum='9' description='YIELD_SPREAD' />
+   <value enum='10' description='YIELD' />
+  </field>
+  <field number='693' name='QuoteRespID' type='STRING' />
+  <field number='694' name='QuoteRespType' type='INT'>
+   <value enum='1' description='HIT_LIFT' />
+   <value enum='2' description='COUNTER' />
+   <value enum='3' description='EXPIRED' />
+   <value enum='4' description='COVER' />
+   <value enum='5' description='DONE_AWAY' />
+   <value enum='6' description='PASS' />
+   <value enum='7' description='END_TRADE' />
+   <value enum='8' description='TIMED_OUT' />
+  </field>
+  <field number='695' name='QuoteQualifier' type='CHAR' />
+  <field number='696' name='YieldRedemptionDate' type='LOCALMKTDATE' />
+  <field number='697' name='YieldRedemptionPrice' type='PRICE' />
+  <field number='698' name='YieldRedemptionPriceType' type='INT' />
+  <field number='699' name='BenchmarkSecurityID' type='STRING' />
+  <field number='700' name='ReversalIndicator' type='BOOLEAN' />
+  <field number='701' name='YieldCalcDate' type='LOCALMKTDATE' />
+  <field number='702' name='NoPositions' type='NUMINGROUP' />
+  <field number='703' name='PosType' type='STRING'>
+   <value enum='ALC' description='ALLOCATION_TRADE_QTY' />
+   <value enum='AS' description='OPTION_ASSIGNMENT' />
+   <value enum='ASF' description='AS_OF_TRADE_QTY' />
+   <value enum='DLV' description='DELIVERY_QTY' />
+   <value enum='ETR' description='ELECTRONIC_TRADE_QTY' />
+   <value enum='EX' description='OPTION_EXERCISE_QTY' />
+   <value enum='FIN' description='END_OF_DAY_QTY' />
+   <value enum='IAS' description='INTRA_SPREAD_QTY' />
+   <value enum='IES' description='INTER_SPREAD_QTY' />
+   <value enum='PA' description='ADJUSTMENT_QTY' />
+   <value enum='PIT' description='PIT_TRADE_QTY' />
+   <value enum='SOD' description='START_OF_DAY_QTY' />
+   <value enum='SPL' description='INTEGRAL_SPLIT' />
+   <value enum='TA' description='TRANSACTION_FROM_ASSIGNMENT' />
+   <value enum='TOT' description='TOTAL_TRANSACTION_QTY' />
+   <value enum='TQ' description='TRANSACTION_QUANTITY' />
+   <value enum='TRF' description='TRANSFER_TRADE_QTY' />
+   <value enum='TX' description='TRANSACTION_FROM_EXERCISE' />
+   <value enum='XM' description='CROSS_MARGIN_QTY' />
+   <value enum='RCV' description='RECEIVE_QUANTITY' />
+   <value enum='CAA' description='CORPORATE_ACTION_ADJUSTMENT' />
+   <value enum='DN' description='DELIVERY_NOTICE_QTY' />
+   <value enum='EP' description='EXCHANGE_FOR_PHYSICAL_QTY' />
+   <value enum='PNTN' description='PRIVATELY_NEGOTIATED_TRADE_QTY' />
+  </field>
+  <field number='704' name='LongQty' type='QTY' />
+  <field number='705' name='ShortQty' type='QTY' />
+  <field number='706' name='PosQtyStatus' type='INT'>
+   <value enum='0' description='SUBMITTED' />
+   <value enum='1' description='ACCEPTED' />
+   <value enum='2' description='REJECTED' />
+  </field>
+  <field number='707' name='PosAmtType' type='STRING'>
+   <value enum='CASH' description='CASH_AMOUNT' />
+   <value enum='CRES' description='CASH_RESIDUAL_AMOUNT' />
+   <value enum='FMTM' description='FINAL_MARK_TO_MARKET_AMOUNT' />
+   <value enum='IMTM' description='INCREMENTAL_MARK_TO_MARKET_AMOUNT' />
+   <value enum='PREM' description='PREMIUM_AMOUNT' />
+   <value enum='SMTM' description='START_OF_DAY_MARK_TO_MARKET_AMOUNT' />
+   <value enum='TVAR' description='TRADE_VARIATION_AMOUNT' />
+   <value enum='VADJ' description='VALUE_ADJUSTED_AMOUNT' />
+   <value enum='SETL' description='SETTLEMENT_VALUE' />
+  </field>
+  <field number='708' name='PosAmt' type='AMT' />
+  <field number='709' name='PosTransType' type='INT'>
+   <value enum='1' description='EXERCISE' />
+   <value enum='2' description='DO_NOT_EXERCISE' />
+   <value enum='3' description='POSITION_ADJUSTMENT' />
+   <value enum='4' description='POSITION_CHANGE_SUBMISSION_MARGIN_DISPOSITION' />
+   <value enum='5' description='PLEDGE' />
+   <value enum='6' description='LARGE_TRADER_SUBMISSION' />
+  </field>
+  <field number='710' name='PosReqID' type='STRING' />
+  <field number='711' name='NoUnderlyings' type='NUMINGROUP' />
+  <field number='712' name='PosMaintAction' type='INT'>
+   <value enum='1' description='NEW' />
+   <value enum='2' description='REPLACE' />
+   <value enum='3' description='CANCEL' />
+   <value enum='4' description='REVERSE' />
+  </field>
+  <field number='713' name='OrigPosReqRefID' type='STRING' />
+  <field number='714' name='PosMaintRptRefID' type='STRING' />
+  <field number='715' name='ClearingBusinessDate' type='LOCALMKTDATE' />
+  <field number='716' name='SettlSessID' type='STRING'>
+   <value enum='ITD' description='INTRADAY' />
+   <value enum='RTH' description='REGULAR_TRADING_HOURS' />
+   <value enum='ETH' description='ELECTRONIC_TRADING_HOURS' />
+   <value enum='EOD' description='END_OF_DAY' />
+  </field>
+  <field number='717' name='SettlSessSubID' type='STRING' />
+  <field number='718' name='AdjustmentType' type='INT'>
+   <value enum='0' description='PROCESS_REQUEST_AS_MARGIN_DISPOSITION' />
+   <value enum='1' description='DELTA_PLUS' />
+   <value enum='2' description='DELTA_MINUS' />
+   <value enum='3' description='FINAL' />
+  </field>
+  <field number='719' name='ContraryInstructionIndicator' type='BOOLEAN' />
+  <field number='720' name='PriorSpreadIndicator' type='BOOLEAN' />
+  <field number='721' name='PosMaintRptID' type='STRING' />
+  <field number='722' name='PosMaintStatus' type='INT'>
+   <value enum='0' description='ACCEPTED' />
+   <value enum='1' description='ACCEPTED_WITH_WARNINGS' />
+   <value enum='2' description='REJECTED' />
+   <value enum='3' description='COMPLETED' />
+   <value enum='4' description='COMPLETED_WITH_WARNINGS' />
+  </field>
+  <field number='723' name='PosMaintResult' type='INT'>
+   <value enum='0' description='SUCCESSFUL_COMPLETION' />
+   <value enum='1' description='REJECTED' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='724' name='PosReqType' type='INT'>
+   <value enum='0' description='POSITIONS' />
+   <value enum='1' description='TRADES' />
+   <value enum='2' description='EXERCISES' />
+   <value enum='3' description='ASSIGNMENTS' />
+   <value enum='4' description='SETTLEMENT_ACTIVITY' />
+   <value enum='5' description='BACKOUT_MESSAGE' />
+  </field>
+  <field number='725' name='ResponseTransportType' type='INT'>
+   <value enum='0' description='INBAND' />
+   <value enum='1' description='OUT_OF_BAND' />
+  </field>
+  <field number='726' name='ResponseDestination' type='STRING' />
+  <field number='727' name='TotalNumPosReports' type='INT' />
+  <field number='728' name='PosReqResult' type='INT'>
+   <value enum='0' description='VALID_REQUEST' />
+   <value enum='1' description='INVALID_OR_UNSUPPORTED_REQUEST' />
+   <value enum='2' description='NO_POSITIONS_FOUND_THAT_MATCH_CRITERIA' />
+   <value enum='3' description='NOT_AUTHORIZED_TO_REQUEST_POSITIONS' />
+   <value enum='4' description='REQUEST_FOR_POSITION_NOT_SUPPORTED' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='729' name='PosReqStatus' type='INT'>
+   <value enum='0' description='COMPLETED' />
+   <value enum='1' description='COMPLETED_WITH_WARNINGS' />
+   <value enum='2' description='REJECTED' />
+  </field>
+  <field number='730' name='SettlPrice' type='PRICE' />
+  <field number='731' name='SettlPriceType' type='INT'>
+   <value enum='1' description='FINAL' />
+   <value enum='2' description='THEORETICAL' />
+  </field>
+  <field number='732' name='UnderlyingSettlPrice' type='PRICE' />
+  <field number='733' name='UnderlyingSettlPriceType' type='INT' />
+  <field number='734' name='PriorSettlPrice' type='PRICE' />
+  <field number='735' name='NoQuoteQualifiers' type='NUMINGROUP' />
+  <field number='736' name='AllocSettlCurrency' type='CURRENCY' />
+  <field number='737' name='AllocSettlCurrAmt' type='AMT' />
+  <field number='738' name='InterestAtMaturity' type='AMT' />
+  <field number='739' name='LegDatedDate' type='LOCALMKTDATE' />
+  <field number='740' name='LegPool' type='STRING' />
+  <field number='741' name='AllocInterestAtMaturity' type='AMT' />
+  <field number='742' name='AllocAccruedInterestAmt' type='AMT' />
+  <field number='743' name='DeliveryDate' type='LOCALMKTDATE' />
+  <field number='744' name='AssignmentMethod' type='CHAR'>
+   <value enum='P' description='PRO_RATA' />
+   <value enum='R' description='RANDOM' />
+  </field>
+  <field number='745' name='AssignmentUnit' type='QTY' />
+  <field number='746' name='OpenInterest' type='AMT' />
+  <field number='747' name='ExerciseMethod' type='CHAR'>
+   <value enum='A' description='AUTOMATIC' />
+   <value enum='M' description='MANUAL' />
+  </field>
+  <field number='748' name='TotNumTradeReports' type='INT' />
+  <field number='749' name='TradeRequestResult' type='INT'>
+   <value enum='0' description='SUCCESSFUL' />
+   <value enum='1' description='INVALID_OR_UNKNOWN_INSTRUMENT' />
+   <value enum='2' description='INVALID_TYPE_OF_TRADE_REQUESTED' />
+   <value enum='3' description='INVALID_PARTIES' />
+   <value enum='4' description='INVALID_TRANSPORT_TYPE_REQUESTED' />
+   <value enum='5' description='INVALID_DESTINATION_REQUESTED' />
+   <value enum='8' description='TRADEREQUESTTYPE_NOT_SUPPORTED' />
+   <value enum='9' description='NOT_AUTHORIZED' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='750' name='TradeRequestStatus' type='INT'>
+   <value enum='0' description='ACCEPTED' />
+   <value enum='1' description='COMPLETED' />
+   <value enum='2' description='REJECTED' />
+  </field>
+  <field number='751' name='TradeReportRejectReason' type='INT'>
+   <value enum='0' description='SUCCESSFUL' />
+   <value enum='1' description='INVALID_PARTY_ONFORMATION' />
+   <value enum='2' description='UNKNOWN_INSTRUMENT' />
+   <value enum='3' description='UNAUTHORIZED_TO_REPORT_TRADES' />
+   <value enum='4' description='INVALID_TRADE_TYPE' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='752' name='SideMultiLegReportingType' type='INT'>
+   <value enum='1' description='SINGLE_SECURITY' />
+   <value enum='2' description='INDIVIDUAL_LEG_OF_A_MULTILEG_SECURITY' />
+   <value enum='3' description='MULTILEG_SECURITY' />
+  </field>
+  <field number='753' name='NoPosAmt' type='NUMINGROUP' />
+  <field number='754' name='AutoAcceptIndicator' type='BOOLEAN' />
+  <field number='755' name='AllocReportID' type='STRING' />
+  <field number='756' name='NoNested2PartyIDs' type='NUMINGROUP' />
+  <field number='757' name='Nested2PartyID' type='STRING' />
+  <field number='758' name='Nested2PartyIDSource' type='CHAR' />
+  <field number='759' name='Nested2PartyRole' type='INT' />
+  <field number='760' name='Nested2PartySubID' type='STRING' />
+  <field number='761' name='BenchmarkSecurityIDSource' type='STRING' />
+  <field number='762' name='SecuritySubType' type='STRING' />
+  <field number='763' name='UnderlyingSecuritySubType' type='STRING' />
+  <field number='764' name='LegSecuritySubType' type='STRING' />
+  <field number='765' name='AllowableOneSidednessPct' type='PERCENTAGE' />
+  <field number='766' name='AllowableOneSidednessValue' type='AMT' />
+  <field number='767' name='AllowableOneSidednessCurr' type='CURRENCY' />
+  <field number='768' name='NoTrdRegTimestamps' type='NUMINGROUP' />
+  <field number='769' name='TrdRegTimestamp' type='UTCTIMESTAMP' />
+  <field number='770' name='TrdRegTimestampType' type='INT'>
+   <value enum='1' description='EXECUTION_TIME' />
+   <value enum='2' description='TIME_IN' />
+   <value enum='3' description='TIME_OUT' />
+   <value enum='4' description='BROKER_RECEIPT' />
+   <value enum='5' description='BROKER_EXECUTION' />
+   <value enum='6' description='DESK_RECEIPT' />
+  </field>
+  <field number='771' name='TrdRegTimestampOrigin' type='STRING' />
+  <field number='772' name='ConfirmRefID' type='STRING' />
+  <field number='773' name='ConfirmType' type='INT'>
+   <value enum='1' description='STATUS' />
+   <value enum='2' description='CONFIRMATION' />
+   <value enum='3' description='CONFIRMATION_REQUEST_REJECTED' />
+  </field>
+  <field number='774' name='ConfirmRejReason' type='INT'>
+   <value enum='1' description='MISMATCHED_ACCOUNT' />
+   <value enum='2' description='MISSING_SETTLEMENT_INSTRUCTIONS' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='775' name='BookingType' type='INT'>
+   <value enum='0' description='REGULAR_BOOKING' />
+   <value enum='1' description='CFD' />
+   <value enum='2' description='TOTAL_RETURN_SWAP' />
+  </field>
+  <field number='776' name='IndividualAllocRejCode' type='INT' />
+  <field number='777' name='SettlInstMsgID' type='STRING' />
+  <field number='778' name='NoSettlInst' type='NUMINGROUP' />
+  <field number='779' name='LastUpdateTime' type='UTCTIMESTAMP' />
+  <field number='780' name='AllocSettlInstType' type='INT'>
+   <value enum='0' description='USE_DEFAULT_INSTRUCTIONS' />
+   <value enum='1' description='DERIVE_FROM_PARAMETERS_PROVIDED' />
+   <value enum='2' description='FULL_DETAILS_PROVIDED' />
+   <value enum='3' description='SSI_DB_IDS_PROVIDED' />
+   <value enum='4' description='PHONE_FOR_INSTRUCTIONS' />
+  </field>
+  <field number='781' name='NoSettlPartyIDs' type='NUMINGROUP' />
+  <field number='782' name='SettlPartyID' type='STRING' />
+  <field number='783' name='SettlPartyIDSource' type='CHAR' />
+  <field number='784' name='SettlPartyRole' type='INT' />
+  <field number='785' name='SettlPartySubID' type='STRING' />
+  <field number='786' name='SettlPartySubIDType' type='INT' />
+  <field number='787' name='DlvyInstType' type='CHAR'>
+   <value enum='C' description='CASH' />
+   <value enum='S' description='SECURITIES' />
+  </field>
+  <field number='788' name='TerminationType' type='INT'>
+   <value enum='1' description='OVERNIGHT' />
+   <value enum='2' description='TERM' />
+   <value enum='3' description='FLEXIBLE' />
+   <value enum='4' description='OPEN' />
+  </field>
+  <field number='789' name='NextExpectedMsgSeqNum' type='SEQNUM' />
+  <field number='790' name='OrdStatusReqID' type='STRING' />
+  <field number='791' name='SettlInstReqID' type='STRING' />
+  <field number='792' name='SettlInstReqRejCode' type='INT'>
+   <value enum='0' description='UNABLE_TO_PROCESS_REQUEST' />
+   <value enum='1' description='UNKNOWN_ACCOUNT' />
+   <value enum='2' description='NO_MATCHING_SETTLEMENT_INSTRUCTIONS_FOUND' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='793' name='SecondaryAllocID' type='STRING' />
+  <field number='794' name='AllocReportType' type='INT'>
+   <value enum='2' description='PRELIMINARY_REQUEST_TO_INTERMEDIARY' />
+   <value enum='3' description='SELLSIDE_CALCULATED_USING_PRELIMINARY' />
+   <value enum='4' description='SELLSIDE_CALCULATED_WITHOUT_PRELIMINARY' />
+   <value enum='5' description='WAREHOUSE_RECAP' />
+   <value enum='8' description='REQUEST_TO_INTERMEDIARY' />
+   <value enum='9' description='ACCEPT' />
+   <value enum='10' description='REJECT' />
+   <value enum='11' description='ACCEPT_PENDING' />
+   <value enum='12' description='COMPLETE' />
+   <value enum='14' description='REVERSE_PENDING' />
+  </field>
+  <field number='795' name='AllocReportRefID' type='STRING' />
+  <field number='796' name='AllocCancReplaceReason' type='INT'>
+   <value enum='1' description='ORIGINAL_DETAILS_INCOMPLETE_INCORRECT' />
+   <value enum='2' description='CHANGE_IN_UNDERLYING_ORDER_DETAILS' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='797' name='CopyMsgIndicator' type='BOOLEAN' />
+  <field number='798' name='AllocAccountType' type='INT'>
+   <value enum='1' description='ACCOUNT_IS_CARRIED_PN_CUSTOMER_SIDE_OF_BOOKS' />
+   <value enum='2' description='ACCOUNT_IS_CARRIED_ON_NON_CUSTOMER_SIDE_OF_BOOKS' />
+   <value enum='3' description='HOUSE_TRADER' />
+   <value enum='4' description='FLOOR_TRADER' />
+   <value enum='6' description='ACCOUNT_IS_CARRIED_ON_NON_CUSTOMER_SIDE_OF_BOOKS_AND_IS_CROSS_MARGINED' />
+   <value enum='7' description='ACCOUNT_IS_HOUSE_TRADER_AND_IS_CROSS_MARGINED' />
+   <value enum='8' description='JOINT_BACK_OFFICE_ACCOUNT' />
+  </field>
+  <field number='799' name='OrderAvgPx' type='PRICE' />
+  <field number='800' name='OrderBookingQty' type='QTY' />
+  <field number='801' name='NoSettlPartySubIDs' type='NUMINGROUP' />
+  <field number='802' name='NoPartySubIDs' type='NUMINGROUP' />
+  <field number='803' name='PartySubIDType' type='INT'>
+   <value enum='1' description='FIRM' />
+   <value enum='2' description='PERSON' />
+   <value enum='3' description='SYSTEM' />
+   <value enum='4' description='APPLICATION' />
+   <value enum='5' description='FULL_LEGAL_NAME_OF_FIRM' />
+   <value enum='6' description='POSTAL_ADDRESS' />
+   <value enum='7' description='PHONE_NUMBER' />
+   <value enum='8' description='EMAIL_ADDRESS' />
+   <value enum='9' description='CONTACT_NAME' />
+   <value enum='10' description='SECURITIES_ACCOUNT_NUMBER' />
+   <value enum='11' description='REGISTRATION_NUMBER' />
+   <value enum='12' description='REGISTERED_ADDRESS_12' />
+   <value enum='13' description='REGULATORY_STATUS' />
+   <value enum='14' description='REGISTRATION_NAME' />
+   <value enum='15' description='CASH_ACCOUNT_NUMBER' />
+   <value enum='16' description='BIC' />
+   <value enum='17' description='CSD_PARTICIPANT_MEMBER_CODE' />
+   <value enum='18' description='REGISTERED_ADDRESS_18' />
+   <value enum='19' description='FUND_ACCOUNT_NAME' />
+   <value enum='20' description='TELEX_NUMBER' />
+   <value enum='21' description='FAX_NUMBER' />
+   <value enum='22' description='SECURITIES_ACCOUNT_NAME' />
+   <value enum='23' description='CASH_ACCOUNT_NAME' />
+   <value enum='24' description='DEPARTMENT' />
+   <value enum='25' description='LOCATION_DESK' />
+   <value enum='26' description='POSITION_ACCOUNT_TYPE' />
+   <value enum='27' description='SECURITY_LOCATE_ID' />
+   <value enum='28' description='MARKET_MAKER' />
+   <value enum='29' description='ELIGIBLE_COUNTERPARTY' />
+   <value enum='30' description='PROFESSIONAL_CLIENT' />
+   <value enum='31' description='LOCATION' />
+   <value enum='32' description='EXECUTION_VENUE' />
+   <value enum='33' description='CURRENCY_DELIVERY_IDENTIFIER' />
+  </field>
+  <field number='804' name='NoNestedPartySubIDs' type='NUMINGROUP' />
+  <field number='805' name='NestedPartySubIDType' type='INT' />
+  <field number='806' name='NoNested2PartySubIDs' type='NUMINGROUP' />
+  <field number='807' name='Nested2PartySubIDType' type='INT' />
+  <field number='808' name='AllocIntermedReqType' type='INT'>
+   <value enum='1' description='PENDING_ACCEPT' />
+   <value enum='2' description='PENDING_RELEASE' />
+   <value enum='3' description='PENDING_REVERSAL' />
+   <value enum='4' description='ACCEPT' />
+   <value enum='5' description='BLOCK_LEVEL_REJECT' />
+   <value enum='6' description='ACCOUNT_LEVEL_REJECT' />
+  </field>
+  <field number='810' name='UnderlyingPx' type='PRICE' />
+  <field number='811' name='PriceDelta' type='FLOAT' />
+  <field number='812' name='ApplQueueMax' type='INT' />
+  <field number='813' name='ApplQueueDepth' type='INT' />
+  <field number='814' name='ApplQueueResolution' type='INT'>
+   <value enum='0' description='NO_ACTION_TAKEN' />
+   <value enum='1' description='QUEUE_FLUSHED' />
+   <value enum='2' description='OVERLAY_LAST' />
+   <value enum='3' description='END_SESSION' />
+  </field>
+  <field number='815' name='ApplQueueAction' type='INT'>
+   <value enum='0' description='NO_ACTION_TAKEN' />
+   <value enum='1' description='QUEUE_FLUSHED' />
+   <value enum='2' description='OVERLAY_LAST' />
+   <value enum='3' description='END_SESSION' />
+  </field>
+  <field number='816' name='NoAltMDSource' type='NUMINGROUP' />
+  <field number='817' name='AltMDSourceID' type='STRING' />
+  <field number='818' name='SecondaryTradeReportID' type='STRING' />
+  <field number='819' name='AvgPxIndicator' type='INT'>
+   <value enum='0' description='NO_AVERAGE_PRICING' />
+   <value enum='1' description='TRADE_IS_PART_OF_AN_AVERAGE_PRICE_GROUP_IDENTIFIED_BY_THE_TRADELINKID' />
+   <value enum='2' description='LAST_TRADE_IS_THE_AVERAGE_PRICE_GROUP_IDENTIFIED_BY_THE_TRADELINKID' />
+  </field>
+  <field number='820' name='TradeLinkID' type='STRING' />
+  <field number='821' name='OrderInputDevice' type='STRING' />
+  <field number='822' name='UnderlyingTradingSessionID' type='STRING' />
+  <field number='823' name='UnderlyingTradingSessionSubID' type='STRING' />
+  <field number='824' name='TradeLegRefID' type='STRING' />
+  <field number='825' name='ExchangeRule' type='STRING' />
+  <field number='826' name='TradeAllocIndicator' type='INT'>
+   <value enum='0' description='ALLOCATION_NOT_REQUIRED' />
+   <value enum='1' description='ALLOCATION_REQUIRED' />
+   <value enum='2' description='USE_ALLOCATION_PROVIDED_WITH_THE_TRADE' />
+   <value enum='3' description='ALLOCATION_GIVE_UP_EXECUTOR' />
+   <value enum='4' description='ALLOCATION_FROM_EXECUTOR' />
+   <value enum='5' description='ALLOCATION_TO_CLAIM_ACCOUNT' />
+  </field>
+  <field number='827' name='ExpirationCycle' type='INT'>
+   <value enum='0' description='EXPIRE_ON_TRADING_SESSION_CLOSE' />
+   <value enum='1' description='EXPIRE_ON_TRADING_SESSION_OPEN' />
+   <value enum='2' description='TRADING_ELIGIBILITY_EXPIRATION_SPECIFIED_IN_THE_DATE_AND_TIME_FIELDS_EVENTDATE' />
+  </field>
+  <field number='828' name='TrdType' type='INT'>
+   <value enum='0' description='REGULAR_TRADE' />
+   <value enum='1' description='BLOCK_TRADE_1' />
+   <value enum='2' description='EFP' />
+   <value enum='3' description='TRANSFER' />
+   <value enum='4' description='LATE_TRADE' />
+   <value enum='5' description='T_TRADE' />
+   <value enum='6' description='WEIGHTED_AVERAGE_PRICE_TRADE' />
+   <value enum='7' description='BUNCHED_TRADE' />
+   <value enum='8' description='LATE_BUNCHED_TRADE' />
+   <value enum='9' description='PRIOR_REFERENCE_PRICE_TRADE' />
+   <value enum='10' description='AFTER_HOURS_TRADE' />
+   <value enum='11' description='EXCHANGE_FOR_RISK' />
+   <value enum='12' description='EXCHANGE_FOR_SWAP' />
+   <value enum='13' description='EXCHANGE_OF_FUTURES_FOR' />
+   <value enum='14' description='EXCHANGE_OF_OPTIONS_FOR_OPTIONS' />
+   <value enum='15' description='TRADING_AT_SETTLEMENT' />
+   <value enum='16' description='ALL_OR_NONE' />
+   <value enum='17' description='FUTURES_LARGE_ORDER_EXECUTION' />
+   <value enum='18' description='EXCHANGE_OF_FUTURES_FOR_FUTURES' />
+   <value enum='19' description='OPTION_INTERIM_TRADE' />
+   <value enum='20' description='OPTION_CABINET_TRADE' />
+   <value enum='22' description='PRIVATELY_NEGOTIATED_TRADES' />
+   <value enum='23' description='SUBSTITUTION_OF_FUTURES_FOR_FORWARDS' />
+   <value enum='48' description='NON_STANDARD_SETTLEMENT' />
+   <value enum='49' description='DERIVATIVE_RELATED_TRANSACTION' />
+   <value enum='50' description='PORTFOLIO_TRADE' />
+   <value enum='51' description='VOLUME_WEIGHTED_AVERAGE_TRADE' />
+   <value enum='52' description='EXCHANGE_GRANTED_TRADE' />
+   <value enum='53' description='REPURCHASE_AGREEMENT' />
+   <value enum='54' description='OTC' />
+   <value enum='55' description='EXCHANGE_BASIS_FACILITY' />
+   <value enum='24' description='ERROR_TRADE' />
+   <value enum='25' description='SPECIAL_CUM_DIVIDEND' />
+   <value enum='26' description='SPECIAL_EX_DIVIDEND' />
+   <value enum='27' description='SPECIAL_CUM_COUPON' />
+   <value enum='28' description='SPECIAL_EX_COUPON' />
+   <value enum='29' description='CASH_SETTLEMENT' />
+   <value enum='30' description='SPECIAL_PRICE' />
+   <value enum='31' description='GUARANTEED_DELIVERY' />
+   <value enum='32' description='SPECIAL_CUM_RIGHTS' />
+   <value enum='33' description='SPECIAL_EX_RIGHTS' />
+   <value enum='34' description='SPECIAL_CUM_CAPITAL_REPAYMENTS' />
+   <value enum='35' description='SPECIAL_EX_CAPITAL_REPAYMENTS' />
+   <value enum='36' description='SPECIAL_CUM_BONUS' />
+   <value enum='37' description='SPECIAL_EX_BONUS' />
+   <value enum='38' description='BLOCK_TRADE_38' />
+   <value enum='39' description='WORKED_PRINCIPAL_TRADE' />
+   <value enum='40' description='BLOCK_TRADES' />
+   <value enum='41' description='NAME_CHANGE' />
+   <value enum='42' description='PORTFOLIO_TRANSFER' />
+   <value enum='43' description='PROROGATION_BUY' />
+   <value enum='44' description='PROROGATION_SELL' />
+   <value enum='45' description='OPTION_EXERCISE' />
+   <value enum='46' description='DELTA_NEUTRAL_TRANSACTION' />
+   <value enum='47' description='FINANCING_TRANSACTION' />
+  </field>
+  <field number='829' name='TrdSubType' type='INT'>
+   <value enum='0' description='CMTA' />
+   <value enum='1' description='INTERNAL_TRANSFER_OR_ADJUSTMENT' />
+   <value enum='2' description='EXTERNAL_TRANSFER_OR_TRANSFER_OF_ACCOUNT' />
+   <value enum='3' description='REJECT_FOR_SUBMITTING_SIDE' />
+   <value enum='4' description='ADVISORY_FOR_CONTRA_SIDE' />
+   <value enum='5' description='OFFSET_DUE_TO_AN_ALLOCATION' />
+   <value enum='6' description='ONSET_DUT_TO_AN_ALLOCATION' />
+   <value enum='7' description='DIFFERENTIAL_SPREAD' />
+   <value enum='8' description='IMPLIED_SPREAD_LEG_EXECUTED_AGAINST_AN_OUTRIGHT' />
+   <value enum='9' description='TRANSACTION_FROM_EXERCISE' />
+   <value enum='10' description='TRANSACTION_FROM_ASSIGNMENT' />
+   <value enum='11' description='ACATS' />
+   <value enum='33' description='OFF_HOURS_TRADE' />
+   <value enum='34' description='ON_HOURS_TRADE' />
+   <value enum='35' description='OTC_QUOTE' />
+   <value enum='36' description='CONVERTED_SWAP' />
+   <value enum='14' description='AI' />
+   <value enum='15' description='B' />
+   <value enum='16' description='K' />
+   <value enum='17' description='LC' />
+   <value enum='18' description='M' />
+   <value enum='19' description='N' />
+   <value enum='20' description='NM' />
+   <value enum='21' description='NR' />
+   <value enum='22' description='P' />
+   <value enum='23' description='PA' />
+   <value enum='24' description='PC' />
+   <value enum='25' description='PN' />
+   <value enum='26' description='R' />
+   <value enum='27' description='RO' />
+   <value enum='28' description='RT' />
+   <value enum='29' description='SW' />
+   <value enum='30' description='T' />
+   <value enum='31' description='WN' />
+   <value enum='32' description='WT' />
+   <value enum='37' description='CROSSED_TRADE' />
+   <value enum='38' description='INTERIM_PROTECTED_TRADE' />
+   <value enum='39' description='LARGE_IN_SCALE' />
+  </field>
+  <field number='830' name='TransferReason' type='STRING' />
+  <field number='832' name='TotNumAssignmentReports' type='INT' />
+  <field number='833' name='AsgnRptID' type='STRING' />
+  <field number='834' name='ThresholdAmount' type='PRICEOFFSET' />
+  <field number='835' name='PegMoveType' type='INT'>
+   <value enum='0' description='FLOATING' />
+   <value enum='1' description='FIXED' />
+  </field>
+  <field number='836' name='PegOffsetType' type='INT'>
+   <value enum='0' description='PRICE' />
+   <value enum='1' description='BASIS_POINTS' />
+   <value enum='2' description='TICKS' />
+   <value enum='3' description='PRICE_TIER' />
+  </field>
+  <field number='837' name='PegLimitType' type='INT'>
+   <value enum='0' description='OR_BETTER' />
+   <value enum='1' description='STRICT' />
+   <value enum='2' description='OR_WORSE' />
+  </field>
+  <field number='838' name='PegRoundDirection' type='INT'>
+   <value enum='1' description='MORE_AGGRESSIVE' />
+   <value enum='2' description='MORE_PASSIVE' />
+  </field>
+  <field number='839' name='PeggedPrice' type='PRICE' />
+  <field number='840' name='PegScope' type='INT'>
+   <value enum='1' description='LOCAL' />
+   <value enum='2' description='NATIONAL' />
+   <value enum='3' description='GLOBAL' />
+   <value enum='4' description='NATIONAL_EXCLUDING_LOCAL' />
+  </field>
+  <field number='841' name='DiscretionMoveType' type='INT'>
+   <value enum='0' description='FLOATING' />
+   <value enum='1' description='FIXED' />
+  </field>
+  <field number='842' name='DiscretionOffsetType' type='INT'>
+   <value enum='0' description='PRICE' />
+   <value enum='1' description='BASIS_POINTS' />
+   <value enum='2' description='TICKS' />
+   <value enum='3' description='PRICE_TIER' />
+  </field>
+  <field number='843' name='DiscretionLimitType' type='INT'>
+   <value enum='0' description='OR_BETTER' />
+   <value enum='1' description='STRICT' />
+   <value enum='2' description='OR_WORSE' />
+  </field>
+  <field number='844' name='DiscretionRoundDirection' type='INT'>
+   <value enum='1' description='MORE_AGGRESSIVE' />
+   <value enum='2' description='MORE_PASSIVE' />
+  </field>
+  <field number='845' name='DiscretionPrice' type='PRICE' />
+  <field number='846' name='DiscretionScope' type='INT'>
+   <value enum='1' description='LOCAL' />
+   <value enum='2' description='NATIONAL' />
+   <value enum='3' description='GLOBAL' />
+   <value enum='4' description='NATIONAL_EXCLUDING_LOCAL' />
+  </field>
+  <field number='847' name='TargetStrategy' type='INT'>
+   <value enum='1' description='VWAP' />
+   <value enum='2' description='PARTICIPATE' />
+   <value enum='3' description='MININIZE_MARKET_IMPACT' />
+  </field>
+  <field number='848' name='TargetStrategyParameters' type='STRING' />
+  <field number='849' name='ParticipationRate' type='PERCENTAGE' />
+  <field number='850' name='TargetStrategyPerformance' type='FLOAT' />
+  <field number='851' name='LastLiquidityInd' type='INT'>
+   <value enum='1' description='ADDED_LIQUIDITY' />
+   <value enum='2' description='REMOVED_LIQUIDITY' />
+   <value enum='3' description='LIQUIDITY_ROUTED_OUT' />
+   <value enum='4' description='AUCTION' />
+  </field>
+  <field number='852' name='PublishTrdIndicator' type='BOOLEAN'>
+   <value enum='N' description='NO' />
+   <value enum='Y' description='YES' />
+  </field>
+  <field number='853' name='ShortSaleReason' type='INT'>
+   <value enum='0' description='DEALER_SOLD_SHORT' />
+   <value enum='1' description='DEALER_SOLD_SHORT_EXEMPT' />
+   <value enum='2' description='SELLING_CUSTOMER_SOLD_SHORT' />
+   <value enum='3' description='SELLING_CUSTOMER_SOLD_SHORT_EXEMPT' />
+   <value enum='4' description='QUALIFIED_SERVICE_REPRESENTATIVE' />
+   <value enum='5' description='QSR_OR_AGU_CONTRA_SIDE_SOLD_SHORT_EXEMPT' />
+  </field>
+  <field number='854' name='QtyType' type='INT'>
+   <value enum='0' description='UNITS' />
+   <value enum='1' description='CONTRACTS' />
+   <value enum='2' description='UNITS_OF_MEASURE_PER_TIME_UNIT' />
+  </field>
+  <field number='855' name='SecondaryTrdType' type='INT' />
+  <field number='856' name='TradeReportType' type='INT'>
+   <value enum='0' description='SUBMIT' />
+   <value enum='1' description='ALLEGED_1' />
+   <value enum='2' description='ACCEPT' />
+   <value enum='3' description='DECLINE' />
+   <value enum='4' description='ADDENDUM' />
+   <value enum='5' description='NO_WAS' />
+   <value enum='6' description='TRADE_REPORT_CANCEL' />
+   <value enum='7' description='7' />
+   <value enum='8' description='DEFAULTED' />
+   <value enum='9' description='INVALID_CMTA' />
+   <value enum='10' description='PENDED' />
+   <value enum='11' description='ALLEGED_NEW' />
+   <value enum='12' description='ALLEGED_ADDENDUM' />
+   <value enum='13' description='ALLEGED_NO_WAS' />
+   <value enum='14' description='ALLEGED_TRADE_REPORT_CANCEL' />
+   <value enum='15' description='ALLEGED_15' />
+  </field>
+  <field number='857' name='AllocNoOrdersType' type='INT'>
+   <value enum='0' description='NOT_SPECIFIED' />
+   <value enum='1' description='EXPLICIT_LIST_PROVIDED' />
+  </field>
+  <field number='858' name='SharedCommission' type='AMT' />
+  <field number='859' name='ConfirmReqID' type='STRING' />
+  <field number='860' name='AvgParPx' type='PRICE' />
+  <field number='861' name='ReportedPx' type='PRICE' />
+  <field number='862' name='NoCapacities' type='NUMINGROUP' />
+  <field number='863' name='OrderCapacityQty' type='QTY' />
+  <field number='864' name='NoEvents' type='NUMINGROUP' />
+  <field number='865' name='EventType' type='INT'>
+   <value enum='1' description='PUT' />
+   <value enum='2' description='CALL' />
+   <value enum='3' description='TENDER' />
+   <value enum='4' description='SINKING_FUND_CALL' />
+   <value enum='5' description='ACTIVATION' />
+   <value enum='6' description='INACTIVIATION' />
+   <value enum='7' description='LAST_ELIGIBLE_TRADE_DATE' />
+   <value enum='8' description='SWAP_START_DATE' />
+   <value enum='9' description='SWAP_END_DATE' />
+   <value enum='10' description='SWAP_ROLL_DATE' />
+   <value enum='11' description='SWAP_NEXT_START_DATE' />
+   <value enum='12' description='SWAP_NEXT_ROLL_DATE' />
+   <value enum='13' description='FIRST_DELIVERY_DATE' />
+   <value enum='14' description='LAST_DELIVERY_DATE' />
+   <value enum='15' description='INITIAL_INVENTORY_DUE_DATE' />
+   <value enum='16' description='FINAL_INVENTORY_DUE_DATE' />
+   <value enum='17' description='FIRST_INTENT_DATE' />
+   <value enum='18' description='LAST_INTENT_DATE' />
+   <value enum='19' description='POSITION_REMOVAL_DATE' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='866' name='EventDate' type='LOCALMKTDATE' />
+  <field number='867' name='EventPx' type='PRICE' />
+  <field number='868' name='EventText' type='STRING' />
+  <field number='869' name='PctAtRisk' type='PERCENTAGE' />
+  <field number='870' name='NoInstrAttrib' type='NUMINGROUP' />
+  <field number='871' name='InstrAttribType' type='INT'>
+   <value enum='1' description='FLAT' />
+   <value enum='2' description='ZERO_COUPON' />
+   <value enum='3' description='INTEREST_BEARING' />
+   <value enum='4' description='NO_PERIODIC_PAYMENTS' />
+   <value enum='5' description='VARIABLE_RATE' />
+   <value enum='6' description='LESS_FEE_FOR_PUT' />
+   <value enum='7' description='STEPPED_COUPON' />
+   <value enum='8' description='COUPON_PERIOD' />
+   <value enum='9' description='WHEN_AND_IF_ISSUED' />
+   <value enum='10' description='ORIGINAL_ISSUE_DISCOUNT' />
+   <value enum='11' description='CALLABLE_PUTTABLE' />
+   <value enum='12' description='ESCROWED_TO_MATURITY' />
+   <value enum='13' description='ESCROWED_TO_REDEMPTION_DATE' />
+   <value enum='14' description='PRE_REFUNDED' />
+   <value enum='15' description='IN_DEFAULT' />
+   <value enum='16' description='UNRATED' />
+   <value enum='17' description='TAXABLE' />
+   <value enum='18' description='INDEXED' />
+   <value enum='19' description='SUBJECT_TO_ALTERNATIVE_MINIMUM_TAX' />
+   <value enum='20' description='ORIGINAL_ISSUE_DISCOUNT_PRICE_SUPPLY_PRICE_IN_THE_INSTRATTRIBVALUE' />
+   <value enum='21' description='CALLABLE_BELOW_MATURITY_VALUE' />
+   <value enum='22' description='CALLABLE_WITHOUT_NOTICE_BY_MAIL_TO_HOLDER_UNLESS_REGISTERED' />
+   <value enum='23' description='PRICE_TICK_RULES_FOR_SECURITY' />
+   <value enum='24' description='TRADE_TYPE_ELIGIBILITY_DETAILS_FOR_SECURITY' />
+   <value enum='25' description='INSTRUMENT_DENOMINATOR' />
+   <value enum='26' description='INSTRUMENT_NUMERATOR' />
+   <value enum='27' description='INSTRUMENT_PRICE_PRECISION' />
+   <value enum='28' description='INSTRUMENT_STRIKE_PRICE' />
+   <value enum='29' description='TRADEABLE_INDICATOR' />
+   <value enum='99' description='TEXT_SUPPLY_THE_TEXT_OF_THE_ATTRIBUTE_OR_DISCLAIMER_IN_THE_INSTRATTRIBVALUE' />
+  </field>
+  <field number='872' name='InstrAttribValue' type='STRING' />
+  <field number='873' name='DatedDate' type='LOCALMKTDATE' />
+  <field number='874' name='InterestAccrualDate' type='LOCALMKTDATE' />
+  <field number='875' name='CPProgram' type='INT'>
+   <value enum='1' description='3' />
+   <value enum='2' description='4' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='876' name='CPRegType' type='STRING' />
+  <field number='877' name='UnderlyingCPProgram' type='STRING' />
+  <field number='878' name='UnderlyingCPRegType' type='STRING' />
+  <field number='879' name='UnderlyingQty' type='QTY' />
+  <field number='880' name='TrdMatchID' type='STRING' />
+  <field number='881' name='SecondaryTradeReportRefID' type='STRING' />
+  <field number='882' name='UnderlyingDirtyPrice' type='PRICE' />
+  <field number='883' name='UnderlyingEndPrice' type='PRICE' />
+  <field number='884' name='UnderlyingStartValue' type='AMT' />
+  <field number='885' name='UnderlyingCurrentValue' type='AMT' />
+  <field number='886' name='UnderlyingEndValue' type='AMT' />
+  <field number='887' name='NoUnderlyingStips' type='NUMINGROUP' />
+  <field number='888' name='UnderlyingStipType' type='STRING' />
+  <field number='889' name='UnderlyingStipValue' type='STRING' />
+  <field number='890' name='MaturityNetMoney' type='AMT' />
+  <field number='891' name='MiscFeeBasis' type='INT'>
+   <value enum='0' description='ABSOLUTE' />
+   <value enum='1' description='PER_UNIT' />
+   <value enum='2' description='PERCENTAGE' />
+  </field>
+  <field number='892' name='TotNoAllocs' type='INT' />
+  <field number='893' name='LastFragment' type='BOOLEAN'>
+   <value enum='N' description='NO' />
+   <value enum='Y' description='YES' />
+  </field>
+  <field number='894' name='CollReqID' type='STRING' />
+  <field number='895' name='CollAsgnReason' type='INT'>
+   <value enum='0' description='INITIAL' />
+   <value enum='1' description='SCHEDULED' />
+   <value enum='2' description='TIME_WARNING' />
+   <value enum='3' description='MARGIN_DEFICIENCY' />
+   <value enum='4' description='MARGIN_EXCESS' />
+   <value enum='5' description='FORWARD_COLLATERAL_DEMAND' />
+   <value enum='6' description='EVENT_OF_DEFAULT' />
+   <value enum='7' description='ADVERSE_TAX_EVENT' />
+  </field>
+  <field number='896' name='CollInquiryQualifier' type='INT'>
+   <value enum='0' description='TRADE_DATE' />
+   <value enum='1' description='GC_INSTRUMENT' />
+   <value enum='2' description='COLLATERAL_INSTRUMENT' />
+   <value enum='3' description='SUBSTITUTION_ELIGIBLE' />
+   <value enum='4' description='NOT_ASSIGNED' />
+   <value enum='5' description='PARTIALLY_ASSIGNED' />
+   <value enum='6' description='FULLY_ASSIGNED' />
+   <value enum='7' description='OUTSTANDING_TRADES' />
+  </field>
+  <field number='897' name='NoTrades' type='NUMINGROUP' />
+  <field number='898' name='MarginRatio' type='PERCENTAGE' />
+  <field number='899' name='MarginExcess' type='AMT' />
+  <field number='900' name='TotalNetValue' type='AMT' />
+  <field number='901' name='CashOutstanding' type='AMT' />
+  <field number='902' name='CollAsgnID' type='STRING' />
+  <field number='903' name='CollAsgnTransType' type='INT'>
+   <value enum='0' description='NEW' />
+   <value enum='1' description='REPLACE' />
+   <value enum='2' description='CANCEL' />
+   <value enum='3' description='RELEASE' />
+   <value enum='4' description='REVERSE' />
+  </field>
+  <field number='904' name='CollRespID' type='STRING' />
+  <field number='905' name='CollAsgnRespType' type='INT'>
+   <value enum='0' description='RECEIVED' />
+   <value enum='1' description='ACCEPTED' />
+   <value enum='2' description='DECLINED' />
+   <value enum='3' description='REJECTED' />
+  </field>
+  <field number='906' name='CollAsgnRejectReason' type='INT'>
+   <value enum='0' description='UNKNOWN_DEAL' />
+   <value enum='1' description='UNKNOWN_OR_INVALID_INSTRUMENT' />
+   <value enum='2' description='UNAUTHORIZED_TRANSACTION' />
+   <value enum='3' description='INSUFFICIENT_COLLATERAL' />
+   <value enum='4' description='INVALID_TYPE_OF_COLLATERAL' />
+   <value enum='5' description='EXCESSIVE_SUBSTITUTION' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='907' name='CollAsgnRefID' type='STRING' />
+  <field number='908' name='CollRptID' type='STRING' />
+  <field number='909' name='CollInquiryID' type='STRING' />
+  <field number='910' name='CollStatus' type='INT'>
+   <value enum='0' description='UNASSIGNED' />
+   <value enum='1' description='PARTIALLY_ASSIGNED' />
+   <value enum='2' description='ASSIGNMENT_PROPOSED' />
+   <value enum='3' description='ASSIGNED' />
+   <value enum='4' description='CHALLENGED' />
+  </field>
+  <field number='911' name='TotNumReports' type='INT' />
+  <field number='912' name='LastRptRequested' type='BOOLEAN'>
+   <value enum='N' description='NO' />
+   <value enum='Y' description='YES' />
+  </field>
+  <field number='913' name='AgreementDesc' type='STRING' />
+  <field number='914' name='AgreementID' type='STRING' />
+  <field number='915' name='AgreementDate' type='LOCALMKTDATE' />
+  <field number='916' name='StartDate' type='LOCALMKTDATE' />
+  <field number='917' name='EndDate' type='LOCALMKTDATE' />
+  <field number='918' name='AgreementCurrency' type='CURRENCY' />
+  <field number='919' name='DeliveryType' type='INT'>
+   <value enum='0' description='VERSUS_PAYMENT_DELIVER' />
+   <value enum='1' description='FREE_DELIVER' />
+   <value enum='2' description='TRI_PARTY' />
+   <value enum='3' description='HOLD_IN_CUSTODY' />
+  </field>
+  <field number='920' name='EndAccruedInterestAmt' type='AMT' />
+  <field number='921' name='StartCash' type='AMT' />
+  <field number='922' name='EndCash' type='AMT' />
+  <field number='923' name='UserRequestID' type='STRING' />
+  <field number='924' name='UserRequestType' type='INT'>
+   <value enum='1' description='LOG_ON_USER' />
+   <value enum='2' description='LOG_OFF_USER' />
+   <value enum='3' description='CHANGE_PASSWORD_FOR_USER' />
+   <value enum='4' description='REQUEST_INDIVIDUAL_USER_STATUS' />
+  </field>
+  <field number='925' name='NewPassword' type='STRING' />
+  <field number='926' name='UserStatus' type='INT'>
+   <value enum='1' description='LOGGED_IN' />
+   <value enum='2' description='NOT_LOGGED_IN' />
+   <value enum='3' description='USER_NOT_RECOGNISED' />
+   <value enum='4' description='PASSWORD_INCORRECT' />
+   <value enum='5' description='PASSWORD_CHANGED' />
+   <value enum='6' description='OTHER' />
+   <value enum='7' description='FORCED_USER_LOGOUT_BY_EXCHANGE' />
+   <value enum='8' description='SESSION_SHUTDOWN_WARNING' />
+  </field>
+  <field number='927' name='UserStatusText' type='STRING' />
+  <field number='928' name='StatusValue' type='INT'>
+   <value enum='1' description='CONNECTED' />
+   <value enum='2' description='NOT_CONNECTED_2' />
+   <value enum='3' description='NOT_CONNECTED_3' />
+   <value enum='4' description='IN_PROCESS' />
+  </field>
+  <field number='929' name='StatusText' type='STRING' />
+  <field number='930' name='RefCompID' type='STRING' />
+  <field number='931' name='RefSubID' type='STRING' />
+  <field number='932' name='NetworkResponseID' type='STRING' />
+  <field number='933' name='NetworkRequestID' type='STRING' />
+  <field number='934' name='LastNetworkResponseID' type='STRING' />
+  <field number='935' name='NetworkRequestType' type='INT'>
+   <value enum='1' description='SNAPSHOT' />
+   <value enum='2' description='SUBSCRIBE' />
+   <value enum='4' description='STOP_SUBSCRIBING' />
+   <value enum='8' description='LEVEL_OF_DETAIL_THEN_NOCOMPIDS_BECOMES_REQUIRED' />
+  </field>
+  <field number='936' name='NoCompIDs' type='NUMINGROUP' />
+  <field number='937' name='NetworkStatusResponseType' type='INT'>
+   <value enum='1' description='FULL' />
+   <value enum='2' description='INCREMENTAL_UPDATE' />
+  </field>
+  <field number='938' name='NoCollInquiryQualifier' type='NUMINGROUP' />
+  <field number='939' name='TrdRptStatus' type='INT'>
+   <value enum='0' description='ACCEPTED' />
+   <value enum='1' description='REJECTED' />
+   <value enum='3' description='ACCEPTED_WITH_ERRORS' />
+  </field>
+  <field number='940' name='AffirmStatus' type='INT'>
+   <value enum='1' description='RECEIVED' />
+   <value enum='2' description='CONFIRM_REJECTED_IE_NOT_AFFIRMED' />
+   <value enum='3' description='AFFIRMED' />
+  </field>
+  <field number='941' name='UnderlyingStrikeCurrency' type='CURRENCY' />
+  <field number='942' name='LegStrikeCurrency' type='CURRENCY' />
+  <field number='943' name='TimeBracket' type='STRING' />
+  <field number='944' name='CollAction' type='INT'>
+   <value enum='0' description='RETAIN' />
+   <value enum='1' description='ADD' />
+   <value enum='2' description='REMOVE' />
+  </field>
+  <field number='945' name='CollInquiryStatus' type='INT'>
+   <value enum='0' description='ACCEPTED' />
+   <value enum='1' description='ACCEPTED_WITH_WARNINGS' />
+   <value enum='2' description='COMPLETED' />
+   <value enum='3' description='COMPLETED_WITH_WARNINGS' />
+   <value enum='4' description='REJECTED' />
+  </field>
+  <field number='946' name='CollInquiryResult' type='INT'>
+   <value enum='0' description='SUCCESSFUL' />
+   <value enum='1' description='INVALID_OR_UNKNOWN_INSTRUMENT' />
+   <value enum='2' description='INVALID_OR_UNKNOWN_COLLATERAL_TYPE' />
+   <value enum='3' description='INVALID_PARTIES' />
+   <value enum='4' description='INVALID_TRANSPORT_TYPE_REQUESTED' />
+   <value enum='5' description='INVALID_DESTINATION_REQUESTED' />
+   <value enum='6' description='NO_COLLATERAL_FOUND_FOR_THE_TRADE_SPECIFIED' />
+   <value enum='7' description='NO_COLLATERAL_FOUND_FOR_THE_ORDER_SPECIFIED' />
+   <value enum='8' description='COLLATERAL_INQUIRY_TYPE_NOT_SUPPORTED' />
+   <value enum='9' description='UNAUTHORIZED_FOR_COLLATERAL_INQUIRY' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='947' name='StrikeCurrency' type='CURRENCY' />
+  <field number='948' name='NoNested3PartyIDs' type='NUMINGROUP' />
+  <field number='949' name='Nested3PartyID' type='STRING' />
+  <field number='950' name='Nested3PartyIDSource' type='CHAR' />
+  <field number='951' name='Nested3PartyRole' type='INT' />
+  <field number='952' name='NoNested3PartySubIDs' type='NUMINGROUP' />
+  <field number='953' name='Nested3PartySubID' type='STRING' />
+  <field number='954' name='Nested3PartySubIDType' type='INT' />
+  <field number='955' name='LegContractSettlMonth' type='MONTHYEAR' />
+  <field number='956' name='LegInterestAccrualDate' type='LOCALMKTDATE' />
+  <field number='957' name='NoStrategyParameters' type='NUMINGROUP' />
+  <field number='958' name='StrategyParameterName' type='STRING' />
+  <field number='959' name='StrategyParameterType' type='INT'>
+   <value enum='1' description='INT' />
+   <value enum='2' description='LENGTH' />
+   <value enum='3' description='NUMINGROUP' />
+   <value enum='4' description='SEQNUM' />
+   <value enum='5' description='TAGNUM' />
+   <value enum='6' description='FLOAT' />
+   <value enum='7' description='QTY' />
+   <value enum='8' description='PRICE' />
+   <value enum='9' description='PRICEOFFSET' />
+   <value enum='10' description='AMT' />
+   <value enum='11' description='PERCENTAGE' />
+   <value enum='12' description='CHAR' />
+   <value enum='13' description='BOOLEAN' />
+   <value enum='14' description='STRING' />
+   <value enum='15' description='MULTIPLECHARVALUE' />
+   <value enum='16' description='CURRENCY' />
+   <value enum='17' description='EXCHANGE' />
+   <value enum='18' description='MONTHYEAR' />
+   <value enum='19' description='UTCTIMESTAMP' />
+   <value enum='20' description='UTCTIMEONLY' />
+   <value enum='21' description='LOCALMKTTIME' />
+   <value enum='22' description='UTCDATE' />
+   <value enum='23' description='DATA' />
+   <value enum='24' description='MULTIPLESTRINGVALUE' />
+  </field>
+  <field number='960' name='StrategyParameterValue' type='STRING' />
+  <field number='961' name='HostCrossID' type='STRING' />
+  <field number='962' name='SideTimeInForce' type='UTCTIMESTAMP' />
+  <field number='963' name='MDReportID' type='INT' />
+  <field number='964' name='SecurityReportID' type='INT' />
+  <field number='965' name='SecurityStatus' type='STRING'>
+   <value enum='1' description='ACTIVE' />
+   <value enum='2' description='INACTIVE' />
+  </field>
+  <field number='966' name='SettleOnOpenFlag' type='STRING' />
+  <field number='967' name='StrikeMultiplier' type='FLOAT' />
+  <field number='968' name='StrikeValue' type='FLOAT' />
+  <field number='969' name='MinPriceIncrement' type='FLOAT' />
+  <field number='970' name='PositionLimit' type='INT' />
+  <field number='971' name='NTPositionLimit' type='INT' />
+  <field number='972' name='UnderlyingAllocationPercent' type='PERCENTAGE' />
+  <field number='973' name='UnderlyingCashAmount' type='AMT' />
+  <field number='974' name='UnderlyingCashType' type='STRING'>
+   <value enum='FIXED' description='FIXED' />
+   <value enum='DIFF' description='DIFF' />
+  </field>
+  <field number='975' name='UnderlyingSettlementType' type='INT'>
+   <value enum='2' description='T_PLUS_1' />
+   <value enum='4' description='T_PLUS_3' />
+   <value enum='5' description='T_PLUS_4' />
+  </field>
+  <field number='976' name='QuantityDate' type='LOCALMKTDATE' />
+  <field number='977' name='ContIntRptID' type='STRING' />
+  <field number='978' name='LateIndicator' type='BOOLEAN' />
+  <field number='979' name='InputSource' type='STRING' />
+  <field number='980' name='SecurityUpdateAction' type='CHAR'>
+   <value enum='A' description='ADD' />
+   <value enum='D' description='DELETE' />
+   <value enum='M' description='MODIFY' />
+  </field>
+  <field number='981' name='NoExpiration' type='NUMINGROUP' />
+  <field number='982' name='ExpirationQtyType' type='INT'>
+   <value enum='1' description='AUTO_EXERCISE' />
+   <value enum='2' description='NON_AUTO_EXERCISE' />
+   <value enum='3' description='FINAL_WILL_BE_EXERCISED' />
+   <value enum='4' description='CONTRARY_INTENTION' />
+   <value enum='5' description='DIFFERENCE' />
+  </field>
+  <field number='983' name='ExpQty' type='QTY' />
+  <field number='984' name='NoUnderlyingAmounts' type='NUMINGROUP' />
+  <field number='985' name='UnderlyingPayAmount' type='AMT' />
+  <field number='986' name='UnderlyingCollectAmount' type='AMT' />
+  <field number='987' name='UnderlyingSettlementDate' type='LOCALMKTDATE' />
+  <field number='988' name='UnderlyingSettlementStatus' type='STRING' />
+  <field number='989' name='SecondaryIndividualAllocID' type='STRING' />
+  <field number='990' name='LegReportID' type='STRING' />
+  <field number='991' name='RndPx' type='PRICE' />
+  <field number='992' name='IndividualAllocType' type='INT'>
+   <value enum='1' description='SUB_ALLOCATE' />
+   <value enum='2' description='THIRD_PARTY_ALLOCATION' />
+  </field>
+  <field number='993' name='AllocCustomerCapacity' type='STRING' />
+  <field number='994' name='TierCode' type='STRING' />
+  <field number='996' name='UnitOfMeasure' type='STRING'>
+   <value enum='Bcf' description='BILLION_CUBIC_FEET' />
+   <value enum='MMbbl' description='MILLION_BARRELS' />
+   <value enum='MMBtu' description='ONE_MILLION_BTU' />
+   <value enum='MWh' description='MEGAWATT_HOURS' />
+   <value enum='Bbl' description='BARRELS' />
+   <value enum='Bu' description='BUSHELS' />
+   <value enum='lbs' description='POUNDS' />
+   <value enum='Gal' description='GALLONS' />
+   <value enum='oz_tr' description='TROY_OUNCES' />
+   <value enum='t' description='METRIC_TONS' />
+   <value enum='tn' description='TONS' />
+   <value enum='USD' description='US_DOLLARS' />
+  </field>
+  <field number='997' name='TimeUnit' type='STRING'>
+   <value enum='H' description='HOUR' />
+   <value enum='Min' description='MINUTE' />
+   <value enum='S' description='SECOND' />
+   <value enum='D' description='DAY' />
+   <value enum='Wk' description='WEEK' />
+   <value enum='Mo' description='MONTH' />
+   <value enum='Yr' description='YEAR' />
+  </field>
+  <field number='998' name='UnderlyingUnitOfMeasure' type='STRING' />
+  <field number='999' name='LegUnitOfMeasure' type='STRING' />
+  <field number='1000' name='UnderlyingTimeUnit' type='STRING' />
+  <field number='1001' name='LegTimeUnit' type='STRING' />
+  <field number='1002' name='AllocMethod' type='INT'>
+   <value enum='1' description='AUTOMATIC' />
+   <value enum='2' description='GUARANTOR' />
+   <value enum='3' description='MANUAL' />
+  </field>
+  <field number='1003' name='TradeID' type='STRING' />
+  <field number='1005' name='SideTradeReportID' type='STRING' />
+  <field number='1006' name='SideFillStationCd' type='STRING' />
+  <field number='1007' name='SideReasonCd' type='STRING' />
+  <field number='1008' name='SideTrdSubTyp' type='INT' />
+  <field number='1009' name='SideQty' type='INT' />
+  <field number='1011' name='MessageEventSource' type='STRING' />
+  <field number='1012' name='SideTrdRegTimestamp' type='UTCTIMESTAMP' />
+  <field number='1013' name='SideTrdRegTimestampType' type='INT' />
+  <field number='1014' name='SideTrdRegTimestampSrc' type='STRING' />
+  <field number='1015' name='AsOfIndicator' type='CHAR'>
+   <value enum='0' description='FALSE' />
+   <value enum='1' description='TRUE' />
+  </field>
+  <field number='1016' name='NoSideTrdRegTS' type='NUMINGROUP' />
+  <field number='1017' name='LegOptionRatio' type='FLOAT' />
+  <field number='1018' name='NoInstrumentParties' type='NUMINGROUP' />
+  <field number='1019' name='InstrumentPartyID' type='STRING' />
+  <field number='1020' name='TradeVolume' type='QTY' />
+  <field number='1021' name='MDBookType' type='INT'>
+   <value enum='1' description='TOP_OF_BOOK' />
+   <value enum='2' description='PRICE_DEPTH' />
+   <value enum='3' description='ORDER_DEPTH' />
+  </field>
+  <field number='1022' name='MDFeedType' type='STRING' />
+  <field number='1023' name='MDPriceLevel' type='INT' />
+  <field number='1024' name='MDOriginType' type='INT'>
+   <value enum='0' description='BOOK' />
+   <value enum='1' description='OFF_BOOK' />
+   <value enum='2' description='CROSS' />
+  </field>
+  <field number='1025' name='FirstPx' type='PRICE' />
+  <field number='1026' name='MDEntrySpotRate' type='FLOAT' />
+  <field number='1027' name='MDEntryForwardPoints' type='PRICEOFFSET' />
+  <field number='1028' name='ManualOrderIndicator' type='BOOLEAN' />
+  <field number='1029' name='CustDirectedOrder' type='BOOLEAN' />
+  <field number='1030' name='ReceivedDeptID' type='STRING' />
+  <field number='1031' name='CustOrderHandlingInst' type='MULTIPLESTRINGVALUE'>
+   <value enum='ADD' description='ADD_ON_ORDER' />
+   <value enum='AON' description='ALL_OR_NONE' />
+   <value enum='CNH' description='CASH_NOT_HELD' />
+   <value enum='DIR' description='DIRECTED_ORDER' />
+   <value enum='E.W' description='EXCHANGE_FOR_PHYSICAL_TRANSACTION' />
+   <value enum='FOK' description='FILL_OR_KILL' />
+   <value enum='IO' description='IMBALANCE_ONLY' />
+   <value enum='IOC' description='IMMEDIATE_OR_CANCEL' />
+   <value enum='LOO' description='LIMIT_ON_OPEN' />
+   <value enum='LOC' description='LIMIT_ON_CLOSE' />
+   <value enum='MAO' description='MARKET_AT_OPEN' />
+   <value enum='MAC' description='MARKET_AT_CLOSE' />
+   <value enum='MOO' description='MARKET_ON_OPEN' />
+   <value enum='MOC' description='MARKET_ON_CLOSE' />
+   <value enum='MQT' description='MINIMUM_QUANTITY' />
+   <value enum='NH' description='NOT_HELD' />
+   <value enum='OVD' description='OVER_THE_DAY' />
+   <value enum='PEG' description='PEGGED' />
+   <value enum='RSV' description='RESERVE_SIZE_ORDER' />
+   <value enum='S.W' description='STOP_STOCK_TRANSACTION' />
+   <value enum='SCL' description='SCALE' />
+   <value enum='TMO' description='TIME_ORDER' />
+   <value enum='TS' description='TRAILING_STOP' />
+   <value enum='WRK' description='WORK' />
+  </field>
+  <field number='1032' name='OrderHandlingInstSource' type='INT'>
+   <value enum='1' description='NASD_OATS' />
+  </field>
+  <field number='1033' name='DeskType' type='STRING'>
+   <value enum='A' description='AGENCY' />
+   <value enum='AR' description='ARBITRAGE' />
+   <value enum='D' description='DERIVATIVES' />
+   <value enum='IN' description='INTERNATIONAL' />
+   <value enum='IS' description='INSTITUTIONAL' />
+   <value enum='O' description='OTHER' />
+   <value enum='PF' description='PREFERRED_TRADING' />
+   <value enum='PR' description='PROPRIETARY' />
+   <value enum='PT' description='PROGRAM_TRADING' />
+   <value enum='S' description='SALES' />
+   <value enum='T' description='TRADING' />
+  </field>
+  <field number='1034' name='DeskTypeSource' type='INT'>
+   <value enum='1' description='NASD_OATS' />
+  </field>
+  <field number='1035' name='DeskOrderHandlingInst' type='MULTIPLESTRINGVALUE'>
+   <value enum='ADD' description='ADD_ON_ORDER' />
+   <value enum='AON' description='ALL_OR_NONE' />
+   <value enum='CNH' description='CASH_NOT_HELD' />
+   <value enum='DIR' description='DIRECTED_ORDER' />
+   <value enum='E.W' description='EXCHANGE_FOR_PHYSICAL_TRANSACTION' />
+   <value enum='FOK' description='FILL_OR_KILL' />
+   <value enum='IO' description='IMBALANCE_ONLY' />
+   <value enum='IOC' description='IMMEDIATE_OR_CANCEL' />
+   <value enum='LOO' description='LIMIT_ON_OPEN' />
+   <value enum='LOC' description='LIMIT_ON_CLOSE' />
+   <value enum='MAO' description='MARKET_AT_OPEN' />
+   <value enum='MAC' description='MARKET_AT_CLOSE' />
+   <value enum='MOO' description='MARKET_ON_OPEN' />
+   <value enum='MOC' description='MARKET_ON_CLOSE' />
+   <value enum='MQT' description='MINIMUM_QUANTITY' />
+   <value enum='NH' description='NOT_HELD' />
+   <value enum='OVD' description='OVER_THE_DAY' />
+   <value enum='PEG' description='PEGGED' />
+   <value enum='RSV' description='RESERVE_SIZE_ORDER' />
+   <value enum='S.W' description='STOP_STOCK_TRANSACTION' />
+   <value enum='SCL' description='SCALE' />
+   <value enum='TMO' description='TIME_ORDER' />
+   <value enum='TS' description='TRAILING_STOP' />
+   <value enum='WRK' description='WORK' />
+  </field>
+  <field number='1036' name='ExecAckStatus' type='CHAR'>
+   <value enum='0' description='RECEIVED_NOT_YET_PROCESSED' />
+   <value enum='1' description='ACCEPTED' />
+   <value enum='2' description='DONT_KNOW' />
+  </field>
+  <field number='1037' name='UnderlyingDeliveryAmount' type='AMT' />
+  <field number='1038' name='UnderlyingCapValue' type='AMT' />
+  <field number='1039' name='UnderlyingSettlMethod' type='STRING' />
+  <field number='1040' name='SecondaryTradeID' type='STRING' />
+  <field number='1041' name='FirmTradeID' type='STRING' />
+  <field number='1042' name='SecondaryFirmTradeID' type='STRING' />
+  <field number='1043' name='CollApplType' type='INT'>
+   <value enum='0' description='SPECIFIC_DEPOSIT' />
+   <value enum='1' description='GENERAL' />
+  </field>
+  <field number='1044' name='UnderlyingAdjustedQuantity' type='QTY' />
+  <field number='1045' name='UnderlyingFXRate' type='FLOAT' />
+  <field number='1046' name='UnderlyingFXRateCalc' type='CHAR'>
+   <value enum='D' description='DIVIDE' />
+   <value enum='M' description='MULTIPLY' />
+  </field>
+  <field number='1047' name='AllocPositionEffect' type='CHAR'>
+   <value enum='O' description='OPEN' />
+   <value enum='C' description='CLOSE' />
+   <value enum='R' description='ROLLED' />
+   <value enum='F' description='FIFO' />
+  </field>
+  <field number='1048' name='DealingCapacity' type='PRICEOFFSET' />
+  <field number='1049' name='InstrmtAssignmentMethod' type='CHAR' />
+  <field number='1050' name='InstrumentPartyIDSource' type='CHAR' />
+  <field number='1051' name='InstrumentPartyRole' type='INT' />
+  <field number='1052' name='NoInstrumentPartySubIDs' type='NUMINGROUP' />
+  <field number='1053' name='InstrumentPartySubID' type='STRING' />
+  <field number='1054' name='InstrumentPartySubIDType' type='INT' />
+  <field number='1055' name='PositionCurrency' type='STRING' />
+  <field number='1056' name='CalculatedCcyLastQty' type='QTY' />
+  <field number='1057' name='AggressorIndicator' type='BOOLEAN'>
+   <value enum='Y' description='YES' />
+   <value enum='N' description='NO' />
+  </field>
+  <field number='1058' name='NoUndlyInstrumentParties' type='NUMINGROUP' />
+  <field number='1059' name='UndlyInstrumentPartyID' type='STRING' />
+  <field number='1060' name='UndlyInstrumentPartyIDSource' type='CHAR' />
+  <field number='1061' name='UndlyInstrumentPartyRole' type='INT' />
+  <field number='1062' name='NoUndlyInstrumentPartySubIDs' type='NUMINGROUP' />
+  <field number='1063' name='UndlyInstrumentPartySubID' type='STRING' />
+  <field number='1064' name='UndlyInstrumentPartySubIDType' type='INT' />
+  <field number='1065' name='BidSwapPoints' type='PRICEOFFSET' />
+  <field number='1066' name='OfferSwapPoints' type='PRICEOFFSET' />
+  <field number='1067' name='LegBidForwardPoints' type='PRICEOFFSET' />
+  <field number='1068' name='LegOfferForwardPoints' type='PRICEOFFSET' />
+  <field number='1069' name='SwapPoints' type='PRICEOFFSET' />
+  <field number='1070' name='MDQuoteType' type='INT'>
+   <value enum='0' description='INDICATIVE' />
+   <value enum='1' description='TRADEABLE' />
+   <value enum='2' description='RESTRICTED_TRADEABLE' />
+   <value enum='3' description='COUNTER' />
+   <value enum='4' description='INDICATIVE_AND_TRADEABLE' />
+  </field>
+  <field number='1071' name='LastSwapPoints' type='PRICEOFFSET' />
+  <field number='1072' name='SideGrossTradeAmt' type='AMT' />
+  <field number='1073' name='LegLastForwardPoints' type='PRICEOFFSET' />
+  <field number='1074' name='LegCalculatedCcyLastQty' type='QTY' />
+  <field number='1075' name='LegGrossTradeAmt' type='AMT' />
+  <field number='1079' name='MaturityTime' type='TZTIMEONLY' />
+  <field number='1080' name='RefOrderID' type='STRING' />
+  <field number='1081' name='RefOrderIDSource' type='CHAR'>
+   <value enum='0' description='SECONDARYORDERID' />
+   <value enum='1' description='ORDERID' />
+   <value enum='2' description='MDENTRYID' />
+   <value enum='3' description='QUOTEENTRYID' />
+  </field>
+  <field number='1082' name='SecondaryDisplayQty' type='QTY' />
+  <field number='1083' name='DisplayWhen' type='CHAR'>
+   <value enum='1' description='IMMEDIATE' />
+   <value enum='2' description='EXHAUST' />
+  </field>
+  <field number='1084' name='DisplayMethod' type='CHAR'>
+   <value enum='1' description='INITIAL' />
+   <value enum='2' description='NEW' />
+   <value enum='3' description='RANDOM' />
+  </field>
+  <field number='1085' name='DisplayLowQty' type='QTY' />
+  <field number='1086' name='DisplayHighQty' type='QTY' />
+  <field number='1087' name='DisplayMinIncr' type='QTY' />
+  <field number='1088' name='RefreshQty' type='QTY' />
+  <field number='1089' name='MatchIncrement' type='QTY' />
+  <field number='1090' name='MaxPriceLevels' type='INT' />
+  <field number='1091' name='PreTradeAnonymity' type='BOOLEAN' />
+  <field number='1092' name='PriceProtectionScope' type='CHAR'>
+   <value enum='0' description='NONE' />
+   <value enum='1' description='LOCAL' />
+   <value enum='2' description='NATIONAL' />
+   <value enum='3' description='GLOBAL' />
+  </field>
+  <field number='1093' name='LotType' type='CHAR'>
+   <value enum='1' description='ODD_LOT' />
+   <value enum='2' description='ROUND_LOT' />
+   <value enum='3' description='BLOCK_LOT' />
+  </field>
+  <field number='1094' name='PegPriceType' type='INT'>
+   <value enum='1' description='LAST_PEG' />
+   <value enum='2' description='MID_PRICE_PEG' />
+   <value enum='3' description='OPENING_PEG' />
+   <value enum='4' description='MARKET_PEG' />
+   <value enum='5' description='PRIMARY_PEG' />
+   <value enum='7' description='PEG_TO_VWAP' />
+   <value enum='8' description='TRAILING_STOP_PEG' />
+   <value enum='9' description='PEG_TO_LIMIT_PRICE' />
+  </field>
+  <field number='1095' name='PeggedRefPrice' type='PRICE' />
+  <field number='1096' name='PegSecurityIDSource' type='STRING' />
+  <field number='1097' name='PegSecurityID' type='STRING' />
+  <field number='1098' name='PegSymbol' type='STRING' />
+  <field number='1099' name='PegSecurityDesc' type='STRING' />
+  <field number='1100' name='TriggerType' type='CHAR'>
+   <value enum='1' description='PARTIAL_EXECUTION' />
+   <value enum='2' description='SPECIFIED_TRADING_SESSION' />
+   <value enum='3' description='NEXT_AUCTION' />
+   <value enum='4' description='PRICE_MOVEMENT' />
+  </field>
+  <field number='1101' name='TriggerAction' type='CHAR'>
+   <value enum='1' description='ACTIVATE' />
+   <value enum='2' description='MODIFY' />
+   <value enum='3' description='CANCEL' />
+  </field>
+  <field number='1102' name='TriggerPrice' type='PRICE' />
+  <field number='1103' name='TriggerSymbol' type='STRING' />
+  <field number='1104' name='TriggerSecurityID' type='STRING' />
+  <field number='1105' name='TriggerSecurityIDSource' type='STRING' />
+  <field number='1106' name='TriggerSecurityDesc' type='STRING' />
+  <field number='1107' name='TriggerPriceType' type='CHAR'>
+   <value enum='1' description='BEST_OFFER' />
+   <value enum='2' description='LAST_TRADE' />
+   <value enum='3' description='BEST_BID' />
+   <value enum='4' description='BEST_BID_OR_LAST_TRADE' />
+   <value enum='5' description='BEST_OFFER_OR_LAST_TRADE' />
+   <value enum='6' description='BEST_MID' />
+  </field>
+  <field number='1108' name='TriggerPriceTypeScope' type='CHAR'>
+   <value enum='0' description='NONE' />
+   <value enum='1' description='LOCAL' />
+   <value enum='2' description='NATIONAL' />
+   <value enum='3' description='GLOBAL' />
+  </field>
+  <field number='1109' name='TriggerPriceDirection' type='CHAR'>
+   <value enum='U' description='TRIGGER_IF_THE_PRICE_OF_THE_SPECIFIED_TYPE_GOES_UP_TO_OR_THROUGH_THE_SPECIFIED_TRIGGER_PRICE' />
+   <value enum='D' description='TRIGGER_IF_THE_PRICE_OF_THE_SPECIFIED_TYPE_GOES_DOWN_TO_OR_THROUGH_THE_SPECIFIED_TRIGGER_PRICE' />
+  </field>
+  <field number='1110' name='TriggerNewPrice' type='PRICE' />
+  <field number='1111' name='TriggerOrderType' type='CHAR'>
+   <value enum='1' description='MARKET' />
+   <value enum='2' description='LIMIT' />
+  </field>
+  <field number='1112' name='TriggerNewQty' type='QTY' />
+  <field number='1113' name='TriggerTradingSessionID' type='STRING' />
+  <field number='1114' name='TriggerTradingSessionSubID' type='STRING' />
+  <field number='1115' name='OrderCategory' type='CHAR'>
+   <value enum='1' description='ORDER' />
+   <value enum='2' description='QUOTE' />
+   <value enum='3' description='PRIVATELY_NEGOTIATED_TRADE' />
+   <value enum='4' description='MULTILEG_ORDER' />
+   <value enum='5' description='LINKED_ORDER' />
+   <value enum='6' description='QUOTE_REQUEST' />
+   <value enum='7' description='IMPLIED_ORDER' />
+   <value enum='8' description='CROSS_ORDER' />
+   <value enum='9' description='STREAMING_PRICE' />
+  </field>
+  <field number='1116' name='NoRootPartyIDs' type='NUMINGROUP' />
+  <field number='1117' name='RootPartyID' type='STRING' />
+  <field number='1118' name='RootPartyIDSource' type='CHAR' />
+  <field number='1119' name='RootPartyRole' type='INT' />
+  <field number='1120' name='NoRootPartySubIDs' type='NUMINGROUP' />
+  <field number='1121' name='RootPartySubID' type='STRING' />
+  <field number='1122' name='RootPartySubIDType' type='INT' />
+  <field number='1123' name='TradeHandlingInstr' type='CHAR'>
+   <value enum='0' description='TRADE_CONFIRMATION' />
+   <value enum='1' description='TWO_PARTY_REPORT' />
+   <value enum='2' description='ONE_PARTY_REPORT_FOR_MATCHING' />
+   <value enum='3' description='ONE_PARTY_REPORT_FOR_PASS_THROUGH' />
+   <value enum='4' description='AUTOMATED_FLOOR_ORDER_ROUTING' />
+   <value enum='5' description='TWO_PARTY_REPORT_FOR_CLAIM' />
+  </field>
+  <field number='1124' name='OrigTradeHandlingInstr' type='CHAR' />
+  <field number='1125' name='OrigTradeDate' type='LOCALMKTDATE' />
+  <field number='1126' name='OrigTradeID' type='STRING' />
+  <field number='1127' name='OrigSecondaryTradeID' type='STRING' />
+  <field number='1128' name='ApplVerID' type='STRING'>
+   <value enum='0' description='FIX27' />
+   <value enum='1' description='FIX30' />
+   <value enum='2' description='FIX40' />
+   <value enum='3' description='FIX41' />
+   <value enum='4' description='FIX42' />
+   <value enum='5' description='FIX43' />
+   <value enum='6' description='FIX44' />
+   <value enum='7' description='FIX50' />
+   <value enum='8' description='FIX50SP1' />
+  </field>
+  <field number='1129' name='CstmApplVerID' type='STRING' />
+  <field number='1130' name='RefApplVerID' type='STRING' />
+  <field number='1131' name='RefCstmApplVerID' type='STRING' />
+  <field number='1132' name='TZTransactTime' type='TZTIMESTAMP' />
+  <field number='1133' name='ExDestinationIDSource' type='CHAR'>
+   <value enum='B' description='BIC' />
+   <value enum='C' description='GENERALLY_ACCEPTED_MARKET_PARTICIPANT_IDENTIFIER' />
+   <value enum='D' description='PROPRIETARY' />
+   <value enum='E' description='ISO_COUNTRY_CODE' />
+   <value enum='G' description='MIC' />
+  </field>
+  <field number='1134' name='ReportedPxDiff' type='BOOLEAN' />
+  <field number='1135' name='RptSys' type='STRING' />
+  <field number='1136' name='AllocClearingFeeIndicator' type='STRING' />
+  <field number='1137' name='DefaultApplVerID' type='STRING' />
+  <field number='1138' name='DisplayQty' type='QTY' />
+  <field number='1139' name='ExchangeSpecialInstructions' type='STRING' />
+  <field number='1140' name='MaxTradeVol' type='QTY' />
+  <field number='1141' name='NoMDFeedTypes' type='NUMINGROUP' />
+  <field number='1142' name='MatchAlgorithm' type='STRING' />
+  <field number='1143' name='MaxPriceVariation' type='FLOAT' />
+  <field number='1144' name='ImpliedMarketIndicator' type='INT'>
+   <value enum='0' description='NOT_IMPLIED' />
+   <value enum='1' description='IMPLIED_IN' />
+   <value enum='2' description='IMPLIED_OUT' />
+   <value enum='3' description='BOTH_IMPLIED_IN_AND_IMPLIED_OUT' />
+  </field>
+  <field number='1145' name='EventTime' type='UTCTIMESTAMP' />
+  <field number='1146' name='MinPriceIncrementAmount' type='AMT' />
+  <field number='1147' name='UnitOfMeasureQty' type='QTY' />
+  <field number='1148' name='LowLimitPrice' type='PRICE' />
+  <field number='1149' name='HighLimitPrice' type='PRICE' />
+  <field number='1150' name='TradingReferencePrice' type='PRICE' />
+  <field number='1151' name='SecurityGroup' type='STRING' />
+  <field number='1152' name='LegNumber' type='INT' />
+  <field number='1153' name='SettlementCycleNo' type='INT' />
+  <field number='1154' name='SideCurrency' type='CURRENCY' />
+  <field number='1155' name='SideSettlCurrency' type='CURRENCY' />
+  <field number='1156' name='ApplExtID' type='INT' />
+  <field number='1157' name='CcyAmt' type='AMT' />
+  <field number='1158' name='NoSettlDetails' type='NUMINGROUP' />
+  <field number='1159' name='SettlObligMode' type='INT'>
+   <value enum='1' description='PRELIMINARY' />
+   <value enum='2' description='FINAL' />
+  </field>
+  <field number='1160' name='SettlObligMsgID' type='STRING' />
+  <field number='1161' name='SettlObligID' type='STRING' />
+  <field number='1162' name='SettlObligTransType' type='CHAR'>
+   <value enum='C' description='CANCEL' />
+   <value enum='N' description='NEW' />
+   <value enum='R' description='REPLACE' />
+   <value enum='T' description='RESTATE' />
+  </field>
+  <field number='1163' name='SettlObligRefID' type='STRING' />
+  <field number='1164' name='SettlObligSource' type='CHAR'>
+   <value enum='1' description='INSTRUCTIONS_OF_BROKER' />
+   <value enum='2' description='INSTRUCTIONS_FOR_INSTITUTION' />
+   <value enum='3' description='INVESTOR' />
+  </field>
+  <field number='1165' name='NoSettlOblig' type='NUMINGROUP' />
+  <field number='1166' name='QuoteMsgID' type='STRING' />
+  <field number='1167' name='QuoteEntryStatus' type='INT'>
+   <value enum='0' description='ACCEPTED' />
+   <value enum='5' description='REJECTED' />
+   <value enum='6' description='REMOVED_FROM_MARKET' />
+   <value enum='7' description='EXPIRED' />
+   <value enum='12' description='LOCKED_MARKET_WARNING' />
+   <value enum='13' description='CROSS_MARKET_WARNING' />
+   <value enum='14' description='CANCELED_DUE_TO_LOCK_MARKET' />
+   <value enum='15' description='CANCELED_DUE_TO_CROSS_MARKET' />
+   <value enum='16' description='ACTIVE' />
+  </field>
+  <field number='1168' name='TotNoCxldQuotes' type='INT' />
+  <field number='1169' name='TotNoAccQuotes' type='INT' />
+  <field number='1170' name='TotNoRejQuotes' type='INT' />
+  <field number='1171' name='PrivateQuote' type='BOOLEAN' />
+  <field number='1172' name='RespondentType' type='INT'>
+   <value enum='1' description='ALL_MARKET_PARTICIPANTS' />
+   <value enum='2' description='SPECIFIED_MARKET_PARTICIPANTS' />
+   <value enum='3' description='ALL_MARKET_MAKERS' />
+   <value enum='4' description='PRIMARY_MARKET_MAKER' />
+  </field>
+  <field number='1173' name='MDSubBookType' type='INT' />
+  <field number='1174' name='SecurityTradingEvent' type='INT'>
+   <value enum='1' description='ORDER_IMBALANCE_AUCTION_IS_EXTENDED' />
+   <value enum='2' description='TRADING_RESUMES' />
+   <value enum='3' description='PRICE_VOLATILITY_INTERRUPTION' />
+   <value enum='4' description='CHANGE_OF_TRADING_SESSION' />
+   <value enum='5' description='CHANGE_OF_TRADING_SUBSESSION' />
+   <value enum='6' description='CHANGE_OF_SECURITY_STATUS' />
+   <value enum='7' description='CHANGE_OF_BOOK_TYPE' />
+   <value enum='8' description='CHANGE_OF_MARKET_DEPTH' />
+  </field>
+  <field number='1175' name='NoStatsIndicators' type='NUMINGROUP' />
+  <field number='1176' name='StatsType' type='INT'>
+   <value enum='1' description='EXCHANGE_LAST' />
+   <value enum='2' description='HIGH' />
+   <value enum='3' description='AVERAGE_PRICE' />
+   <value enum='4' description='TURNOVER' />
+  </field>
+  <field number='1177' name='NoOfSecSizes' type='NUMINGROUP' />
+  <field number='1178' name='MDSecSizeType' type='INT'>
+   <value enum='1' description='CUSTOMER' />
+  </field>
+  <field number='1179' name='MDSecSize' type='QTY' />
+  <field number='1180' name='ApplID' type='STRING' />
+  <field number='1181' name='ApplSeqNum' type='SEQNUM' />
+  <field number='1182' name='ApplBegSeqNum' type='SEQNUM' />
+  <field number='1183' name='ApplEndSeqNum' type='SEQNUM' />
+  <field number='1184' name='SecurityXMLLen' type='LENGTH' />
+  <field number='1185' name='SecurityXML' type='XMLDATA' />
+  <field number='1186' name='SecurityXMLSchema' type='STRING' />
+  <field number='1187' name='RefreshIndicator' type='BOOLEAN' />
+  <field number='1188' name='Volatility' type='FLOAT' />
+  <field number='1189' name='TimeToExpiration' type='FLOAT' />
+  <field number='1190' name='RiskFreeRate' type='FLOAT' />
+  <field number='1191' name='PriceUnitOfMeasure' type='STRING' />
+  <field number='1192' name='PriceUnitOfMeasureQty' type='QTY' />
+  <field number='1193' name='SettlMethod' type='CHAR'>
+   <value enum='C' description='CASH_SETTLEMENT_REQUIRED' />
+   <value enum='P' description='PHYSICAL_SETTLEMENT_REQUIRED' />
+  </field>
+  <field number='1194' name='ExerciseStyle' type='INT'>
+   <value enum='0' description='EUROPEAN' />
+   <value enum='1' description='AMERICAN' />
+   <value enum='2' description='BERMUDA' />
+  </field>
+  <field number='1195' name='OptPayAmount' type='AMT' />
+  <field number='1196' name='PriceQuoteMethod' type='STRING'>
+   <value enum='STD' description='STANDARD_MONEY_PER_UNIT_OF_A_PHYSICAL' />
+   <value enum='INX' description='INDEX' />
+   <value enum='INT' description='INTEREST_RATE_INDEX' />
+  </field>
+  <field number='1197' name='FuturesValuationMethod' type='STRING'>
+   <value enum='EQTY' description='PREMIUM_STYLE' />
+   <value enum='FUT' description='FUTURES_STYLE_MARK_TO_MARKET' />
+   <value enum='FUTDA' description='FUTURES_STYLE_WITH_AN_ATTACHED_CASH_ADJUSTMENT' />
+  </field>
+  <field number='1198' name='ListMethod' type='INT'>
+   <value enum='0' description='PRE_LISTED_ONLY' />
+   <value enum='1' description='USER_REQUESTED' />
+  </field>
+  <field number='1199' name='CapPrice' type='PRICE' />
+  <field number='1200' name='FloorPrice' type='PRICE' />
+  <field number='1201' name='NoStrikeRules' type='NUMINGROUP' />
+  <field number='1202' name='StartStrikePxRange' type='PRICE' />
+  <field number='1203' name='EndStrikePxRange' type='PRICE' />
+  <field number='1204' name='StrikeIncrement' type='FLOAT' />
+  <field number='1205' name='NoTickRules' type='NUMINGROUP' />
+  <field number='1206' name='StartTickPriceRange' type='PRICE' />
+  <field number='1207' name='EndTickPriceRange' type='PRICE' />
+  <field number='1208' name='TickIncrement' type='PRICE' />
+  <field number='1209' name='TickRuleType' type='INT'>
+   <value enum='0' description='REGULAR' />
+   <value enum='1' description='VARIABLE' />
+   <value enum='2' description='FIXED' />
+   <value enum='3' description='TRADED_AS_A_SPREAD_LEG' />
+   <value enum='4' description='SETTLED_AS_A_SPREAD_LEG' />
+  </field>
+  <field number='1210' name='NestedInstrAttribType' type='INT' />
+  <field number='1211' name='NestedInstrAttribValue' type='STRING' />
+  <field number='1212' name='LegMaturityTime' type='TZTIMEONLY' />
+  <field number='1213' name='UnderlyingMaturityTime' type='TZTIMEONLY' />
+  <field number='1214' name='DerivativeSymbol' type='STRING' />
+  <field number='1215' name='DerivativeSymbolSfx' type='STRING' />
+  <field number='1216' name='DerivativeSecurityID' type='STRING' />
+  <field number='1217' name='DerivativeSecurityIDSource' type='STRING' />
+  <field number='1218' name='NoDerivativeSecurityAltID' type='NUMINGROUP' />
+  <field number='1219' name='DerivativeSecurityAltID' type='STRING' />
+  <field number='1220' name='DerivativeSecurityAltIDSource' type='STRING' />
+  <field number='1221' name='SecondaryLowLimitPrice' type='PRICE' />
+  <field number='1222' name='MaturityRuleID' type='STRING' />
+  <field number='1223' name='StrikeRuleID' type='STRING' />
+  <field number='1224' name='LegUnitOfMeasureQty' type='QTY' />
+  <field number='1225' name='DerivativeOptPayAmount' type='AMT' />
+  <field number='1226' name='EndMaturityMonthYear' type='MONTHYEAR' />
+  <field number='1227' name='ProductComplex' type='STRING' />
+  <field number='1228' name='DerivativeProductComplex' type='STRING' />
+  <field number='1229' name='MaturityMonthYearIncrement' type='INT' />
+  <field number='1230' name='SecondaryHighLimitPrice' type='PRICE' />
+  <field number='1231' name='MinLotSize' type='QTY' />
+  <field number='1232' name='NoExecInstRules' type='NUMINGROUP' />
+  <field number='1234' name='NoLotTypeRules' type='NUMINGROUP' />
+  <field number='1235' name='NoMatchRules' type='NUMINGROUP' />
+  <field number='1236' name='NoMaturityRules' type='NUMINGROUP' />
+  <field number='1237' name='NoOrdTypeRules' type='NUMINGROUP' />
+  <field number='1239' name='NoTimeInForceRules' type='NUMINGROUP' />
+  <field number='1240' name='SecondaryTradingReferencePrice' type='PRICE' />
+  <field number='1241' name='StartMaturityMonthYear' type='MONTHYEAR' />
+  <field number='1242' name='FlexProductEligibilityIndicator' type='BOOLEAN' />
+  <field number='1243' name='DerivFlexProductEligibilityIndicator' type='BOOLEAN' />
+  <field number='1244' name='FlexibleIndicator' type='BOOLEAN' />
+  <field number='1245' name='TradingCurrency' type='CURRENCY' />
+  <field number='1246' name='DerivativeProduct' type='INT' />
+  <field number='1247' name='DerivativeSecurityGroup' type='STRING' />
+  <field number='1248' name='DerivativeCFICode' type='STRING' />
+  <field number='1249' name='DerivativeSecurityType' type='STRING' />
+  <field number='1250' name='DerivativeSecuritySubType' type='STRING' />
+  <field number='1251' name='DerivativeMaturityMonthYear' type='MONTHYEAR' />
+  <field number='1252' name='DerivativeMaturityDate' type='LOCALMKTDATE' />
+  <field number='1253' name='DerivativeMaturityTime' type='TZTIMEONLY' />
+  <field number='1254' name='DerivativeSettleOnOpenFlag' type='STRING' />
+  <field number='1255' name='DerivativeInstrmtAssignmentMethod' type='CHAR' />
+  <field number='1256' name='DerivativeSecurityStatus' type='STRING' />
+  <field number='1257' name='DerivativeInstrRegistry' type='STRING' />
+  <field number='1258' name='DerivativeCountryOfIssue' type='COUNTRY' />
+  <field number='1259' name='DerivativeStateOrProvinceOfIssue' type='STRING' />
+  <field number='1260' name='DerivativeLocaleOfIssue' type='STRING' />
+  <field number='1261' name='DerivativeStrikePrice' type='PRICE' />
+  <field number='1262' name='DerivativeStrikeCurrency' type='CURRENCY' />
+  <field number='1263' name='DerivativeStrikeMultiplier' type='FLOAT' />
+  <field number='1264' name='DerivativeStrikeValue' type='FLOAT' />
+  <field number='1265' name='DerivativeOptAttribute' type='CHAR' />
+  <field number='1266' name='DerivativeContractMultiplier' type='FLOAT' />
+  <field number='1267' name='DerivativeMinPriceIncrement' type='FLOAT' />
+  <field number='1268' name='DerivativeMinPriceIncrementAmount' type='AMT' />
+  <field number='1269' name='DerivativeUnitOfMeasure' type='STRING' />
+  <field number='1270' name='DerivativeUnitOfMeasureQty' type='QTY' />
+  <field number='1271' name='DerivativeTimeUnit' type='STRING' />
+  <field number='1272' name='DerivativeSecurityExchange' type='EXCHANGE' />
+  <field number='1273' name='DerivativePositionLimit' type='INT' />
+  <field number='1274' name='DerivativeNTPositionLimit' type='INT' />
+  <field number='1275' name='DerivativeIssuer' type='STRING' />
+  <field number='1276' name='DerivativeIssueDate' type='LOCALMKTDATE' />
+  <field number='1277' name='DerivativeEncodedIssuerLen' type='LENGTH' />
+  <field number='1278' name='DerivativeEncodedIssuer' type='DATA' />
+  <field number='1279' name='DerivativeSecurityDesc' type='STRING' />
+  <field number='1280' name='DerivativeEncodedSecurityDescLen' type='LENGTH' />
+  <field number='1281' name='DerivativeEncodedSecurityDesc' type='DATA' />
+  <field number='1282' name='DerivativeSecurityXMLLen' type='LENGTH' />
+  <field number='1283' name='DerivativeSecurityXML' type='DATA' />
+  <field number='1284' name='DerivativeSecurityXMLSchema' type='STRING' />
+  <field number='1285' name='DerivativeContractSettlMonth' type='MONTHYEAR' />
+  <field number='1286' name='NoDerivativeEvents' type='NUMINGROUP' />
+  <field number='1287' name='DerivativeEventType' type='INT' />
+  <field number='1288' name='DerivativeEventDate' type='LOCALMKTDATE' />
+  <field number='1289' name='DerivativeEventTime' type='UTCTIMESTAMP' />
+  <field number='1290' name='DerivativeEventPx' type='PRICE' />
+  <field number='1291' name='DerivativeEventText' type='STRING' />
+  <field number='1292' name='NoDerivativeInstrumentParties' type='NUMINGROUP' />
+  <field number='1293' name='DerivativeInstrumentPartyID' type='STRING' />
+  <field number='1294' name='DerivativeInstrumentPartyIDSource' type='STRING' />
+  <field number='1295' name='DerivativeInstrumentPartyRole' type='INT' />
+  <field number='1296' name='NoDerivativeInstrumentPartySubIDs' type='NUMINGROUP' />
+  <field number='1297' name='DerivativeInstrumentPartySubID' type='STRING' />
+  <field number='1298' name='DerivativeInstrumentPartySubIDType' type='INT' />
+  <field number='1299' name='DerivativeExerciseStyle' type='CHAR' />
+  <field number='1300' name='MarketSegmentID' type='STRING' />
+  <field number='1301' name='MarketID' type='EXCHANGE' />
+  <field number='1302' name='MaturityMonthYearIncrementUnits' type='INT'>
+   <value enum='0' description='MONTHS' />
+   <value enum='1' description='DAYS' />
+   <value enum='2' description='WEEKS' />
+   <value enum='3' description='YEARS' />
+  </field>
+  <field number='1303' name='MaturityMonthYearFormat' type='INT'>
+   <value enum='0' description='YEARMONTH_ONLY' />
+   <value enum='1' description='YEARMONTHDAY' />
+   <value enum='2' description='YEARMONTHWEEK' />
+  </field>
+  <field number='1304' name='StrikeExerciseStyle' type='INT' />
+  <field number='1305' name='SecondaryPriceLimitType' type='INT' />
+  <field number='1306' name='PriceLimitType' type='INT'>
+   <value enum='0' description='PRICE' />
+   <value enum='1' description='TICKS' />
+   <value enum='2' description='PERCENTAGE' />
+  </field>
+  <field number='1308' name='ExecInstValue' type='CHAR' />
+  <field number='1309' name='NoTradingSessionRules' type='NUMINGROUP' />
+  <field number='1310' name='NoMarketSegments' type='NUMINGROUP' />
+  <field number='1311' name='NoDerivativeInstrAttrib' type='NUMINGROUP' />
+  <field number='1312' name='NoNestedInstrAttrib' type='NUMINGROUP' />
+  <field number='1313' name='DerivativeInstrAttribType' type='INT' />
+  <field number='1314' name='DerivativeInstrAttribValue' type='STRING' />
+  <field number='1315' name='DerivativePriceUnitOfMeasure' type='STRING' />
+  <field number='1316' name='DerivativePriceUnitOfMeasureQty' type='QTY' />
+  <field number='1317' name='DerivativeSettlMethod' type='CHAR' />
+  <field number='1318' name='DerivativePriceQuoteMethod' type='STRING' />
+  <field number='1319' name='DerivativeFuturesValuationMethod' type='STRING' />
+  <field number='1320' name='DerivativeListMethod' type='INT' />
+  <field number='1321' name='DerivativeCapPrice' type='PRICE' />
+  <field number='1322' name='DerivativeFloorPrice' type='PRICE' />
+  <field number='1323' name='DerivativePutOrCall' type='INT' />
+  <field number='1324' name='ListUpdateAction' type='CHAR' />
+  <field number='1325' name='ParentMktSegmID' type='STRING' />
+  <field number='1326' name='TradingSessionDesc' type='STRING' />
+  <field number='1327' name='TradSesUpdateAction' type='CHAR' />
+  <field number='1328' name='RejectText' type='STRING' />
+  <field number='1329' name='FeeMultiplier' type='FLOAT' />
+  <field number='1330' name='UnderlyingLegSymbol' type='STRING' />
+  <field number='1331' name='UnderlyingLegSymbolSfx' type='STRING' />
+  <field number='1332' name='UnderlyingLegSecurityID' type='STRING' />
+  <field number='1333' name='UnderlyingLegSecurityIDSource' type='STRING' />
+  <field number='1334' name='NoUnderlyingLegSecurityAltID' type='NUMINGROUP' />
+  <field number='1335' name='UnderlyingLegSecurityAltID' type='STRING' />
+  <field number='1336' name='UnderlyingLegSecurityAltIDSource' type='STRING' />
+  <field number='1337' name='UnderlyingLegSecurityType' type='STRING' />
+  <field number='1338' name='UnderlyingLegSecuritySubType' type='STRING' />
+  <field number='1339' name='UnderlyingLegMaturityMonthYear' type='MONTHYEAR' />
+  <field number='1340' name='UnderlyingLegStrikePrice' type='PRICE' />
+  <field number='1341' name='UnderlyingLegSecurityExchange' type='STRING' />
+  <field number='1342' name='NoOfLegUnderlyings' type='NUMINGROUP' />
+  <field number='1343' name='UnderlyingLegPutOrCall' type='INT' />
+  <field number='1344' name='UnderlyingLegCFICode' type='STRING' />
+  <field number='1345' name='UnderlyingLegMaturityDate' type='LOCALMKTDATE' />
+  <field number='1346' name='ApplReqID' type='STRING' />
+  <field number='1347' name='ApplReqType' type='INT'>
+   <value enum='0' description='RETRANSMISSION_OF_APPLICATION_MESSAGES_FOR_THE_SPECIFIED_APPLICATIONS' />
+   <value enum='1' description='SUBSCRIPTION_TO_THE_SPECIFIED_APPLICATIONS' />
+   <value enum='2' description='REQUEST_FOR_THE_LAST_APPLLASTSEQNUM_PUBLISHED_FOR_THE_SPECIFIED_APPLICATIONS' />
+   <value enum='3' description='REQUEST_VALID_SET_OF_APPLICATIONS' />
+   <value enum='4' description='UNSUBSCRIBE_TO_THE_SPECIFIED_APPLICATIONS' />
+  </field>
+  <field number='1348' name='ApplResponseType' type='INT'>
+   <value enum='0' description='REQUEST_SUCCESSFULLY_PROCESSED' />
+   <value enum='1' description='APPLICATION_DOES_NOT_EXIST' />
+   <value enum='2' description='MESSAGES_NOT_AVAILABLE' />
+  </field>
+  <field number='1349' name='ApplTotalMessageCount' type='INT' />
+  <field number='1350' name='ApplLastSeqNum' type='SEQNUM' />
+  <field number='1351' name='NoApplIDs' type='NUMINGROUP' />
+  <field number='1352' name='ApplResendFlag' type='BOOLEAN' />
+  <field number='1353' name='ApplResponseID' type='STRING' />
+  <field number='1354' name='ApplResponseError' type='INT'>
+   <value enum='0' description='APPLICATION_DOES_NOT_EXIST' />
+   <value enum='1' description='MESSAGES_REQUESTED_ARE_NOT_AVAILABLE' />
+   <value enum='2' description='USER_NOT_AUTHORIZED_FOR_APPLICATION' />
+  </field>
+  <field number='1355' name='RefApplID' type='STRING' />
+  <field number='1356' name='ApplReportID' type='STRING' />
+  <field number='1357' name='RefApplLastSeqNum' type='SEQNUM' />
+  <field number='1358' name='LegPutOrCall' type='INT' />
+  <field number='1361' name='TotNoFills' type='INT' />
+  <field number='1362' name='NoFills' type='NUMINGROUP' />
+  <field number='1363' name='FillExecID' type='STRING' />
+  <field number='1364' name='FillPx' type='PRICE' />
+  <field number='1365' name='FillQty' type='QTY' />
+  <field number='1366' name='LegAllocID' type='STRING' />
+  <field number='1367' name='LegAllocSettlCurrency' type='CURRENCY' />
+  <field number='1368' name='TradSesEvent' type='INT'>
+   <value enum='0' description='TRADING_RESUMES' />
+   <value enum='1' description='CHANGE_OF_TRADING_SESSION' />
+   <value enum='2' description='CHANGE_OF_TRADING_SUBSESSION' />
+   <value enum='3' description='CHANGE_OF_TRADING_STATUS' />
+  </field>
+  <field number='1369' name='MassActionReportID' type='STRING' />
+  <field number='1370' name='NoNotAffectedOrders' type='NUMINGROUP' />
+  <field number='1371' name='NotAffectedOrderID' type='STRING' />
+  <field number='1372' name='NotAffOrigClOrdID' type='STRING' />
+  <field number='1373' name='MassActionType' type='INT'>
+   <value enum='1' description='SUSPEND_ORDERS' />
+   <value enum='2' description='RELEASE_ORDERS_FROM_SUSPENSION' />
+   <value enum='3' description='CANCEL_ORDERS' />
+  </field>
+  <field number='1374' name='MassActionScope' type='INT'>
+   <value enum='1' description='ALL_ORDERS_FOR_A_SECURITY' />
+   <value enum='2' description='ALL_ORDERS_FOR_AN_UNDERLYING_SECURITY' />
+   <value enum='3' description='ALL_ORDERS_FOR_A_PRODUCT' />
+   <value enum='4' description='ALL_ORDERS_FOR_A_CFICODE' />
+   <value enum='5' description='ALL_ORDERS_FOR_A_SECURITYTYPE' />
+   <value enum='6' description='ALL_ORDERS_FOR_A_TRADING_SESSION' />
+   <value enum='7' description='ALL_ORDERS' />
+   <value enum='8' description='ALL_ORDERS_FOR_A_MARKET' />
+   <value enum='9' description='ALL_ORDERS_FOR_A_MARKET_SEGMENT' />
+   <value enum='10' description='ALL_ORDERS_FOR_A_SECURITY_GROUP' />
+  </field>
+  <field number='1375' name='MassActionResponse' type='INT'>
+   <value enum='0' description='REJECTED' />
+   <value enum='1' description='ACCEPTED' />
+  </field>
+  <field number='1376' name='MassActionRejectReason' type='INT'>
+   <value enum='0' description='MASS_ACTION_NOT_SUPPORTED' />
+   <value enum='1' description='INVALID_OR_UNKNOWN_SECURITY' />
+   <value enum='2' description='INVALID_OR_UNKNOWN_UNDERLYING_SECURITY' />
+   <value enum='3' description='INVALID_OR_UNKNOWN_PRODUCT' />
+   <value enum='4' description='INVALID_OR_UNKNOWN_CFICODE' />
+   <value enum='5' description='INVALID_OR_UNKNOWN_SECURITYTYPE' />
+   <value enum='6' description='INVALID_OR_UNKNOWN_TRADING_SESSION' />
+   <value enum='7' description='INVALID_OR_UNKNOWN_MARKET' />
+   <value enum='8' description='INVALID_OR_UNKNOWN_MARKET_SEGMENT' />
+   <value enum='9' description='INVALID_OR_UNKNOWN_SECURITY_GROUP' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='1377' name='MultilegModel' type='INT'>
+   <value enum='0' description='PREDEFINED_MULTILEG_SECURITY' />
+   <value enum='1' description='USER_DEFINED_MULTLEG_SECURITY' />
+   <value enum='2' description='USER_DEFINED_NON_SECURITIZED_MULTILEG' />
+  </field>
+  <field number='1378' name='MultilegPriceMethod' type='INT'>
+   <value enum='0' description='NET_PRICE' />
+   <value enum='1' description='REVERSED_NET_PRICE' />
+   <value enum='2' description='YIELD_DIFFERENCE' />
+   <value enum='3' description='INDIVIDUAL' />
+   <value enum='4' description='CONTRACT_WEIGHTED_AVERAGE_PRICE' />
+   <value enum='5' description='MULTIPLIED_PRICE' />
+  </field>
+  <field number='1379' name='LegVolatility' type='FLOAT' />
+  <field number='1380' name='DividendYield' type='PERCENTAGE' />
+  <field number='1381' name='LegDividendYield' type='PERCENTAGE' />
+  <field number='1382' name='CurrencyRatio' type='FLOAT' />
+  <field number='1383' name='LegCurrencyRatio' type='FLOAT' />
+  <field number='1384' name='LegExecInst' type='MULTIPLECHARVALUE' />
+  <field number='1385' name='ContingencyType' type='INT'>
+   <value enum='1' description='ONE_CANCELS_THE_OTHER' />
+   <value enum='2' description='ONE_TRIGGERS_THE_OTHER' />
+   <value enum='3' description='ONE_UPDATES_THE_OTHER_3' />
+   <value enum='4' description='ONE_UPDATES_THE_OTHER_4' />
+  </field>
+  <field number='1386' name='ListRejectReason' type='INT'>
+   <value enum='0' description='BROKER' />
+   <value enum='2' description='EXCHANGE_CLOSED' />
+   <value enum='4' description='TOO_LATE_TO_ENTER' />
+   <value enum='5' description='UNKNOWN_ORDER' />
+   <value enum='6' description='DUPLICATE_ORDER' />
+   <value enum='11' description='UNSUPPORTED_ORDER_CHARACTERISTIC' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='1387' name='NoTrdRepIndicators' type='NUMINGROUP' />
+  <field number='1388' name='TrdRepPartyRole' type='INT' />
+  <field number='1389' name='TrdRepIndicator' type='BOOLEAN' />
+  <field number='1390' name='TradePublishIndicator' type='INT'>
+   <value enum='0' description='DO_NOT_PUBLISH_TRADE' />
+   <value enum='1' description='PUBLISH_TRADE' />
+   <value enum='2' description='DEFERRED_PUBLICATION' />
