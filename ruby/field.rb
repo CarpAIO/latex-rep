@@ -49,4 +49,23 @@ class Field
       'LENGTH' => 'Length',
       'LOCALMKTDATE' => 'LocalMktDate',
       'MONTHYEAR' => 'MonthYear',
-      'MULTIPLEVALUESTRING' => 'MultipleValueSt
+      'MULTIPLEVALUESTRING' => 'MultipleValueString',
+      'NUMINGROUP' => 'NumInGroup',
+      'PERCENTAGE' => 'Percentage',
+      'PRICE' => 'Price',
+      'PRICEOFFSET' => 'PriceOffset',
+      'QTY' => 'Qty',
+      'SEQNUM' => 'SeqNum',
+      'STRING' => 'String',
+      'TIME' => 'Time',
+      'UTCDATE' => 'UTCDateOnly',
+      'UTCDATEONLY' => 'UTCDateOnly',
+      'UTCTIMEONLY' => 'UTCTimeOnly',
+      'UTCTIMESTAMP' => 'UTCTimestamp',
+      'INT' => 'Int',
+    }[t]
+    raise Exception.new("#{t} is not a valid tag type") if oft.nil?
+    oft
+  end
+
+end # Field
