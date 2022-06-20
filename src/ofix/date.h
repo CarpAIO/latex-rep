@@ -16,4 +16,19 @@ typedef enum {
 } ofixDateType;
     
 typedef struct _ofixDate {
- 
+    int16_t		year;
+    uint8_t		month;
+    uint8_t		week;
+    uint8_t		day;
+    uint8_t		hour;
+    uint8_t		minute;
+    uint8_t		sec;
+    uint16_t		msec;
+    ofixDateType	type;
+} *ofixDate;
+
+extern bool	ofix_date_is_valid(ofixDate date);
+extern char*	ofix_date_to_str(ofixDate date);
+extern void	ofix_date_set_timestamp(ofixDate ts, uint64_t usec);
+
+#endif /* __OFIX_DATE_H__ */
