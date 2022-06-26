@@ -1592,3 +1592,330 @@ ofix_msg_set_data(ofixErr err, ofixMsg msg, int tag, const char *value, int len)
 	return;
     }
     if (0 == (len_tag = ref->related_tag)) {
+	if (NULL != err) {
+	    err->code = OFIX_ARG_ERR;
+	    snprintf(err->msg, sizeof(err->msg),
+		     "NULL or zero length array is not a valid value for ofix_msg_set_data()");
+	}
+	return;
+    }
+    ofix_msg_set_int(err, msg, len_tag, len);
+    ofix_msg_set_data_only(err, msg, tag, value, len);
+    msg->changed = true;
+}
+
+static int
+set_float(ofixErr err, ofixMsg msg, Field f, double value, int fracDigits) {
+    char	buf[32];
+    double	e = 1.0;
+    int		i;
+    int		start;
+    int		vcnt;
+    int		shift = 0;
+
+    if (NULL != err && OFIX_OK != err->code) {
+	return 0;
+    }
+    for (i = fracDigits; 0 < i; i--) {
+	e *= 10;
+    }
+    if (0.0 == (double)(long)(value * e) / e - (double)(long)value) {
+	sprintf(buf, "%ld", (long)value);
+    } else {
+	sprintf(buf, "%.*lf", fracDigits, value);
+    }
+    vcnt = strlen(buf);
+    if (0 == f->vlen) {
+	int	tagLen = f->ref->tag_byte_len;
+	
+	start = f->vpos;
+	shift = tagLen + vcnt + 1;
+	slide(err, msg, start, shift);
+	if (NULL != err && OFIX_OK != err->code) {
+	    return 0;
+	}
+	memcpy(msg->raw + start, f->ref->tag_bytes, tagLen);
+	f->vpos = start + tagLen;
+	f->vlen = vcnt;
+	msg->raw[f->vpos + f->vlen] = SOH;
+    } else if (f->vlen != vcnt) {
+	shift = vcnt - f->vlen;
+	slide(err, msg, f->vpos + f->vlen, shift);
+	if (NULL != err && OFIX_OK != err->code) {
+	    return 0;
+	}
+	f->vlen = vcnt;
+    }
+    // copy the value into the msg
+    memcpy(msg->raw + f->vpos, buf, vcnt);
+
+    msg->changed = true;
+
+    return shift;
+}
+
+void
+ofix_msg_set_float(ofixErr err, ofixMsg msg, int tag, double value, int fracDigits) {
+    Field	f = NULL;
+
+    if (NULL != err && OFIX_OK != err->code) {
+	return;
+    }
+    if (!msg->append_mode) {
+	f = get_tag_field(msg, tag);
+    }
+    if (NULL == f) {
+	// sets f->pos to beginning, tricks slide() into doing the right thing
+	if (NULL == (f = append(err, msg, tag, msg->append_mode))) {
+	    return;
+	}
+    }
+    slide_fields(msg, f + 1, set_float(err, msg, f, value, fracDigits));
+    msg->changed = true;
+}
+
+static int
+set_date(ofixErr err, ofixMsg msg, Field f, ofixDate value) {
+    char	*b;
+    int		start;
+    int		vcnt;
+    int		shift = 0;
+
+    switch (value->type) {
+    case OFIX_TIMEONLY:	// HH:MM:SS.sss or HH:MM:SS
+	if (12 == f->vlen) {
+	    vcnt = 12;
+	} else {
+	    vcnt = (0 == value->msec) ? 8 : 12;
+	}
+	break;
+    case OFIX_DATEONLY:	// YYYYMMDD
+	vcnt = 8;
+	break;
+    case OFIX_YYYYMM:	// YYYYMM
+	vcnt = 6;
+	break;
+    case OFIX_YYYYMMWW:	// YYYYMMWW
+	vcnt = 8;
+	break;
+    case OFIX_TIME:	// YYYYMMDD-HH:MM:SS
+	vcnt = 17;
+	break;
+    case OFIX_TIMESTAMP:// YYYYMMDD-HH:MM:SS.sss or YYYYMMDD-HH:MM:SS
+    default:
+	if (21 == f->vlen) {
+	    vcnt = 21;
+	} else {
+	    vcnt = (0 == value->msec) ? 17 : 21;
+	}
+	break;
+    }
+    if (0 == f->vlen) {
+	int	tagLen = f->ref->tag_byte_len;
+	
+	start = f->vpos;
+	shift = tagLen + vcnt + 1;
+	slide(err, msg, start, shift);
+	if (NULL != err && OFIX_OK != err->code) {
+	    return 0;
+	}
+	memcpy(msg->raw + start, f->ref->tag_bytes, tagLen);
+	f->vpos = start + tagLen;
+    } else if (f->vlen != vcnt) { // need to change field size
+	shift = vcnt - f->vlen;
+	slide(err, msg, f->vpos + f->vlen, shift);
+	if (NULL != err && OFIX_OK != err->code) {
+	    return 0;
+	}
+    }
+    f->vlen = vcnt;
+    b = msg->raw + f->vpos;
+    // copy the value into the msg
+    switch (value->type) {
+    case OFIX_TIMEONLY:	// HH:MM:SS.sss or HH:MM:SS
+	*b++ = '0' + (value->hour / 10);
+	*b++ = '0' + (value->hour - value->hour / 10 * 10);
+	*b++ = ':';
+	*b++ = '0' + (value->minute / 10);
+	*b++ = '0' + (value->minute - value->minute / 10 * 10);
+	*b++ = ':';
+	*b++ = '0' + (value->sec / 10);
+	*b++ = '0' + (value->sec - value->sec / 10 * 10);
+	if (12 == vcnt) {
+	    *b++ = '.';
+	    *b++ = '0' + (value->msec / 100);
+	    *b++ = '0' + (value->msec / 10 - value->msec / 100 * 10);
+	    *b++ = '0' + (value->msec - value->msec / 10 * 10);
+	}
+	break;
+    case OFIX_DATEONLY:	// YYYYMMDD
+	*b++ = '0' + (value->year / 1000);
+	*b++ = '0' + (value->year / 100 - value->year / 1000 * 10);
+	*b++ = '0' + (value->year / 10 - value->year / 100 * 10);
+	*b++ = '0' + (value->year - value->year / 10 * 10);
+	*b++ = '0' + (value->month / 10);
+	*b++ = '0' + (value->month - value->month / 10 * 10);
+	*b++ = '0' + (value->day / 10);
+	*b++ = '0' + (value->day - value->day / 10 * 10);
+	break;
+    case OFIX_YYYYMM:	// YYYYMM
+	*b++ = '0' + (value->year / 1000);
+	*b++ = '0' + (value->year / 100 - value->year / 1000 * 10);
+	*b++ = '0' + (value->year / 10 - value->year / 100 * 10);
+	*b++ = '0' + (value->year - value->year / 10 * 10);
+	*b++ = '0' + (value->month / 10);
+	*b++ = '0' + (value->month - value->month / 10 * 10);
+	break;
+    case OFIX_YYYYMMWW:	// YYYYMMwW
+	*b++ = '0' + (value->year / 1000);
+	*b++ = '0' + (value->year / 100 - value->year / 1000 * 10);
+	*b++ = '0' + (value->year / 10 - value->year / 100 * 10);
+	*b++ = '0' + (value->year - value->year / 10 * 10);
+	*b++ = '0' + (value->month / 10);
+	*b++ = '0' + (value->month - value->month / 10 * 10);
+	*b++ = 'w';
+	*b++ = '0' + value->week;
+	break;
+    case OFIX_TIME:	// YYYYMMDD-HH:MM:SS
+	*b++ = '0' + (value->year / 1000);
+	*b++ = '0' + (value->year / 100 - value->year / 1000 * 10);
+	*b++ = '0' + (value->year / 10 - value->year / 100 * 10);
+	*b++ = '0' + (value->year - value->year / 10 * 10);
+	*b++ = '0' + (value->month / 10);
+	*b++ = '0' + (value->month - value->month / 10 * 10);
+	*b++ = '0' + (value->day / 10);
+	*b++ = '0' + (value->day - value->day / 10 * 10);
+	*b++ = '-';
+	*b++ = '0' + (value->hour / 10);
+	*b++ = '0' + (value->hour - value->hour / 10 * 10);
+	*b++ = ':';
+	*b++ = '0' + (value->minute / 10);
+	*b++ = '0' + (value->minute - value->minute / 10 * 10);
+	*b++ = ':';
+	*b++ = '0' + (value->sec / 10);
+	*b++ = '0' + (value->sec - value->sec / 10 * 10);
+	break;
+    case OFIX_TIMESTAMP:	// YYYYMMDD-HH:MM:SS.sss or YYYYMMDD-HH:MM:SS
+    default:
+	*b++ = '0' + (value->year / 1000);
+	*b++ = '0' + (value->year / 100 - value->year / 1000 * 10);
+	*b++ = '0' + (value->year / 10 - value->year / 100 * 10);
+	*b++ = '0' + (value->year - value->year / 10 * 10);
+	*b++ = '0' + (value->month / 10);
+	*b++ = '0' + (value->month - value->month / 10 * 10);
+	*b++ = '0' + (value->day / 10);
+	*b++ = '0' + (value->day - value->day / 10 * 10);
+	*b++ = '-';
+	*b++ = '0' + (value->hour / 10);
+	*b++ = '0' + (value->hour - value->hour / 10 * 10);
+	*b++ = ':';
+	*b++ = '0' + (value->minute / 10);
+	*b++ = '0' + (value->minute - value->minute / 10 * 10);
+	*b++ = ':';
+	*b++ = '0' + (value->sec / 10);
+	*b++ = '0' + (value->sec - value->sec / 10 * 10);
+	if (21 == vcnt) {
+	    *b++ = '.';
+	    *b++ = '0' + (value->msec / 100);
+	    *b++ = '0' + (value->msec / 10 - value->msec / 100 * 10);
+	    *b++ = '0' + (value->msec - value->msec / 10 * 10);
+	}
+	break;
+    }
+    msg->raw[f->vpos + f->vlen] = SOH;
+    msg->changed = true;
+
+    return shift;
+}
+
+void
+ofix_msg_set_date(ofixErr err, ofixMsg msg, int tag, ofixDate value) {
+    Field	f = NULL;
+
+    if (NULL != err && OFIX_OK != err->code) {
+	return;
+    }
+    if (!msg->append_mode) {
+	f = get_tag_field(msg, tag);
+    }
+    if (NULL == f) {
+	// sets f->pos to beginning, tricks slide() into doing the right thing
+	if (NULL == (f = append(err, msg, tag, msg->append_mode))) {
+	    return;
+	}
+    }
+    slide_fields(msg, f + 1, set_date(err, msg, f, value));
+    msg->changed = true;
+}
+
+// TBD set repeating fields
+
+void
+ofix_msg_remove(ofixErr err, ofixMsg msg, int tag) {
+    Field	f = get_field(msg, tag);
+    int		start;
+    int		end;
+    int		shift;
+
+    if (NULL != err && OFIX_OK != err->code) {
+	return;
+    }
+    if (NULL == f) {
+	if (NULL != err) {
+	    err->code = OFIX_NOT_FOUND_ERR;
+	    snprintf(err->msg, sizeof(err->msg), "Tag %d not found in message.", tag);
+	}
+	return;
+    }
+    if (OFIX_CheckSumTAG == tag ||
+	OFIX_BeginStringTAG == tag ||
+	OFIX_BodyLengthTAG == tag ||
+	OFIX_MsgTypeTAG == tag) {
+	if (NULL != err) {
+	    err->code = OFIX_DENIED_ERR;
+	    snprintf(err->msg, sizeof(err->msg), "Tag %d can not be removed from message.", tag);
+	}
+	return;
+    }
+    start = f->vpos - f->ref->tag_byte_len;
+    end = field_end(f) + 1;
+    shift = start - end;
+    slide(err, msg, end, shift);
+    if (NULL != err && OFIX_OK != err->code) {
+	return;
+    }
+    slide_fields(msg, f + 1, shift);
+    memmove(f, f + 1, sizeof(struct _Field) * (msg->field_cnt - (f - msg->fields) - 1));
+    msg->field_cnt--;
+    msg->changed = true;
+}
+
+int
+ofix_msg_iterator_next_tag(ofixMsgIterator iter) {
+    Field	f;
+    int		tag;
+    
+    if (0 == iter->context) {
+	f = iter->msg->fields;
+    } else if (&iter->msg->check_sum_field == (Field)iter->context) {
+	return 0;
+    } else {
+	f = (Field)iter->context;
+	f++;
+    }
+    if (last_field(iter->msg) < f) {
+	f = &iter->msg->check_sum_field;
+	tag = OFIX_CheckSumTAG;
+    } else {
+	tag = f->ref->tag;
+	iter->msg->cached_field = f;
+    }
+    iter->context = (void*)f;
+
+    return tag;
+}
+
+void
+ofix_msg_set_changed(ofixMsg msg) {
+    msg->changed = true;
+}
