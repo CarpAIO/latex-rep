@@ -69,3 +69,11 @@ extern bool		ofix_engine_running(ofixEngine eng);
  */
 extern void		ofix_engine_destroy(ofixErr err, ofixEngine eng);
 
+extern void		ofix_engine_set_log(ofixEngine eng, ofixLogOn log_on, ofixLog log, void *ctx);
+
+extern bool		ofix_engine_authorized(ofixEngine eng,
+					       const char *cid,
+					       const char *user,
+					       const char *password);
+
+#endif /* __OFIX_ENGINE_H__ */
