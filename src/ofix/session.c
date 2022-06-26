@@ -102,4 +102,79 @@ _ofix_session_init(ofixErr err,
     }
     s->done = true;
     s->closed = true;
-    s
+    s->logon_sent = false;
+    s->logon_recv = false;
+    s->test_req_sent = false;
+    s->logout_sent = 0.0;
+}
+
+void
+_ofix_session_free(ofixSession session) {
+    double	give_up = dtime() + 2.0;
+
+    session->done = true;
+    while (dtime() < give_up && !session->closed) {
+	dsleep(0.1);
+    }
+    if (0 < session->sock) {
+	close(session->sock);
+	session->sock = 0;
+    }
+    if (NULL != session->store) {
+	ofix_store_destroy(session->store);
+	session->store = NULL;
+    }
+    free(session->sid);
+    free(session->tid);
+}
+
+ofixMsg
+ofix_session_create_msg(ofixErr err, ofixSession session, const char *type) {
+    ofixMsgSpec	mspec = ofix_version_spec_get_msg_spec_from_version(err, type, session->spec);
+
+    if (NULL == mspec) {
+	return NULL;
+    }
+    return ofix_msg_create_from_spec(err, mspec, 20);
+}
+
+static void
+reset_target_heartbeat(ofixSession session, double now) {
+    session->heartbeat_expect_recv = now + (double)session->target_heartbeat_interval + HEARTBEAT_TOLERANCE;
+    session->test_req_sent = false;
+}
+
+static bool
+resend(ofixErr err, ofixSession session, int64_t seq) {
+    int		cnt;
+    const char	*str;
+    ofixMsg	msg = ofix_store_get(err, session->store, seq, OFIX_IODIR_SEND);
+
+    if (NULL != err && OFIX_OK != err->code) {
+	return false;
+    }
+    ofix_msg_set_bool(err, msg, OFIX_PossDupFlagTAG, true);
+    cnt = ofix_msg_size(err, msg);
+    str = ofix_msg_FIX_str(err, msg);
+    pthread_mutex_lock(&session->send_mutex);
+    if (cnt != send(session->sock, str, cnt, 0)) {
+	if (NULL != err) {
+	    err->code = OFIX_WRITE_ERR;
+	    snprintf(err->msg, sizeof(err->msg),
+		     "Failed to send message. error [%d] %s", errno, strerror(errno));
+	}
+    }
+    pthread_mutex_unlock(&session->send_mutex);
+    if (session->log_on(session->log_ctx, OFIX_DEBUG)) {
+	char	*s = ofix_msg_to_str(err, msg);
+
+	session->log(session->log_ctx, OFIX_DEBUG, "Resent %s", s);
+	free(s);
+    }
+    session->heartbeat_next_send = (double)session->heartbeat_interval + dtime();
+
+    return true;
+}
+
+static void
+s
