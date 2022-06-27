@@ -246,4 +246,62 @@ send_reject(ofixErr err,
 	ofix_msg_set_int(err, msg, OFIX_RefTagIDTAG, tag);
     }
     if (0 <= reason) {
-	ofix_msg_set_int(err, msg, OFIX_SessionRejectReason
+	ofix_msg_set_int(err, msg, OFIX_SessionRejectReasonTAG, reason);
+    }
+    if (NULL != text && '\0' != *text) {
+	ofix_msg_set_str(err, msg, OFIX_TextTAG, text);
+    }
+    ofix_session_send(err, session, msg);
+}
+
+static void
+handle_logon(ofixErr err, ofixSession session, ofixMsg msg) {
+    char	buf[16]; // longer than 32 is an error
+    char	*user;
+    char	*password;
+    double	now;
+
+    ofix_msg_copy_str(err, msg, OFIX_BeginStringTAG, buf, sizeof(buf));
+    if (0 != strcmp(session->version_str, buf)) {
+	char		err_msg[256];
+	struct _ofixErr	ignore = OFIX_ERR_INIT;
+
+	snprintf(err_msg, sizeof(err_msg),
+		 "Wrong FIX version. Expected %s. Recieved %s.", session->version_str, buf);
+	send_reject(&ignore, session, 0, "A", OFIX_EncryptMethodTAG, OFIX_REASON_BAD_VALUE, err_msg);
+	ofix_session_logout(err, session, "%s", err_msg);
+	return;
+    }
+    if (0 != ofix_msg_get_int(err, msg, OFIX_EncryptMethodTAG)) {
+	struct _ofixErr	ignore = OFIX_ERR_INIT;
+
+	send_reject(&ignore, session, 0, "A", OFIX_EncryptMethodTAG, OFIX_REASON_DECRYPT,
+		    "Encryption is not supported.");
+	ofix_session_logout(err, session, "Encryption is not supported.");
+	return;
+    }
+    user = ofix_msg_get_str(NULL, msg, OFIX_UsernameTAG);
+    password = ofix_msg_get_str(NULL, msg, OFIX_PasswordTAG);
+    if (NULL != session->eng &&
+	!ofix_engine_authorized(session->eng, session->tid, user, password)) {
+	struct _ofixErr	ignore = OFIX_ERR_INIT;
+
+	free(user);
+	free(password);
+	send_reject(&ignore, session, 0, "A", 0, OFIX_REASON_SIGNATURE, "Invalid credentials.");
+	ofix_session_logout(err, session, "Invalid credentials.");
+	return;
+    }
+    free(user);
+    free(password);
+    now = dtime();
+    // TBD verify sequence number (if there is some predefined start number)
+    session->target_heartbeat_interval = (int)ofix_msg_get_int(err, msg, OFIX_HeartBtIntTAG);
+    if (!session->logon_sent) {
+	ofixMsg	reply = ofix_session_create_msg(err, session, "A");
+
+	if (NULL == reply) {
+	    return;
+	}
+	ofix_msg_set_int(err, reply, OFIX_EncryptMethodTAG, 0); // not encrypted
+	ofix_msg_set_int(err, reply, OFIX_HeartBtIntTAG, session->heartbeat_interval)
