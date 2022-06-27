@@ -177,4 +177,73 @@ resend(ofixErr err, ofixSession session, int64_t seq) {
 }
 
 static void
-s
+send_heartbeat(ofixErr err, ofixSession session, const char *id) {
+    ofixMsg	msg = ofix_session_create_msg(err, session, "0");
+
+    if (NULL == msg) {
+	return;
+    }
+    if (NULL != id && '\0' != *id) {
+	ofix_msg_set_str(err, msg, OFIX_TestReqIDTAG, id);
+    }
+    session->heartbeat_next_send = dtime() + (double)session->heartbeat_interval;
+    ofix_session_send(err, session, msg);
+}
+
+static void
+send_test_request(ofixErr err, ofixSession session) {
+    ofixMsg		msg = ofix_session_create_msg(err, session, "1");
+    struct timeval	tv;
+    struct timezone	tz;
+    struct _ofixDate	now;
+    char		*id;
+
+    session->test_req_sent = true;
+    if (NULL == msg) {
+	return;
+    }
+    if (NULL != err && OFIX_OK != err->code) {
+	return;
+    }
+    gettimeofday(&tv, &tz);
+    ofix_date_set_timestamp(&now, (uint64_t)tv.tv_sec * 1000000LL + (uint64_t)tv.tv_usec);
+    id = ofix_date_to_str(&now);
+    ofix_msg_set_str(err, msg, OFIX_TestReqIDTAG, id);
+    free(id);
+    ofix_session_send(err, session, msg);
+}
+
+static void
+send_resend_request(ofixErr err, ofixSession session, int64_t begin, int64_t end) {
+    ofixMsg	msg = ofix_session_create_msg(err, session, "2");
+
+    if (NULL == msg || (NULL != err && OFIX_OK != err->code)) {
+	return;
+    }
+    ofix_msg_set_int(err, msg, OFIX_BeginSeqNoTAG, begin);
+    ofix_msg_set_int(err, msg, OFIX_EndSeqNoTAG, end);
+    ofix_session_send(err, session, msg);
+}
+
+static void
+send_reject(ofixErr err,
+	    ofixSession session,
+	    int64_t seq,
+	    const char *msg_type,
+	    int64_t tag,
+	    int64_t reason,
+	    const char *text) {
+    ofixMsg	msg = ofix_session_create_msg(err, session, "3");
+
+    if (NULL == msg) {
+	return;
+    }
+    ofix_msg_set_int(err, msg, OFIX_RefSeqNumTAG, seq);
+    if (NULL != msg_type && '\0' != *msg_type) {
+	ofix_msg_set_str(err, msg, OFIX_RefMsgTypeTAG, msg_type);
+    }
+    if (0 < tag) {
+	ofix_msg_set_int(err, msg, OFIX_RefTagIDTAG, tag);
+    }
+    if (0 <= reason) {
+	ofix_msg_set_int(err, msg, OFIX_SessionRejectReason
