@@ -304,4 +304,76 @@ handle_logon(ofixErr err, ofixSession session, ofixMsg msg) {
 	    return;
 	}
 	ofix_msg_set_int(err, reply, OFIX_EncryptMethodTAG, 0); // not encrypted
-	ofix_msg_set_int(err, reply, OFIX_HeartBtIntTAG, session->heartbeat_interval)
+	ofix_msg_set_int(err, reply, OFIX_HeartBtIntTAG, session->heartbeat_interval);
+	ofix_session_send(err, session, reply);
+	session->heartbeat_next_send = (double)session->heartbeat_interval + now;
+    }
+    session->logon_recv = true;
+}
+
+static void
+handle_logout(ofixErr err, ofixSession session, ofixMsg msg) {
+    ofixMsg	reply;
+
+    if (0.0 < session->logout_sent) {
+	session->done = true;
+	return;
+    }
+    if (NULL != (reply = ofix_session_create_msg(err, session, "5"))) {
+	ofix_session_send(err, session, reply);
+    }
+    // Even if failed to send, set the loutout_sent time so that the socket will
+    // get closed.
+    session->logout_sent = dtime();
+}
+
+static void
+handle_heartbeat(ofixErr err, ofixSession session, ofixMsg msg) {
+    // Got a message so timer can be reset, TestReqId doesn't matter really.
+}
+
+static void
+handle_test_request(ofixErr err, ofixSession session, ofixMsg msg) {
+    char	*id = ofix_msg_get_str(NULL, msg, OFIX_TestReqIDTAG);
+
+    send_heartbeat(err, session, id);
+    free(id);
+}
+
+static void
+handle_resend_request(ofixErr err, ofixSession session, ofixMsg msg) {
+    int64_t	begin = ofix_msg_get_int(err, msg, OFIX_BeginSeqNoTAG);
+    int64_t	end;
+
+    if (OFIX_OK != err->code) {
+	int64_t	seq = ofix_msg_get_int(err, msg, OFIX_MsgSeqNumTAG);
+
+	session->log(session->log_ctx, OFIX_WARN, err->msg);
+	send_reject(err, session, seq, "2", OFIX_BeginSeqNoTAG, OFIX_REASON_MISSING_TAG, err->msg);
+	return;
+    }
+    end = ofix_msg_get_int(err, msg, OFIX_EndSeqNoTAG);
+    if (OFIX_OK != err->code) {
+	int64_t	seq = ofix_msg_get_int(err, msg, OFIX_MsgSeqNumTAG);
+
+	session->log(session->log_ctx, OFIX_WARN, err->msg);
+	send_reject(err, session, seq, "2", OFIX_EndSeqNoTAG, OFIX_REASON_MISSING_TAG, err->msg);
+	return;
+    }
+    if (begin <= end) {
+	for (; begin <= end; begin++) {
+	    if (!resend(err, session, begin)) {
+		break;
+	    }
+	}
+    } else {
+	for (; true; begin++) {
+	    if (!resend(err, session, begin)) {
+		break;
+	    }
+	}
+    }
+}
+
+static void
+handle_sequence_r
