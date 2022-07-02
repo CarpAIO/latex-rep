@@ -376,4 +376,75 @@ handle_resend_request(ofixErr err, ofixSession session, ofixMsg msg) {
 }
 
 static void
-handle_sequence_r
+handle_sequence_reset(ofixErr err, ofixSession session, ofixMsg msg) {
+    int64_t	seq = ofix_msg_get_int(err, msg, OFIX_NewSeqNoTAG);
+
+    if (session->recv_seq < seq) {
+	session->recv_seq = seq - 1; // one less so we expect new seq next
+    }
+}
+
+
+static void
+handle_reject(ofixErr err, ofixSession session, ofixMsg msg) {
+    if (!session->logon_recv) {
+	session->logon_recv = true;
+	// logout is coming
+    } else {
+	session->recv_cb(session, msg, session->recv_ctx);
+    }
+}
+
+static bool
+handle_session_msg(ofixErr err, ofixSession session, const char *mt, ofixMsg msg, int64_t seq) {
+    if ('\0' != mt[1]) {
+	return false;
+    }
+    switch (*mt) {
+    case 'A': // Logon
+	handle_logon(err, session, msg);
+	break;
+    case '0': // Heartbeat
+	handle_heartbeat(err, session, msg);
+	break;
+    case '1': // TestRequest
+	handle_test_request(err, session, msg);
+	break;
+    case '2': // ResendRequest
+	handle_resend_request(err, session, msg);
+	break;
+    case '3': // Reject
+	handle_reject(err, session, msg);
+	break;
+    case '4': // SequenceReset
+	handle_sequence_reset(err, session, msg);
+	break;
+    case '5': // Logout
+	handle_logout(err, session, msg);
+	break;
+    default:
+	return false;
+    }
+    return true;
+}
+
+// If true is returned then do not delete the message.
+static bool
+process_msg(ofixErr err, ofixSession session, ofixMsg msg) {
+    bool	keep = false;
+    int64_t	seq = ofix_msg_get_int(err, msg, OFIX_MsgSeqNumTAG);
+    const char	*mt = ofix_msg_get_str(err, msg, OFIX_MsgTypeTAG);
+    const char	*sid = ofix_msg_get_str(err, msg, OFIX_SenderCompIDTAG);
+    const char	*tid = ofix_msg_get_str(err, msg, OFIX_TargetCompIDTAG);
+
+    // Errors handled later based on returned values.
+    ofix_err_clear(err);
+    if (NULL == session->store) {
+	// Server just got it's first message on this session.
+	char		path[1024];
+	time_t		now = time(NULL);
+	struct tm	*tm = gmtime(&now);
+	const char	*err_msg = "Message did not contain a sender identifier. Closing session.";
+
+	if (NULL == sid) {
+	    session->log(session
