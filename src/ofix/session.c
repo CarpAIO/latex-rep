@@ -447,4 +447,55 @@ process_msg(ofixErr err, ofixSession session, ofixMsg msg) {
 	const char	*err_msg = "Message did not contain a sender identifier. Closing session.";
 
 	if (NULL == sid) {
-	    session->log(session
+	    session->log(session->log_ctx, OFIX_WARN, err_msg);
+	    session->recv_seq = seq;
+	    send_reject(err, session, seq, mt, OFIX_SenderCompIDTAG, OFIX_REASON_COMP_ID, err_msg);
+
+	    return false;
+	}
+	session->tid = strdup(sid);
+	snprintf(path, sizeof(path), "%s/%s-%04d%02d%02d.%02d%02d%02d.fix",
+		 session->store_dir, session->tid,
+		 tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday,
+		 tm->tm_hour, tm->tm_min, tm->tm_sec);
+	session->store = ofix_store_create(err, path, session->tid);
+	if (OFIX_OK != err->code) {
+	    return false;
+	}
+    }
+    ofix_store_add(err, session->store, seq, OFIX_IODIR_RECV, msg);
+    if (0.0 < session->logout_sent) {
+	if (0 == strcmp("5", mt)) {
+	    handle_session_msg(err, session, mt, msg, seq);
+	    session->recv_seq = seq;
+	}
+    } else if (NULL == sid || 0 != strcmp(session->tid, sid)) {
+	char	err_buf[1024];
+
+	snprintf(err_buf, sizeof(err_buf), "Expected sender of '%s'. Received '%s'.",
+		 session->tid, (NULL == sid ? "<null>" : sid));
+
+	session->log(session->log_ctx, OFIX_WARN, "%s", err_buf);
+	session->recv_seq = seq;
+	send_reject(err, session, seq, mt, OFIX_SenderCompIDTAG, OFIX_REASON_COMP_ID, err_buf);
+    } else if (NULL == tid || 0 != strcmp(session->sid, tid)) {
+	char	err_buf[1024];
+
+	snprintf(err_buf, sizeof(err_buf), "Expected target of '%s'. Received '%s'.",
+		 session->sid, (NULL == tid ? "<null>" : tid));
+	session->log(session->log_ctx, OFIX_WARN, "%s", err_buf);
+	session->recv_seq = seq;
+	send_reject(err, session, seq, mt, OFIX_TargetCompIDTAG, OFIX_REASON_COMP_ID, err_buf);
+    } else if (session->recv_seq >= seq) {
+	struct _ofixErr	derr = OFIX_ERR_INIT;
+	bool		dup = ofix_msg_get_bool(&derr, msg, OFIX_PossDupFlagTAG);
+
+	if (OFIX_OK != derr.code || !dup) {
+	    char	err_buf[1024];
+
+	    snprintf(err_buf, sizeof(err_buf),
+		     "Duplicate message %lld from '%s' not flagged as duplicate.",
+		     (long long)seq, (NULL == tid ? "<null>" : tid));
+	    session->log(session->log_ctx, OFIX_WARN, "%s", err_buf);
+	    send_reject(err, session, seq, mt, OFIX_MsgSeqNumTAG, OFIX_REASON_OTHER, err_buf);
+	    ofix_ses
