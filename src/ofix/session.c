@@ -498,4 +498,64 @@ process_msg(ofixErr err, ofixSession session, ofixMsg msg) {
 		     (long long)seq, (NULL == tid ? "<null>" : tid));
 	    session->log(session->log_ctx, OFIX_WARN, "%s", err_buf);
 	    send_reject(err, session, seq, mt, OFIX_MsgSeqNumTAG, OFIX_REASON_OTHER, err_buf);
-	    ofix_ses
+	    ofix_session_logout(err, session, "%s", err_buf);
+	} else if (handle_session_msg(err, session, mt, msg, seq)) {
+	    // do not reset session->recv_seq
+	} else if (NULL != session->recv_cb) {
+	    keep = !session->recv_cb(session, msg, session->recv_ctx);
+	}
+    } else if (session->recv_seq + 1 != seq) {
+	session->log(session->log_ctx, OFIX_WARN,
+		     "'%s' did not send the correct sequence number. Received %lld. Expected %lld.",
+		     session->tid, (long long)seq, (long long)session->recv_seq + 1);
+	if (0 == strcmp("4", mt)) { // SequenceReset
+	    handle_session_msg(err, session, mt, msg, seq);
+	} else {
+	    send_resend_request(err, session, session->recv_seq + 1, 0);
+	    session->recv_seq = seq;
+	}
+    } else if (handle_session_msg(err, session, mt, msg, seq)) {
+	session->recv_seq = seq;
+    } else if (NULL != session->recv_cb) { // at last, an app valid message
+	session->recv_seq = seq;
+	keep = !session->recv_cb(session, msg, session->recv_ctx);
+    }
+    reset_target_heartbeat(session, dtime());
+
+    return keep;
+}
+
+static void
+check_heartbeat(ofixSession session) {
+    struct _ofixErr	err = OFIX_ERR_INIT;
+    double		now = dtime();
+
+    if (0 < session->heartbeat_interval && session->heartbeat_next_send <= now) {
+	send_heartbeat(&err, session, NULL);
+	if (OFIX_OK != err.code) {
+	    session->log(session->log_ctx, OFIX_WARN, "error %d sending heartbeat - %s",
+			 err.code, err.msg);
+	}
+    }
+    if (0 < session->target_heartbeat_interval && session->heartbeat_expect_recv <= now) {
+	if (session->heartbeat_expect_recv + HEARTBEAT_GIVEUP <= now) {
+	    // Connection lost, shut it down.
+	    session->done = true;
+	} else if (!session->test_req_sent) {
+	    send_test_request(&err, session);
+	}
+    }
+}
+
+static void*
+session_loop(void *arg) {
+    ofixSession		session = (ofixSession)arg;
+    char		buf[4096];
+    char		*b = buf;
+    char		*start = buf;
+    char		*end = buf + sizeof(buf);
+    fd_set		xfds;
+    fd_set		rfds;
+    struct timeval	to;
+    int			cnt;
+    int			so
