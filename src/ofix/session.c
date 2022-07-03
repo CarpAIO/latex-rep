@@ -558,4 +558,74 @@ session_loop(void *arg) {
     fd_set		rfds;
     struct timeval	to;
     int			cnt;
-    int			so
+    int			sock = session->sock;
+    int			max_sock = session->sock + 1;
+    socklen_t		rlen = 0;
+    ssize_t		rcnt;
+    int			msg_len = 0;
+
+    session->done = false;
+    session->closed = false;
+    while (!session->done) {
+	while (start < b && isspace(*start)) {
+	    start++;
+	}
+	if (b - start < 22 || (0 < msg_len && b - start < msg_len)) {
+	    // Slide to make room before reading.
+	    if (buf < start) {
+		if (0 < b - start) {
+		    memmove(buf, start, b - start);
+		    b -= start - buf;
+		} else {
+		    b = buf;
+		}
+		start = buf;
+	    }
+	    to.tv_sec = 1;
+	    to.tv_usec = 0;
+	    FD_ZERO(&rfds);
+	    FD_ZERO(&xfds);
+	    FD_SET(sock, &rfds);
+	    FD_SET(sock, &xfds);
+	    if (0 < (cnt = select(max_sock, &rfds, 0, &xfds, &to))) {
+		if (FD_ISSET(sock, &xfds)) {
+		    session->done = true;
+		    break;
+		}
+		if (FD_ISSET(sock, &rfds)) {
+		    rlen = 0;
+		    rcnt = recvfrom(session->sock, b, end - b, 0, 0, &rlen);
+		    b += rcnt;
+		}
+	    } else if (0 == cnt) {
+		if (0.0 < session->logout_sent && session->logout_sent < dtime() + LOGOUT_TIMEOUT) {
+		    session->done = true;
+		}
+		check_heartbeat(session);
+		continue;
+	    } else {
+		if (0.0 >= session->logout_sent) {
+		    // Only an error if there was no logout sent.
+		    session->log(session->log_ctx, OFIX_WARN, "select error %d - %s", errno, strerror(errno));
+		}
+		session->done = true;
+		break;
+	    }
+	}
+	if (0.0 < session->logout_sent && session->logout_sent + 1.0 < dtime()) {
+	    session->done = true;
+	    break;
+	}
+	if (22 <= b - start && 0 == msg_len) {
+	    msg_len = ofix_msg_expected_buf_size(start);
+	    if (0 == msg_len) {
+		*b = '\0';
+		session->log(session->log_ctx, OFIX_WARN,
+			     "Failed to parse message length, aborting '%s'", start);
+		break;
+	    } else if (sizeof(buf) <= msg_len) {
+		// TBD if msg_len is greater than buf then allocate,exit for now
+		session->log(session->log_ctx, OFIX_ERROR,
+			     "Message length too long. Limit is %lu, aborting '%s'", sizeof(buf) - 1);
+		session->done = true;
+		b
