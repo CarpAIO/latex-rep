@@ -709,4 +709,63 @@ ofix_session_send(ofixErr err, ofixSession session, ofixMsg msg) {
     ofix_msg_set_str(err, msg, OFIX_TargetCompIDTAG, session->tid);
 
     pthread_mutex_lock(&session->send_mutex);
-    if (NULL != (st
+    if (NULL != (str = ofix_msg_get_str(err, msg, OFIX_MsgTypeTAG)) && '\0' == str[1]) {
+	if ('5' == *str) {
+	    session->logout_sent = dtime();
+	} else if ('4' == *str) {
+	    if (0 < (seq = ofix_msg_get_int(err, msg, OFIX_NewSeqNoTAG))) {
+		session->sent_seq = seq - 2; // ends up as 1 less than new seq
+	    }
+	}
+    }
+    session->sent_seq++;
+    seq = session->sent_seq;
+    ofix_msg_set_int(err, msg, OFIX_MsgSeqNumTAG, seq);
+    cnt = ofix_msg_size(err, msg);
+    str = ofix_msg_FIX_str(err, msg);
+    if (cnt != send(session->sock, str, cnt, 0)) {
+	if (NULL != err) {
+	    err->code = OFIX_WRITE_ERR;
+	    snprintf(err->msg, sizeof(err->msg),
+		     "Failed to send message. error [%d] %s", errno, strerror(errno));
+	}
+    }
+    pthread_mutex_unlock(&session->send_mutex);
+    ofix_store_add(err, session->store, seq, OFIX_IODIR_SEND, msg);
+    if (session->log_on(session->log_ctx, OFIX_DEBUG)) {
+	char	*s = ofix_msg_to_str(err, msg);
+
+	session->log(session->log_ctx, OFIX_DEBUG, "Sent %s", s);
+	free(s);
+    }
+    // reset the heartbeat timer
+    session->heartbeat_next_send = (double)session->heartbeat_interval + (double)tv.tv_sec + (double)tv.tv_usec / 1000000.0;
+}
+
+// only used for testing bad messages
+void
+_ofix_session_raw_send(ofixErr err, ofixSession session, ofixMsg msg) {
+    int			cnt;
+    const char		*str;
+    struct timeval	tv;
+    struct timezone	tz;
+    struct _ofixDate	now;
+    int64_t		seq;
+
+    if (NULL != err && OFIX_OK != err->code) {
+	return;
+    }
+    gettimeofday(&tv, &tz);
+    ofix_date_set_timestamp(&now, (uint64_t)tv.tv_sec * 1000000LL + (uint64_t)tv.tv_usec);
+    ofix_msg_set_date(err, msg, OFIX_SendingTimeTAG, &now);
+
+    pthread_mutex_lock(&session->send_mutex);
+    seq = ofix_msg_get_int(err, msg, OFIX_MsgSeqNumTAG);
+    session->sent_seq = seq;
+    cnt = ofix_msg_size(err, msg);
+    str = ofix_msg_FIX_str(err, msg);
+    if (cnt != send(session->sock, str, cnt, 0)) {
+	if (NULL != err) {
+	    err->code = OFIX_WRITE_ERR;
+	    snprintf(err->msg, sizeof(err->msg),
+		     "Fail
