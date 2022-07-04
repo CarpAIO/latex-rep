@@ -628,4 +628,85 @@ session_loop(void *arg) {
 		session->log(session->log_ctx, OFIX_ERROR,
 			     "Message length too long. Limit is %lu, aborting '%s'", sizeof(buf) - 1);
 		session->done = true;
-		b
+		break;
+	    }
+	}
+	if (0 < msg_len && msg_len <= b - start) {
+	    struct _ofixErr	err = OFIX_ERR_INIT;
+	    ofixMsg		msg = ofix_msg_parse(&err, start, msg_len);
+
+	    if (OFIX_OK != err.code) {
+		struct _ofixErr	rerr = OFIX_ERR_INIT;
+		
+		session->log(session->log_ctx, OFIX_WARN, "Parse error: %s", err.msg);
+		send_reject(&rerr, session, (0 == err.seq ? session->recv_seq + 1: err.seq),
+			    err.msg_type, err.tag, err.reason, err.msg);
+		if (0 != err.seq) {
+		    session->recv_seq = err.seq;
+		} else {
+		    session->recv_seq++;
+		}
+	    } else {
+		if (!process_msg(&err, session, msg)) {
+		    ofix_msg_destroy(msg);
+		}
+	    }
+	    start += msg_len;
+	    msg_len = 0;
+	    if (OFIX_OK != err.code) {
+		session->log(session->log_ctx, OFIX_WARN, "[%d] %s.", err.code, err.msg);
+		ofix_err_clear(&err);
+	    }
+	}
+	check_heartbeat(session);
+    }
+    if (0 < session->sock) {
+	close(session->sock);
+	session->sock = 0;
+    }
+    session->closed = true;
+
+    return NULL;
+}
+
+void
+_ofix_session_start(ofixErr err, ofixSession session, bool wait) {
+    if (0 != pthread_create(&session->thread, 0, session_loop, session)) {
+	if (NULL != err) {
+	    err->code = OFIX_THREAD_ERR;
+	    strcpy(err->msg, "Failed to start sessionthread.");
+	}
+    }
+    if (wait) {
+	double	giveup = dtime() + 2.0;
+
+	while (session->closed && session->done) {
+	    if (giveup < dtime()) {
+		err->code = OFIX_NETWORK_ERR;
+		strcpy(err->msg, "Timed out waiting for session to start.");
+		return;
+	    }
+	}
+    }
+}
+
+void
+ofix_session_send(ofixErr err, ofixSession session, ofixMsg msg) {
+    int			cnt;
+    const char		*str;
+    struct timeval	tv;
+    struct timezone	tz;
+    struct _ofixDate	now;
+    int64_t		seq;
+
+    if (NULL != err && OFIX_OK != err->code) {
+	return;
+    }
+    gettimeofday(&tv, &tz);
+    ofix_date_set_timestamp(&now, (uint64_t)tv.tv_sec * 1000000LL + (uint64_t)tv.tv_usec);
+    ofix_msg_set_date(err, msg, OFIX_SendingTimeTAG, &now);
+    ofix_msg_set_str(err, msg, OFIX_SenderCompIDTAG, session->sid);
+    ofix_msg_set_str(err, msg, OFIX_TargetCompIDTAG, session->tid);
+
+    pthread_mutex_lock(&session->send_mutex);
+    if (NULL != (st
