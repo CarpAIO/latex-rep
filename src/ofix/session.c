@@ -768,4 +768,64 @@ _ofix_session_raw_send(ofixErr err, ofixSession session, ofixMsg msg) {
 	if (NULL != err) {
 	    err->code = OFIX_WRITE_ERR;
 	    snprintf(err->msg, sizeof(err->msg),
-		     "Fail
+		     "Failed to send message. error [%d] %s", errno, strerror(errno));
+	}
+    }
+    pthread_mutex_unlock(&session->send_mutex);
+    ofix_store_add(err, session->store, seq, OFIX_IODIR_SEND, msg);
+}
+
+ofixMsg
+ofix_session_get_msg(ofixErr err, ofixSession session, int64_t seqnum) {
+    // TBD
+    return NULL;
+}
+
+int64_t
+ofix_session_send_seqnum(ofixSession session) {
+    return session->sent_seq;
+}
+
+int64_t
+ofix_session_recv_seqnum(ofixSession session) {
+    return session->recv_seq;
+}
+
+void
+ofix_session_logout(ofixErr err, ofixSession session, const char *txt, ...) {
+    ofixMsg	msg;
+
+    if (0.0 < session->logout_sent) {
+	session->done = true;
+	return;
+    }
+    if (NULL == (msg = ofix_session_create_msg(err, session, "5"))) {
+	return;
+    }
+    if (NULL != txt) {
+	char	buf[4096];
+	va_list	ap;
+
+	va_start(ap, txt);
+	vsnprintf(buf, sizeof(buf), txt, ap);
+	va_end(ap);
+	ofix_msg_set_str(err, msg, OFIX_TextTAG, buf);
+    }
+    ofix_session_send(err, session, msg);
+}
+
+void
+ofix_session_set_heartbeat(ofixSession session, int interval) {
+    double	now = dtime();
+
+    if (0.0 < session->heartbeat_next_send) {
+	session->heartbeat_next_send -= (double)session->heartbeat_interval;
+	session->heartbeat_next_send += (double)interval;
+	if (session->heartbeat_next_send < now) {
+	    session->heartbeat_next_send = now;
+	}
+    } else {
+	session->heartbeat_next_send = (double)interval + now;
+    }
+    session->heartbeat_interval = interval;
+}
