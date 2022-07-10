@@ -108,3 +108,85 @@ index_add(ofixErr err, Index index, int64_t seq, off_t where, off_t len) {
 	if (new_size - 100 <= seq) {
 	    new_size = seq + LOCS_INC;
 	}
+	if (NULL == (index->locs = (Loc)realloc(index->locs, sizeof(struct _Loc) * new_size))) {
+	    if (NULL != err) {
+		err->code = OFIX_MEMORY_ERR;
+		strcpy(err->msg, "Failed to allocate memory for session store index.");
+	    }
+	    return;
+	}
+	memset(index->locs + index->size, 0, sizeof(struct _Loc) * (new_size - index->size));
+    }
+    loc = index->locs + seq;
+    loc->start = where;
+    loc->size = len;
+}
+
+void
+ofix_store_add(ofixErr err, Store store, int64_t seq, IoDir dir, ofixMsg msg) {
+    const char*	mstr = NULL;
+    off_t	mlen = 0;
+
+    if (NULL != err && OFIX_OK != err->code) {
+	return;
+    }
+    if (NULL == store) {
+	if (NULL != err) {
+	    err->code = OFIX_ARG_ERR;
+	    strcpy(err->msg, "NULL store in call to staore add.");
+	}
+	return;
+    }
+    if (NULL == msg) {
+	if (NULL != err) {
+	    err->code = OFIX_ARG_ERR;
+	    strcpy(err->msg, "NULL mesage argument to store add.");
+	}
+	return;
+    }
+    if (NULL == store->file) {
+	if (NULL != err) {
+	    err->code = OFIX_ARG_ERR;
+	    strcpy(err->msg, "No storage setup for session.");
+	}
+	return;
+    }
+    mlen = ofix_msg_size(err, msg);
+    mstr = ofix_msg_FIX_str(err, msg);
+    if (NULL != err && OFIX_OK != err->code) {
+	return;
+    }
+    if (mlen != fwrite(mstr, 1, mlen, store->file) ||
+	1 != fwrite("\n", 1, 1, store->file)) {
+	fclose(store->file);
+	store->file = NULL;
+	if (NULL != err) {
+	    err->code = OFIX_WRITE_ERR;
+	    strcpy(err->msg, "Failed to store message.");
+	}
+	return;
+    }
+    switch (dir) {
+    case OFIX_IODIR_SEND:
+	index_add(err, &store->sindex, seq, store->where, mlen);
+	break;
+    case OFIX_IODIR_RECV:
+	index_add(err, &store->rindex, seq, store->where, mlen);
+	break;
+    default:
+	// error
+	break;
+    }
+    store->where += mlen + 1;
+}
+
+ofixMsg
+ofix_store_get(ofixErr err, Store store, int64_t seq, IoDir dir) {
+    ofixMsg	msg = NULL;
+    Loc		loc = NULL;
+    char	buf[4096];
+    char	*mstr = buf;
+    
+    switch (dir) {
+    case OFIX_IODIR_SEND:
+	if (seq < store->sindex.
