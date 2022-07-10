@@ -189,4 +189,79 @@ ofix_store_get(ofixErr err, Store store, int64_t seq, IoDir dir) {
     
     switch (dir) {
     case OFIX_IODIR_SEND:
-	if (seq < store->sindex.
+	if (seq < store->sindex.size) {
+	    loc = store->sindex.locs + seq;
+	}
+	break;
+    case OFIX_IODIR_RECV:
+	if (seq < store->rindex.size) {
+	    loc = store->rindex.locs + seq;
+	}
+	break;
+    default:
+	if (seq < store->sindex.size) {
+	    loc = store->sindex.locs + seq;
+	} else if (seq < store->rindex.size) {
+	    loc = store->rindex.locs + seq;
+	}
+	break;
+    }
+    if (NULL == loc || 0 == loc->start || 0 == loc->size) {
+	return NULL;
+    }
+    if (0 != fseek(store->file, loc->start, SEEK_SET)) {
+	if (NULL != err) {
+	    err->code = OFIX_READ_ERR;
+	    snprintf(err->msg, sizeof(err->msg), "Failed to find message. %s", strerror(errno));
+	}
+	return NULL;
+    }
+    if (sizeof(buf) <= loc->size) {
+	if (NULL == (mstr = (char*)malloc(loc->size + 1))) {
+	    if (NULL != err) {
+		err->code = OFIX_MEMORY_ERR;
+		strcpy(err->msg, "Failed to allocate memory for message.");
+	    }
+	    return NULL;
+	}
+    }
+    if (loc->size != fread(mstr, 1, loc->size, store->file)) {
+	if (NULL != err) {
+	    err->code = OFIX_READ_ERR;
+	    snprintf(err->msg, sizeof(err->msg), "Failed to read message. %s", strerror(errno));
+	}
+	return NULL;
+    }
+    msg = ofix_msg_parse(err, mstr, loc->size);
+    if (0 != fseek(store->file, store->where, SEEK_SET)) {
+	if (NULL != err) {
+	    err->code = OFIX_READ_ERR;
+	    snprintf(err->msg, sizeof(err->msg), "Failed to reset storage. %s", strerror(errno));
+	}
+    }
+    if (buf != mstr) {
+	free(mstr);
+    }
+    return msg;
+}
+
+void
+ofix_store_iterate(ofixErr err, Store store, bool (*cb)(ofixMsg msg, void *ctx), void *ctx) {
+    if (0 != fseek(store->file, 0, SEEK_SET)) {
+	if (NULL != err) {
+	    err->code = OFIX_READ_ERR;
+	    snprintf(err->msg, sizeof(err->msg), "Failed to read storage. %s", strerror(errno));
+	}
+	return;
+    }
+    ofix_store_fiterate(err, store->file, cb, ctx);
+    if (0 != fseek(store->file, store->where, SEEK_SET)) {
+	if (NULL != err) {
+	    err->code = OFIX_READ_ERR;
+	    snprintf(err->msg, sizeof(err->msg), "Failed to reset storage. %s", strerror(errno));
+	}
+    }
+}
+
+void
+ofix_store_fiterate(ofixErr err, FILE *f, bool (*cb)(ofixMsg msg, void *ctx), voi
