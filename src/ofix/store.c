@@ -264,4 +264,69 @@ ofix_store_iterate(ofixErr err, Store store, bool (*cb)(ofixMsg msg, void *ctx),
 }
 
 void
-ofix_store_fiterate(ofixErr err, FILE *f, bool (*cb)(ofixMsg msg, void *ctx), voi
+ofix_store_fiterate(ofixErr err, FILE *f, bool (*cb)(ofixMsg msg, void *ctx), void *ctx) {
+    ofixMsg	msg;
+    char	buf[4096];
+    char	*b;
+    char	*end = buf;
+    size_t	cnt;
+    int		rcnt = 0;
+
+    for (b = buf; 2 > rcnt; b++) {
+	if (end <= b) {
+	    if (0 == (cnt = fread(buf, 1, sizeof(buf), f))) {
+		// short
+		return;
+	    }
+	    b = buf;
+	    end = buf + cnt;
+	}
+	if ('\n' == *b) {
+	    rcnt++;
+	} else {
+	    rcnt = 0;
+	}
+    }
+    while (true) {
+	// need at least 22 bytes to read the expected message length
+	if (22 > end - b) {
+	    cnt = end - b;
+	    memmove(buf, b, cnt);
+	    end = buf + cnt;
+	    b = buf;
+	    if (0 == (cnt = fread(end, 1, sizeof(buf) - cnt, f))) {
+		return;
+	    }
+	    end += cnt;
+	}
+	cnt = ofix_msg_expected_buf_size(b);
+	if (end - b < cnt + 1) {
+	    // If the buf is not big enough then error out for now.
+	    if (sizeof(buf) < cnt + 1) {
+		if (NULL != err) {
+		    err->code = OFIX_OVERFLOW_ERR;
+		    strcpy(err->msg, "Not enough space to read message.");
+		}
+		return;
+	    }
+	    if (sizeof(buf) < (b - buf) + cnt + 1) {
+		rcnt = end - b;
+		memmove(buf, b, rcnt);
+		end = buf + rcnt;
+		b = buf;
+	    }
+	    if (0 == (rcnt = fread(end, 1, sizeof(buf) - (end - buf), f))) {
+		return;
+	    }
+	    end += rcnt;
+	}
+	if (NULL == (msg = ofix_msg_parse(err, b, cnt))) {
+	    return;
+	}
+	if (cb(msg, ctx)) {
+	    ofix_msg_destroy(msg);
+	}
+	b += cnt;
+	b++; // past \n
+    }
+}
