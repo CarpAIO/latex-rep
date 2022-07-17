@@ -33,4 +33,10 @@ extern Store		ofix_store_create(ofixErr err, const char *path, const char *id);
 extern void		ofix_store_destroy(Store store);
 
 extern void		ofix_store_add(ofixErr err, Store store, int64_t seq, IoDir dir, ofixMsg msg);
-extern ofixMsg		ofix_store_get(ofixErr err, Store store, int64_t seq, Io
+extern ofixMsg		ofix_store_get(ofixErr err, Store store, int64_t seq, IoDir dir);
+
+// if cb returns true then msg is destroyed after callback
+extern void		ofix_store_iterate(ofixErr err, Store store, bool (*cb)(ofixMsg msg, void *ctx), void *ctx);
+extern void		ofix_store_fiterate(ofixErr err, FILE *f, bool (*cb)(ofixMsg msg, void *ctx), void *ctx);
+
+#endif /* __OFIX_STORE_H__ */
