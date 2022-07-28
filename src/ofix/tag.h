@@ -941,4 +941,48 @@
 #define OFIX_AgreementIDTAG				914
 #define OFIX_AgreementDateTAG				915
 #define OFIX_StartDateTAG				916
-#define OFIX
+#define OFIX_EndDateTAG					917
+#define OFIX_AgreementCurrencyTAG			918
+#define OFIX_DeliveryTypeTAG				919
+#define OFIX_EndAccruedInterestAmtTAG			920
+#define OFIX_StartCashTAG				921
+#define OFIX_EndCashTAG					922
+#define OFIX_UserRequestIDTAG				923
+#define OFIX_UserRequestTypeTAG				924
+#define OFIX_NewPasswordTAG				925
+#define OFIX_UserStatusTAG				926
+#define OFIX_UserStatusTextTAG				927
+#define OFIX_StatusValueTAG				928
+#define OFIX_StatusTextTAG				929
+#define OFIX_RefCompIDTAG				930
+#define OFIX_RefSubIDTAG				931
+#define OFIX_NetworkResponseIDTAG			932
+#define OFIX_NetworkRequestIDTAG			933
+#define OFIX_LastNetworkResponseIDTAG			934
+#define OFIX_NetworkRequestTypeTAG			935
+#define OFIX_NoCompIDsTAG				936
+#define OFIX_NetworkStatusResponseTypeTAG		937
+#define OFIX_NoCollInquiryQualifierTAG			938
+#define OFIX_TrdRptStatusTAG				939
+#define OFIX_AffirmStatusTAG				940
+#define OFIX_UnderlyingStrikeCurrencyTAG		941
+#define OFIX_LegStrikeCurrencyTAG			942
+#define OFIX_TimeBracketTAG				943
+#define OFIX_CollActionTAG				944
+#define OFIX_CollInquiryStatusTAG			945
+#define OFIX_CollInquiryResultTAG			946
+#define OFIX_StrikeCurrencyTAG				947
+#define OFIX_NoNested3PartyIDsTAG			948
+#define OFIX_Nested3PartyIDTAG				949
+#define OFIX_Nested3PartyIDSourceTAG			950
+#define OFIX_Nested3PartyRoleTAG			951
+#define OFIX_NoNested3PartySubIDsTAG			952
+#define OFIX_Nested3PartySubIDTAG			953
+#define OFIX_Nested3PartySubIDTypeTAG			954
+#define OFIX_LegContractSettlMonthTAG			955
+#define OFIX_LegInterestAccrualDateTAG			956
+
+extern const char*	ofix_tag_to_str(int tag);
+extern int		ofix_str_to_tag(const char *str);
+
+#endif /* __OFIX_TAG_H__ */
