@@ -24,4 +24,8 @@ struct _ofixVersionSpec {
 extern void		ofix_version_spec_prepare(ofixErr err, ofixVersionSpec spec);
 extern void		ofix_version_spec_destroy(ofixVersionSpec spec);
 
-extern o
+extern ofixMsgSpec	ofix_version_spec_get_msg_spec(ofixErr err, const char *type, int major, int minor);
+extern ofixMsgSpec	ofix_version_spec_get_msg_spec_from_version(ofixErr err, const char *type, ofixVersionSpec vspec);
+extern ofixTagSpec	ofix_version_spec_get_tag_spec(ofixErr err, ofixVersionSpec vspec, int tag, bool create);
+
+#endif /* __OFIX_VERSIONSPEC_H__ */
