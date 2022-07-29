@@ -1659,3 +1659,21 @@ struct _ofixVersionSpec	fix40Spec = {
 	&OrderCancelReject,
 	&Logon,
 	&News,
+	&Email,
+	&NewOrderSingle,
+	&NewOrderList,
+	&OrderCancelRequest,
+	&OrderCancelReplaceRequest,
+	&OrderStatusRequest,
+	&Allocation,
+	&ListCancelRequest,
+	&ListExecute,
+	&ListStatusRequest,
+	&ListStatus,
+	&AllocationACK,
+	&DontKnowTrade,
+	&QuoteRequest,
+	&Quote,
+	0
+    }
+};
