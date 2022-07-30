@@ -1983,3 +1983,147 @@ static struct _ofixMsgSpec	Quote = {
 	{ 205, false }, // MaturityDay
 	{ 201, false }, // PutOrCall
 	{ 202, false }, // StrikePrice
+	{ 206, false }, // OptAttribute
+	{ 207, false }, // SecurityExchange
+	{ 106, false }, // Issuer
+	{ 107, false }, // SecurityDesc
+	{ 132, false }, // BidPx
+	{ 133, false }, // OfferPx
+	{ 134, false }, // BidSize
+	{ 135, false }, // OfferSize
+	{ 62, false }, // ValidUntilTime
+	{ 188, false }, // BidSpotRate
+	{ 190, false }, // OfferSpotRate
+	{ 189, false }, // BidForwardPoints
+	{ 191, false }, // OfferForwardPoints
+	{ 60, false }, // TransactTime
+	{ 64, false }, // FutSettDate
+	{ 40, false }, // OrdType
+	{ 193, false }, // FutSettDate2
+	{ 192, false }, // OrderQty2
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// SettlementInstructions [T]
+
+static ofixGroupSpec	SettlementInstructionsGroups[] = {
+    0
+};
+
+static struct _ofixMsgSpec	SettlementInstructions = {
+    &fix41Spec, // version
+    84, // tid
+    "T", // type
+    "SettlementInstructions", // name
+    {0,0,0,0,0,0,0,0,1,2,59,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,0,0,0,10,3,0,0,0,0,0,0,0,19,0,0,0,0,0,4,11,0,21,0,32,0,5,13,0,0,35,0,0,0,0,0,0,0,0,0,30,0,0,0,0,29,37,0,0,27,0,0,0,0,0,0,0,0,0,58,8,9,0,57,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,36,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,23,24,0,26,28,33,34,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    SettlementInstructionsGroups, // groups
+    {
+	{ 8, true }, // BeginString
+	{ 9, true }, // BodyLength
+	{ 35, true }, // MsgType
+	{ 49, true }, // SenderCompID
+	{ 56, true }, // TargetCompID
+	{ 115, false }, // OnBehalfOfCompID
+	{ 128, false }, // DeliverToCompID
+	{ 90, false }, // SecureDataLen
+	{ 91, false }, // SecureData
+	{ 34, true }, // MsgSeqNum
+	{ 50, false }, // SenderSubID
+	{ 142, false }, // SenderLocationID
+	{ 57, false }, // TargetSubID
+	{ 143, false }, // TargetLocationID
+	{ 116, false }, // OnBehalfOfSubID
+	{ 144, false }, // OnBehalfOfLocationID
+	{ 129, false }, // DeliverToSubID
+	{ 145, false }, // DeliverToLocationID
+	{ 43, false }, // PossDupFlag
+	{ 97, false }, // PossResend
+	{ 52, true }, // SendingTime
+	{ 122, false }, // OrigSendingTime
+	{ 162, true }, // SettlInstID
+	{ 163, true }, // SettlInstTransType
+	{ 160, true }, // SettlInstMode
+	{ 165, true }, // SettlInstSource
+	{ 79, true }, // AllocAccount
+	{ 166, false }, // SettlLocation
+	{ 75, false }, // TradeDate
+	{ 70, false }, // AllocID
+	{ 30, false }, // LastMkt
+	{ 54, false }, // Side
+	{ 167, false }, // SecurityType
+	{ 168, false }, // EffectiveTime
+	{ 60, true }, // TransactTime
+	{ 109, false }, // ClientID
+	{ 76, false }, // ExecBroker
+	{ 169, false }, // StandInstDbType
+	{ 170, false }, // StandInstDbName
+	{ 171, false }, // StandInstDbID
+	{ 172, false }, // SettlDeliveryType
+	{ 173, false }, // SettlDepositoryCode
+	{ 174, false }, // SettlBrkrCode
+	{ 175, false }, // SettlInstCode
+	{ 176, false }, // SecuritySettlAgentName
+	{ 177, false }, // SecuritySettlAgentCode
+	{ 178, false }, // SecuritySettlAgentAcctNum
+	{ 179, false }, // SecuritySettlAgentAcctName
+	{ 180, false }, // SecuritySettlAgentContactName
+	{ 181, false }, // SecuritySettlAgentContactPhone
+	{ 182, false }, // CashSettlAgentName
+	{ 183, false }, // CashSettlAgentCode
+	{ 184, false }, // CashSettlAgentAcctNum
+	{ 185, false }, // CashSettlAgentAcctName
+	{ 186, false }, // CashSettlAgentContactName
+	{ 187, false }, // CashSettlAgentContactPhone
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+
+
+// FIX Version 4.1
+struct _ofixVersionSpec	fix41Spec = {
+    4, // majorVersion
+    1, // minorVersion
+    "FIX.4.1", // id
+    false, // ready
+    tags, // tags
+    { 0 }, // tagTable
+    {
+	&Heartbeat,
+	&TestRequest,
+	&ResendRequest,
+	&Reject,
+	&SequenceReset,
+	&Logout,
+	&IndicationofInterest,
+	&Advertisement,
+	&ExecutionReport,
+	&OrderCancelReject,
+	&Logon,
+	&News,
+	&Email,
+	&NewOrderSingle,
+	&NewOrderList,
+	&OrderCancelRequest,
+	&OrderCancelReplaceRequest,
+	&OrderStatusRequest,
+	&Allocation,
+	&ListCancelRequest,
+	&ListExecute,
+	&ListStatusRequest,
+	&ListStatus,
+	&AllocationACK,
+	&DontKnowTrade,
+	&QuoteRequest,
+	&Quote,
+	&SettlementInstructions,
+	0
+    }
+};
