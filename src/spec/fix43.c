@@ -648,4 +648,48 @@ static struct _ofixTagSpec	tags[] = {
     { 639, OFIX_PriceOffset, OFIX_Body, 0, 4, "639=", "PriceImprovement" },
     { 640, OFIX_Price, OFIX_Body, 0, 4, "640=", "Price2" },
     { 641, OFIX_PriceOffset, OFIX_Body, 0, 4, "641=", "LastForwardPoints2" },
-    { 642, OFIX_PriceOffset, OFIX_
+    { 642, OFIX_PriceOffset, OFIX_Body, 0, 4, "642=", "BidForwardPoints2" },
+    { 643, OFIX_PriceOffset, OFIX_Body, 0, 4, "643=", "OfferForwardPoints2" },
+    { 644, OFIX_String, OFIX_Body, 0, 4, "644=", "RFQReqID" },
+    { 645, OFIX_Price, OFIX_Body, 0, 4, "645=", "MktBidPx" },
+    { 646, OFIX_Price, OFIX_Body, 0, 4, "646=", "MktOfferPx" },
+    { 647, OFIX_Qty, OFIX_Body, 0, 4, "647=", "MinBidSize" },
+    { 648, OFIX_Qty, OFIX_Body, 0, 4, "648=", "MinOfferSize" },
+    { 649, OFIX_String, OFIX_Body, 0, 4, "649=", "QuoteStatusReqID" },
+    { 650, OFIX_Boolean, OFIX_Body, 0, 4, "650=", "LegalConfirm" },
+    { 651, OFIX_Price, OFIX_Body, 0, 4, "651=", "UnderlyingLastPx" },
+    { 652, OFIX_Qty, OFIX_Body, 0, 4, "652=", "UnderlyingLastQty" },
+    { 653, OFIX_Int, OFIX_Body, 0, 4, "653=", "SecDefStatus" },
+    { 654, OFIX_String, OFIX_Body, 0, 4, "654=", "LegRefID" },
+    { 655, OFIX_String, OFIX_Body, 0, 4, "655=", "ContraLegRefID" },
+    { 656, OFIX_Float, OFIX_Body, 0, 4, "656=", "SettlCurrBidFxRate" },
+    { 657, OFIX_Float, OFIX_Body, 0, 4, "657=", "SettlCurrOfferFxRate" },
+    { 658, OFIX_Int, OFIX_Body, 0, 4, "658=", "QuoteRequestRejectReason" },
+    { 659, OFIX_String, OFIX_Body, 0, 4, "659=", "SideComplianceID" },
+    { 0 }
+};
+
+// ----- Messages -----
+// Heartbeat [0]
+
+static struct _ofixGroupSpec	HeartbeatGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	HeartbeatGroups[] = {
+    &HeartbeatGroup627,
+    0
+};
+
+static struct _ofixMsgSpec	Heartbeat = {
+    &fix43Spec, // version
+    48, // tid
+    "0", // type
+    "Heartbeat", // name
+    {0,0,0,0,0,0,0,0,1,2,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,3,0,0,0,0,0,0,0,19,0,0,0,0,0,4,11,0,21,0,0,0,5,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,8,9,0,30,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
