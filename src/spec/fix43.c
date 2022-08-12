@@ -1024,4 +1024,77 @@ static struct _ofixMsgSpec	Logout = {
 	{ 143, false }, // TargetLocationID
 	{ 116, false }, // OnBehalfOfSubID
 	{ 144, false }, // OnBehalfOfLocationID
-	{ 129, false }, 
+	{ 129, false }, // DeliverToSubID
+	{ 145, false }, // DeliverToLocationID
+	{ 43, false }, // PossDupFlag
+	{ 97, false }, // PossResend
+	{ 52, true }, // SendingTime
+	{ 122, false }, // OrigSendingTime
+	{ 212, false }, // XmlDataLen
+	{ 213, false }, // XmlData
+	{ 347, false }, // MessageEncoding
+	{ 369, false }, // LastMsgSeqNumProcessed
+	{ 370, false }, // OnBehalfOfSendingTime
+	{ 627, false }, // NoHops
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// IndicationOfInterest [6]
+
+static struct _ofixGroupSpec	IndicationOfInterestGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	IndicationOfInterestGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	IndicationOfInterestGroup199 = {
+    199, // NoIOIQualifiers
+    {
+	{ 104, false }, // IOIQualifier
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	IndicationOfInterestGroup215 = {
+    215, // NoRoutingIDs
+    {
+	{ 216, false }, // RoutingType
+	{ 217, false }, // RoutingID
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	IndicationOfInterestGroups[] = {
+    &IndicationOfInterestGroup627,
+    &IndicationOfInterestGroup454,
+    &IndicationOfInterestGroup199,
+    &IndicationOfInterestGroup215,
+    0
+};
+
+static struct _ofixMsgSpec	IndicationOfInterest = {
+    &fix43Spec, // version
+    54, // tid
+    "6", // type
+    "IndicationOfInterest", // name
+    {0,0,0,0,0,0,0,0,1,2,88,0,0,0,0,70,0,0,0,0,0,0,35,29,0,72,31,67,30,0,0,0,0,0,10,3,0,0,0,0,0,0,0,19,69,0,0,0,34,4,11,0,21,0,65,32,5,13,75,0,78,0,71,0,0,33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,87,8,9,0,86,0,0,0,20,0,0,0,0,0,0,0,0,59,62,0,0,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,
