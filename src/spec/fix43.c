@@ -1163,3 +1163,65 @@ static struct _ofixMsgSpec	IndicationOfInterest = {
 	{ 349, false }, // EncodedIssuer
 	{ 107, false }, // SecurityDesc
 	{ 350, false }, // EncodedSecurityDescLen
+	{ 351, false }, // EncodedSecurityDesc
+	{ 54, true }, // Side
+	{ 465, false }, // QuantityType
+	{ 27, true }, // IOIQty
+	{ 423, false }, // PriceType
+	{ 44, false }, // Price
+	{ 15, false }, // Currency
+	{ 62, false }, // ValidUntilTime
+	{ 25, false }, // IOIQltyInd
+	{ 130, false }, // IOINaturalFlag
+	{ 199, false }, // NoIOIQualifiers
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 60, false }, // TransactTime
+	{ 149, false }, // URLLink
+	{ 215, false }, // NoRoutingIDs
+	{ 218, false }, // Spread
+	{ 220, false }, // BenchmarkCurveCurrency
+	{ 221, false }, // BenchmarkCurveName
+	{ 222, false }, // BenchmarkCurvePoint
+	{ 219, false }, // Benchmark
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// Advertisement [7]
+
+static struct _ofixGroupSpec	AdvertisementGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	AdvertisementGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	AdvertisementGroups[] = {
+    &AdvertisementGroup627,
+    &AdvertisementGroup454,
+    0
+};
+
+static struct _ofixMsgSpec	Advertisement = {
+    &fix43Spec, // version
+    55, // tid
+    "7", // type
+    "Advertisement", // name
+    {0,0,29,31,65,30,0,0,1,2,80,0,0,0,0,68,0,0,0,0,0,0,35,0,0,0,0,0,0,0,75,0,0,0,10,3,0,0,0,0,0,0,0,19,67,0,0,0,34,4,11,0,21,66,0,32,5,13,71,0,70,0,0,0,0,33,0,0,0,0,0,0,0,0,0,69,0,0,0,0,0,0,0,0,0,0,0,0,0,79,8,9,0,78,0,0,0,20,0,0,0,0,0,0,0,0,59,62,0,0,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,74,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,39,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,54,0,0,0,55,58,0,0,0,0,23,24,0,0,0,0,0,0,0,0,0,57,42,43,45,46,47,0,0,56,0,0,0,0,0,0,0,44,53,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,0,0,
