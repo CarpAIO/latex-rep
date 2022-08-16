@@ -1303,4 +1303,92 @@ static struct _ofixMsgSpec	Advertisement = {
 	{ 149, false }, // URLLink
 	{ 30, false }, // LastMkt
 	{ 336, false }, // TradingSessionID
-	{ 625, false }, // Tradi
+	{ 625, false }, // TradingSessionSubID
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// ExecutionReport [8]
+
+static struct _ofixGroupSpec	ExecutionReportGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	ExecutionReportGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 523, false }, // PartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	ExecutionReportGroup382 = {
+    382, // NoContraBrokers
+    {
+	{ 375, false }, // ContraBroker
+	{ 337, false }, // ContraTrader
+	{ 437, false }, // ContraTradeQty
+	{ 438, false }, // ContraTradeTime
+	{ 655, false }, // ContraLegRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	ExecutionReportGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	ExecutionReportGroup232 = {
+    232, // NoStipulations
+    {
+	{ 233, false }, // StipulationType
+	{ 234, false }, // StipulationValue
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	ExecutionReportGroup518 = {
+    518, // NoContAmts
+    {
+	{ 519, false }, // ContAmtType
+	{ 520, false }, // ContAmtValue
+	{ 521, false }, // ContAmtCurr
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	ExecutionReportGroup555 = {
+    555, // NoLegs
+    {
+	{ 600, true }, // LegSymbol
+	{ 601, false }, // LegSymbolSfx
+	{ 602, false }, // LegSecurityID
+	{ 603, false }, // LegSecurityIDSource
+	{ 604, false }, // NoLegSecurityAltID
+	{ 607, false }, // LegProduct
+	{ 608, false }, // LegCFICode
+	{ 609, false }, // LegSecurityType
+	{ 610, false }, // LegMaturityMonthYear
+	{ 611, false }, // LegMaturityDate
+	{ 248, false }, // LegCouponPaymentDate
+	{ 249, false }, // LegIssueDate
+	{ 250, false }, // LegRepoCollateralSecurityType
+	{ 251, false }, // LegRepurchaseTerm
+	{ 252, false }, // Le
