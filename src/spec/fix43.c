@@ -1391,4 +1391,75 @@ static struct _ofixGroupSpec	ExecutionReportGroup555 = {
 	{ 249, false }, // LegIssueDate
 	{ 250, false }, // LegRepoCollateralSecurityType
 	{ 251, false }, // LegRepurchaseTerm
-	{ 252, false }, // Le
+	{ 252, false }, // LegRepurchaseRate
+	{ 253, false }, // LegFactor
+	{ 257, false }, // LegCreditRating
+	{ 599, false }, // LegInstrRegistry
+	{ 596, false }, // LegCountryOfIssue
+	{ 597, false }, // LegStateOrProvinceOfIssue
+	{ 598, false }, // LegLocaleOfIssue
+	{ 254, false }, // LegRedemptionDate
+	{ 612, false }, // LegStrikePrice
+	{ 613, false }, // LegOptAttribute
+	{ 614, false }, // LegContractMultiplier
+	{ 615, false }, // LegCouponRate
+	{ 616, false }, // LegSecurityExchange
+	{ 617, false }, // LegIssuer
+	{ 618, false }, // EncodedLegIssuerLen
+	{ 619, false }, // EncodedLegIssuer
+	{ 620, false }, // LegSecurityDesc
+	{ 621, false }, // EncodedLegSecurityDescLen
+	{ 622, false }, // EncodedLegSecurityDesc
+	{ 623, false }, // LegRatioQty
+	{ 624, false }, // LegSide
+	{ 564, false }, // LegPositionEffect
+	{ 565, false }, // LegCoveredOrUncovered
+	{ 539, false }, // NoNestedPartyIDs
+	{ 654, false }, // LegRefID
+	{ 566, false }, // LegPrice
+	{ 587, false }, // LegSettlmntTyp
+	{ 588, false }, // LegFutSettDate
+	{ 637, false }, // LegLastPx
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	ExecutionReportGroup604 = {
+    604, // NoLegSecurityAltID
+    {
+	{ 605, false }, // LegSecurityAltID
+	{ 606, false }, // LegSecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	ExecutionReportGroup539 = {
+    539, // NoNestedPartyIDs
+    {
+	{ 524, false }, // NestedPartyID
+	{ 525, false }, // NestedPartyIDSource
+	{ 538, false }, // NestedPartyRole
+	{ 545, false }, // NestedPartySubID
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	ExecutionReportGroups[] = {
+    &ExecutionReportGroup627,
+    &ExecutionReportGroup453,
+    &ExecutionReportGroup382,
+    &ExecutionReportGroup454,
+    &ExecutionReportGroup232,
+    &ExecutionReportGroup518,
+    &ExecutionReportGroup555,
+    &ExecutionReportGroup604,
+    &ExecutionReportGroup539,
+    0
+};
+
+static struct _ofixMsgSpec	ExecutionReport = {
+    &fix43Spec, // version
+    56, // tid
+    "8", // type
+    "ExecutionReport", // name
+    {0,50,0,0,0,0,131,0,1,2,190,33,139,140,130,107,0,43,114,44,0,164,62,0,0,0,0,0,0,128,125,121,119,0,10,3,0,
