@@ -1523,4 +1523,64 @@ static struct _ofixMsgSpec	ExecutionReport = {
 	{ 64, false }, // FutSettDate
 	{ 544, false }, // CashMargin
 	{ 635, false }, // ClearingFeeIndicator
-	{ 55, true }, /
+	{ 55, true }, // Symbol
+	{ 65, false }, // SymbolSfx
+	{ 48, false }, // SecurityID
+	{ 22, false }, // SecurityIDSource
+	{ 454, false }, // NoSecurityAltID
+	{ 460, false }, // Product
+	{ 461, false }, // CFICode
+	{ 167, false }, // SecurityType
+	{ 200, false }, // MaturityMonthYear
+	{ 541, false }, // MaturityDate
+	{ 224, false }, // CouponPaymentDate
+	{ 225, false }, // IssueDate
+	{ 239, false }, // RepoCollateralSecurityType
+	{ 226, false }, // RepurchaseTerm
+	{ 227, false }, // RepurchaseRate
+	{ 228, false }, // Factor
+	{ 255, false }, // CreditRating
+	{ 543, false }, // InstrRegistry
+	{ 470, false }, // CountryOfIssue
+	{ 471, false }, // StateOrProvinceOfIssue
+	{ 472, false }, // LocaleOfIssue
+	{ 240, false }, // RedemptionDate
+	{ 202, false }, // StrikePrice
+	{ 206, false }, // OptAttribute
+	{ 231, false }, // ContractMultiplier
+	{ 223, false }, // CouponRate
+	{ 207, false }, // SecurityExchange
+	{ 106, false }, // Issuer
+	{ 348, false }, // EncodedIssuerLen
+	{ 349, false }, // EncodedIssuer
+	{ 107, false }, // SecurityDesc
+	{ 350, false }, // EncodedSecurityDescLen
+	{ 351, false }, // EncodedSecurityDesc
+	{ 54, true }, // Side
+	{ 232, false }, // NoStipulations
+	{ 465, false }, // QuantityType
+	{ 38, false }, // OrderQty
+	{ 152, false }, // CashOrderQty
+	{ 516, false }, // OrderPercent
+	{ 468, false }, // RoundingDirection
+	{ 469, false }, // RoundingModulus
+	{ 40, false }, // OrdType
+	{ 423, false }, // PriceType
+	{ 44, false }, // Price
+	{ 99, false }, // StopPx
+	{ 211, false }, // PegDifference
+	{ 388, false }, // DiscretionInst
+	{ 389, false }, // DiscretionOffset
+	{ 15, false }, // Currency
+	{ 376, false }, // ComplianceID
+	{ 377, false }, // SolicitedFlag
+	{ 59, false }, // TimeInForce
+	{ 168, false }, // EffectiveTime
+	{ 432, false }, // ExpireDate
+	{ 126, false }, // ExpireTime
+	{ 18, false }, // ExecInst
+	{ 528, false }, // OrderCapacity
+	{ 529, false }, // OrderRestrictions
+	{ 582, false }, // CustOrderCapacity
+	{ 47, false }, // Rule80A
+	{ 32, fals
