@@ -1798,4 +1798,75 @@ static struct _ofixMsgSpec	Logon = {
 	{ 212, false }, // XmlDataLen
 	{ 213, false }, // XmlData
 	{ 347, false }, // MessageEncoding
-	{ 369, false }, // LastMsgSeqNum
+	{ 369, false }, // LastMsgSeqNumProcessed
+	{ 370, false }, // OnBehalfOfSendingTime
+	{ 627, false }, // NoHops
+	{ 98, true }, // EncryptMethod
+	{ 108, true }, // HeartBtInt
+	{ 95, false }, // RawDataLength
+	{ 96, false }, // RawData
+	{ 141, false }, // ResetSeqNumFlag
+	{ 383, false }, // MaxMessageSize
+	{ 384, false }, // NoMsgTypes
+	{ 464, false }, // TestMessageIndicator
+	{ 553, false }, // Username
+	{ 554, false }, // Password
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// DerivativeSecurityList [AA]
+
+static struct _ofixGroupSpec	DerivativeSecurityListGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	DerivativeSecurityListGroup457 = {
+    457, // NoUnderlyingSecurityAltID
+    {
+	{ 458, false }, // UnderlyingSecurityAltID
+	{ 459, false }, // UnderlyingSecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	DerivativeSecurityListGroup146 = {
+    146, // NoRelatedSym
+    {
+	{ 55, true }, // Symbol
+	{ 65, false }, // SymbolSfx
+	{ 48, false }, // SecurityID
+	{ 22, false }, // SecurityIDSource
+	{ 454, false }, // NoSecurityAltID
+	{ 460, false }, // Product
+	{ 461, false }, // CFICode
+	{ 167, false }, // SecurityType
+	{ 200, false }, // MaturityMonthYear
+	{ 541, false }, // MaturityDate
+	{ 224, false }, // CouponPaymentDate
+	{ 225, false }, // IssueDate
+	{ 239, false }, // RepoCollateralSecurityType
+	{ 226, false }, // RepurchaseTerm
+	{ 227, false }, // RepurchaseRate
+	{ 228, false }, // Factor
+	{ 255, false }, // CreditRating
+	{ 543, false }, // InstrRegistry
+	{ 470, false }, // CountryOfIssue
+	{ 471, false }, // StateOrProvinceOfIssue
+	{ 472, false }, // LocaleOfIssue
+	{ 240, false }, // RedemptionDate
+	{ 202, false }, // StrikePrice
+	{ 206, false }, // OptAttribute
+	{ 231, false }, // ContractMultiplier
+	{ 223, false }, // CouponRate
+	{ 207, false }, // SecurityExchange
+	{ 106, false 
