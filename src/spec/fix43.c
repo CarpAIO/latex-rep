@@ -2129,4 +2129,51 @@ static struct _ofixGroupSpec	NewOrderMultilegGroup555 = {
 	{ 623, false }, // LegRatioQty
 	{ 624, false }, // LegSide
 	{ 564, false }, // LegPositionEffect
-	{ 565, false }, // LegCoveredOrUnco
+	{ 565, false }, // LegCoveredOrUncovered
+	{ 539, false }, // NoNestedPartyIDs
+	{ 654, false }, // LegRefID
+	{ 566, false }, // LegPrice
+	{ 587, false }, // LegSettlmntTyp
+	{ 588, false }, // LegFutSettDate
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderMultilegGroup604 = {
+    604, // NoLegSecurityAltID
+    {
+	{ 605, false }, // LegSecurityAltID
+	{ 606, false }, // LegSecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderMultilegGroup539 = {
+    539, // NoNestedPartyIDs
+    {
+	{ 524, false }, // NestedPartyID
+	{ 525, false }, // NestedPartyIDSource
+	{ 538, false }, // NestedPartyRole
+	{ 545, false }, // NestedPartySubID
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	NewOrderMultilegGroups[] = {
+    &NewOrderMultilegGroup627,
+    &NewOrderMultilegGroup453,
+    &NewOrderMultilegGroup78,
+    &NewOrderMultilegGroup386,
+    &NewOrderMultilegGroup454,
+    &NewOrderMultilegGroup555,
+    &NewOrderMultilegGroup604,
+    &NewOrderMultilegGroup539,
+    0
+};
+
+static struct _ofixMsgSpec	NewOrderMultileg = {
+    &fix43Spec, // version
+    16706, // tid
+    "AB", // type
+    "NewOrderMultileg", // name
+    {0,33,0,0,0,0,0,0,1,2,134,29,108,109,0,98,0,0,44,0,0,43,54,101,0,0,0,0,0,0,0,0,0,0,10,3,0,0,89,0,94,0,0,19,96,0,0,0,53,4,11,0,21,0,50,51,5,13,117,103,87,0,0,39,40,52,0,0,0,0,0,0,0,0,0,0,0,120,38,0,0,49,0,0,0,0,0,0,0,133,8,9,0,132,0,0,0,20,0,97,47,0,0,0,0,0,78,81,0,0,45,46,0,0,86,6,15,102,131,0,116,115,22,0,0,0,106,0,7,17,0,0,0,0,0,0,0,0,0,0,84,0,12,14,16,18,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,58,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,59,0,73,121,0,0,74,77,0,0,122,123,23,24,0,0,0,0,0,0,0,0,0,76,61,62,64,65,66,0,0,75,0,0,0,0,0,0,0,63,72,0,0,0,0,0,0,0,0,0,0,0,0,0,0,67,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,79,80,82,83,0,0,118,119,0,0,0,0,0,0,0,0,0,0,0,0,0,26,27,0,0,0,0,0,99,100,0,0,0,0,0,0,0,0,48,0,124,
