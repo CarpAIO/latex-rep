@@ -2260,4 +2260,73 @@ static struct _ofixMsgSpec	NewOrderMultileg = {
 	{ 348, false }, // EncodedIssuerLen
 	{ 349, false }, // EncodedIssuer
 	{ 107, false }, // SecurityDesc
-	{ 350, false }, // Enco
+	{ 350, false }, // EncodedSecurityDescLen
+	{ 351, false }, // EncodedSecurityDesc
+	{ 140, false }, // PrevClosePx
+	{ 555, false }, // NoLegs
+	{ 114, false }, // LocateReqd
+	{ 60, true }, // TransactTime
+	{ 465, false }, // QuantityType
+	{ 38, false }, // OrderQty
+	{ 152, false }, // CashOrderQty
+	{ 516, false }, // OrderPercent
+	{ 468, false }, // RoundingDirection
+	{ 469, false }, // RoundingModulus
+	{ 40, true }, // OrdType
+	{ 423, false }, // PriceType
+	{ 44, false }, // Price
+	{ 99, false }, // StopPx
+	{ 15, false }, // Currency
+	{ 376, false }, // ComplianceID
+	{ 377, false }, // SolicitedFlag
+	{ 23, false }, // IOIid
+	{ 117, false }, // QuoteID
+	{ 59, false }, // TimeInForce
+	{ 168, false }, // EffectiveTime
+	{ 432, false }, // ExpireDate
+	{ 126, false }, // ExpireTime
+	{ 427, false }, // GTBookingInst
+	{ 12, false }, // Commission
+	{ 13, false }, // CommType
+	{ 479, false }, // CommCurrency
+	{ 497, false }, // FundRenewWaiv
+	{ 528, false }, // OrderCapacity
+	{ 529, false }, // OrderRestrictions
+	{ 582, false }, // CustOrderCapacity
+	{ 121, false }, // ForexReq
+	{ 120, false }, // SettlCurrency
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 77, false }, // PositionEffect
+	{ 203, false }, // CoveredOrUncovered
+	{ 210, false }, // MaxShow
+	{ 211, false }, // PegDifference
+	{ 388, false }, // DiscretionInst
+	{ 389, false }, // DiscretionOffset
+	{ 480, false }, // CancellationRights
+	{ 481, false }, // MoneyLaunderingStatus
+	{ 513, false }, // RegistID
+	{ 494, false }, // Designation
+	{ 563, false }, // MultiLegRptTypeReq
+	{ 118, false }, // NetMoney
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// MultilegOrderCancelReplaceRequest [AC]
+
+static struct _ofixGroupSpec	MultilegOrderCancelReplaceRequestGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	MultilegOrderCancelReplaceReques
