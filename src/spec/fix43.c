@@ -2401,4 +2401,57 @@ static struct _ofixGroupSpec	MultilegOrderCancelReplaceRequestGroup555 = {
 	{ 617, false }, // LegIssuer
 	{ 618, false }, // EncodedLegIssuerLen
 	{ 619, false }, // EncodedLegIssuer
-	{ 620, false }
+	{ 620, false }, // LegSecurityDesc
+	{ 621, false }, // EncodedLegSecurityDescLen
+	{ 622, false }, // EncodedLegSecurityDesc
+	{ 623, false }, // LegRatioQty
+	{ 624, false }, // LegSide
+	{ 564, false }, // LegPositionEffect
+	{ 565, false }, // LegCoveredOrUncovered
+	{ 539, false }, // NoNestedPartyIDs
+	{ 654, false }, // LegRefID
+	{ 566, false }, // LegPrice
+	{ 587, false }, // LegSettlmntTyp
+	{ 588, false }, // LegFutSettDate
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	MultilegOrderCancelReplaceRequestGroup604 = {
+    604, // NoLegSecurityAltID
+    {
+	{ 605, false }, // LegSecurityAltID
+	{ 606, false }, // LegSecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	MultilegOrderCancelReplaceRequestGroup539 = {
+    539, // NoNestedPartyIDs
+    {
+	{ 524, false }, // NestedPartyID
+	{ 525, false }, // NestedPartyIDSource
+	{ 538, false }, // NestedPartyRole
+	{ 545, false }, // NestedPartySubID
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	MultilegOrderCancelReplaceRequestGroups[] = {
+    &MultilegOrderCancelReplaceRequestGroup627,
+    &MultilegOrderCancelReplaceRequestGroup453,
+    &MultilegOrderCancelReplaceRequestGroup78,
+    &MultilegOrderCancelReplaceRequestGroup386,
+    &MultilegOrderCancelReplaceRequestGroup454,
+    &MultilegOrderCancelReplaceRequestGroup555,
+    &MultilegOrderCancelReplaceRequestGroup604,
+    &MultilegOrderCancelReplaceRequestGroup539,
+    0
+};
+
+static struct _ofixMsgSpec	MultilegOrderCancelReplaceRequest = {
+    &fix43Spec, // version
+    16707, // tid
+    "AC", // type
+    "MultilegOrderCancelReplaceRequest", // name
+    {0,36,0,0,0,0,0,0,1,2,137,31,111,112,0,101,0,0,47,0,0,46,57,104,0,0,0,0,0,0,0,0,0,0,10,3,0,29,92,0,97,30,0,19,99,0,0,0,56,4,11,0,21,0,53,54,5,13,120,106,90,0,0,42,43,55,0,0,0,0,0,0,0,0,0,0,0,123,41,0,0,52,0,0,0,0,0,0,0,136,8,9,0,135,0,0,0,20,0,100,50,0,0,0,0,0,81,84,0,0,48,49,0,0,89,6,15,105,134,0,119,118,22,0,0,0,109,0,7,17,0,0,0,0,0,0,0,0,0,0,87,0,12,14,16,18,0,0,0,0,0,0,93,0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,107,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,62,0,76,124,0,0,77,80
