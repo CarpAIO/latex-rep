@@ -2589,4 +2589,67 @@ static struct _ofixMsgSpec	MultilegOrderCancelReplaceRequest = {
 	{ 481, false }, // MoneyLaunderingStatus
 	{ 513, false }, // RegistID
 	{ 494, false }, // Designation
-	{ 563, false }, // MultiLegRptTy
+	{ 563, false }, // MultiLegRptTypeReq
+	{ 118, false }, // NetMoney
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// TradeCaptureReportRequest [AD]
+
+static struct _ofixGroupSpec	TradeCaptureReportRequestGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	TradeCaptureReportRequestGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 523, false }, // PartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	TradeCaptureReportRequestGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	TradeCaptureReportRequestGroup580 = {
+    580, // NoDates
+    {
+	{ 75, false }, // TradeDate
+	{ 60, false }, // TransactTime
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	TradeCaptureReportRequestGroups[] = {
+    &TradeCaptureReportRequestGroup627,
+    &TradeCaptureReportRequestGroup453,
+    &TradeCaptureReportRequestGroup454,
+    &TradeCaptureReportRequestGroup580,
+    0
+};
+
+static struct _ofixMsgSpec	TradeCaptureReportRequest = {
+    &fix43Spec, // version
+    16708, // tid
+    "AD", // type
+    "TradeCaptureReportRequest", // name
+    {0,0,0,0,0,0,0,0,1,2,79,34,0,0,0,0,0,32,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,10,3,0,33,0,0,0,0,0,19,0,0,0,0,39,4,11,0,21,0,71,37,5,13,72,0,0,0,0,0,0,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,8,9,0,77,0,0,0,20,0,0,0,0,0,0,0,0,64,67,0,0,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45,0,59,0,0,0,60,63,0,0,0,0,23,24,0,0,0,0,0,0,0,0,0,62,47,48,50,51,52,0,0,61,0,0,0,0,0,0,0,49,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,53,0,0,0,0,0,0,0,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
