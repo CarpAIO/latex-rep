@@ -2801,4 +2801,69 @@ static struct _ofixGroupSpec	TradeCaptureReportGroup552 = {
 	{ 155, false }, // SettlCurrFxRate
 	{ 156, false }, // SettlCurrFxRateCalc
 	{ 77, false }, // PositionEffect
-	{ 58, false }, // Tex
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 442, false }, // MultiLegReportingType
+	{ 518, false }, // NoContAmts
+	{ 136, false }, // NoMiscFees
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	TradeCaptureReportGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 523, false }, // PartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	TradeCaptureReportGroup576 = {
+    576, // NoClearingInstructions
+    {
+	{ 577, false }, // ClearingInstruction
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	TradeCaptureReportGroup518 = {
+    518, // NoContAmts
+    {
+	{ 519, false }, // ContAmtType
+	{ 520, false }, // ContAmtValue
+	{ 521, false }, // ContAmtCurr
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	TradeCaptureReportGroup136 = {
+    136, // NoMiscFees
+    {
+	{ 137, false }, // MiscFeeAmt
+	{ 138, false }, // MiscFeeCurr
+	{ 139, false }, // MiscFeeType
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	TradeCaptureReportGroups[] = {
+    &TradeCaptureReportGroup627,
+    &TradeCaptureReportGroup454,
+    &TradeCaptureReportGroup552,
+    &TradeCaptureReportGroup453,
+    &TradeCaptureReportGroup576,
+    &TradeCaptureReportGroup518,
+    &TradeCaptureReportGroup136,
+    0
+};
+
+static struct _ofixMsgSpec	TradeCaptureReport = {
+    &fix43Spec, // version
+    16709, // tid
+    "AE", // type
+    "TradeCaptureReport", // name
+    {0,0,0,0,0,0,0,0,1,2,90,0,0,0,0,0,0,34,0,0,0,0,41,0,0,0,0,0,0,0,80,77,76,0,10,3,0,0,71,0,0,0,0,19,0,0,0,0,40,4,11,0,21,0,0,38,5,13,0,0,82,0,0,83,84,39,0,0,0,0,0,0,0,0,0,81,0,0,0,0,0,0,0,0,0,0,0,0,0,89,8,9,0,88,0,0,0,20,0,0,0,0,0,0,0,0,65,68,0,0,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,32,0,72,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,79,0,0,0,0,46,0,60,0,0,0,61,64,0,0,0,0,23,24,0,0,0,0,0,0,0,0,0,63,48,49,51,52,53,0,0,62,0,0,0,0,0,0,0,50,5
