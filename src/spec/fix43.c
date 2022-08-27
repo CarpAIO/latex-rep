@@ -2728,4 +2728,77 @@ static struct _ofixMsgSpec	TradeCaptureReportRequest = {
 	{ 54, false }, // Side
 	{ 58, false }, // Text
 	{ 354, false }, // EncodedTextLen
-	{ 355, false }, // Encode
+	{ 355, false }, // EncodedText
+	{ 578, false }, // TradeInputSource
+	{ 579, false }, // TradeInputDevice
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// TradeCaptureReport [AE]
+
+static struct _ofixGroupSpec	TradeCaptureReportGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	TradeCaptureReportGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	TradeCaptureReportGroup552 = {
+    552, // NoSides
+    {
+	{ 54, true }, // Side
+	{ 37, true }, // OrderID
+	{ 198, false }, // SecondaryOrderID
+	{ 11, false }, // ClOrdID
+	{ 453, false }, // NoPartyIDs
+	{ 1, false }, // Account
+	{ 581, false }, // AccountType
+	{ 81, false }, // ProcessCode
+	{ 575, false }, // OddLot
+	{ 576, false }, // NoClearingInstructions
+	{ 635, false }, // ClearingFeeIndicator
+	{ 578, false }, // TradeInputSource
+	{ 579, false }, // TradeInputDevice
+	{ 15, false }, // Currency
+	{ 376, false }, // ComplianceID
+	{ 377, false }, // SolicitedFlag
+	{ 528, false }, // OrderCapacity
+	{ 529, false }, // OrderRestrictions
+	{ 582, false }, // CustOrderCapacity
+	{ 483, false }, // TransBkdTime
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 12, false }, // Commission
+	{ 13, false }, // CommType
+	{ 479, false }, // CommCurrency
+	{ 497, false }, // FundRenewWaiv
+	{ 381, false }, // GrossTradeAmt
+	{ 157, false }, // NumDaysInterest
+	{ 230, false }, // ExDate
+	{ 158, false }, // AccruedInterestRate
+	{ 159, false }, // AccruedInterestAmt
+	{ 238, false }, // Concession
+	{ 237, false }, // TotalTakedown
+	{ 118, false }, // NetMoney
+	{ 119, false }, // SettlCurrAmt
+	{ 120, false }, // SettlCurrency
+	{ 155, false }, // SettlCurrFxRate
+	{ 156, false }, // SettlCurrFxRateCalc
+	{ 77, false }, // PositionEffect
+	{ 58, false }, // Tex
