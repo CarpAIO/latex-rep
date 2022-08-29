@@ -2938,4 +2938,83 @@ static struct _ofixMsgSpec	TradeCaptureReport = {
 	{ 349, false }, // EncodedIssuer
 	{ 107, false }, // SecurityDesc
 	{ 350, false }, // EncodedSecurityDescLen
-	{ 351, fal
+	{ 351, false }, // EncodedSecurityDesc
+	{ 38, false }, // OrderQty
+	{ 152, false }, // CashOrderQty
+	{ 516, false }, // OrderPercent
+	{ 468, false }, // RoundingDirection
+	{ 469, false }, // RoundingModulus
+	{ 32, true }, // LastQty
+	{ 31, true }, // LastPx
+	{ 194, false }, // LastSpotRate
+	{ 195, false }, // LastForwardPoints
+	{ 30, false }, // LastMkt
+	{ 75, true }, // TradeDate
+	{ 60, true }, // TransactTime
+	{ 63, false }, // SettlmntTyp
+	{ 64, false }, // FutSettDate
+	{ 573, false }, // MatchStatus
+	{ 574, false }, // MatchType
+	{ 552, true }, // NoSides
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// OrderMassStatusRequest [AF]
+
+static struct _ofixGroupSpec	OrderMassStatusRequestGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderMassStatusRequestGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 523, false }, // PartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderMassStatusRequestGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderMassStatusRequestGroup457 = {
+    457, // NoUnderlyingSecurityAltID
+    {
+	{ 458, false }, // UnderlyingSecurityAltID
+	{ 459, false }, // UnderlyingSecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	OrderMassStatusRequestGroups[] = {
+    &OrderMassStatusRequestGroup627,
+    &OrderMassStatusRequestGroup453,
+    &OrderMassStatusRequestGroup454,
+    &OrderMassStatusRequestGroup457,
+    0
+};
+
+static struct _ofixMsgSpec	OrderMassStatusRequest = {
+    &fix43Spec, // version
+    16710, // tid
+    "AF", // type
+    "OrderMassStatusRequest", // name
+    {0,32,0,0,0,0,0,0,1,2,105,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,0,0,0,0,0,0,0,0,10,3,0,0,0,0,0,0,0,19,0,0,0,0,37,
