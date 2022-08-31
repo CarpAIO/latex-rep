@@ -3134,4 +3134,67 @@ static struct _ofixMsgSpec	OrderMassStatusRequest = {
 static struct _ofixGroupSpec	QuoteRequestRejectGroup627 = {
     627, // NoHops
     {
-	{ 628, false }, // HopCompI
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	QuoteRequestRejectGroup146 = {
+    146, // NoRelatedSym
+    {
+	{ 55, true }, // Symbol
+	{ 65, false }, // SymbolSfx
+	{ 48, false }, // SecurityID
+	{ 22, false }, // SecurityIDSource
+	{ 454, false }, // NoSecurityAltID
+	{ 460, false }, // Product
+	{ 461, false }, // CFICode
+	{ 167, false }, // SecurityType
+	{ 200, false }, // MaturityMonthYear
+	{ 541, false }, // MaturityDate
+	{ 224, false }, // CouponPaymentDate
+	{ 225, false }, // IssueDate
+	{ 239, false }, // RepoCollateralSecurityType
+	{ 226, false }, // RepurchaseTerm
+	{ 227, false }, // RepurchaseRate
+	{ 228, false }, // Factor
+	{ 255, false }, // CreditRating
+	{ 543, false }, // InstrRegistry
+	{ 470, false }, // CountryOfIssue
+	{ 471, false }, // StateOrProvinceOfIssue
+	{ 472, false }, // LocaleOfIssue
+	{ 240, false }, // RedemptionDate
+	{ 202, false }, // StrikePrice
+	{ 206, false }, // OptAttribute
+	{ 231, false }, // ContractMultiplier
+	{ 223, false }, // CouponRate
+	{ 207, false }, // SecurityExchange
+	{ 106, false }, // Issuer
+	{ 348, false }, // EncodedIssuerLen
+	{ 349, false }, // EncodedIssuer
+	{ 107, false }, // SecurityDesc
+	{ 350, false }, // EncodedSecurityDescLen
+	{ 351, false }, // EncodedSecurityDesc
+	{ 140, false }, // PrevClosePx
+	{ 303, false }, // QuoteRequestType
+	{ 537, false }, // QuoteType
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 229, false }, // TradeOriginationDate
+	{ 232, false }, // NoStipulations
+	{ 54, false }, // Side
+	{ 465, false }, // QuantityType
+	{ 38, false }, // OrderQty
+	{ 152, false }, // CashOrderQty
+	{ 63, false }, // SettlmntTyp
+	{ 64, false }, // FutSettDate
+	{ 40, false }, // OrdType
+	{ 193, false }, // FutSettDate2
+	{ 192, false }, // OrderQty2
+	{ 126, false }, // ExpireTime
+	{ 60, false }, // TransactTime
+	{ 15, false }, // Currency
+	{ 218, false }, // Spread
+	{ 220, false }, // BenchmarkCurveCurrency
