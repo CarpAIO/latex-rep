@@ -4212,4 +4212,93 @@ static struct _ofixGroupSpec	NewOrderListGroup73 = {
 	{ 640, false }, // Price2
 	{ 77, false }, // PositionEffect
 	{ 203, false }, // CoveredOrUncovered
-	{ 210, false }, // M
+	{ 210, false }, // MaxShow
+	{ 211, false }, // PegDifference
+	{ 388, false }, // DiscretionInst
+	{ 389, false }, // DiscretionOffset
+	{ 494, false }, // Designation
+	{ 158, false }, // AccruedInterestRate
+	{ 159, false }, // AccruedInterestAmt
+	{ 118, false }, // NetMoney
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderListGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 523, false }, // PartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderListGroup78 = {
+    78, // NoAllocs
+    {
+	{ 79, false }, // AllocAccount
+	{ 467, false }, // IndividualAllocID
+	{ 539, false }, // NoNestedPartyIDs
+	{ 80, false }, // AllocQty
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderListGroup539 = {
+    539, // NoNestedPartyIDs
+    {
+	{ 524, false }, // NestedPartyID
+	{ 525, false }, // NestedPartyIDSource
+	{ 538, false }, // NestedPartyRole
+	{ 545, false }, // NestedPartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderListGroup386 = {
+    386, // NoTradingSessions
+    {
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderListGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderListGroup232 = {
+    232, // NoStipulations
+    {
+	{ 233, false }, // StipulationType
+	{ 234, false }, // StipulationValue
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	NewOrderListGroups[] = {
+    &NewOrderListGroup627,
+    &NewOrderListGroup73,
+    &NewOrderListGroup453,
+    &NewOrderListGroup78,
+    &NewOrderListGroup539,
+    &NewOrderListGroup386,
+    &NewOrderListGroup454,
+    &NewOrderListGroup232,
+    0
+};
+
+static struct _ofixMsgSpec	NewOrderList = {
+    &fix43Spec, // version
+    69, // tid
+    "E", // type
+    "NewOrderList", // name
+    {0,0,0,0,0,0,0,0,1,2,46,0,0,0,0,0,0,0,0,0,0,0,0,0,0
