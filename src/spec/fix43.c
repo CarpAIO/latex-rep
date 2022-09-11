@@ -4519,4 +4519,53 @@ static struct _ofixGroupSpec	OrderCancelReplaceRequestGroup78 = {
 	{ 79, false }, // AllocAccount
 	{ 467, false }, // IndividualAllocID
 	{ 539, false }, // NoNestedPartyIDs
-	{ 80, 
+	{ 80, false }, // AllocQty
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderCancelReplaceRequestGroup539 = {
+    539, // NoNestedPartyIDs
+    {
+	{ 524, false }, // NestedPartyID
+	{ 525, false }, // NestedPartyIDSource
+	{ 538, false }, // NestedPartyRole
+	{ 545, false }, // NestedPartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderCancelReplaceRequestGroup386 = {
+    386, // NoTradingSessions
+    {
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderCancelReplaceRequestGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	OrderCancelReplaceRequestGroups[] = {
+    &OrderCancelReplaceRequestGroup627,
+    &OrderCancelReplaceRequestGroup453,
+    &OrderCancelReplaceRequestGroup78,
+    &OrderCancelReplaceRequestGroup539,
+    &OrderCancelReplaceRequestGroup386,
+    &OrderCancelReplaceRequestGroup454,
+    0
+};
+
+static struct _ofixMsgSpec	OrderCancelReplaceRequest = {
+    &fix43Spec, // version
+    71, // tid
+    "G", // type
+    "OrderCancelReplaceRequest", // name
+    {0,38,0,0,0,0,0,0,1,2,145,33,116,117,0,110,0,0,49,0,0,48,57,0,0,0,0,0,0,0,0,0,0,0,10,3,0,29,90,0,95,32,0,19,97,0,0,123,56,4,11,0,21,0,87,54,5,13,126,111,88,0,0,44,45,55,36,0,0,0,0,0,0,0,0,0,0,132,43,0,0,0,0,0,0,0,0,0,0,144,8,9,0,143,0,0,0,20,0,98,52,0,0,0,0,0,81,84,0,0,50,51,0,0,135,6,15,0,142,0,125,124,22,0,0,0,114,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,91,0,0,0,0,0,140,141,0,0,0,0,0,0,0,61,112,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,130,129,0,0,0,0,0,0,62,0,76,133,0,0,77,80,0,0,134,105,23,24,0,0,0,0,99,0,100,101,102,79,64,65,67,68,69,31,0,78,0,0,0,103,104,0,0,66,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
