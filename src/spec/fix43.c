@@ -4870,4 +4870,87 @@ static struct _ofixGroupSpec	AllocationGroup124 = {
     124, // NoExecs
     {
 	{ 32, false }, // LastQty
-	{ 17, false },
+	{ 17, false }, // ExecID
+	{ 527, false }, // SecondaryExecID
+	{ 31, false }, // LastPx
+	{ 29, false }, // LastCapacity
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	AllocationGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	AllocationGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 523, false }, // PartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	AllocationGroup78 = {
+    78, // NoAllocs
+    {
+	{ 79, true }, // AllocAccount
+	{ 366, false }, // AllocPrice
+	{ 80, true }, // AllocQty
+	{ 467, false }, // IndividualAllocID
+	{ 81, false }, // ProcessCode
+	{ 539, false }, // NoNestedPartyIDs
+	{ 208, false }, // NotifyBrokerOfCredit
+	{ 209, false }, // AllocHandlInst
+	{ 161, false }, // AllocText
+	{ 360, false }, // EncodedAllocTextLen
+	{ 361, false }, // EncodedAllocText
+	{ 12, false }, // Commission
+	{ 13, false }, // CommType
+	{ 479, false }, // CommCurrency
+	{ 497, false }, // FundRenewWaiv
+	{ 153, false }, // AllocAvgPx
+	{ 154, false }, // AllocNetMoney
+	{ 119, false }, // SettlCurrAmt
+	{ 120, false }, // SettlCurrency
+	{ 155, false }, // SettlCurrFxRate
+	{ 156, false }, // SettlCurrFxRateCalc
+	{ 159, false }, // AccruedInterestAmt
+	{ 160, false }, // SettlInstMode
+	{ 136, false }, // NoMiscFees
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	AllocationGroup539 = {
+    539, // NoNestedPartyIDs
+    {
+	{ 524, false }, // NestedPartyID
+	{ 525, false }, // NestedPartyIDSource
+	{ 538, false }, // NestedPartyRole
+	{ 545, false }, // NestedPartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	AllocationGroup136 = {
+    136, // NoMiscFees
+    {
+	{ 137, false }, // MiscFeeAmt
+	{ 138, false }, // MiscFeeCurr
+	{ 139, false }, // MiscFeeType
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	AllocationGroups[] = {
+    &AllocationGroup627,
+    &AllocationGroup73,
+   
