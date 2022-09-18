@@ -5022,4 +5022,77 @@ static struct _ofixMsgSpec	Allocation = {
 	{ 225, false }, // IssueDate
 	{ 239, false }, // RepoCollateralSecurityType
 	{ 226, false }, // RepurchaseTerm
-	{ 22
+	{ 227, false }, // RepurchaseRate
+	{ 228, false }, // Factor
+	{ 255, false }, // CreditRating
+	{ 543, false }, // InstrRegistry
+	{ 470, false }, // CountryOfIssue
+	{ 471, false }, // StateOrProvinceOfIssue
+	{ 472, false }, // LocaleOfIssue
+	{ 240, false }, // RedemptionDate
+	{ 202, false }, // StrikePrice
+	{ 206, false }, // OptAttribute
+	{ 231, false }, // ContractMultiplier
+	{ 223, false }, // CouponRate
+	{ 207, false }, // SecurityExchange
+	{ 106, false }, // Issuer
+	{ 348, false }, // EncodedIssuerLen
+	{ 349, false }, // EncodedIssuer
+	{ 107, false }, // SecurityDesc
+	{ 350, false }, // EncodedSecurityDescLen
+	{ 351, false }, // EncodedSecurityDesc
+	{ 53, true }, // Quantity
+	{ 30, false }, // LastMkt
+	{ 229, false }, // TradeOriginationDate
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 423, false }, // PriceType
+	{ 6, true }, // AvgPx
+	{ 15, false }, // Currency
+	{ 74, false }, // AvgPrxPrecision
+	{ 453, false }, // NoPartyIDs
+	{ 75, true }, // TradeDate
+	{ 60, false }, // TransactTime
+	{ 63, false }, // SettlmntTyp
+	{ 64, false }, // FutSettDate
+	{ 381, false }, // GrossTradeAmt
+	{ 238, false }, // Concession
+	{ 237, false }, // TotalTakedown
+	{ 118, false }, // NetMoney
+	{ 77, false }, // PositionEffect
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 157, false }, // NumDaysInterest
+	{ 158, false }, // AccruedInterestRate
+	{ 540, false }, // TotalAccruedInterestAmt
+	{ 650, false }, // LegalConfirm
+	{ 78, true }, // NoAllocs
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// ListCancelRequest [K]
+
+static struct _ofixGroupSpec	ListCancelRequestGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	ListCancelRequestGroups[] = {
+    &ListCancelRequestGroup627,
+    0
+};
+
+static struct _ofixMsgSpec	ListCancelRequest = {
+    &fix43Spec, // version
+    75, // tid
+    
