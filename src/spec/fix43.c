@@ -5331,4 +5331,70 @@ static struct _ofixMsgSpec	ListStatus = {
 	{ 142, false }, // SenderLocationID
 	{ 57, false }, // TargetSubID
 	{ 143, false }, // TargetLocationID
-	{ 116, false }, 
+	{ 116, false }, // OnBehalfOfSubID
+	{ 144, false }, // OnBehalfOfLocationID
+	{ 129, false }, // DeliverToSubID
+	{ 145, false }, // DeliverToLocationID
+	{ 43, false }, // PossDupFlag
+	{ 97, false }, // PossResend
+	{ 52, true }, // SendingTime
+	{ 122, false }, // OrigSendingTime
+	{ 212, false }, // XmlDataLen
+	{ 213, false }, // XmlData
+	{ 347, false }, // MessageEncoding
+	{ 369, false }, // LastMsgSeqNumProcessed
+	{ 370, false }, // OnBehalfOfSendingTime
+	{ 627, false }, // NoHops
+	{ 66, true }, // ListID
+	{ 429, true }, // ListStatusType
+	{ 82, true }, // NoRpts
+	{ 431, true }, // ListOrderStatus
+	{ 83, true }, // RptSeq
+	{ 444, false }, // ListStatusText
+	{ 445, false }, // EncodedListStatusTextLen
+	{ 446, false }, // EncodedListStatusText
+	{ 60, false }, // TransactTime
+	{ 68, true }, // TotNoOrders
+	{ 73, true }, // NoOrders
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// AllocationACK [P]
+
+static struct _ofixGroupSpec	AllocationACKGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	AllocationACKGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 523, false }, // PartySubID
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	AllocationACKGroups[] = {
+    &AllocationACKGroup627,
+    &AllocationACKGroup453,
+    0
+};
+
+static struct _ofixMsgSpec	AllocationACK = {
+    &fix43Spec, // version
+    80, // tid
+    "P", // type
+    "AllocationACK", // name
+    {0,0,0,0,0,0,0,0,1,2,41,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,3,0,0,0,0,0,0,0,19,0,0,0,0,0,4,11,0,21,0,0,0,5,13,35,0,32,0,0,0,0,0,0,0,0,0,30,0,0,0,0,31,0,0,0,0,0,0,0,0,0,0,0,33,34,40,8,9,0,39,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,24,0,0,0
