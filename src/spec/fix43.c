@@ -5703,4 +5703,62 @@ static struct _ofixMsgSpec	QuoteRequest = {
 	{ 347, false }, // MessageEncoding
 	{ 369, false }, // LastMsgSeqNumProcessed
 	{ 370, false }, // OnBehalfOfSendingTime
-	{ 627, false }
+	{ 627, false }, // NoHops
+	{ 131, true }, // QuoteReqID
+	{ 644, false }, // RFQReqID
+	{ 146, true }, // NoRelatedSym
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// Quote [S]
+
+static struct _ofixGroupSpec	QuoteGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	QuoteGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 523, false }, // PartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	QuoteGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	QuoteGroups[] = {
+    &QuoteGroup627,
+    &QuoteGroup453,
+    &QuoteGroup454,
+    0
+};
+
+static struct _ofixMsgSpec	Quote = {
+    &fix43Spec, // version
+    83, // tid
+    "S", // type
+    "Quote", // name
+    {0,34,0,0,0,0,0,0,1,2,109,0,101,100,0,96,0,0,0,0,0,0,41,0,0,0,0,0,0,0,0,0,0,0,10,3,0,0,0,0,91,0,0,19,0,0,0,0,40,4,11,0,21,0,0,38,5,13,104,0,88,0,79,89,90,39,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,8,9,0,107,0,0,0,20,0,0,103,0,0,0,0,0,65,68,0,0,0,0,0,0,0,6,15,30,0,0,0,0,22,0,0,0,0,0,7,17,0,29,71,72,76,78,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,99,0,0,0,0,0,0,0,0,0,0,45,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,80,82,81,83,93,92,0,0,0,0,0,0,46,0,60,0,0,0,61,64,0,0,0,0,23,24,0,0,0,0,0,0,0,0,0,63,48,49,51,52,53,0,0,62,0,0,0,0,0,0,0,50,59,0,0,0,0,0,0,0,0,0,0,0,0,0,0,54,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36,0,0,0,0,0,0,0,0,0,0,25,66,67,69,70,0,0,105,106,0,0,0,0,0,0,0,0,0,0,0,0,0,26,27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
