@@ -5849,4 +5849,66 @@ static struct _ofixMsgSpec	Quote = {
 	{ 191, false }, // OfferForwardPoints
 	{ 631, false }, // MidPx
 	{ 632, false }, // BidYield
-	{ 633, fal
+	{ 633, false }, // MidYield
+	{ 634, false }, // OfferYield
+	{ 60, false }, // TransactTime
+	{ 63, false }, // SettlmntTyp
+	{ 64, false }, // FutSettDate
+	{ 40, false }, // OrdType
+	{ 193, false }, // FutSettDate2
+	{ 192, false }, // OrderQty2
+	{ 642, false }, // BidForwardPoints2
+	{ 643, false }, // OfferForwardPoints2
+	{ 15, false }, // Currency
+	{ 656, false }, // SettlCurrBidFxRate
+	{ 657, false }, // SettlCurrOfferFxRate
+	{ 156, false }, // SettlCurrFxRateCalc
+	{ 13, false }, // CommType
+	{ 12, false }, // Commission
+	{ 582, false }, // CustOrderCapacity
+	{ 100, false }, // ExDestination
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// SettlementInstructions [T]
+
+static struct _ofixGroupSpec	SettlementInstructionsGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	SettlementInstructionsGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 523, false }, // PartySubID
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	SettlementInstructionsGroups[] = {
+    &SettlementInstructionsGroup627,
+    &SettlementInstructionsGroup453,
+    0
+};
+
+static struct _ofixMsgSpec	SettlementInstructions = {
+    &fix43Spec, // version
+    84, // tid
+    "T", // type
+    "SettlementInstructions", // name
+    {0,0,0,0,0,0,0,0,1,2,77,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,39,0,0,0,10,3,0,0,0,0,0,0,0,19,0,0,0,0,0,4,11,0,21,0,42,0,5,13,0,0,45,0,0,0,0,0,0,0,0,0,38,0,0,0,0,37,0,0,0,34,0,0,0,0,0,0,0,0,0,76,8,9,0,75,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,29,30,0,33,0,43,44,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
