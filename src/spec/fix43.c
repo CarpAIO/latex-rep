@@ -6136,4 +6136,76 @@ static struct _ofixMsgSpec	MarketDataRequest = {
     }
 };
 
-// MarketDataSnapshotFull
+// MarketDataSnapshotFullRefresh [W]
+
+static struct _ofixGroupSpec	MarketDataSnapshotFullRefreshGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	MarketDataSnapshotFullRefreshGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	MarketDataSnapshotFullRefreshGroup268 = {
+    268, // NoMDEntries
+    {
+	{ 269, true }, // MDEntryType
+	{ 270, false }, // MDEntryPx
+	{ 15, false }, // Currency
+	{ 271, false }, // MDEntrySize
+	{ 272, false }, // MDEntryDate
+	{ 273, false }, // MDEntryTime
+	{ 274, false }, // TickDirection
+	{ 275, false }, // MDMkt
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 276, false }, // QuoteCondition
+	{ 277, false }, // TradeCondition
+	{ 282, false }, // MDEntryOriginator
+	{ 283, false }, // LocationID
+	{ 284, false }, // DeskID
+	{ 286, false }, // OpenCloseSettleFlag
+	{ 59, false }, // TimeInForce
+	{ 432, false }, // ExpireDate
+	{ 126, false }, // ExpireTime
+	{ 110, false }, // MinQty
+	{ 18, false }, // ExecInst
+	{ 287, false }, // SellerDays
+	{ 37, false }, // OrderID
+	{ 299, false }, // QuoteEntryID
+	{ 288, false }, // MDEntryBuyer
+	{ 289, false }, // MDEntrySeller
+	{ 346, false }, // NumberOfOrders
+	{ 290, false }, // MDEntryPositionNo
+	{ 546, false }, // Scope
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	MarketDataSnapshotFullRefreshGroups[] = {
+    &MarketDataSnapshotFullRefreshGroup627,
+    &MarketDataSnapshotFullRefreshGroup454,
+    &MarketDataSnapshotFullRefreshGroup268,
+    0
+};
+
+static struct _ofixMsgSpec	MarketDataSnapshotFullRefresh = {
+    &fix43Spec, // version
+    87, // tid
+    "W", // type
+    "MarketDataSnapshotFullRefresh", // name
+    {0,0,0,0,0,0,0,0,
