@@ -6336,3 +6336,70 @@ static struct _ofixGroupSpec	MarketDataIncrementalRefreshGroup268 = {
 	{ 207, false }, // SecurityExchange
 	{ 106, false }, // Issuer
 	{ 348, false }, // EncodedIssuerLen
+	{ 349, false }, // EncodedIssuer
+	{ 107, false }, // SecurityDesc
+	{ 350, false }, // EncodedSecurityDescLen
+	{ 351, false }, // EncodedSecurityDesc
+	{ 291, false }, // FinancialStatus
+	{ 292, false }, // CorporateAction
+	{ 270, false }, // MDEntryPx
+	{ 15, false }, // Currency
+	{ 271, false }, // MDEntrySize
+	{ 272, false }, // MDEntryDate
+	{ 273, false }, // MDEntryTime
+	{ 274, false }, // TickDirection
+	{ 275, false }, // MDMkt
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 276, false }, // QuoteCondition
+	{ 277, false }, // TradeCondition
+	{ 282, false }, // MDEntryOriginator
+	{ 283, false }, // LocationID
+	{ 284, false }, // DeskID
+	{ 286, false }, // OpenCloseSettleFlag
+	{ 59, false }, // TimeInForce
+	{ 432, false }, // ExpireDate
+	{ 126, false }, // ExpireTime
+	{ 110, false }, // MinQty
+	{ 18, false }, // ExecInst
+	{ 287, false }, // SellerDays
+	{ 37, false }, // OrderID
+	{ 299, false }, // QuoteEntryID
+	{ 288, false }, // MDEntryBuyer
+	{ 289, false }, // MDEntrySeller
+	{ 346, false }, // NumberOfOrders
+	{ 290, false }, // MDEntryPositionNo
+	{ 546, false }, // Scope
+	{ 387, false }, // TotalVolumeTraded
+	{ 449, false }, // TotalVolumeTradedDate
+	{ 450, false }, // TotalVolumeTradedTime
+	{ 451, false }, // NetChgPrevDay
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	MarketDataIncrementalRefreshGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	MarketDataIncrementalRefreshGroups[] = {
+    &MarketDataIncrementalRefreshGroup627,
+    &MarketDataIncrementalRefreshGroup268,
+    &MarketDataIncrementalRefreshGroup454,
+    0
+};
+
+static struct _ofixMsgSpec	MarketDataIncrementalRefresh = {
+    &fix43Spec, // version
+    88, // tid
+    "X", // type
+    "MarketDataIncrementalRefresh", // name
+    {0,0,0,0,0,0,0,0,1,2,33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
