@@ -6630,4 +6630,58 @@ static struct _ofixMsgSpec	QuoteCancel = {
 	{ 453, false }, // NoPartyIDs
 	{ 1, false }, // Account
 	{ 581, false }, // AccountType
-	{ 336, false }, /
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 295, false }, // NoQuoteEntries
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// QuoteStatusRequest [a]
+
+static struct _ofixGroupSpec	QuoteStatusRequestGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	QuoteStatusRequestGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	QuoteStatusRequestGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 523, false }, // PartySubID
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	QuoteStatusRequestGroups[] = {
+    &QuoteStatusRequestGroup627,
+    &QuoteStatusRequestGroup454,
+    &QuoteStatusRequestGroup453,
+    0
+};
+
+static struct _ofixMsgSpec	QuoteStatusRequest = {
+    &fix43Spec, // version
+    97, // tid
+    "a", // type
+    "QuoteStatusRequest", // name
+    {0,65,0,0,0,0,0,0,1,2,72,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0,0,0,0,0,0,0,0,0,10,3,0,0,0,0,0,0,0,19,0,0,0,0,33,4,11,0,21,0,0,31,5,13,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,71,8,9,0,70,0,0,0,20,0,0,0,0,0,0,0,0,58,61,0,0,0,0,0,0,0,6,15,30,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,39,0,53,0,0,0,54,57,0,0,0,0,23,24,0,0,0,0,0,0,0,0,0,56,41,42,44,45,46,0,0,55,0,0,0,0,0,0,0,43,52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,0,0,0,0,0,0,0,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,67,0,0,0,0,0,0,0,0,0,0,25,59,60,62,63,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
