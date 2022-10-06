@@ -6778,4 +6778,60 @@ static struct _ofixGroupSpec	MassQuoteAcknowledgementGroup627 = {
 static struct _ofixGroupSpec	MassQuoteAcknowledgementGroup453 = {
     453, // NoPartyIDs
     {
-	{ 448, false }, /
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 523, false }, // PartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	MassQuoteAcknowledgementGroup296 = {
+    296, // NoQuoteSets
+    {
+	{ 302, false }, // QuoteSetID
+	{ 311, true }, // UnderlyingSymbol
+	{ 312, false }, // UnderlyingSymbolSfx
+	{ 309, false }, // UnderlyingSecurityID
+	{ 305, false }, // UnderlyingSecurityIDSource
+	{ 457, false }, // NoUnderlyingSecurityAltID
+	{ 462, false }, // UnderlyingProduct
+	{ 463, false }, // UnderlyingCFICode
+	{ 310, false }, // UnderlyingSecurityType
+	{ 313, false }, // UnderlyingMaturityMonthYear
+	{ 542, false }, // UnderlyingMaturityDate
+	{ 241, false }, // UnderlyingCouponPaymentDate
+	{ 242, false }, // UnderlyingIssueDate
+	{ 243, false }, // UnderlyingRepoCollateralSecurityType
+	{ 244, false }, // UnderlyingRepurchaseTerm
+	{ 245, false }, // UnderlyingRepurchaseRate
+	{ 246, false }, // UnderlyingFactor
+	{ 256, false }, // UnderlyingCreditRating
+	{ 595, false }, // UnderlyingInstrRegistry
+	{ 592, false }, // UnderlyingCountryOfIssue
+	{ 593, false }, // UnderlyingStateOrProvinceOfIssue
+	{ 594, false }, // UnderlyingLocaleOfIssue
+	{ 247, false }, // UnderlyingRedemptionDate
+	{ 315, false }, // UnderlyingPutOrCall
+	{ 316, false }, // UnderlyingStrikePrice
+	{ 317, false }, // UnderlyingOptAttribute
+	{ 436, false }, // UnderlyingContractMultiplier
+	{ 435, false }, // UnderlyingCouponRate
+	{ 308, false }, // UnderlyingSecurityExchange
+	{ 306, false }, // UnderlyingIssuer
+	{ 362, false }, // EncodedUnderlyingIssuerLen
+	{ 363, false }, // EncodedUnderlyingIssuer
+	{ 307, false }, // UnderlyingSecurityDesc
+	{ 364, false }, // EncodedUnderlyingSecurityDescLen
+	{ 365, false }, // EncodedUnderlyingSecurityDesc
+	{ 304, false }, // TotQuoteEntries
+	{ 295, false }, // NoQuoteEntries
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	MassQuoteAcknowledgementGroup457 = {
+    457, // NoUnderlyingSecurityAltID
+    {
+	{ 458, false }, // UnderlyingSecurityAltID
+	{ 459, false }, // UnderlyingSecurityAltIDSour
