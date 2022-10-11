@@ -7301,4 +7301,48 @@ static struct _ofixMsgSpec	SecurityDefinition = {
 	{ 336, false }, // TradingSessionID
 	{ 625, false }, // TradingSessionSubID
 	{ 58, false }, // Text
-	{ 354, false }, // EncodedTex
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 555, false }, // NoLegs
+	{ 561, false }, // RoundLot
+	{ 562, false }, // MinTradeVol
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// SecurityStatusRequest [e]
+
+static struct _ofixGroupSpec	SecurityStatusRequestGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	SecurityStatusRequestGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	SecurityStatusRequestGroups[] = {
+    &SecurityStatusRequestGroup627,
+    &SecurityStatusRequestGroup454,
+    0
+};
+
+static struct _ofixMsgSpec	SecurityStatusRequest = {
+    &fix43Spec, // version
+    101, // tid
+    "e", // type
+    "SecurityStatusRequest", // name
+    {0,0,0,0,0,0,0,0,1,2,69,0,0,0,0,63,0,0,0,0,0,0,33,0,0,0,0,0,0,0,0,0,0,0,10,3,0,0,0,0,0,0,0,19,0,0,0,0,32,4,11,0,21,0,0,30,5,13,0,0,0,0,0,0,0,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,8,9,0,67,0,0,0,20,0,0,0,0,0,0,0,0,57,60,0,0,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,52,0,0,0,53,56,0,0,0,0,23,24,0,0,0,0,0,0,0,0,0,55,40,41,43,44,45,0,0,54,0,0,0,0,0,0,0,42,51,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,0,0,0,0,0,0,0,0,65,0,0,0,0,0,0,0,0,0,0,25,58,59,61,62,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0,0,0,35,36,0,0,0,0,0,0,0,0,48,49,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
