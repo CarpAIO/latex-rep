@@ -7510,4 +7510,61 @@ static struct _ofixMsgSpec	SecurityStatus = {
 	{ 202, false }, // StrikePrice
 	{ 206, false }, // OptAttribute
 	{ 231, false }, // ContractMultiplier
-	{ 223, false }
+	{ 223, false }, // CouponRate
+	{ 207, false }, // SecurityExchange
+	{ 106, false }, // Issuer
+	{ 348, false }, // EncodedIssuerLen
+	{ 349, false }, // EncodedIssuer
+	{ 107, false }, // SecurityDesc
+	{ 350, false }, // EncodedSecurityDescLen
+	{ 351, false }, // EncodedSecurityDesc
+	{ 15, false }, // Currency
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 325, false }, // UnsolicitedIndicator
+	{ 326, false }, // SecurityTradingStatus
+	{ 291, false }, // FinancialStatus
+	{ 292, false }, // CorporateAction
+	{ 327, false }, // HaltReason
+	{ 328, false }, // InViewOfCommon
+	{ 329, false }, // DueToRelated
+	{ 330, false }, // BuyVolume
+	{ 331, false }, // SellVolume
+	{ 332, false }, // HighPx
+	{ 333, false }, // LowPx
+	{ 31, false }, // LastPx
+	{ 60, false }, // TransactTime
+	{ 334, false }, // Adjustment
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// TradingSessionStatusRequest [g]
+
+static struct _ofixGroupSpec	TradingSessionStatusRequestGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	TradingSessionStatusRequestGroups[] = {
+    &TradingSessionStatusRequestGroup627,
+    0
+};
+
+static struct _ofixMsgSpec	TradingSessionStatusRequest = {
+    &fix43Spec, // version
+    103, // tid
+    "g", // type
+    "TradingSessionStatusRequest", // name
+    {0,0,0,0,0,0,0,0,1,2,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,3,0,0,0,0,0,0,0,19,0,0,0,0,0,4,11,0,21,0,0,0,5,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36,8,9,0,35,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
