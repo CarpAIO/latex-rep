@@ -7653,4 +7653,74 @@ static struct _ofixMsgSpec	TradingSessionStatus = {
 	{ 116, false }, // OnBehalfOfSubID
 	{ 144, false }, // OnBehalfOfLocationID
 	{ 129, false }, // DeliverToSubID
-	{ 
+	{ 145, false }, // DeliverToLocationID
+	{ 43, false }, // PossDupFlag
+	{ 97, false }, // PossResend
+	{ 52, true }, // SendingTime
+	{ 122, false }, // OrigSendingTime
+	{ 212, false }, // XmlDataLen
+	{ 213, false }, // XmlData
+	{ 347, false }, // MessageEncoding
+	{ 369, false }, // LastMsgSeqNumProcessed
+	{ 370, false }, // OnBehalfOfSendingTime
+	{ 627, false }, // NoHops
+	{ 335, false }, // TradSesReqID
+	{ 336, true }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 338, false }, // TradSesMethod
+	{ 339, false }, // TradSesMode
+	{ 325, false }, // UnsolicitedIndicator
+	{ 340, true }, // TradSesStatus
+	{ 567, false }, // TradSesStatusRejReason
+	{ 341, false }, // TradSesStartTime
+	{ 342, false }, // TradSesOpenTime
+	{ 343, false }, // TradSesPreCloseTime
+	{ 344, false }, // TradSesCloseTime
+	{ 345, false }, // TradSesEndTime
+	{ 387, false }, // TotalVolumeTraded
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// MassQuote [i]
+
+static struct _ofixGroupSpec	MassQuoteGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	MassQuoteGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 523, false }, // PartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	MassQuoteGroup296 = {
+    296, // NoQuoteSets
+    {
+	{ 302, true }, // QuoteSetID
+	{ 311, true }, // UnderlyingSymbol
+	{ 312, false }, // UnderlyingSymbolSfx
+	{ 309, false }, // UnderlyingSecurityID
+	{ 305, false }, // UnderlyingSecurityIDSource
+	{ 457, false }, // NoUnderlyingSecurityAltID
+	{ 462, false }, // UnderlyingProduct
+	{ 463, false }, // UnderlyingCFICode
+	{ 310, false }, // UnderlyingSecurityType
+	{ 313, false }, // Und
