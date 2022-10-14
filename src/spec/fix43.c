@@ -7782,4 +7782,75 @@ static struct _ofixGroupSpec	MassQuoteGroup295 = {
 	{ 224, false }, // CouponPaymentDate
 	{ 225, false }, // IssueDate
 	{ 239, false }, // RepoCollateralSecurityType
-	{ 22
+	{ 226, false }, // RepurchaseTerm
+	{ 227, false }, // RepurchaseRate
+	{ 228, false }, // Factor
+	{ 255, false }, // CreditRating
+	{ 543, false }, // InstrRegistry
+	{ 470, false }, // CountryOfIssue
+	{ 471, false }, // StateOrProvinceOfIssue
+	{ 472, false }, // LocaleOfIssue
+	{ 240, false }, // RedemptionDate
+	{ 202, false }, // StrikePrice
+	{ 206, false }, // OptAttribute
+	{ 231, false }, // ContractMultiplier
+	{ 223, false }, // CouponRate
+	{ 207, false }, // SecurityExchange
+	{ 106, false }, // Issuer
+	{ 348, false }, // EncodedIssuerLen
+	{ 349, false }, // EncodedIssuer
+	{ 107, false }, // SecurityDesc
+	{ 350, false }, // EncodedSecurityDescLen
+	{ 351, false }, // EncodedSecurityDesc
+	{ 132, false }, // BidPx
+	{ 133, false }, // OfferPx
+	{ 134, false }, // BidSize
+	{ 135, false }, // OfferSize
+	{ 62, false }, // ValidUntilTime
+	{ 188, false }, // BidSpotRate
+	{ 190, false }, // OfferSpotRate
+	{ 189, false }, // BidForwardPoints
+	{ 191, false }, // OfferForwardPoints
+	{ 631, false }, // MidPx
+	{ 632, false }, // BidYield
+	{ 633, false }, // MidYield
+	{ 634, false }, // OfferYield
+	{ 60, false }, // TransactTime
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 64, false }, // FutSettDate
+	{ 40, false }, // OrdType
+	{ 193, false }, // FutSettDate2
+	{ 192, false }, // OrderQty2
+	{ 642, false }, // BidForwardPoints2
+	{ 643, false }, // OfferForwardPoints2
+	{ 15, false }, // Currency
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	MassQuoteGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	MassQuoteGroups[] = {
+    &MassQuoteGroup627,
+    &MassQuoteGroup453,
+    &MassQuoteGroup296,
+    &MassQuoteGroup457,
+    &MassQuoteGroup295,
+    &MassQuoteGroup454,
+    0
+};
+
+static struct _ofixMsgSpec	MassQuote = {
+    &fix43Spec, // version
+    105, // tid
+    "i", // type
+    "MassQuote", // name
+    {0,34,0,0,0,0,0,0,1,2,41,0,0,0,0,0,0,0,0,0,0,0,0,0,0
