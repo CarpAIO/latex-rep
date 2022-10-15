@@ -7932,4 +7932,76 @@ static struct _ofixMsgSpec	BusinessMessageReject = {
 	{ 49, true }, // SenderCompID
 	{ 56, true }, // TargetCompID
 	{ 115, false }, // OnBehalfOfCompID
-	{ 128, f
+	{ 128, false }, // DeliverToCompID
+	{ 90, false }, // SecureDataLen
+	{ 91, false }, // SecureData
+	{ 34, true }, // MsgSeqNum
+	{ 50, false }, // SenderSubID
+	{ 142, false }, // SenderLocationID
+	{ 57, false }, // TargetSubID
+	{ 143, false }, // TargetLocationID
+	{ 116, false }, // OnBehalfOfSubID
+	{ 144, false }, // OnBehalfOfLocationID
+	{ 129, false }, // DeliverToSubID
+	{ 145, false }, // DeliverToLocationID
+	{ 43, false }, // PossDupFlag
+	{ 97, false }, // PossResend
+	{ 52, true }, // SendingTime
+	{ 122, false }, // OrigSendingTime
+	{ 212, false }, // XmlDataLen
+	{ 213, false }, // XmlData
+	{ 347, false }, // MessageEncoding
+	{ 369, false }, // LastMsgSeqNumProcessed
+	{ 370, false }, // OnBehalfOfSendingTime
+	{ 627, false }, // NoHops
+	{ 45, false }, // RefSeqNum
+	{ 372, true }, // RefMsgType
+	{ 379, false }, // BusinessRejectRefID
+	{ 380, true }, // BusinessRejectReason
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// BidRequest [k]
+
+static struct _ofixGroupSpec	BidRequestGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	BidRequestGroup398 = {
+    398, // NoBidDescriptors
+    {
+	{ 399, false }, // BidDescriptorType
+	{ 400, false }, // BidDescriptor
+	{ 401, false }, // SideValueInd
+	{ 404, false }, // LiquidityValue
+	{ 441, false }, // LiquidityNumSecurities
+	{ 402, false }, // LiquidityPctLow
+	{ 403, false }, // LiquidityPctHigh
+	{ 405, false }, // EFPTrackingError
+	{ 406, false }, // FairValue
+	{ 407, false }, // OutsideIndexPct
+	{ 408, false }, // ValueOfFutures
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	BidRequestGroup420 = {
+    420, // NoBidComponents
+    {
+	{ 66, false }, // ListID
+	{ 54, false }, // Side
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // Tradi
