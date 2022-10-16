@@ -8080,4 +8080,64 @@ static struct _ofixMsgSpec	BidRequest = {
 	{ 417, false }, // NumBidders
 	{ 75, false }, // TradeDate
 	{ 418, true }, // TradeType
-	{ 419, true 
+	{ 419, true }, // BasisPxType
+	{ 443, false }, // StrikeTime
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// BidResponse [l]
+
+static struct _ofixGroupSpec	BidResponseGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	BidResponseGroup420 = {
+    420, // NoBidComponents
+    {
+	{ 12, false }, // Commission
+	{ 13, false }, // CommType
+	{ 479, false }, // CommCurrency
+	{ 497, false }, // FundRenewWaiv
+	{ 66, false }, // ListID
+	{ 421, false }, // Country
+	{ 54, false }, // Side
+	{ 44, false }, // Price
+	{ 423, false }, // PriceType
+	{ 406, false }, // FairValue
+	{ 430, false }, // NetGrossInd
+	{ 63, false }, // SettlmntTyp
+	{ 64, false }, // FutSettDate
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	BidResponseGroups[] = {
+    &BidResponseGroup627,
+    &BidResponseGroup420,
+    0
+};
+
+static struct _ofixMsgSpec	BidResponse = {
+    &fix43Spec, // version
+    108, // tid
+    "l", // type
+    "BidResponse", // name
+    {0,0,0,0,0,0,0,0,1,2,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,3,0,0,0,0,0,0,0,19,0,0,0,0,0,4,11,0,21,0,0,0,5,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,8,9,0,32,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
