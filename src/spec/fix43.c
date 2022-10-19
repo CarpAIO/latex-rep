@@ -8299,4 +8299,86 @@ static struct _ofixMsgSpec	ListStrikePrice = {
 	{ 428, true }, // NoStrikes
 	{ 93, false }, // SignatureLength
 	{ 89, false }, // Signature
-	{ 10, true }, 
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// RegistrationInstructions [o]
+
+static struct _ofixGroupSpec	RegistrationInstructionsGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	RegistrationInstructionsGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 523, false }, // PartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	RegistrationInstructionsGroup473 = {
+    473, // NoRegistDtls
+    {
+	{ 509, false }, // RegistDetls
+	{ 511, false }, // RegistEmail
+	{ 474, false }, // MailingDtls
+	{ 482, false }, // MailingInst
+	{ 539, false }, // NoNestedPartyIDs
+	{ 522, false }, // OwnerType
+	{ 486, false }, // DateOfBirth
+	{ 475, false }, // InvestorCountryOfResidence
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	RegistrationInstructionsGroup539 = {
+    539, // NoNestedPartyIDs
+    {
+	{ 524, false }, // NestedPartyID
+	{ 525, false }, // NestedPartyIDSource
+	{ 538, false }, // NestedPartyRole
+	{ 545, false }, // NestedPartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	RegistrationInstructionsGroup510 = {
+    510, // NoDistribInsts
+    {
+	{ 477, false }, // DistribPaymentMethod
+	{ 512, false }, // DistribPercentage
+	{ 478, false }, // CashDistribCurr
+	{ 498, false }, // CashDistribAgentName
+	{ 499, false }, // CashDistribAgentCode
+	{ 500, false }, // CashDistribAgentAcctNumber
+	{ 501, false }, // CashDistribPayRef
+	{ 502, false }, // CashDistribAgentAcctName
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	RegistrationInstructionsGroups[] = {
+    &RegistrationInstructionsGroup627,
+    &RegistrationInstructionsGroup453,
+    &RegistrationInstructionsGroup473,
+    &RegistrationInstructionsGroup539,
+    &RegistrationInstructionsGroup510,
+    0
+};
+
+static struct _ofixMsgSpec	RegistrationInstructions = {
+    &fix43Spec, // version
+    111, // tid
+    "o", // type
+    "RegistrationInstructions", //
