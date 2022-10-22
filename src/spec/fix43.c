@@ -8592,4 +8592,55 @@ static struct _ofixMsgSpec	OrderMassCancelRequest = {
 	{ 625, false }, // TradingSessionSubID
 	{ 55, true }, // Symbol
 	{ 65, false }, // SymbolSfx
-	{ 48, f
+	{ 48, false }, // SecurityID
+	{ 22, false }, // SecurityIDSource
+	{ 454, false }, // NoSecurityAltID
+	{ 460, false }, // Product
+	{ 461, false }, // CFICode
+	{ 167, false }, // SecurityType
+	{ 200, false }, // MaturityMonthYear
+	{ 541, false }, // MaturityDate
+	{ 224, false }, // CouponPaymentDate
+	{ 225, false }, // IssueDate
+	{ 239, false }, // RepoCollateralSecurityType
+	{ 226, false }, // RepurchaseTerm
+	{ 227, false }, // RepurchaseRate
+	{ 228, false }, // Factor
+	{ 255, false }, // CreditRating
+	{ 543, false }, // InstrRegistry
+	{ 470, false }, // CountryOfIssue
+	{ 471, false }, // StateOrProvinceOfIssue
+	{ 472, false }, // LocaleOfIssue
+	{ 240, false }, // RedemptionDate
+	{ 202, false }, // StrikePrice
+	{ 206, false }, // OptAttribute
+	{ 231, false }, // ContractMultiplier
+	{ 223, false }, // CouponRate
+	{ 207, false }, // SecurityExchange
+	{ 106, false }, // Issuer
+	{ 348, false }, // EncodedIssuerLen
+	{ 349, false }, // EncodedIssuer
+	{ 107, false }, // SecurityDesc
+	{ 350, false }, // EncodedSecurityDescLen
+	{ 351, false }, // EncodedSecurityDesc
+	{ 311, true }, // UnderlyingSymbol
+	{ 312, false }, // UnderlyingSymbolSfx
+	{ 309, false }, // UnderlyingSecurityID
+	{ 305, false }, // UnderlyingSecurityIDSource
+	{ 457, false }, // NoUnderlyingSecurityAltID
+	{ 462, false }, // UnderlyingProduct
+	{ 463, false }, // UnderlyingCFICode
+	{ 310, false }, // UnderlyingSecurityType
+	{ 313, false }, // UnderlyingMaturityMonthYear
+	{ 542, false }, // UnderlyingMaturityDate
+	{ 241, false }, // UnderlyingCouponPaymentDate
+	{ 242, false }, // UnderlyingIssueDate
+	{ 243, false }, // UnderlyingRepoCollateralSecurityType
+	{ 244, false }, // UnderlyingRepurchaseTerm
+	{ 245, false }, // UnderlyingRepurchaseRate
+	{ 246, false }, // UnderlyingFactor
+	{ 256, false }, // UnderlyingCreditRating
+	{ 595, false }, // UnderlyingInstrRegistry
+	{ 592, false }, // UnderlyingCountryOfIssue
+	{ 593, false }, // UnderlyingStateOrProvinceOfIssue
+	{ 594, false }, // UnderlyingLocaleOfIssue
