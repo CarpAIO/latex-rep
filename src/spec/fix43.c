@@ -8644,3 +8644,82 @@ static struct _ofixMsgSpec	OrderMassCancelRequest = {
 	{ 592, false }, // UnderlyingCountryOfIssue
 	{ 593, false }, // UnderlyingStateOrProvinceOfIssue
 	{ 594, false }, // UnderlyingLocaleOfIssue
+	{ 247, false }, // UnderlyingRedemptionDate
+	{ 315, false }, // UnderlyingPutOrCall
+	{ 316, false }, // UnderlyingStrikePrice
+	{ 317, false }, // UnderlyingOptAttribute
+	{ 436, false }, // UnderlyingContractMultiplier
+	{ 435, false }, // UnderlyingCouponRate
+	{ 308, false }, // UnderlyingSecurityExchange
+	{ 306, false }, // UnderlyingIssuer
+	{ 362, false }, // EncodedUnderlyingIssuerLen
+	{ 363, false }, // EncodedUnderlyingIssuer
+	{ 307, false }, // UnderlyingSecurityDesc
+	{ 364, false }, // EncodedUnderlyingSecurityDescLen
+	{ 365, false }, // EncodedUnderlyingSecurityDesc
+	{ 54, false }, // Side
+	{ 60, true }, // TransactTime
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// OrderMassCancelReport [r]
+
+static struct _ofixGroupSpec	OrderMassCancelReportGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderMassCancelReportGroup534 = {
+    534, // NoAffectedOrders
+    {
+	{ 41, false }, // OrigClOrdID
+	{ 535, false }, // AffectedOrderID
+	{ 536, false }, // AffectedSecondaryOrderID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderMassCancelReportGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderMassCancelReportGroup457 = {
+    457, // NoUnderlyingSecurityAltID
+    {
+	{ 458, false }, // UnderlyingSecurityAltID
+	{ 459, false }, // UnderlyingSecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	OrderMassCancelReportGroups[] = {
+    &OrderMassCancelReportGroup627,
+    &OrderMassCancelReportGroup534,
+    &OrderMassCancelReportGroup454,
+    &OrderMassCancelReportGroup457,
+    0
+};
+
+static struct _ofixMsgSpec	OrderMassCancelReport = {
+    &fix43Spec, // version
+    114, // tid
+    "r", // type
+    "OrderMassCancelReport", // name
+ 
