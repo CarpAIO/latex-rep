@@ -8827,4 +8827,76 @@ static struct _ofixMsgSpec	OrderMassCancelReport = {
 	{ 308, false }, // UnderlyingSecurityExchange
 	{ 306, false }, // UnderlyingIssuer
 	{ 362, false }, // EncodedUnderlyingIssuerLen
-	{ 363, false }, // EncodedUnderlyingIssue
+	{ 363, false }, // EncodedUnderlyingIssuer
+	{ 307, false }, // UnderlyingSecurityDesc
+	{ 364, false }, // EncodedUnderlyingSecurityDescLen
+	{ 365, false }, // EncodedUnderlyingSecurityDesc
+	{ 54, false }, // Side
+	{ 60, false }, // TransactTime
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// NewOrderCross [s]
+
+static struct _ofixGroupSpec	NewOrderCrossGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup552 = {
+    552, // NoSides
+    {
+	{ 54, true }, // Side
+	{ 11, true }, // ClOrdID
+	{ 526, false }, // SecondaryClOrdID
+	{ 583, false }, // ClOrdLinkID
+	{ 453, false }, // NoPartyIDs
+	{ 229, false }, // TradeOriginationDate
+	{ 1, false }, // Account
+	{ 581, false }, // AccountType
+	{ 589, false }, // DayBookingInst
+	{ 590, false }, // BookingUnit
+	{ 591, false }, // PreallocMethod
+	{ 78, false }, // NoAllocs
+	{ 465, false }, // QuantityType
+	{ 38, false }, // OrderQty
+	{ 152, false }, // CashOrderQty
+	{ 516, false }, // OrderPercent
+	{ 468, false }, // RoundingDirection
+	{ 469, false }, // RoundingModulus
+	{ 12, false }, // Commission
+	{ 13, false }, // CommType
+	{ 479, false }, // CommCurrency
+	{ 497, false }, // FundRenewWaiv
+	{ 528, false }, // OrderCapacity
+	{ 529, false }, // OrderRestrictions
+	{ 582, false }, // CustOrderCapacity
+	{ 121, false }, // ForexReq
+	{ 120, false }, // SettlCurrency
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 77, false }, // PositionEffect
+	{ 203, false }, // CoveredOrUncovered
+	{ 544, false }, // CashMargin
+	{ 635, false }, // ClearingFeeIndicator
+	{ 377, false }, // SolicitedFlag
+	{ 659, false }, // SideComplianceID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup453 = {
+    453
