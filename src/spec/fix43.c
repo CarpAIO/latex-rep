@@ -8899,4 +8899,80 @@ static struct _ofixGroupSpec	NewOrderCrossGroup552 = {
 };
 
 static struct _ofixGroupSpec	NewOrderCrossGroup453 = {
-    453
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 523, false }, // PartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup78 = {
+    78, // NoAllocs
+    {
+	{ 79, false }, // AllocAccount
+	{ 467, false }, // IndividualAllocID
+	{ 539, false }, // NoNestedPartyIDs
+	{ 80, false }, // AllocQty
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup539 = {
+    539, // NoNestedPartyIDs
+    {
+	{ 524, false }, // NestedPartyID
+	{ 525, false }, // NestedPartyIDSource
+	{ 538, false }, // NestedPartyRole
+	{ 545, false }, // NestedPartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup386 = {
+    386, // NoTradingSessions
+    {
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup232 = {
+    232, // NoStipulations
+    {
+	{ 233, false }, // StipulationType
+	{ 234, false }, // StipulationValue
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	NewOrderCrossGroups[] = {
+    &NewOrderCrossGroup627,
+    &NewOrderCrossGroup552,
+    &NewOrderCrossGroup453,
+    &NewOrderCrossGroup78,
+    &NewOrderCrossGroup539,
+    &NewOrderCrossGroup454,
+    &NewOrderCrossGroup386,
+    &NewOrderCrossGroup232,
+    0
+};
+
+static struct _ofixMsgSpec	NewOrderCross = {
+    &fix43Spec, // version
+    115, // tid
+    "s", // type
+    "NewOrderCross", // name
+    {0,0,0,0,0,0,0,0,1,2,111,0,0,0,0,89,0,0,69,0,0,68,36,91,0,0,0,0,0,0,0,0,0,0,10,3,0,0,0,0,79,0,0,19,81,0,0,0,35,4,11,0,21,0,0,33,5,13,0,93,77,0,0,66,67,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,74,0,0,0,0,0,0,0,110,8,9,0,109,0,0,0,20,0,82,72,0,0,0,0,0,60,63,0,0,70,71,0,0,76,6,15,92,108,0,0,0,22,0,0,0,96,0,7,17,0,0,0,0,0,0,0,0,0,0,75,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0
