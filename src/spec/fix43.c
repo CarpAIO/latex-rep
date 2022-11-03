@@ -9187,4 +9187,44 @@ static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup454 = {
     454, // NoSecurityAltID
     {
 	{ 455, false }, // SecurityAltID
-	{ 456, false }, // Secu
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup386 = {
+    386, // NoTradingSessions
+    {
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup232 = {
+    232, // NoStipulations
+    {
+	{ 233, false }, // StipulationType
+	{ 234, false }, // StipulationValue
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	CrossOrderCancelReplaceRequestGroups[] = {
+    &CrossOrderCancelReplaceRequestGroup627,
+    &CrossOrderCancelReplaceRequestGroup552,
+    &CrossOrderCancelReplaceRequestGroup453,
+    &CrossOrderCancelReplaceRequestGroup78,
+    &CrossOrderCancelReplaceRequestGroup539,
+    &CrossOrderCancelReplaceRequestGroup454,
+    &CrossOrderCancelReplaceRequestGroup386,
+    &CrossOrderCancelReplaceRequestGroup232,
+    0
+};
+
+static struct _ofixMsgSpec	CrossOrderCancelReplaceRequest = {
+    &fix43Spec, // version
+    116, // tid
+    "t", // type
+    "CrossOrderCancelReplaceRequest", // name
+    {0,0,0,0,0,0,0,0,1,2,113,0,0,0,0,91,0,0,71,0,0,70,38,93,0,0,0,0,0,0,0,0,0,0,10,3,0,29,0,0,81,0,0,19,83,0,0,0,37,4,11,0,21,0,0,35,5,13,0,95,79,0,0,68,69,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0,112,8,9,0,111,0,0,0,20,0,84,74,0,0,0,0,0,62,65,0,0,72,73,0,0,78,6,15,94,110,0,0,0,22,0,0,0,98,0,7,17,0,0,0,0,0,0,0,0,0,0,77,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,108,109,0,0,0,0,0,0,0,42,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,0,57,0,0,0,58,61,0,0,100,101,23,24,0,0,0,0,85,0,86,87,88,60,45,46,48,49,50,0,0,59,80,0,0,89,90,0,0,47,56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,51,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,63,64,66,67,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,27,0,0,0,0,0,92,0,0,0,0,0,0,0,0,0,75,0,102,103,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,82,0,0,0,99,0,0,0,0,97,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
