@@ -9117,3 +9117,74 @@ static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup552 = {
 	{ 453, false }, // NoPartyIDs
 	{ 229, false }, // TradeOriginationDate
 	{ 1, false }, // Account
+	{ 581, false }, // AccountType
+	{ 589, false }, // DayBookingInst
+	{ 590, false }, // BookingUnit
+	{ 591, false }, // PreallocMethod
+	{ 78, false }, // NoAllocs
+	{ 465, false }, // QuantityType
+	{ 38, false }, // OrderQty
+	{ 152, false }, // CashOrderQty
+	{ 516, false }, // OrderPercent
+	{ 468, false }, // RoundingDirection
+	{ 469, false }, // RoundingModulus
+	{ 12, false }, // Commission
+	{ 13, false }, // CommType
+	{ 479, false }, // CommCurrency
+	{ 497, false }, // FundRenewWaiv
+	{ 528, false }, // OrderCapacity
+	{ 529, false }, // OrderRestrictions
+	{ 582, false }, // CustOrderCapacity
+	{ 121, false }, // ForexReq
+	{ 120, false }, // SettlCurrency
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 77, false }, // PositionEffect
+	{ 203, false }, // CoveredOrUncovered
+	{ 544, false }, // CashMargin
+	{ 635, false }, // ClearingFeeIndicator
+	{ 377, false }, // SolicitedFlag
+	{ 659, false }, // SideComplianceID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 523, false }, // PartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup78 = {
+    78, // NoAllocs
+    {
+	{ 79, false }, // AllocAccount
+	{ 467, false }, // IndividualAllocID
+	{ 539, false }, // NoNestedPartyIDs
+	{ 80, false }, // AllocQty
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup539 = {
+    539, // NoNestedPartyIDs
+    {
+	{ 524, false }, // NestedPartyID
+	{ 525, false }, // NestedPartyIDSource
+	{ 538, false }, // NestedPartyRole
+	{ 545, false }, // NestedPartySubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // Secu
