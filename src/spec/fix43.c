@@ -9256,4 +9256,65 @@ static struct _ofixMsgSpec	CrossOrderCancelReplaceRequest = {
 	{ 213, false }, // XmlData
 	{ 347, false }, // MessageEncoding
 	{ 369, false }, // LastMsgSeqNumProcessed
-	{ 37
+	{ 370, false }, // OnBehalfOfSendingTime
+	{ 627, false }, // NoHops
+	{ 37, false }, // OrderID
+	{ 548, true }, // CrossID
+	{ 551, true }, // OrigCrossID
+	{ 549, true }, // CrossType
+	{ 550, true }, // CrossPrioritization
+	{ 552, true }, // NoSides
+	{ 55, true }, // Symbol
+	{ 65, false }, // SymbolSfx
+	{ 48, false }, // SecurityID
+	{ 22, false }, // SecurityIDSource
+	{ 454, false }, // NoSecurityAltID
+	{ 460, false }, // Product
+	{ 461, false }, // CFICode
+	{ 167, false }, // SecurityType
+	{ 200, false }, // MaturityMonthYear
+	{ 541, false }, // MaturityDate
+	{ 224, false }, // CouponPaymentDate
+	{ 225, false }, // IssueDate
+	{ 239, false }, // RepoCollateralSecurityType
+	{ 226, false }, // RepurchaseTerm
+	{ 227, false }, // RepurchaseRate
+	{ 228, false }, // Factor
+	{ 255, false }, // CreditRating
+	{ 543, false }, // InstrRegistry
+	{ 470, false }, // CountryOfIssue
+	{ 471, false }, // StateOrProvinceOfIssue
+	{ 472, false }, // LocaleOfIssue
+	{ 240, false }, // RedemptionDate
+	{ 202, false }, // StrikePrice
+	{ 206, false }, // OptAttribute
+	{ 231, false }, // ContractMultiplier
+	{ 223, false }, // CouponRate
+	{ 207, false }, // SecurityExchange
+	{ 106, false }, // Issuer
+	{ 348, false }, // EncodedIssuerLen
+	{ 349, false }, // EncodedIssuer
+	{ 107, false }, // SecurityDesc
+	{ 350, false }, // EncodedSecurityDescLen
+	{ 351, false }, // EncodedSecurityDesc
+	{ 63, false }, // SettlmntTyp
+	{ 64, false }, // FutSettDate
+	{ 21, true }, // HandlInst
+	{ 18, false }, // ExecInst
+	{ 110, false }, // MinQty
+	{ 111, false }, // MaxFloor
+	{ 100, false }, // ExDestination
+	{ 386, false }, // NoTradingSessions
+	{ 81, false }, // ProcessCode
+	{ 140, false }, // PrevClosePx
+	{ 114, false }, // LocateReqd
+	{ 60, true }, // TransactTime
+	{ 232, false }, // NoStipulations
+	{ 40, true }, // OrdType
+	{ 423, false }, // PriceType
+	{ 44, false }, // Price
+	{ 99, false }, // StopPx
+	{ 218, false }, // Spread
+	{ 220, false }, // BenchmarkCurveCurrency
+	{ 221, false }, // BenchmarkCurveName
+	{ 222, false }, //
