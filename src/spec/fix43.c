@@ -9317,4 +9317,81 @@ static struct _ofixMsgSpec	CrossOrderCancelReplaceRequest = {
 	{ 218, false }, // Spread
 	{ 220, false }, // BenchmarkCurveCurrency
 	{ 221, false }, // BenchmarkCurveName
-	{ 222, false }, //
+	{ 222, false }, // BenchmarkCurvePoint
+	{ 235, false }, // YieldType
+	{ 236, false }, // Yield
+	{ 15, false }, // Currency
+	{ 376, false }, // ComplianceID
+	{ 23, false }, // IOIid
+	{ 117, false }, // QuoteID
+	{ 59, false }, // TimeInForce
+	{ 168, false }, // EffectiveTime
+	{ 432, false }, // ExpireDate
+	{ 126, false }, // ExpireTime
+	{ 427, false }, // GTBookingInst
+	{ 210, false }, // MaxShow
+	{ 211, false }, // PegDifference
+	{ 388, false }, // DiscretionInst
+	{ 389, false }, // DiscretionOffset
+	{ 480, false }, // CancellationRights
+	{ 481, false }, // MoneyLaunderingStatus
+	{ 513, false }, // RegistID
+	{ 494, false }, // Designation
+	{ 158, false }, // AccruedInterestRate
+	{ 159, false }, // AccruedInterestAmt
+	{ 118, false }, // NetMoney
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// CrossOrderCancelRequest [u]
+
+static struct _ofixGroupSpec	CrossOrderCancelRequestGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelRequestGroup552 = {
+    552, // NoSides
+    {
+	{ 54, true }, // Side
+	{ 41, false }, // OrigClOrdID
+	{ 11, true }, // ClOrdID
+	{ 526, false }, // SecondaryClOrdID
+	{ 583, false }, // ClOrdLinkID
+	{ 586, false }, // OrigOrdModTime
+	{ 453, false }, // NoPartyIDs
+	{ 229, false }, // TradeOriginationDate
+	{ 38, false }, // OrderQty
+	{ 152, false }, // CashOrderQty
+	{ 516, false }, // OrderPercent
+	{ 468, false }, // RoundingDirection
+	{ 469, false }, // RoundingModulus
+	{ 376, false }, // ComplianceID
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelRequestGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 523, false }, // PartySubID
+	{ 0, false }
+    }
+};
+
+static stru
