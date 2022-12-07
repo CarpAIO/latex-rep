@@ -9461,4 +9461,59 @@ static struct _ofixMsgSpec	CrossOrderCancelRequest = {
 	{ 460, false }, // Product
 	{ 461, false }, // CFICode
 	{ 167, false }, // SecurityType
-	{ 200, false }, // MaturityM
+	{ 200, false }, // MaturityMonthYear
+	{ 541, false }, // MaturityDate
+	{ 224, false }, // CouponPaymentDate
+	{ 225, false }, // IssueDate
+	{ 239, false }, // RepoCollateralSecurityType
+	{ 226, false }, // RepurchaseTerm
+	{ 227, false }, // RepurchaseRate
+	{ 228, false }, // Factor
+	{ 255, false }, // CreditRating
+	{ 543, false }, // InstrRegistry
+	{ 470, false }, // CountryOfIssue
+	{ 471, false }, // StateOrProvinceOfIssue
+	{ 472, false }, // LocaleOfIssue
+	{ 240, false }, // RedemptionDate
+	{ 202, false }, // StrikePrice
+	{ 206, false }, // OptAttribute
+	{ 231, false }, // ContractMultiplier
+	{ 223, false }, // CouponRate
+	{ 207, false }, // SecurityExchange
+	{ 106, false }, // Issuer
+	{ 348, false }, // EncodedIssuerLen
+	{ 349, false }, // EncodedIssuer
+	{ 107, false }, // SecurityDesc
+	{ 350, false }, // EncodedSecurityDescLen
+	{ 351, false }, // EncodedSecurityDesc
+	{ 60, true }, // TransactTime
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// SecurityTypeRequest [v]
+
+static struct _ofixGroupSpec	SecurityTypeRequestGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	SecurityTypeRequestGroups[] = {
+    &SecurityTypeRequestGroup627,
+    0
+};
+
+static struct _ofixMsgSpec	SecurityTypeRequest = {
+    &fix43Spec, // version
+    118, // tid
+    "v", // type
+    "SecurityTypeRequest", // name
+    {0,0,0,0,0,0,0,0,1,2,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,3,0,0,0,0,0,0,0,19,0,0,0,0,0,4,11,0,21,0,0,0,5,13,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36,8,9,0,35,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
