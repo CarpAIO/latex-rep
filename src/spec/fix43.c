@@ -9615,4 +9615,63 @@ static struct _ofixMsgSpec	SecurityTypes = {
 	{ 129, false }, // DeliverToSubID
 	{ 145, false }, // DeliverToLocationID
 	{ 43, false }, // PossDupFlag
-	{ 97, false }, // Pos
+	{ 97, false }, // PossResend
+	{ 52, true }, // SendingTime
+	{ 122, false }, // OrigSendingTime
+	{ 212, false }, // XmlDataLen
+	{ 213, false }, // XmlData
+	{ 347, false }, // MessageEncoding
+	{ 369, false }, // LastMsgSeqNumProcessed
+	{ 370, false }, // OnBehalfOfSendingTime
+	{ 627, false }, // NoHops
+	{ 320, true }, // SecurityReqID
+	{ 322, true }, // SecurityResponseID
+	{ 323, true }, // SecurityResponseType
+	{ 557, false }, // TotalNumSecurityTypes
+	{ 558, false }, // NoSecurityTypes
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 263, false }, // SubscriptionRequestType
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// SecurityListRequest [x]
+
+static struct _ofixGroupSpec	SecurityListRequestGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	SecurityListRequestGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	SecurityListRequestGroups[] = {
+    &SecurityListRequestGroup627,
+    &SecurityListRequestGroup454,
+    0
+};
+
+static struct _ofixMsgSpec	SecurityListRequest = {
+    &fix43Spec, // version
+    120, // tid
+    "x", // type
+    "SecurityListRequest", // name
+    {0,0,0,0,0,0,0,0,1,2,73,0,0,0,0,64,0,0,0,0,0,0,34,0,0,0,0,0,0,0,0,0,0,0,10,3,0,0,0,0,0,0,0,19,0,0,0,0,33,4,11,0,21,0,0,31,5,13,65,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72,8,9,0,71,0,0,0,20,0,0,0,0,0,0,0,0,58,61,0,0,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,39,0,53,0,0,0,54,
