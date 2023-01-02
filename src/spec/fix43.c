@@ -10016,4 +10016,83 @@ static struct _ofixMsgSpec	DerivativeSecurityListRequest = {
 	{ 246, false }, // UnderlyingFactor
 	{ 256, false }, // UnderlyingCreditRating
 	{ 595, false }, // UnderlyingInstrRegistry
-	{ 592, fa
+	{ 592, false }, // UnderlyingCountryOfIssue
+	{ 593, false }, // UnderlyingStateOrProvinceOfIssue
+	{ 594, false }, // UnderlyingLocaleOfIssue
+	{ 247, false }, // UnderlyingRedemptionDate
+	{ 315, false }, // UnderlyingPutOrCall
+	{ 316, false }, // UnderlyingStrikePrice
+	{ 317, false }, // UnderlyingOptAttribute
+	{ 436, false }, // UnderlyingContractMultiplier
+	{ 435, false }, // UnderlyingCouponRate
+	{ 308, false }, // UnderlyingSecurityExchange
+	{ 306, false }, // UnderlyingIssuer
+	{ 362, false }, // EncodedUnderlyingIssuerLen
+	{ 363, false }, // EncodedUnderlyingIssuer
+	{ 307, false }, // UnderlyingSecurityDesc
+	{ 364, false }, // EncodedUnderlyingSecurityDescLen
+	{ 365, false }, // EncodedUnderlyingSecurityDesc
+	{ 15, false }, // Currency
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 263, false }, // SubscriptionRequestType
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+
+
+// FIX Version 4.3
+struct _ofixVersionSpec	fix43Spec = {
+    4, // majorVersion
+    3, // minorVersion
+    "FIX.4.3", // id
+    false, // ready
+    tags, // tags
+    { 0 }, // tagTable
+    {
+	&Heartbeat,
+	&TestRequest,
+	&ResendRequest,
+	&Reject,
+	&SequenceReset,
+	&Logout,
+	&IndicationOfInterest,
+	&Advertisement,
+	&ExecutionReport,
+	&OrderCancelReject,
+	&Logon,
+	&DerivativeSecurityList,
+	&NewOrderMultileg,
+	&MultilegOrderCancelReplaceRequest,
+	&TradeCaptureReportRequest,
+	&TradeCaptureReport,
+	&OrderMassStatusRequest,
+	&QuoteRequestReject,
+	&RFQRequest,
+	&QuoteStatusReport,
+	&News,
+	&Email,
+	&NewOrderSingle,
+	&NewOrderList,
+	&OrderCancelRequest,
+	&OrderCancelReplaceRequest,
+	&OrderStatusRequest,
+	&Allocation,
+	&ListCancelRequest,
+	&ListExecute,
+	&ListStatusRequest,
+	&ListStatus,
+	&AllocationACK,
+	&DontKnowTrade,
+	&QuoteRequest,
+	&Quote,
+	&SettlementInstructions,
+	&MarketDataRequest,
+	&MarketD
