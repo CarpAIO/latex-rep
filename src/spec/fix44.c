@@ -21609,3 +21609,2022 @@ static struct _ofixGroupSpec	ListStrikePriceGroup864 = {
     {
 	{ 865, false }, // EventType
 	{ 866, false }, // EventDate
+	{ 867, false }, // EventPx
+	{ 868, false }, // EventText
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	ListStrikePriceGroup711 = {
+    711, // NoUnderlyings
+    {
+	{ 311, true }, // UnderlyingSymbol
+	{ 312, false }, // UnderlyingSymbolSfx
+	{ 309, false }, // UnderlyingSecurityID
+	{ 305, false }, // UnderlyingSecurityIDSource
+	{ 457, false }, // NoUnderlyingSecurityAltID
+	{ 462, false }, // UnderlyingProduct
+	{ 463, false }, // UnderlyingCFICode
+	{ 310, false }, // UnderlyingSecurityType
+	{ 763, false }, // UnderlyingSecuritySubType
+	{ 313, false }, // UnderlyingMaturityMonthYear
+	{ 542, false }, // UnderlyingMaturityDate
+	{ 241, false }, // UnderlyingCouponPaymentDate
+	{ 242, false }, // UnderlyingIssueDate
+	{ 243, false }, // UnderlyingRepoCollateralSecurityType
+	{ 244, false }, // UnderlyingRepurchaseTerm
+	{ 245, false }, // UnderlyingRepurchaseRate
+	{ 246, false }, // UnderlyingFactor
+	{ 256, false }, // UnderlyingCreditRating
+	{ 595, false }, // UnderlyingInstrRegistry
+	{ 592, false }, // UnderlyingCountryOfIssue
+	{ 593, false }, // UnderlyingStateOrProvinceOfIssue
+	{ 594, false }, // UnderlyingLocaleOfIssue
+	{ 247, false }, // UnderlyingRedemptionDate
+	{ 316, false }, // UnderlyingStrikePrice
+	{ 941, false }, // UnderlyingStrikeCurrency
+	{ 317, false }, // UnderlyingOptAttribute
+	{ 436, false }, // UnderlyingContractMultiplier
+	{ 435, false }, // UnderlyingCouponRate
+	{ 308, false }, // UnderlyingSecurityExchange
+	{ 306, false }, // UnderlyingIssuer
+	{ 362, false }, // EncodedUnderlyingIssuerLen
+	{ 363, false }, // EncodedUnderlyingIssuer
+	{ 307, false }, // UnderlyingSecurityDesc
+	{ 364, false }, // EncodedUnderlyingSecurityDescLen
+	{ 365, false }, // EncodedUnderlyingSecurityDesc
+	{ 877, false }, // UnderlyingCPProgram
+	{ 878, false }, // UnderlyingCPRegType
+	{ 318, false }, // UnderlyingCurrency
+	{ 879, false }, // UnderlyingQty
+	{ 810, false }, // UnderlyingPx
+	{ 882, false }, // UnderlyingDirtyPrice
+	{ 883, false }, // UnderlyingEndPrice
+	{ 884, false }, // UnderlyingStartValue
+	{ 885, false }, // UnderlyingCurrentValue
+	{ 886, false }, // UnderlyingEndValue
+	{ 887, false }, // NoUnderlyingStips
+	{ 140, false }, // PrevClosePx
+	{ 11, false }, // ClOrdID
+	{ 526, false }, // SecondaryClOrdID
+	{ 54, false }, // Side
+	{ 44, true }, // Price
+	{ 15, false }, // Currency
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	ListStrikePriceGroup457 = {
+    457, // NoUnderlyingSecurityAltID
+    {
+	{ 458, false }, // UnderlyingSecurityAltID
+	{ 459, false }, // UnderlyingSecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	ListStrikePriceGroup887 = {
+    887, // NoUnderlyingStips
+    {
+	{ 888, false }, // UnderlyingStipType
+	{ 889, false }, // UnderlyingStipValue
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	ListStrikePriceGroups[] = {
+    &ListStrikePriceGroup627,
+    &ListStrikePriceGroup428,
+    &ListStrikePriceGroup454,
+    &ListStrikePriceGroup864,
+    &ListStrikePriceGroup711,
+    &ListStrikePriceGroup457,
+    &ListStrikePriceGroup887,
+    0
+};
+
+static struct _ofixMsgSpec	ListStrikePrice = {
+    &fix44Spec, // version
+    109, // tid
+    "m", // type
+    "ListStrikePrice", // name
+    {0,0,0,0,0,0,0,0,1,2,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,3,0,0,0,0,0,0,0,19,0,0,0,0,0,4,11,0,21,0,0,0,5,13,0,0,0,0,0,0,0,0,28,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,8,9,0,33,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,0,0,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    ListStrikePriceGroups, // groups
+    {
+	{ 8, true }, // BeginString
+	{ 9, true }, // BodyLength
+	{ 35, true }, // MsgType
+	{ 49, true }, // SenderCompID
+	{ 56, true }, // TargetCompID
+	{ 115, false }, // OnBehalfOfCompID
+	{ 128, false }, // DeliverToCompID
+	{ 90, false }, // SecureDataLen
+	{ 91, false }, // SecureData
+	{ 34, true }, // MsgSeqNum
+	{ 50, false }, // SenderSubID
+	{ 142, false }, // SenderLocationID
+	{ 57, false }, // TargetSubID
+	{ 143, false }, // TargetLocationID
+	{ 116, false }, // OnBehalfOfSubID
+	{ 144, false }, // OnBehalfOfLocationID
+	{ 129, false }, // DeliverToSubID
+	{ 145, false }, // DeliverToLocationID
+	{ 43, false }, // PossDupFlag
+	{ 97, false }, // PossResend
+	{ 52, true }, // SendingTime
+	{ 122, false }, // OrigSendingTime
+	{ 212, false }, // XmlDataLen
+	{ 213, false }, // XmlData
+	{ 347, false }, // MessageEncoding
+	{ 369, false }, // LastMsgSeqNumProcessed
+	{ 627, false }, // NoHops
+	{ 66, true }, // ListID
+	{ 422, true }, // TotNoStrikes
+	{ 893, false }, // LastFragment
+	{ 428, true }, // NoStrikes
+	{ 711, false }, // NoUnderlyings
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// RegistrationInstructions [o]
+
+static struct _ofixGroupSpec	RegistrationInstructionsGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	RegistrationInstructionsGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 802, false }, // NoPartySubIDs
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	RegistrationInstructionsGroup802 = {
+    802, // NoPartySubIDs
+    {
+	{ 523, false }, // PartySubID
+	{ 803, false }, // PartySubIDType
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	RegistrationInstructionsGroup473 = {
+    473, // NoRegistDtls
+    {
+	{ 509, false }, // RegistDtls
+	{ 511, false }, // RegistEmail
+	{ 474, false }, // MailingDtls
+	{ 482, false }, // MailingInst
+	{ 539, false }, // NoNestedPartyIDs
+	{ 522, false }, // OwnerType
+	{ 486, false }, // DateOfBirth
+	{ 475, false }, // InvestorCountryOfResidence
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	RegistrationInstructionsGroup539 = {
+    539, // NoNestedPartyIDs
+    {
+	{ 524, false }, // NestedPartyID
+	{ 525, false }, // NestedPartyIDSource
+	{ 538, false }, // NestedPartyRole
+	{ 804, false }, // NoNestedPartySubIDs
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	RegistrationInstructionsGroup804 = {
+    804, // NoNestedPartySubIDs
+    {
+	{ 545, false }, // NestedPartySubID
+	{ 805, false }, // NestedPartySubIDType
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	RegistrationInstructionsGroup510 = {
+    510, // NoDistribInsts
+    {
+	{ 477, false }, // DistribPaymentMethod
+	{ 512, false }, // DistribPercentage
+	{ 478, false }, // CashDistribCurr
+	{ 498, false }, // CashDistribAgentName
+	{ 499, false }, // CashDistribAgentCode
+	{ 500, false }, // CashDistribAgentAcctNumber
+	{ 501, false }, // CashDistribPayRef
+	{ 502, false }, // CashDistribAgentAcctName
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	RegistrationInstructionsGroups[] = {
+    &RegistrationInstructionsGroup627,
+    &RegistrationInstructionsGroup453,
+    &RegistrationInstructionsGroup802,
+    &RegistrationInstructionsGroup473,
+    &RegistrationInstructionsGroup539,
+    &RegistrationInstructionsGroup804,
+    &RegistrationInstructionsGroup510,
+    0
+};
+
+static struct _ofixMsgSpec	RegistrationInstructions = {
+    &fix44Spec, // version
+    111, // tid
+    "o", // type
+    "RegistrationInstructions", // name
+    {0,33,0,0,0,0,0,0,1,2,42,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,3,0,0,0,0,0,0,0,19,0,0,0,0,0,4,11,0,21,0,0,0,5,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,8,9,0,40,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,0,36,0,0,0,0,0,0,0,0,0,0,0,0,30,0,39,0,0,28,29,0,0,37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    RegistrationInstructionsGroups, // groups
+    {
+	{ 8, true }, // BeginString
+	{ 9, true }, // BodyLength
+	{ 35, true }, // MsgType
+	{ 49, true }, // SenderCompID
+	{ 56, true }, // TargetCompID
+	{ 115, false }, // OnBehalfOfCompID
+	{ 128, false }, // DeliverToCompID
+	{ 90, false }, // SecureDataLen
+	{ 91, false }, // SecureData
+	{ 34, true }, // MsgSeqNum
+	{ 50, false }, // SenderSubID
+	{ 142, false }, // SenderLocationID
+	{ 57, false }, // TargetSubID
+	{ 143, false }, // TargetLocationID
+	{ 116, false }, // OnBehalfOfSubID
+	{ 144, false }, // OnBehalfOfLocationID
+	{ 129, false }, // DeliverToSubID
+	{ 145, false }, // DeliverToLocationID
+	{ 43, false }, // PossDupFlag
+	{ 97, false }, // PossResend
+	{ 52, true }, // SendingTime
+	{ 122, false }, // OrigSendingTime
+	{ 212, false }, // XmlDataLen
+	{ 213, false }, // XmlData
+	{ 347, false }, // MessageEncoding
+	{ 369, false }, // LastMsgSeqNumProcessed
+	{ 627, false }, // NoHops
+	{ 513, true }, // RegistID
+	{ 514, true }, // RegistTransType
+	{ 508, true }, // RegistRefID
+	{ 11, false }, // ClOrdID
+	{ 453, false }, // NoPartyIDs
+	{ 1, false }, // Account
+	{ 660, false }, // AcctIDSource
+	{ 493, false }, // RegistAcctType
+	{ 495, false }, // TaxAdvantageType
+	{ 517, false }, // OwnershipType
+	{ 473, false }, // NoRegistDtls
+	{ 510, false }, // NoDistribInsts
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// RegistrationInstructionsResponse [p]
+
+static struct _ofixGroupSpec	RegistrationInstructionsResponseGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	RegistrationInstructionsResponseGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 802, false }, // NoPartySubIDs
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	RegistrationInstructionsResponseGroup802 = {
+    802, // NoPartySubIDs
+    {
+	{ 523, false }, // PartySubID
+	{ 803, false }, // PartySubIDType
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	RegistrationInstructionsResponseGroups[] = {
+    &RegistrationInstructionsResponseGroup627,
+    &RegistrationInstructionsResponseGroup453,
+    &RegistrationInstructionsResponseGroup802,
+    0
+};
+
+static struct _ofixMsgSpec	RegistrationInstructionsResponse = {
+    &fix44Spec, // version
+    112, // tid
+    "p", // type
+    "RegistrationInstructionsResponse", // name
+    {0,33,0,0,0,0,0,0,1,2,40,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,3,0,0,0,0,0,0,0,19,0,0,0,0,0,4,11,0,21,0,0,0,5,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,39,8,9,0,38,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,0,0,0,0,0,0,35,36,30,0,0,0,0,28,29,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    RegistrationInstructionsResponseGroups, // groups
+    {
+	{ 8, true }, // BeginString
+	{ 9, true }, // BodyLength
+	{ 35, true }, // MsgType
+	{ 49, true }, // SenderCompID
+	{ 56, true }, // TargetCompID
+	{ 115, false }, // OnBehalfOfCompID
+	{ 128, false }, // DeliverToCompID
+	{ 90, false }, // SecureDataLen
+	{ 91, false }, // SecureData
+	{ 34, true }, // MsgSeqNum
+	{ 50, false }, // SenderSubID
+	{ 142, false }, // SenderLocationID
+	{ 57, false }, // TargetSubID
+	{ 143, false }, // TargetLocationID
+	{ 116, false }, // OnBehalfOfSubID
+	{ 144, false }, // OnBehalfOfLocationID
+	{ 129, false }, // DeliverToSubID
+	{ 145, false }, // DeliverToLocationID
+	{ 43, false }, // PossDupFlag
+	{ 97, false }, // PossResend
+	{ 52, true }, // SendingTime
+	{ 122, false }, // OrigSendingTime
+	{ 212, false }, // XmlDataLen
+	{ 213, false }, // XmlData
+	{ 347, false }, // MessageEncoding
+	{ 369, false }, // LastMsgSeqNumProcessed
+	{ 627, false }, // NoHops
+	{ 513, true }, // RegistID
+	{ 514, true }, // RegistTransType
+	{ 508, true }, // RegistRefID
+	{ 11, false }, // ClOrdID
+	{ 453, false }, // NoPartyIDs
+	{ 1, false }, // Account
+	{ 660, false }, // AcctIDSource
+	{ 506, true }, // RegistStatus
+	{ 507, false }, // RegistRejReasonCode
+	{ 496, false }, // RegistRejReasonText
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// OrderMassCancelRequest [q]
+
+static struct _ofixGroupSpec	OrderMassCancelRequestGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderMassCancelRequestGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderMassCancelRequestGroup864 = {
+    864, // NoEvents
+    {
+	{ 865, false }, // EventType
+	{ 866, false }, // EventDate
+	{ 867, false }, // EventPx
+	{ 868, false }, // EventText
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderMassCancelRequestGroup457 = {
+    457, // NoUnderlyingSecurityAltID
+    {
+	{ 458, false }, // UnderlyingSecurityAltID
+	{ 459, false }, // UnderlyingSecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderMassCancelRequestGroup887 = {
+    887, // NoUnderlyingStips
+    {
+	{ 888, false }, // UnderlyingStipType
+	{ 889, false }, // UnderlyingStipValue
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	OrderMassCancelRequestGroups[] = {
+    &OrderMassCancelRequestGroup627,
+    &OrderMassCancelRequestGroup454,
+    &OrderMassCancelRequestGroup864,
+    &OrderMassCancelRequestGroup457,
+    &OrderMassCancelRequestGroup887,
+    0
+};
+
+static struct _ofixMsgSpec	OrderMassCancelRequest = {
+    &fix44Spec, // version
+    113, // tid
+    "q", // type
+    "OrderMassCancelRequest", // name
+    {0,0,0,0,0,0,0,0,1,2,128,28,0,0,0,0,0,0,0,0,0,0,36,0,0,0,0,0,0,0,0,0,0,0,10,3,0,0,0,0,0,0,0,19,0,0,0,0,35,4,11,0,21,0,121,33,5,13,123,0,122,0,0,0,0,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,127,8,9,0,126,0,0,0,20,0,0,0,0,0,0,0,0,62,65,0,0,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,42,0,56,0,0,0,58,61,0,0,0,0,23,24,0,0,0,0,0,0,0,0,0,60,44,45,47,48,49,0,0,59,0,0,0,0,0,0,0,46,55,86,87,88,89,90,91,97,0,0,0,0,0,0,0,50,92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,104,107,103,77,82,75,76,84,0,0,98,100,112,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,0,0,0,0,0,0,0,0,0,0,25,63,64,66,67,0,0,124,125,0,0,0,0,0,0,105,106,108,109,0,0,0,26,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,102,101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,79,0,0,38,39,80,81,0,0,0,0,0,0,52,53,54,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,30,0,0,0,0,0,0,0,0,0,0,43,85,51,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,94,95,96,93,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,83,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,114,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,0,73,74,70,71,110,111,113,0,0,115,116,117,118,119,120,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,99,0,0,0,0,0,57,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    OrderMassCancelRequestGroups, // groups
+    {
+	{ 8, true }, // BeginString
+	{ 9, true }, // BodyLength
+	{ 35, true }, // MsgType
+	{ 49, true }, // SenderCompID
+	{ 56, true }, // TargetCompID
+	{ 115, false }, // OnBehalfOfCompID
+	{ 128, false }, // DeliverToCompID
+	{ 90, false }, // SecureDataLen
+	{ 91, false }, // SecureData
+	{ 34, true }, // MsgSeqNum
+	{ 50, false }, // SenderSubID
+	{ 142, false }, // SenderLocationID
+	{ 57, false }, // TargetSubID
+	{ 143, false }, // TargetLocationID
+	{ 116, false }, // OnBehalfOfSubID
+	{ 144, false }, // OnBehalfOfLocationID
+	{ 129, false }, // DeliverToSubID
+	{ 145, false }, // DeliverToLocationID
+	{ 43, false }, // PossDupFlag
+	{ 97, false }, // PossResend
+	{ 52, true }, // SendingTime
+	{ 122, false }, // OrigSendingTime
+	{ 212, false }, // XmlDataLen
+	{ 213, false }, // XmlData
+	{ 347, false }, // MessageEncoding
+	{ 369, false }, // LastMsgSeqNumProcessed
+	{ 627, false }, // NoHops
+	{ 11, true }, // ClOrdID
+	{ 526, false }, // SecondaryClOrdID
+	{ 530, true }, // MassCancelRequestType
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 55, true }, // Symbol
+	{ 65, false }, // SymbolSfx
+	{ 48, false }, // SecurityID
+	{ 22, false }, // SecurityIDSource
+	{ 454, false }, // NoSecurityAltID
+	{ 460, false }, // Product
+	{ 461, false }, // CFICode
+	{ 167, false }, // SecurityType
+	{ 762, false }, // SecuritySubType
+	{ 200, false }, // MaturityMonthYear
+	{ 541, false }, // MaturityDate
+	{ 224, false }, // CouponPaymentDate
+	{ 225, false }, // IssueDate
+	{ 239, false }, // RepoCollateralSecurityType
+	{ 226, false }, // RepurchaseTerm
+	{ 227, false }, // RepurchaseRate
+	{ 228, false }, // Factor
+	{ 255, false }, // CreditRating
+	{ 543, false }, // InstrRegistry
+	{ 470, false }, // CountryOfIssue
+	{ 471, false }, // StateOrProvinceOfIssue
+	{ 472, false }, // LocaleOfIssue
+	{ 240, false }, // RedemptionDate
+	{ 202, false }, // StrikePrice
+	{ 947, false }, // StrikeCurrency
+	{ 206, false }, // OptAttribute
+	{ 231, false }, // ContractMultiplier
+	{ 223, false }, // CouponRate
+	{ 207, false }, // SecurityExchange
+	{ 106, false }, // Issuer
+	{ 348, false }, // EncodedIssuerLen
+	{ 349, false }, // EncodedIssuer
+	{ 107, false }, // SecurityDesc
+	{ 350, false }, // EncodedSecurityDescLen
+	{ 351, false }, // EncodedSecurityDesc
+	{ 691, false }, // Pool
+	{ 667, false }, // ContractSettlMonth
+	{ 875, false }, // CPProgram
+	{ 876, false }, // CPRegType
+	{ 864, false }, // NoEvents
+	{ 873, false }, // DatedDate
+	{ 874, false }, // InterestAccrualDate
+	{ 311, true }, // UnderlyingSymbol
+	{ 312, false }, // UnderlyingSymbolSfx
+	{ 309, false }, // UnderlyingSecurityID
+	{ 305, false }, // UnderlyingSecurityIDSource
+	{ 457, false }, // NoUnderlyingSecurityAltID
+	{ 462, false }, // UnderlyingProduct
+	{ 463, false }, // UnderlyingCFICode
+	{ 310, false }, // UnderlyingSecurityType
+	{ 763, false }, // UnderlyingSecuritySubType
+	{ 313, false }, // UnderlyingMaturityMonthYear
+	{ 542, false }, // UnderlyingMaturityDate
+	{ 241, false }, // UnderlyingCouponPaymentDate
+	{ 242, false }, // UnderlyingIssueDate
+	{ 243, false }, // UnderlyingRepoCollateralSecurityType
+	{ 244, false }, // UnderlyingRepurchaseTerm
+	{ 245, false }, // UnderlyingRepurchaseRate
+	{ 246, false }, // UnderlyingFactor
+	{ 256, false }, // UnderlyingCreditRating
+	{ 595, false }, // UnderlyingInstrRegistry
+	{ 592, false }, // UnderlyingCountryOfIssue
+	{ 593, false }, // UnderlyingStateOrProvinceOfIssue
+	{ 594, false }, // UnderlyingLocaleOfIssue
+	{ 247, false }, // UnderlyingRedemptionDate
+	{ 316, false }, // UnderlyingStrikePrice
+	{ 941, false }, // UnderlyingStrikeCurrency
+	{ 317, false }, // UnderlyingOptAttribute
+	{ 436, false }, // UnderlyingContractMultiplier
+	{ 435, false }, // UnderlyingCouponRate
+	{ 308, false }, // UnderlyingSecurityExchange
+	{ 306, false }, // UnderlyingIssuer
+	{ 362, false }, // EncodedUnderlyingIssuerLen
+	{ 363, false }, // EncodedUnderlyingIssuer
+	{ 307, false }, // UnderlyingSecurityDesc
+	{ 364, false }, // EncodedUnderlyingSecurityDescLen
+	{ 365, false }, // EncodedUnderlyingSecurityDesc
+	{ 877, false }, // UnderlyingCPProgram
+	{ 878, false }, // UnderlyingCPRegType
+	{ 318, false }, // UnderlyingCurrency
+	{ 879, false }, // UnderlyingQty
+	{ 810, false }, // UnderlyingPx
+	{ 882, false }, // UnderlyingDirtyPrice
+	{ 883, false }, // UnderlyingEndPrice
+	{ 884, false }, // UnderlyingStartValue
+	{ 885, false }, // UnderlyingCurrentValue
+	{ 886, false }, // UnderlyingEndValue
+	{ 887, false }, // NoUnderlyingStips
+	{ 54, false }, // Side
+	{ 60, true }, // TransactTime
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// OrderMassCancelReport [r]
+
+static struct _ofixGroupSpec	OrderMassCancelReportGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderMassCancelReportGroup534 = {
+    534, // NoAffectedOrders
+    {
+	{ 41, false }, // OrigClOrdID
+	{ 535, false }, // AffectedOrderID
+	{ 536, false }, // AffectedSecondaryOrderID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderMassCancelReportGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderMassCancelReportGroup864 = {
+    864, // NoEvents
+    {
+	{ 865, false }, // EventType
+	{ 866, false }, // EventDate
+	{ 867, false }, // EventPx
+	{ 868, false }, // EventText
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderMassCancelReportGroup457 = {
+    457, // NoUnderlyingSecurityAltID
+    {
+	{ 458, false }, // UnderlyingSecurityAltID
+	{ 459, false }, // UnderlyingSecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	OrderMassCancelReportGroup887 = {
+    887, // NoUnderlyingStips
+    {
+	{ 888, false }, // UnderlyingStipType
+	{ 889, false }, // UnderlyingStipValue
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	OrderMassCancelReportGroups[] = {
+    &OrderMassCancelReportGroup627,
+    &OrderMassCancelReportGroup534,
+    &OrderMassCancelReportGroup454,
+    &OrderMassCancelReportGroup864,
+    &OrderMassCancelReportGroup457,
+    &OrderMassCancelReportGroup887,
+    0
+};
+
+static struct _ofixMsgSpec	OrderMassCancelReport = {
+    &fix44Spec, // version
+    114, // tid
+    "r", // type
+    "OrderMassCancelReport", // name
+    {0,0,0,0,0,0,0,0,1,2,134,28,0,0,0,0,0,0,0,0,0,0,42,0,0,0,0,0,0,0,0,0,0,0,10,3,0,30,0,0,0,0,0,19,0,0,0,0,41,4,11,0,21,0,127,39,5,13,129,0,128,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,133,8,9,0,132,0,0,0,20,0,0,0,0,0,0,0,0,68,71,0,0,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,0,48,0,62,0,0,0,64,67,0,0,0,0,23,24,0,0,0,0,0,0,0,0,0,66,50,51,53,54,55,0,0,65,0,0,0,0,0,0,0,52,61,92,93,94,95,96,97,103,0,0,0,0,0,0,0,56,98,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,84,110,113,109,83,88,81,82,90,0,0,104,106,118,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,0,0,0,0,0,0,0,25,69,70,72,73,0,0,130,131,0,0,0,0,0,0,111,112,114,115,0,0,0,26,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,107,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,0,0,85,0,0,44,45,86,87,0,0,0,0,0,0,58,59,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,32,33,34,35,36,0,0,0,0,0,0,49,91,57,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,101,102,99,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,74,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,89,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,120,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,0,79,80,76,77,116,117,119,0,0,121,122,123,124,125,126,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,105,0,0,0,0,0,63,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    OrderMassCancelReportGroups, // groups
+    {
+	{ 8, true }, // BeginString
+	{ 9, true }, // BodyLength
+	{ 35, true }, // MsgType
+	{ 49, true }, // SenderCompID
+	{ 56, true }, // TargetCompID
+	{ 115, false }, // OnBehalfOfCompID
+	{ 128, false }, // DeliverToCompID
+	{ 90, false }, // SecureDataLen
+	{ 91, false }, // SecureData
+	{ 34, true }, // MsgSeqNum
+	{ 50, false }, // SenderSubID
+	{ 142, false }, // SenderLocationID
+	{ 57, false }, // TargetSubID
+	{ 143, false }, // TargetLocationID
+	{ 116, false }, // OnBehalfOfSubID
+	{ 144, false }, // OnBehalfOfLocationID
+	{ 129, false }, // DeliverToSubID
+	{ 145, false }, // DeliverToLocationID
+	{ 43, false }, // PossDupFlag
+	{ 97, false }, // PossResend
+	{ 52, true }, // SendingTime
+	{ 122, false }, // OrigSendingTime
+	{ 212, false }, // XmlDataLen
+	{ 213, false }, // XmlData
+	{ 347, false }, // MessageEncoding
+	{ 369, false }, // LastMsgSeqNumProcessed
+	{ 627, false }, // NoHops
+	{ 11, false }, // ClOrdID
+	{ 526, false }, // SecondaryClOrdID
+	{ 37, true }, // OrderID
+	{ 198, false }, // SecondaryOrderID
+	{ 530, true }, // MassCancelRequestType
+	{ 531, true }, // MassCancelResponse
+	{ 532, false }, // MassCancelRejectReason
+	{ 533, false }, // TotalAffectedOrders
+	{ 534, false }, // NoAffectedOrders
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 55, true }, // Symbol
+	{ 65, false }, // SymbolSfx
+	{ 48, false }, // SecurityID
+	{ 22, false }, // SecurityIDSource
+	{ 454, false }, // NoSecurityAltID
+	{ 460, false }, // Product
+	{ 461, false }, // CFICode
+	{ 167, false }, // SecurityType
+	{ 762, false }, // SecuritySubType
+	{ 200, false }, // MaturityMonthYear
+	{ 541, false }, // MaturityDate
+	{ 224, false }, // CouponPaymentDate
+	{ 225, false }, // IssueDate
+	{ 239, false }, // RepoCollateralSecurityType
+	{ 226, false }, // RepurchaseTerm
+	{ 227, false }, // RepurchaseRate
+	{ 228, false }, // Factor
+	{ 255, false }, // CreditRating
+	{ 543, false }, // InstrRegistry
+	{ 470, false }, // CountryOfIssue
+	{ 471, false }, // StateOrProvinceOfIssue
+	{ 472, false }, // LocaleOfIssue
+	{ 240, false }, // RedemptionDate
+	{ 202, false }, // StrikePrice
+	{ 947, false }, // StrikeCurrency
+	{ 206, false }, // OptAttribute
+	{ 231, false }, // ContractMultiplier
+	{ 223, false }, // CouponRate
+	{ 207, false }, // SecurityExchange
+	{ 106, false }, // Issuer
+	{ 348, false }, // EncodedIssuerLen
+	{ 349, false }, // EncodedIssuer
+	{ 107, false }, // SecurityDesc
+	{ 350, false }, // EncodedSecurityDescLen
+	{ 351, false }, // EncodedSecurityDesc
+	{ 691, false }, // Pool
+	{ 667, false }, // ContractSettlMonth
+	{ 875, false }, // CPProgram
+	{ 876, false }, // CPRegType
+	{ 864, false }, // NoEvents
+	{ 873, false }, // DatedDate
+	{ 874, false }, // InterestAccrualDate
+	{ 311, true }, // UnderlyingSymbol
+	{ 312, false }, // UnderlyingSymbolSfx
+	{ 309, false }, // UnderlyingSecurityID
+	{ 305, false }, // UnderlyingSecurityIDSource
+	{ 457, false }, // NoUnderlyingSecurityAltID
+	{ 462, false }, // UnderlyingProduct
+	{ 463, false }, // UnderlyingCFICode
+	{ 310, false }, // UnderlyingSecurityType
+	{ 763, false }, // UnderlyingSecuritySubType
+	{ 313, false }, // UnderlyingMaturityMonthYear
+	{ 542, false }, // UnderlyingMaturityDate
+	{ 241, false }, // UnderlyingCouponPaymentDate
+	{ 242, false }, // UnderlyingIssueDate
+	{ 243, false }, // UnderlyingRepoCollateralSecurityType
+	{ 244, false }, // UnderlyingRepurchaseTerm
+	{ 245, false }, // UnderlyingRepurchaseRate
+	{ 246, false }, // UnderlyingFactor
+	{ 256, false }, // UnderlyingCreditRating
+	{ 595, false }, // UnderlyingInstrRegistry
+	{ 592, false }, // UnderlyingCountryOfIssue
+	{ 593, false }, // UnderlyingStateOrProvinceOfIssue
+	{ 594, false }, // UnderlyingLocaleOfIssue
+	{ 247, false }, // UnderlyingRedemptionDate
+	{ 316, false }, // UnderlyingStrikePrice
+	{ 941, false }, // UnderlyingStrikeCurrency
+	{ 317, false }, // UnderlyingOptAttribute
+	{ 436, false }, // UnderlyingContractMultiplier
+	{ 435, false }, // UnderlyingCouponRate
+	{ 308, false }, // UnderlyingSecurityExchange
+	{ 306, false }, // UnderlyingIssuer
+	{ 362, false }, // EncodedUnderlyingIssuerLen
+	{ 363, false }, // EncodedUnderlyingIssuer
+	{ 307, false }, // UnderlyingSecurityDesc
+	{ 364, false }, // EncodedUnderlyingSecurityDescLen
+	{ 365, false }, // EncodedUnderlyingSecurityDesc
+	{ 877, false }, // UnderlyingCPProgram
+	{ 878, false }, // UnderlyingCPRegType
+	{ 318, false }, // UnderlyingCurrency
+	{ 879, false }, // UnderlyingQty
+	{ 810, false }, // UnderlyingPx
+	{ 882, false }, // UnderlyingDirtyPrice
+	{ 883, false }, // UnderlyingEndPrice
+	{ 884, false }, // UnderlyingStartValue
+	{ 885, false }, // UnderlyingCurrentValue
+	{ 886, false }, // UnderlyingEndValue
+	{ 887, false }, // NoUnderlyingStips
+	{ 54, false }, // Side
+	{ 60, false }, // TransactTime
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// NewOrderCross [s]
+
+static struct _ofixGroupSpec	NewOrderCrossGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup552 = {
+    552, // NoSides
+    {
+	{ 54, true }, // Side
+	{ 11, true }, // ClOrdID
+	{ 526, false }, // SecondaryClOrdID
+	{ 583, false }, // ClOrdLinkID
+	{ 453, false }, // NoPartyIDs
+	{ 229, false }, // TradeOriginationDate
+	{ 75, false }, // TradeDate
+	{ 1, false }, // Account
+	{ 660, false }, // AcctIDSource
+	{ 581, false }, // AccountType
+	{ 589, false }, // DayBookingInst
+	{ 590, false }, // BookingUnit
+	{ 591, false }, // PreallocMethod
+	{ 70, false }, // AllocID
+	{ 78, false }, // NoAllocs
+	{ 854, false }, // QtyType
+	{ 38, false }, // OrderQty
+	{ 152, false }, // CashOrderQty
+	{ 516, false }, // OrderPercent
+	{ 468, false }, // RoundingDirection
+	{ 469, false }, // RoundingModulus
+	{ 12, false }, // Commission
+	{ 13, false }, // CommType
+	{ 479, false }, // CommCurrency
+	{ 497, false }, // FundRenewWaiv
+	{ 528, false }, // OrderCapacity
+	{ 529, false }, // OrderRestrictions
+	{ 582, false }, // CustOrderCapacity
+	{ 121, false }, // ForexReq
+	{ 120, false }, // SettlCurrency
+	{ 775, false }, // BookingType
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 77, false }, // PositionEffect
+	{ 203, false }, // CoveredOrUncovered
+	{ 544, false }, // CashMargin
+	{ 635, false }, // ClearingFeeIndicator
+	{ 377, false }, // SolicitedFlag
+	{ 659, false }, // SideComplianceID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 802, false }, // NoPartySubIDs
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup802 = {
+    802, // NoPartySubIDs
+    {
+	{ 523, false }, // PartySubID
+	{ 803, false }, // PartySubIDType
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup78 = {
+    78, // NoAllocs
+    {
+	{ 79, false }, // AllocAccount
+	{ 661, false }, // AllocAcctIDSource
+	{ 736, false }, // AllocSettlCurrency
+	{ 467, false }, // IndividualAllocID
+	{ 539, false }, // NoNestedPartyIDs
+	{ 80, false }, // AllocQty
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup539 = {
+    539, // NoNestedPartyIDs
+    {
+	{ 524, false }, // NestedPartyID
+	{ 525, false }, // NestedPartyIDSource
+	{ 538, false }, // NestedPartyRole
+	{ 804, false }, // NoNestedPartySubIDs
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup804 = {
+    804, // NoNestedPartySubIDs
+    {
+	{ 545, false }, // NestedPartySubID
+	{ 805, false }, // NestedPartySubIDType
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup864 = {
+    864, // NoEvents
+    {
+	{ 865, false }, // EventType
+	{ 866, false }, // EventDate
+	{ 867, false }, // EventPx
+	{ 868, false }, // EventText
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup711 = {
+    711, // NoUnderlyings
+    {
+	{ 311, true }, // UnderlyingSymbol
+	{ 312, false }, // UnderlyingSymbolSfx
+	{ 309, false }, // UnderlyingSecurityID
+	{ 305, false }, // UnderlyingSecurityIDSource
+	{ 457, false }, // NoUnderlyingSecurityAltID
+	{ 462, false }, // UnderlyingProduct
+	{ 463, false }, // UnderlyingCFICode
+	{ 310, false }, // UnderlyingSecurityType
+	{ 763, false }, // UnderlyingSecuritySubType
+	{ 313, false }, // UnderlyingMaturityMonthYear
+	{ 542, false }, // UnderlyingMaturityDate
+	{ 241, false }, // UnderlyingCouponPaymentDate
+	{ 242, false }, // UnderlyingIssueDate
+	{ 243, false }, // UnderlyingRepoCollateralSecurityType
+	{ 244, false }, // UnderlyingRepurchaseTerm
+	{ 245, false }, // UnderlyingRepurchaseRate
+	{ 246, false }, // UnderlyingFactor
+	{ 256, false }, // UnderlyingCreditRating
+	{ 595, false }, // UnderlyingInstrRegistry
+	{ 592, false }, // UnderlyingCountryOfIssue
+	{ 593, false }, // UnderlyingStateOrProvinceOfIssue
+	{ 594, false }, // UnderlyingLocaleOfIssue
+	{ 247, false }, // UnderlyingRedemptionDate
+	{ 316, false }, // UnderlyingStrikePrice
+	{ 941, false }, // UnderlyingStrikeCurrency
+	{ 317, false }, // UnderlyingOptAttribute
+	{ 436, false }, // UnderlyingContractMultiplier
+	{ 435, false }, // UnderlyingCouponRate
+	{ 308, false }, // UnderlyingSecurityExchange
+	{ 306, false }, // UnderlyingIssuer
+	{ 362, false }, // EncodedUnderlyingIssuerLen
+	{ 363, false }, // EncodedUnderlyingIssuer
+	{ 307, false }, // UnderlyingSecurityDesc
+	{ 364, false }, // EncodedUnderlyingSecurityDescLen
+	{ 365, false }, // EncodedUnderlyingSecurityDesc
+	{ 877, false }, // UnderlyingCPProgram
+	{ 878, false }, // UnderlyingCPRegType
+	{ 318, false }, // UnderlyingCurrency
+	{ 879, false }, // UnderlyingQty
+	{ 810, false }, // UnderlyingPx
+	{ 882, false }, // UnderlyingDirtyPrice
+	{ 883, false }, // UnderlyingEndPrice
+	{ 884, false }, // UnderlyingStartValue
+	{ 885, false }, // UnderlyingCurrentValue
+	{ 886, false }, // UnderlyingEndValue
+	{ 887, false }, // NoUnderlyingStips
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup457 = {
+    457, // NoUnderlyingSecurityAltID
+    {
+	{ 458, false }, // UnderlyingSecurityAltID
+	{ 459, false }, // UnderlyingSecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup887 = {
+    887, // NoUnderlyingStips
+    {
+	{ 888, false }, // UnderlyingStipType
+	{ 889, false }, // UnderlyingStipValue
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup555 = {
+    555, // NoLegs
+    {
+	{ 600, false }, // LegSymbol
+	{ 601, false }, // LegSymbolSfx
+	{ 602, false }, // LegSecurityID
+	{ 603, false }, // LegSecurityIDSource
+	{ 604, false }, // NoLegSecurityAltID
+	{ 607, false }, // LegProduct
+	{ 608, false }, // LegCFICode
+	{ 609, false }, // LegSecurityType
+	{ 764, false }, // LegSecuritySubType
+	{ 610, false }, // LegMaturityMonthYear
+	{ 611, false }, // LegMaturityDate
+	{ 248, false }, // LegCouponPaymentDate
+	{ 249, false }, // LegIssueDate
+	{ 250, false }, // LegRepoCollateralSecurityType
+	{ 251, false }, // LegRepurchaseTerm
+	{ 252, false }, // LegRepurchaseRate
+	{ 253, false }, // LegFactor
+	{ 257, false }, // LegCreditRating
+	{ 599, false }, // LegInstrRegistry
+	{ 596, false }, // LegCountryOfIssue
+	{ 597, false }, // LegStateOrProvinceOfIssue
+	{ 598, false }, // LegLocaleOfIssue
+	{ 254, false }, // LegRedemptionDate
+	{ 612, false }, // LegStrikePrice
+	{ 942, false }, // LegStrikeCurrency
+	{ 613, false }, // LegOptAttribute
+	{ 614, false }, // LegContractMultiplier
+	{ 615, false }, // LegCouponRate
+	{ 616, false }, // LegSecurityExchange
+	{ 617, false }, // LegIssuer
+	{ 618, false }, // EncodedLegIssuerLen
+	{ 619, false }, // EncodedLegIssuer
+	{ 620, false }, // LegSecurityDesc
+	{ 621, false }, // EncodedLegSecurityDescLen
+	{ 622, false }, // EncodedLegSecurityDesc
+	{ 623, false }, // LegRatioQty
+	{ 624, false }, // LegSide
+	{ 556, false }, // LegCurrency
+	{ 740, false }, // LegPool
+	{ 739, false }, // LegDatedDate
+	{ 955, false }, // LegContractSettlMonth
+	{ 956, false }, // LegInterestAccrualDate
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup604 = {
+    604, // NoLegSecurityAltID
+    {
+	{ 605, false }, // LegSecurityAltID
+	{ 606, false }, // LegSecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup386 = {
+    386, // NoTradingSessions
+    {
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	NewOrderCrossGroup232 = {
+    232, // NoStipulations
+    {
+	{ 233, false }, // StipulationType
+	{ 234, false }, // StipulationValue
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	NewOrderCrossGroups[] = {
+    &NewOrderCrossGroup627,
+    &NewOrderCrossGroup552,
+    &NewOrderCrossGroup453,
+    &NewOrderCrossGroup802,
+    &NewOrderCrossGroup78,
+    &NewOrderCrossGroup539,
+    &NewOrderCrossGroup804,
+    &NewOrderCrossGroup454,
+    &NewOrderCrossGroup864,
+    &NewOrderCrossGroup711,
+    &NewOrderCrossGroup457,
+    &NewOrderCrossGroup887,
+    &NewOrderCrossGroup555,
+    &NewOrderCrossGroup604,
+    &NewOrderCrossGroup386,
+    &NewOrderCrossGroup232,
+    0
+};
+
+static struct _ofixMsgSpec	NewOrderCross = {
+    &fix44Spec, // version
+    115, // tid
+    "s", // type
+    "NewOrderCross", // name
+    {0,0,0,0,0,0,0,0,1,2,139,0,0,0,0,107,0,0,79,0,0,78,35,109,0,0,0,0,0,0,0,0,0,0,10,3,0,0,0,0,89,0,0,19,91,0,0,0,34,4,11,0,21,0,0,32,5,13,0,111,87,0,0,76,77,33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,84,0,0,0,0,0,0,0,138,8,9,0,137,0,0,0,20,0,92,82,0,0,0,0,0,61,64,0,0,80,81,0,0,86,6,15,110,0,0,0,0,22,0,0,0,114,0,7,17,0,0,0,0,0,0,0,0,0,0,85,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,39,112,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,0,55,0,0,0,57,60,0,0,116,117,23,24,0,0,0,0,93,0,94,95,96,59,43,44,46,47,48,0,0,58,88,0,0,101,102,0,0,45,54,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,62,63,65,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0,0,0,0,108,0,0,0,0,0,0,0,0,0,83,0,123,124,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,115,0,0,0,0,113,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36,0,0,0,0,0,37,38,0,0,0,0,0,0,0,0,51,52,53,0,0,0,0,0,0,0,133,134,0,0,0,0,0,0,0,0,0,0,0,0,136,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,135,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,42,0,50,0,0,0,0,28,29,30,0,31,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,97,98,0,0,0,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,67,0,0,0,0,104,105,106,99,0,103,0,0,0,0,0,0,0,0,0,74,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,118,119,120,121,0,122,125,126,127,128,0,129,130,131,132,0,0,0,0,0,0,0,0,0,0,0,0,0,0,71,0,0,0,0,0,0,0,0,72,73,69,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    NewOrderCrossGroups, // groups
+    {
+	{ 8, true }, // BeginString
+	{ 9, true }, // BodyLength
+	{ 35, true }, // MsgType
+	{ 49, true }, // SenderCompID
+	{ 56, true }, // TargetCompID
+	{ 115, false }, // OnBehalfOfCompID
+	{ 128, false }, // DeliverToCompID
+	{ 90, false }, // SecureDataLen
+	{ 91, false }, // SecureData
+	{ 34, true }, // MsgSeqNum
+	{ 50, false }, // SenderSubID
+	{ 142, false }, // SenderLocationID
+	{ 57, false }, // TargetSubID
+	{ 143, false }, // TargetLocationID
+	{ 116, false }, // OnBehalfOfSubID
+	{ 144, false }, // OnBehalfOfLocationID
+	{ 129, false }, // DeliverToSubID
+	{ 145, false }, // DeliverToLocationID
+	{ 43, false }, // PossDupFlag
+	{ 97, false }, // PossResend
+	{ 52, true }, // SendingTime
+	{ 122, false }, // OrigSendingTime
+	{ 212, false }, // XmlDataLen
+	{ 213, false }, // XmlData
+	{ 347, false }, // MessageEncoding
+	{ 369, false }, // LastMsgSeqNumProcessed
+	{ 627, false }, // NoHops
+	{ 548, true }, // CrossID
+	{ 549, true }, // CrossType
+	{ 550, true }, // CrossPrioritization
+	{ 552, true }, // NoSides
+	{ 55, true }, // Symbol
+	{ 65, false }, // SymbolSfx
+	{ 48, false }, // SecurityID
+	{ 22, false }, // SecurityIDSource
+	{ 454, false }, // NoSecurityAltID
+	{ 460, false }, // Product
+	{ 461, false }, // CFICode
+	{ 167, false }, // SecurityType
+	{ 762, false }, // SecuritySubType
+	{ 200, false }, // MaturityMonthYear
+	{ 541, false }, // MaturityDate
+	{ 224, false }, // CouponPaymentDate
+	{ 225, false }, // IssueDate
+	{ 239, false }, // RepoCollateralSecurityType
+	{ 226, false }, // RepurchaseTerm
+	{ 227, false }, // RepurchaseRate
+	{ 228, false }, // Factor
+	{ 255, false }, // CreditRating
+	{ 543, false }, // InstrRegistry
+	{ 470, false }, // CountryOfIssue
+	{ 471, false }, // StateOrProvinceOfIssue
+	{ 472, false }, // LocaleOfIssue
+	{ 240, false }, // RedemptionDate
+	{ 202, false }, // StrikePrice
+	{ 947, false }, // StrikeCurrency
+	{ 206, false }, // OptAttribute
+	{ 231, false }, // ContractMultiplier
+	{ 223, false }, // CouponRate
+	{ 207, false }, // SecurityExchange
+	{ 106, false }, // Issuer
+	{ 348, false }, // EncodedIssuerLen
+	{ 349, false }, // EncodedIssuer
+	{ 107, false }, // SecurityDesc
+	{ 350, false }, // EncodedSecurityDescLen
+	{ 351, false }, // EncodedSecurityDesc
+	{ 691, false }, // Pool
+	{ 667, false }, // ContractSettlMonth
+	{ 875, false }, // CPProgram
+	{ 876, false }, // CPRegType
+	{ 864, false }, // NoEvents
+	{ 873, false }, // DatedDate
+	{ 874, false }, // InterestAccrualDate
+	{ 711, false }, // NoUnderlyings
+	{ 555, false }, // NoLegs
+	{ 63, false }, // SettlType
+	{ 64, false }, // SettlDate
+	{ 21, false }, // HandlInst
+	{ 18, false }, // ExecInst
+	{ 110, false }, // MinQty
+	{ 111, false }, // MaxFloor
+	{ 100, false }, // ExDestination
+	{ 386, false }, // NoTradingSessions
+	{ 81, false }, // ProcessCode
+	{ 140, false }, // PrevClosePx
+	{ 114, false }, // LocateReqd
+	{ 60, true }, // TransactTime
+	{ 232, false }, // NoStipulations
+	{ 40, true }, // OrdType
+	{ 423, false }, // PriceType
+	{ 44, false }, // Price
+	{ 99, false }, // StopPx
+	{ 218, false }, // Spread
+	{ 220, false }, // BenchmarkCurveCurrency
+	{ 221, false }, // BenchmarkCurveName
+	{ 222, false }, // BenchmarkCurvePoint
+	{ 662, false }, // BenchmarkPrice
+	{ 663, false }, // BenchmarkPriceType
+	{ 699, false }, // BenchmarkSecurityID
+	{ 761, false }, // BenchmarkSecurityIDSource
+	{ 235, false }, // YieldType
+	{ 236, false }, // Yield
+	{ 701, false }, // YieldCalcDate
+	{ 696, false }, // YieldRedemptionDate
+	{ 697, false }, // YieldRedemptionPrice
+	{ 698, false }, // YieldRedemptionPriceType
+	{ 15, false }, // Currency
+	{ 376, false }, // ComplianceID
+	{ 23, false }, // IOIid
+	{ 117, false }, // QuoteID
+	{ 59, false }, // TimeInForce
+	{ 168, false }, // EffectiveTime
+	{ 432, false }, // ExpireDate
+	{ 126, false }, // ExpireTime
+	{ 427, false }, // GTBookingInst
+	{ 210, false }, // MaxShow
+	{ 211, false }, // PegOffsetValue
+	{ 835, false }, // PegMoveType
+	{ 836, false }, // PegOffsetType
+	{ 837, false }, // PegLimitType
+	{ 838, false }, // PegRoundDirection
+	{ 840, false }, // PegScope
+	{ 388, false }, // DiscretionInst
+	{ 389, false }, // DiscretionOffsetValue
+	{ 841, false }, // DiscretionMoveType
+	{ 842, false }, // DiscretionOffsetType
+	{ 843, false }, // DiscretionLimitType
+	{ 844, false }, // DiscretionRoundDirection
+	{ 846, false }, // DiscretionScope
+	{ 847, false }, // TargetStrategy
+	{ 848, false }, // TargetStrategyParameters
+	{ 849, false }, // ParticipationRate
+	{ 480, false }, // CancellationRights
+	{ 481, false }, // MoneyLaunderingStatus
+	{ 513, false }, // RegistID
+	{ 494, false }, // Designation
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// CrossOrderCancelReplaceRequest [t]
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup552 = {
+    552, // NoSides
+    {
+	{ 54, true }, // Side
+	{ 41, true }, // OrigClOrdID
+	{ 11, true }, // ClOrdID
+	{ 526, false }, // SecondaryClOrdID
+	{ 583, false }, // ClOrdLinkID
+	{ 586, false }, // OrigOrdModTime
+	{ 453, false }, // NoPartyIDs
+	{ 229, false }, // TradeOriginationDate
+	{ 75, false }, // TradeDate
+	{ 1, false }, // Account
+	{ 660, false }, // AcctIDSource
+	{ 581, false }, // AccountType
+	{ 589, false }, // DayBookingInst
+	{ 590, false }, // BookingUnit
+	{ 591, false }, // PreallocMethod
+	{ 70, false }, // AllocID
+	{ 78, false }, // NoAllocs
+	{ 854, false }, // QtyType
+	{ 38, false }, // OrderQty
+	{ 152, false }, // CashOrderQty
+	{ 516, false }, // OrderPercent
+	{ 468, false }, // RoundingDirection
+	{ 469, false }, // RoundingModulus
+	{ 12, false }, // Commission
+	{ 13, false }, // CommType
+	{ 479, false }, // CommCurrency
+	{ 497, false }, // FundRenewWaiv
+	{ 528, false }, // OrderCapacity
+	{ 529, false }, // OrderRestrictions
+	{ 582, false }, // CustOrderCapacity
+	{ 121, false }, // ForexReq
+	{ 120, false }, // SettlCurrency
+	{ 775, false }, // BookingType
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 77, false }, // PositionEffect
+	{ 203, false }, // CoveredOrUncovered
+	{ 544, false }, // CashMargin
+	{ 635, false }, // ClearingFeeIndicator
+	{ 377, false }, // SolicitedFlag
+	{ 659, false }, // SideComplianceID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 802, false }, // NoPartySubIDs
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup802 = {
+    802, // NoPartySubIDs
+    {
+	{ 523, false }, // PartySubID
+	{ 803, false }, // PartySubIDType
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup78 = {
+    78, // NoAllocs
+    {
+	{ 79, false }, // AllocAccount
+	{ 661, false }, // AllocAcctIDSource
+	{ 736, false }, // AllocSettlCurrency
+	{ 467, false }, // IndividualAllocID
+	{ 539, false }, // NoNestedPartyIDs
+	{ 80, false }, // AllocQty
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup539 = {
+    539, // NoNestedPartyIDs
+    {
+	{ 524, false }, // NestedPartyID
+	{ 525, false }, // NestedPartyIDSource
+	{ 538, false }, // NestedPartyRole
+	{ 804, false }, // NoNestedPartySubIDs
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup804 = {
+    804, // NoNestedPartySubIDs
+    {
+	{ 545, false }, // NestedPartySubID
+	{ 805, false }, // NestedPartySubIDType
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup864 = {
+    864, // NoEvents
+    {
+	{ 865, false }, // EventType
+	{ 866, false }, // EventDate
+	{ 867, false }, // EventPx
+	{ 868, false }, // EventText
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup711 = {
+    711, // NoUnderlyings
+    {
+	{ 311, true }, // UnderlyingSymbol
+	{ 312, false }, // UnderlyingSymbolSfx
+	{ 309, false }, // UnderlyingSecurityID
+	{ 305, false }, // UnderlyingSecurityIDSource
+	{ 457, false }, // NoUnderlyingSecurityAltID
+	{ 462, false }, // UnderlyingProduct
+	{ 463, false }, // UnderlyingCFICode
+	{ 310, false }, // UnderlyingSecurityType
+	{ 763, false }, // UnderlyingSecuritySubType
+	{ 313, false }, // UnderlyingMaturityMonthYear
+	{ 542, false }, // UnderlyingMaturityDate
+	{ 241, false }, // UnderlyingCouponPaymentDate
+	{ 242, false }, // UnderlyingIssueDate
+	{ 243, false }, // UnderlyingRepoCollateralSecurityType
+	{ 244, false }, // UnderlyingRepurchaseTerm
+	{ 245, false }, // UnderlyingRepurchaseRate
+	{ 246, false }, // UnderlyingFactor
+	{ 256, false }, // UnderlyingCreditRating
+	{ 595, false }, // UnderlyingInstrRegistry
+	{ 592, false }, // UnderlyingCountryOfIssue
+	{ 593, false }, // UnderlyingStateOrProvinceOfIssue
+	{ 594, false }, // UnderlyingLocaleOfIssue
+	{ 247, false }, // UnderlyingRedemptionDate
+	{ 316, false }, // UnderlyingStrikePrice
+	{ 941, false }, // UnderlyingStrikeCurrency
+	{ 317, false }, // UnderlyingOptAttribute
+	{ 436, false }, // UnderlyingContractMultiplier
+	{ 435, false }, // UnderlyingCouponRate
+	{ 308, false }, // UnderlyingSecurityExchange
+	{ 306, false }, // UnderlyingIssuer
+	{ 362, false }, // EncodedUnderlyingIssuerLen
+	{ 363, false }, // EncodedUnderlyingIssuer
+	{ 307, false }, // UnderlyingSecurityDesc
+	{ 364, false }, // EncodedUnderlyingSecurityDescLen
+	{ 365, false }, // EncodedUnderlyingSecurityDesc
+	{ 877, false }, // UnderlyingCPProgram
+	{ 878, false }, // UnderlyingCPRegType
+	{ 318, false }, // UnderlyingCurrency
+	{ 879, false }, // UnderlyingQty
+	{ 810, false }, // UnderlyingPx
+	{ 882, false }, // UnderlyingDirtyPrice
+	{ 883, false }, // UnderlyingEndPrice
+	{ 884, false }, // UnderlyingStartValue
+	{ 885, false }, // UnderlyingCurrentValue
+	{ 886, false }, // UnderlyingEndValue
+	{ 887, false }, // NoUnderlyingStips
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup457 = {
+    457, // NoUnderlyingSecurityAltID
+    {
+	{ 458, false }, // UnderlyingSecurityAltID
+	{ 459, false }, // UnderlyingSecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup887 = {
+    887, // NoUnderlyingStips
+    {
+	{ 888, false }, // UnderlyingStipType
+	{ 889, false }, // UnderlyingStipValue
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup555 = {
+    555, // NoLegs
+    {
+	{ 600, false }, // LegSymbol
+	{ 601, false }, // LegSymbolSfx
+	{ 602, false }, // LegSecurityID
+	{ 603, false }, // LegSecurityIDSource
+	{ 604, false }, // NoLegSecurityAltID
+	{ 607, false }, // LegProduct
+	{ 608, false }, // LegCFICode
+	{ 609, false }, // LegSecurityType
+	{ 764, false }, // LegSecuritySubType
+	{ 610, false }, // LegMaturityMonthYear
+	{ 611, false }, // LegMaturityDate
+	{ 248, false }, // LegCouponPaymentDate
+	{ 249, false }, // LegIssueDate
+	{ 250, false }, // LegRepoCollateralSecurityType
+	{ 251, false }, // LegRepurchaseTerm
+	{ 252, false }, // LegRepurchaseRate
+	{ 253, false }, // LegFactor
+	{ 257, false }, // LegCreditRating
+	{ 599, false }, // LegInstrRegistry
+	{ 596, false }, // LegCountryOfIssue
+	{ 597, false }, // LegStateOrProvinceOfIssue
+	{ 598, false }, // LegLocaleOfIssue
+	{ 254, false }, // LegRedemptionDate
+	{ 612, false }, // LegStrikePrice
+	{ 942, false }, // LegStrikeCurrency
+	{ 613, false }, // LegOptAttribute
+	{ 614, false }, // LegContractMultiplier
+	{ 615, false }, // LegCouponRate
+	{ 616, false }, // LegSecurityExchange
+	{ 617, false }, // LegIssuer
+	{ 618, false }, // EncodedLegIssuerLen
+	{ 619, false }, // EncodedLegIssuer
+	{ 620, false }, // LegSecurityDesc
+	{ 621, false }, // EncodedLegSecurityDescLen
+	{ 622, false }, // EncodedLegSecurityDesc
+	{ 623, false }, // LegRatioQty
+	{ 624, false }, // LegSide
+	{ 556, false }, // LegCurrency
+	{ 740, false }, // LegPool
+	{ 739, false }, // LegDatedDate
+	{ 955, false }, // LegContractSettlMonth
+	{ 956, false }, // LegInterestAccrualDate
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup604 = {
+    604, // NoLegSecurityAltID
+    {
+	{ 605, false }, // LegSecurityAltID
+	{ 606, false }, // LegSecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup386 = {
+    386, // NoTradingSessions
+    {
+	{ 336, false }, // TradingSessionID
+	{ 625, false }, // TradingSessionSubID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelReplaceRequestGroup232 = {
+    232, // NoStipulations
+    {
+	{ 233, false }, // StipulationType
+	{ 234, false }, // StipulationValue
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	CrossOrderCancelReplaceRequestGroups[] = {
+    &CrossOrderCancelReplaceRequestGroup627,
+    &CrossOrderCancelReplaceRequestGroup552,
+    &CrossOrderCancelReplaceRequestGroup453,
+    &CrossOrderCancelReplaceRequestGroup802,
+    &CrossOrderCancelReplaceRequestGroup78,
+    &CrossOrderCancelReplaceRequestGroup539,
+    &CrossOrderCancelReplaceRequestGroup804,
+    &CrossOrderCancelReplaceRequestGroup454,
+    &CrossOrderCancelReplaceRequestGroup864,
+    &CrossOrderCancelReplaceRequestGroup711,
+    &CrossOrderCancelReplaceRequestGroup457,
+    &CrossOrderCancelReplaceRequestGroup887,
+    &CrossOrderCancelReplaceRequestGroup555,
+    &CrossOrderCancelReplaceRequestGroup604,
+    &CrossOrderCancelReplaceRequestGroup386,
+    &CrossOrderCancelReplaceRequestGroup232,
+    0
+};
+
+static struct _ofixMsgSpec	CrossOrderCancelReplaceRequest = {
+    &fix44Spec, // version
+    116, // tid
+    "t", // type
+    "CrossOrderCancelReplaceRequest", // name
+    {0,0,0,0,0,0,0,0,1,2,141,0,0,0,0,109,0,0,81,0,0,80,37,111,0,0,0,0,0,0,0,0,0,0,10,3,0,28,0,0,91,0,0,19,93,0,0,0,36,4,11,0,21,0,0,34,5,13,0,113,89,0,0,78,79,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,86,0,0,0,0,0,0,0,140,8,9,0,139,0,0,0,20,0,94,84,0,0,0,0,0,63,66,0,0,82,83,0,0,88,6,15,112,0,0,0,0,22,0,0,0,116,0,7,17,0,0,0,0,0,0,0,0,0,0,87,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,114,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,0,57,0,0,0,59,62,0,0,118,119,23,24,0,0,0,0,95,0,96,97,98,61,45,46,48,49,50,0,0,60,90,0,0,103,104,0,0,47,56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,51,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,64,65,67,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0,0,0,0,110,0,0,0,0,0,0,0,0,0,85,0,125,126,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,92,0,0,0,117,0,0,0,0,115,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,0,0,39,40,0,0,0,0,0,0,0,0,53,54,55,0,0,0,0,0,0,0,135,136,0,0,0,0,0,0,0,0,0,0,0,0,138,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,137,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,52,0,0,0,0,29,31,32,30,33,0,0,77,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,99,100,0,0,0,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,69,0,0,0,0,106,107,108,101,0,105,0,0,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,102,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,120,121,122,123,0,124,127,128,129,130,0,131,132,133,134,0,0,0,0,0,0,0,0,0,0,0,0,0,0,73,0,0,0,0,0,0,0,0,74,75,71,72,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    CrossOrderCancelReplaceRequestGroups, // groups
+    {
+	{ 8, true }, // BeginString
+	{ 9, true }, // BodyLength
+	{ 35, true }, // MsgType
+	{ 49, true }, // SenderCompID
+	{ 56, true }, // TargetCompID
+	{ 115, false }, // OnBehalfOfCompID
+	{ 128, false }, // DeliverToCompID
+	{ 90, false }, // SecureDataLen
+	{ 91, false }, // SecureData
+	{ 34, true }, // MsgSeqNum
+	{ 50, false }, // SenderSubID
+	{ 142, false }, // SenderLocationID
+	{ 57, false }, // TargetSubID
+	{ 143, false }, // TargetLocationID
+	{ 116, false }, // OnBehalfOfSubID
+	{ 144, false }, // OnBehalfOfLocationID
+	{ 129, false }, // DeliverToSubID
+	{ 145, false }, // DeliverToLocationID
+	{ 43, false }, // PossDupFlag
+	{ 97, false }, // PossResend
+	{ 52, true }, // SendingTime
+	{ 122, false }, // OrigSendingTime
+	{ 212, false }, // XmlDataLen
+	{ 213, false }, // XmlData
+	{ 347, false }, // MessageEncoding
+	{ 369, false }, // LastMsgSeqNumProcessed
+	{ 627, false }, // NoHops
+	{ 37, false }, // OrderID
+	{ 548, true }, // CrossID
+	{ 551, true }, // OrigCrossID
+	{ 549, true }, // CrossType
+	{ 550, true }, // CrossPrioritization
+	{ 552, true }, // NoSides
+	{ 55, true }, // Symbol
+	{ 65, false }, // SymbolSfx
+	{ 48, false }, // SecurityID
+	{ 22, false }, // SecurityIDSource
+	{ 454, false }, // NoSecurityAltID
+	{ 460, false }, // Product
+	{ 461, false }, // CFICode
+	{ 167, false }, // SecurityType
+	{ 762, false }, // SecuritySubType
+	{ 200, false }, // MaturityMonthYear
+	{ 541, false }, // MaturityDate
+	{ 224, false }, // CouponPaymentDate
+	{ 225, false }, // IssueDate
+	{ 239, false }, // RepoCollateralSecurityType
+	{ 226, false }, // RepurchaseTerm
+	{ 227, false }, // RepurchaseRate
+	{ 228, false }, // Factor
+	{ 255, false }, // CreditRating
+	{ 543, false }, // InstrRegistry
+	{ 470, false }, // CountryOfIssue
+	{ 471, false }, // StateOrProvinceOfIssue
+	{ 472, false }, // LocaleOfIssue
+	{ 240, false }, // RedemptionDate
+	{ 202, false }, // StrikePrice
+	{ 947, false }, // StrikeCurrency
+	{ 206, false }, // OptAttribute
+	{ 231, false }, // ContractMultiplier
+	{ 223, false }, // CouponRate
+	{ 207, false }, // SecurityExchange
+	{ 106, false }, // Issuer
+	{ 348, false }, // EncodedIssuerLen
+	{ 349, false }, // EncodedIssuer
+	{ 107, false }, // SecurityDesc
+	{ 350, false }, // EncodedSecurityDescLen
+	{ 351, false }, // EncodedSecurityDesc
+	{ 691, false }, // Pool
+	{ 667, false }, // ContractSettlMonth
+	{ 875, false }, // CPProgram
+	{ 876, false }, // CPRegType
+	{ 864, false }, // NoEvents
+	{ 873, false }, // DatedDate
+	{ 874, false }, // InterestAccrualDate
+	{ 711, false }, // NoUnderlyings
+	{ 555, false }, // NoLegs
+	{ 63, false }, // SettlType
+	{ 64, false }, // SettlDate
+	{ 21, false }, // HandlInst
+	{ 18, false }, // ExecInst
+	{ 110, false }, // MinQty
+	{ 111, false }, // MaxFloor
+	{ 100, false }, // ExDestination
+	{ 386, false }, // NoTradingSessions
+	{ 81, false }, // ProcessCode
+	{ 140, false }, // PrevClosePx
+	{ 114, false }, // LocateReqd
+	{ 60, true }, // TransactTime
+	{ 232, false }, // NoStipulations
+	{ 40, true }, // OrdType
+	{ 423, false }, // PriceType
+	{ 44, false }, // Price
+	{ 99, false }, // StopPx
+	{ 218, false }, // Spread
+	{ 220, false }, // BenchmarkCurveCurrency
+	{ 221, false }, // BenchmarkCurveName
+	{ 222, false }, // BenchmarkCurvePoint
+	{ 662, false }, // BenchmarkPrice
+	{ 663, false }, // BenchmarkPriceType
+	{ 699, false }, // BenchmarkSecurityID
+	{ 761, false }, // BenchmarkSecurityIDSource
+	{ 235, false }, // YieldType
+	{ 236, false }, // Yield
+	{ 701, false }, // YieldCalcDate
+	{ 696, false }, // YieldRedemptionDate
+	{ 697, false }, // YieldRedemptionPrice
+	{ 698, false }, // YieldRedemptionPriceType
+	{ 15, false }, // Currency
+	{ 376, false }, // ComplianceID
+	{ 23, false }, // IOIid
+	{ 117, false }, // QuoteID
+	{ 59, false }, // TimeInForce
+	{ 168, false }, // EffectiveTime
+	{ 432, false }, // ExpireDate
+	{ 126, false }, // ExpireTime
+	{ 427, false }, // GTBookingInst
+	{ 210, false }, // MaxShow
+	{ 211, false }, // PegOffsetValue
+	{ 835, false }, // PegMoveType
+	{ 836, false }, // PegOffsetType
+	{ 837, false }, // PegLimitType
+	{ 838, false }, // PegRoundDirection
+	{ 840, false }, // PegScope
+	{ 388, false }, // DiscretionInst
+	{ 389, false }, // DiscretionOffsetValue
+	{ 841, false }, // DiscretionMoveType
+	{ 842, false }, // DiscretionOffsetType
+	{ 843, false }, // DiscretionLimitType
+	{ 844, false }, // DiscretionRoundDirection
+	{ 846, false }, // DiscretionScope
+	{ 847, false }, // TargetStrategy
+	{ 848, false }, // TargetStrategyParameters
+	{ 849, false }, // ParticipationRate
+	{ 480, false }, // CancellationRights
+	{ 481, false }, // MoneyLaunderingStatus
+	{ 513, false }, // RegistID
+	{ 494, false }, // Designation
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// CrossOrderCancelRequest [u]
+
+static struct _ofixGroupSpec	CrossOrderCancelRequestGroup627 = {
+    627, // NoHops
+    {
+	{ 628, false }, // HopCompID
+	{ 629, false }, // HopSendingTime
+	{ 630, false }, // HopRefID
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelRequestGroup552 = {
+    552, // NoSides
+    {
+	{ 54, true }, // Side
+	{ 41, true }, // OrigClOrdID
+	{ 11, true }, // ClOrdID
+	{ 526, false }, // SecondaryClOrdID
+	{ 583, false }, // ClOrdLinkID
+	{ 586, false }, // OrigOrdModTime
+	{ 453, false }, // NoPartyIDs
+	{ 229, false }, // TradeOriginationDate
+	{ 75, false }, // TradeDate
+	{ 38, false }, // OrderQty
+	{ 152, false }, // CashOrderQty
+	{ 516, false }, // OrderPercent
+	{ 468, false }, // RoundingDirection
+	{ 469, false }, // RoundingModulus
+	{ 376, false }, // ComplianceID
+	{ 58, false }, // Text
+	{ 354, false }, // EncodedTextLen
+	{ 355, false }, // EncodedText
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelRequestGroup453 = {
+    453, // NoPartyIDs
+    {
+	{ 448, false }, // PartyID
+	{ 447, false }, // PartyIDSource
+	{ 452, false }, // PartyRole
+	{ 802, false }, // NoPartySubIDs
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelRequestGroup802 = {
+    802, // NoPartySubIDs
+    {
+	{ 523, false }, // PartySubID
+	{ 803, false }, // PartySubIDType
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelRequestGroup454 = {
+    454, // NoSecurityAltID
+    {
+	{ 455, false }, // SecurityAltID
+	{ 456, false }, // SecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelRequestGroup864 = {
+    864, // NoEvents
+    {
+	{ 865, false }, // EventType
+	{ 866, false }, // EventDate
+	{ 867, false }, // EventPx
+	{ 868, false }, // EventText
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelRequestGroup711 = {
+    711, // NoUnderlyings
+    {
+	{ 311, true }, // UnderlyingSymbol
+	{ 312, false }, // UnderlyingSymbolSfx
+	{ 309, false }, // UnderlyingSecurityID
+	{ 305, false }, // UnderlyingSecurityIDSource
+	{ 457, false }, // NoUnderlyingSecurityAltID
+	{ 462, false }, // UnderlyingProduct
+	{ 463, false }, // UnderlyingCFICode
+	{ 310, false }, // UnderlyingSecurityType
+	{ 763, false }, // UnderlyingSecuritySubType
+	{ 313, false }, // UnderlyingMaturityMonthYear
+	{ 542, false }, // UnderlyingMaturityDate
+	{ 241, false }, // UnderlyingCouponPaymentDate
+	{ 242, false }, // UnderlyingIssueDate
+	{ 243, false }, // UnderlyingRepoCollateralSecurityType
+	{ 244, false }, // UnderlyingRepurchaseTerm
+	{ 245, false }, // UnderlyingRepurchaseRate
+	{ 246, false }, // UnderlyingFactor
+	{ 256, false }, // UnderlyingCreditRating
+	{ 595, false }, // UnderlyingInstrRegistry
+	{ 592, false }, // UnderlyingCountryOfIssue
+	{ 593, false }, // UnderlyingStateOrProvinceOfIssue
+	{ 594, false }, // UnderlyingLocaleOfIssue
+	{ 247, false }, // UnderlyingRedemptionDate
+	{ 316, false }, // UnderlyingStrikePrice
+	{ 941, false }, // UnderlyingStrikeCurrency
+	{ 317, false }, // UnderlyingOptAttribute
+	{ 436, false }, // UnderlyingContractMultiplier
+	{ 435, false }, // UnderlyingCouponRate
+	{ 308, false }, // UnderlyingSecurityExchange
+	{ 306, false }, // UnderlyingIssuer
+	{ 362, false }, // EncodedUnderlyingIssuerLen
+	{ 363, false }, // EncodedUnderlyingIssuer
+	{ 307, false }, // UnderlyingSecurityDesc
+	{ 364, false }, // EncodedUnderlyingSecurityDescLen
+	{ 365, false }, // EncodedUnderlyingSecurityDesc
+	{ 877, false }, // UnderlyingCPProgram
+	{ 878, false }, // UnderlyingCPRegType
+	{ 318, false }, // UnderlyingCurrency
+	{ 879, false }, // UnderlyingQty
+	{ 810, false }, // UnderlyingPx
+	{ 882, false }, // UnderlyingDirtyPrice
+	{ 883, false }, // UnderlyingEndPrice
+	{ 884, false }, // UnderlyingStartValue
+	{ 885, false }, // UnderlyingCurrentValue
+	{ 886, false }, // UnderlyingEndValue
+	{ 887, false }, // NoUnderlyingStips
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelRequestGroup457 = {
+    457, // NoUnderlyingSecurityAltID
+    {
+	{ 458, false }, // UnderlyingSecurityAltID
+	{ 459, false }, // UnderlyingSecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelRequestGroup887 = {
+    887, // NoUnderlyingStips
+    {
+	{ 888, false }, // UnderlyingStipType
+	{ 889, false }, // UnderlyingStipValue
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelRequestGroup555 = {
+    555, // NoLegs
+    {
+	{ 600, false }, // LegSymbol
+	{ 601, false }, // LegSymbolSfx
+	{ 602, false }, // LegSecurityID
+	{ 603, false }, // LegSecurityIDSource
+	{ 604, false }, // NoLegSecurityAltID
+	{ 607, false }, // LegProduct
+	{ 608, false }, // LegCFICode
+	{ 609, false }, // LegSecurityType
+	{ 764, false }, // LegSecuritySubType
+	{ 610, false }, // LegMaturityMonthYear
+	{ 611, false }, // LegMaturityDate
+	{ 248, false }, // LegCouponPaymentDate
+	{ 249, false }, // LegIssueDate
+	{ 250, false }, // LegRepoCollateralSecurityType
+	{ 251, false }, // LegRepurchaseTerm
+	{ 252, false }, // LegRepurchaseRate
+	{ 253, false }, // LegFactor
+	{ 257, false }, // LegCreditRating
+	{ 599, false }, // LegInstrRegistry
+	{ 596, false }, // LegCountryOfIssue
+	{ 597, false }, // LegStateOrProvinceOfIssue
+	{ 598, false }, // LegLocaleOfIssue
+	{ 254, false }, // LegRedemptionDate
+	{ 612, false }, // LegStrikePrice
+	{ 942, false }, // LegStrikeCurrency
+	{ 613, false }, // LegOptAttribute
+	{ 614, false }, // LegContractMultiplier
+	{ 615, false }, // LegCouponRate
+	{ 616, false }, // LegSecurityExchange
+	{ 617, false }, // LegIssuer
+	{ 618, false }, // EncodedLegIssuerLen
+	{ 619, false }, // EncodedLegIssuer
+	{ 620, false }, // LegSecurityDesc
+	{ 621, false }, // EncodedLegSecurityDescLen
+	{ 622, false }, // EncodedLegSecurityDesc
+	{ 623, false }, // LegRatioQty
+	{ 624, false }, // LegSide
+	{ 556, false }, // LegCurrency
+	{ 740, false }, // LegPool
+	{ 739, false }, // LegDatedDate
+	{ 955, false }, // LegContractSettlMonth
+	{ 956, false }, // LegInterestAccrualDate
+	{ 0, false }
+    }
+};
+
+static struct _ofixGroupSpec	CrossOrderCancelRequestGroup604 = {
+    604, // NoLegSecurityAltID
+    {
+	{ 605, false }, // LegSecurityAltID
+	{ 606, false }, // LegSecurityAltIDSource
+	{ 0, false }
+    }
+};
+
+static ofixGroupSpec	CrossOrderCancelRequestGroups[] = {
+    &CrossOrderCancelRequestGroup627,
+    &CrossOrderCancelRequestGroup552,
+    &CrossOrderCancelRequestGroup453,
+    &CrossOrderCancelRequestGroup802,
+    &CrossOrderCancelRequestGroup454,
+    &CrossOrderCancelRequestGroup864,
+    &CrossOrderCancelRequestGroup711,
+    &CrossOrderCancelRequestGroup457,
+    &CrossOrderCancelRequestGroup887,
+    &CrossOrderCancelRequestGroup555,
+    &CrossOrderCancelRequestGroup604,
+    0
+};
+
+static struct _ofixMsgSpec	CrossOrderCancelRequest = {
+    &fix44Spec, // version
+    117, // tid
+    "u", // type
+    "CrossOrderCancelRequest", // name
+    {0,0,0,0,0,0,0,0,1,2,81,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,0,0,0,0,0,0,0,0,10,3,0,28,0,0,0,0,0,19,0,0,0,0,36,4,11,0,21,0,0,34,5,13,0,0,78,0,0,0,0,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,80,8,9,0,79,0,0,0,20,0,0,0,0,0,0,0,0,63,66,0,0,0,0,0,0,0,6,15,0,0,0,0,0,22,0,0,0,0,0,7,17,0,0,0,0,0,0,0,0,0,0,0,0,12,14,16,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,0,57,0,0,0,59,62,0,0,0,0,23,24,0,0,0,0,0,0,0,0,0,61,45,46,48,49,50,0,0,60,0,0,0,0,0,0,0,47,56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,51,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,64,65,67,68,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,0,0,39,40,0,0,0,0,0,0,0,0,53,54,55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,52,0,0,0,0,29,31,32,30,33,0,0,77,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,73,0,0,0,0,0,0,0,0,74,75,71,72,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+    CrossOrderCancelRequestGroups, // groups
+    {
+	{ 8, true }, // BeginString
+	{ 9, true }, // BodyLength
+	{ 35, true }, // MsgType
+	{ 49, true }, // SenderCompID
+	{ 56, true }, // TargetCompID
+	{ 115, false }, // OnBehalfOfCompID
+	{ 128, false }, // DeliverToCompID
+	{ 90, false }, // SecureDataLen
+	{ 91, false }, // SecureData
+	{ 34, true }, // MsgSeqNum
+	{ 50, false }, // SenderSubID
+	{ 142, false }, // SenderLocationID
+	{ 57, false }, // TargetSubID
+	{ 143, false }, // TargetLocationID
+	{ 116, false }, // OnBehalfOfSubID
+	{ 144, false }, // OnBehalfOfLocationID
+	{ 129, false }, // DeliverToSubID
+	{ 145, false }, // DeliverToLocationID
+	{ 43, false }, // PossDupFlag
+	{ 97, false }, // PossResend
+	{ 52, true }, // SendingTime
+	{ 122, false }, // OrigSendingTime
+	{ 212, false }, // XmlDataLen
+	{ 213, false }, // XmlData
+	{ 347, false }, // MessageEncoding
+	{ 369, false }, // LastMsgSeqNumProcessed
+	{ 627, false }, // NoHops
+	{ 37, false }, // OrderID
+	{ 548, true }, // CrossID
+	{ 551, true }, // OrigCrossID
+	{ 549, true }, // CrossType
+	{ 550, true }, // CrossPrioritization
+	{ 552, true }, // NoSides
+	{ 55, true }, // Symbol
+	{ 65, false }, // SymbolSfx
+	{ 48, false }, // SecurityID
+	{ 22, false }, // SecurityIDSource
+	{ 454, false }, // NoSecurityAltID
+	{ 460, false }, // Product
+	{ 461, false }, // CFICode
+	{ 167, false }, // SecurityType
+	{ 762, false }, // SecuritySubType
+	{ 200, false }, // MaturityMonthYear
+	{ 541, false }, // MaturityDate
+	{ 224, false }, // CouponPaymentDate
+	{ 225, false }, // IssueDate
+	{ 239, false }, // RepoCollateralSecurityType
+	{ 226, false }, // RepurchaseTerm
+	{ 227, false }, // RepurchaseRate
+	{ 228, false }, // Factor
+	{ 255, false }, // CreditRating
+	{ 543, false }, // InstrRegistry
+	{ 470, false }, // CountryOfIssue
+	{ 471, false }, // StateOrProvinceOfIssue
+	{ 472, false }, // LocaleOfIssue
+	{ 240, false }, // RedemptionDate
+	{ 202, false }, // StrikePrice
+	{ 947, false }, // StrikeCurrency
+	{ 206, false }, // OptAttribute
+	{ 231, false }, // ContractMultiplier
+	{ 223, false }, // CouponRate
+	{ 207, false }, // SecurityExchange
+	{ 106, false }, // Issuer
+	{ 348, false }, // EncodedIssuerLen
+	{ 349, false }, // EncodedIssuer
+	{ 107, false }, // SecurityDesc
+	{ 350, false }, // EncodedSecurityDescLen
+	{ 351, false }, // EncodedSecurityDesc
+	{ 691, false }, // Pool
+	{ 667, false }, // ContractSettlMonth
+	{ 875, false }, // CPProgram
+	{ 876, false }, // CPRegType
+	{ 864, false }, // NoEvents
+	{ 873, false }, // DatedDate
+	{ 874, false }, // InterestAccrualDate
+	{ 711, false }, // NoUnderlyings
+	{ 555, false }, // NoLegs
+	{ 60, true }, // TransactTime
+	{ 93, false }, // SignatureLength
+	{ 89, false }, // Signature
+	{ 10, true }, // CheckSum
+	{ 0, false }
+    }
+};
+
+// SecurityTypeRequest [v]
+
+static struct _ofixGroupSpec	SecurityTypeRequestGroup627 = {
+    627, // NoHops
