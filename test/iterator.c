@@ -45,4 +45,30 @@ msg_test() {
 
     ofix_msg_iterator_init(&iter, msg);
     for (tag = ofix_msg_iterator_next_tag(&iter); 0 != tag; tag = ofix_msg_iterator_next_tag(&iter)) {
-	str = ofix_msg_get_str(&err, msg, tag
+	str = ofix_msg_get_str(&err, msg, tag);
+	if (OFIX_OK != err.code) {
+	    test_print("get string of %d failed: [%d] %s\n", tag, err.code, err.msg);
+	    test_fail();
+	    return;
+	}
+	a += sprintf(a, "%d:%s\n", tag, str);
+	free(str);
+    }
+    ofix_msg_destroy(msg);
+    test_same(expected, actual);
+}
+
+static void
+parsed_test() {
+}
+
+static void
+group_test() {
+}
+
+void
+append_iterator_tests(Test tests) {
+    test_append(tests, "iterator.msg", msg_test);
+    test_append(tests, "iterator.parsed", parsed_test);
+    test_append(tests, "iterator.group", group_test);
+}
