@@ -899,3 +899,221 @@ test_request_test() {
 8=FIX.4.4^9=066^35=A^49=Server^56=Client^34=1^52=$-$:$:$.$^98=0^108=2^10=$^\n\
 8=FIX.4.4^9=055^35=0^49=Client^56=Server^34=2^52=$-$:$:$.$^10=$^\n\
 8=FIX.4.4^9=055^35=0^49=Client^56=Server^34=3^52=$-$:$:$.$^10=$^\n\
+8=FIX.4.4^9=081^35=1^49=Client^56=Server^34=4^52=$-$:$:$.$^112=$-$:$:$.$^10=$^\n\
+8=FIX.4.4^9=081^35=0^49=Server^56=Client^34=2^52=$-$:$:$.$^112=$-$:$:$.$^10=$^\n",
+	      actual);
+    free(actual);
+}
+
+static void
+resend_request_test() {
+    struct _ofixErr	err = OFIX_ERR_INIT;
+    ofixMsgSpec		spec = ofix_version_spec_get_msg_spec(&err, "D", 4, 4);
+    ofixMsgSpec		resend_spec = ofix_version_spec_get_msg_spec(&err, "2", 4, 4);
+    ofixEngine		server;
+    ofixClient		client;
+    ofixMsg		msg;
+    ofixMsg		rmsg;
+    double		giveup;
+    char		*actual;
+    struct timeval	tv;
+    struct timezone	tz;
+    struct _ofixDate	now;
+
+    gettimeofday(&tv, &tz);
+    ofix_date_set_timestamp(&now, (uint64_t)tv.tv_sec * 1000000LL + (uint64_t)tv.tv_usec);
+
+    if (!create_client_server(&err, &server, &client, 6174, "Client", NULL, NULL, 4, 30)) {
+	return;
+    }
+    // wait for exchanges to complete
+    giveup = dtime() + 1.0;
+    while (1 > ofix_client_recv_seqnum(client)) {
+	if (giveup < dtime()) {
+	    test_print("Timed out waiting for client to receive responses.\n");
+	    test_fail();
+	    return;
+	}
+	dsleep(0.01);
+    }
+    msg = ofix_msg_create_from_spec(&err, spec, 16);
+    if (OFIX_OK != err.code || NULL == msg) {
+	test_print("Failed to create message [%d] %s\n", err.code, err.msg);
+	test_fail();
+	return;
+    }
+    ofix_msg_set_str(&err, msg, OFIX_ClOrdIDTAG, "order-123");
+    ofix_msg_set_str(&err, msg, OFIX_SymbolTAG, "IBM");
+    ofix_msg_set_char(&err, msg, OFIX_SideTAG, '1'); // buy
+    ofix_msg_set_int(&err, msg, OFIX_OrderQtyTAG, 250);
+    ofix_msg_set_date(&err, msg, OFIX_TransactTimeTAG, &now);
+    ofix_msg_set_char(&err, msg, OFIX_OrdTypeTAG, '1'); // market order
+    if (OFIX_OK != err.code) {
+	test_print("Error while setting fields in message [%d] %s\n", err.code, err.msg);
+	test_fail();
+	return;
+    }
+    ofix_client_send(&err, client, msg);
+    while (2 > ofix_client_recv_seqnum(client)) {
+	if (giveup < dtime()) {
+	    test_print("Timed out waiting for client to receive responses.\n");
+	    test_fail();
+	    return;
+	}
+	dsleep(0.01);
+    }
+    // second message
+    ofix_msg_set_str(&err, msg, OFIX_ClOrdIDTAG, "order-124");
+    ofix_client_send(&err, client, msg);
+    while (3 > ofix_client_recv_seqnum(client)) {
+	if (giveup < dtime()) {
+	    test_print("Timed out waiting for client to receive responses.\n");
+	    test_fail();
+	    return;
+	}
+	dsleep(0.01);
+    }
+    // send resend request
+    rmsg = ofix_msg_create_from_spec(&err, resend_spec, 10);
+    if (OFIX_OK != err.code || NULL == rmsg) {
+	test_print("Failed to create message [%d] %s\n", err.code, err.msg);
+	test_fail();
+	return;
+    }
+    ofix_msg_set_int(&err, rmsg, OFIX_BeginSeqNoTAG, 2);
+    ofix_msg_set_int(&err, rmsg, OFIX_EndSeqNoTAG, 2);
+    ofix_client_send(&err, client, rmsg);
+
+    // third message to verify seq number is correct
+    ofix_msg_set_str(&err, msg, OFIX_ClOrdIDTAG, "order-125");
+    ofix_client_send(&err, client, msg);
+
+    while (4 > ofix_client_recv_seqnum(client)) {
+	if (giveup < dtime()) {
+	    test_print("Timed out waiting for client to receive responses.\n");
+	    test_fail();
+	    return;
+	}
+	dsleep(0.01);
+    }
+
+    ofix_client_destroy(&err, client);
+    ofix_engine_destroy(&err, server);
+    actual = load_fix_file(client_storage);
+    test_same("sender: Client\n\
+\n\
+8=FIX.4.4^9=073^35=A^49=Client^56=Server^34=1^52=$-$:$:$.$^98=0^108=30^141=Y^10=$^\n\
+8=FIX.4.4^9=067^35=A^49=Server^56=Client^34=1^52=$-$:$:$.$^98=0^108=30^10=$^\n\
+8=FIX.4.4^9=117^35=D^49=Client^56=Server^34=2^52=$-$:$:$.$^11=order-123^55=IBM^54=1^60=$-$:$:$.$^38=250^40=1^10=$^\n\
+8=FIX.4.4^9=125^35=8^49=Server^56=Client^34=2^52=$-$:$:$.$^37=order-123^17=x-order-123^150=0^39=0^55=IBM^54=1^151=250^14=250^6=0^10=$^\n\
+8=FIX.4.4^9=117^35=D^49=Client^56=Server^34=3^52=$-$:$:$.$^11=order-124^55=IBM^54=1^60=$-$:$:$.$^38=250^40=1^10=$^\n\
+8=FIX.4.4^9=125^35=8^49=Server^56=Client^34=3^52=$-$:$:$.$^37=order-124^17=x-order-124^150=0^39=0^55=IBM^54=1^151=250^14=250^6=0^10=$^\n\
+8=FIX.4.4^9=064^35=2^49=Client^56=Server^34=4^52=$-$:$:$.$^7=2^16=2^10=$^\n\
+8=FIX.4.4^9=117^35=D^49=Client^56=Server^34=5^52=$-$:$:$.$^11=order-125^55=IBM^54=1^60=$-$:$:$.$^38=250^40=1^10=$^\n\
+8=FIX.4.4^9=130^35=8^49=Server^56=Client^34=2^43=Y^52=$-$:$:$.$^37=order-123^17=x-order-123^150=0^39=0^55=IBM^54=1^151=250^14=250^6=0^10=$^\n\
+8=FIX.4.4^9=125^35=8^49=Server^56=Client^34=4^52=$-$:$:$.$^37=order-125^17=x-order-125^150=0^39=0^55=IBM^54=1^151=250^14=250^6=0^10=$^\n",
+	      actual);
+    free(actual);
+}
+
+static void
+sequence_reset_test() {
+    struct _ofixErr	err = OFIX_ERR_INIT;
+    ofixMsgSpec		spec = ofix_version_spec_get_msg_spec(&err, "D", 4, 4);
+    ofixMsgSpec		seq_spec = ofix_version_spec_get_msg_spec(&err, "4", 4, 4);
+    ofixMsg		msg1;
+    ofixMsg		msg2;
+    ofixMsg		msg3;
+    ofixMsg		msgs[4];
+    const char		*s;
+    struct timeval	tv;
+    struct timezone	tz;
+    struct _ofixDate	now;
+    char		*actual;
+
+    gettimeofday(&tv, &tz);
+    ofix_date_set_timestamp(&now, (uint64_t)tv.tv_sec * 1000000LL + (uint64_t)tv.tv_usec);
+    
+    // Create an single order message.
+    // First get the message spec.
+    if (OFIX_OK != err.code || NULL == spec) {
+	test_print("Failed to find message spec for 'D' [%d] %s\n", err.code, err.msg);
+	test_fail();
+	return;
+    }
+    msg1 = ofix_msg_create_from_spec(&err, spec, 16);
+    if (OFIX_OK != err.code || NULL == msg1) {
+	test_print("Failed to create message [%d] %s\n", err.code, err.msg);
+	test_fail();
+	return;
+    }
+    ofix_msg_set_str(&err, msg1, OFIX_ClOrdIDTAG, "order-123");
+    ofix_msg_set_str(&err, msg1, OFIX_SymbolTAG, "IBM");
+    ofix_msg_set_char(&err, msg1, OFIX_SideTAG, '1'); // buy
+    ofix_msg_set_int(&err, msg1, OFIX_OrderQtyTAG, 250);
+    ofix_msg_set_date(&err, msg1, OFIX_TransactTimeTAG, &now);
+    ofix_msg_set_char(&err, msg1, OFIX_OrdTypeTAG, '1'); // market order
+    if (OFIX_OK != err.code) {
+	test_print("Error while setting fields in message [%d] %s\n", err.code, err.msg);
+	test_fail();
+	return;
+    }
+
+    if (NULL == (s = ofix_msg_FIX_str(&err, msg1)) ||
+	NULL == (msg3 = ofix_msg_parse(&err, s, strlen(s))) ||
+	OFIX_OK != err.code) {
+	test_print("Error cloning message.\n");
+	test_fail();
+	return;
+    }
+    ofix_msg_set_str(&err, msg3, OFIX_ClOrdIDTAG, "order-124");
+
+    msg2 = ofix_msg_create_from_spec(&err, seq_spec, 10);
+    if (OFIX_OK != err.code || NULL == msg2) {
+	test_print("Failed to create message [%d] %s\n", err.code, err.msg);
+	test_fail();
+	return;
+    }
+    ofix_msg_set_int(&err, msg2, OFIX_NewSeqNoTAG, 10);
+
+    msgs[0] = msg1;
+    msgs[1] = msg2;
+    msgs[2] = msg3;
+    msgs[3] = NULL;
+
+    run_test(msgs, false, 3, 6175);
+
+    actual = load_fix_file(client_storage);
+    test_same("sender: Client\n\
+\n\
+8=FIX.4.4^9=073^35=A^49=Client^56=Server^34=1^52=$-$:$:$.$^98=0^108=30^141=Y^10=$^\n\
+8=FIX.4.4^9=067^35=A^49=Server^56=Client^34=1^52=$-$:$:$.$^98=0^108=30^10=$^\n\
+8=FIX.4.4^9=117^35=D^49=Client^56=Server^34=2^52=$-$:$:$.$^11=order-123^55=IBM^54=1^60=$-$:$:$.$^38=250^40=1^10=$^\n\
+8=FIX.4.4^9=061^35=4^49=Client^56=Server^34=9^52=$-$:$:$.$^36=10^10=$^\n\
+8=FIX.4.4^9=118^35=D^49=Client^56=Server^34=10^52=$-$:$:$.$^11=order-124^55=IBM^54=1^60=$-$:$:$.$^38=250^40=1^10=$^\n\
+8=FIX.4.4^9=125^35=8^49=Server^56=Client^34=2^52=$-$:$:$.$^37=order-123^17=x-order-123^150=0^39=0^55=IBM^54=1^151=250^14=250^6=0^10=$^\n\
+8=FIX.4.4^9=125^35=8^49=Server^56=Client^34=3^52=$-$:$:$.$^37=order-124^17=x-order-124^150=0^39=0^55=IBM^54=1^151=250^14=250^6=0^10=$^\n\
+8=FIX.4.4^9=067^35=5^49=Client^56=Server^34=11^52=$-$:$:$.$^58=bye bye^10=$^\n\
+8=FIX.4.4^9=055^35=5^49=Server^56=Client^34=4^52=$-$:$:$.$^10=$^\n",
+	      actual);
+    free(actual);
+}
+
+void
+append_engine_tests(Test tests) {
+    test_append(tests, "engine.normal", normal_test);
+    test_append(tests, "engine.bad_sender", bad_sender_test);
+    test_append(tests, "engine.bad_target", bad_target_test);
+    test_append(tests, "engine.bad_msgtype", bad_msgtype_test);
+    test_append(tests, "engine.bad_dup", bad_dup_test);
+    test_append(tests, "engine.dup", dup_test);
+    test_append(tests, "engine.bad_comp_id", bad_comp_id_test);
+    test_append(tests, "engine.bad_fix", bad_fix_test);
+    test_append(tests, "engine.bad_user", bad_user_test);
+    test_append(tests, "engine.bad_password", bad_password_test);
+    test_append(tests, "engine.after_logout", after_logout_test);
+    test_append(tests, "engine.heartbeat", heartbeat_test);
+    test_append(tests, "engine.test_request", test_request_test);
+    test_append(tests, "engine.resend_request", resend_request_test);
+    test_append(tests, "engine.sequence_reset", sequence_reset_test);
+}
