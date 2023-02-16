@@ -79,4 +79,82 @@ set_neg_tag_test() {
 	}
 	str = ofix_msg_to_str(&err, msg);
 	if (OFIX_OK != err.code) {
-	    tes
+	    test_print("[%d] %s\n", err.code, err.msg);
+	    test_fail();
+	    return;
+	}
+	a += sprintf(a, "%s\n", str);
+	free(str);
+    }
+    ofix_msg_destroy(msg);
+    test_same(expected, actual);
+}
+
+static void
+set_char_test() {
+    char		actual[1024];
+    char		*a = actual;
+    char		*expected = "\
+8=FIX.4.4^9=012^35=A^5000=0^10=069^\n\
+8=FIX.4.4^9=012^35=A^5000=X^10=109^\n";
+    struct _ofixErr	err = OFIX_ERR_INIT;
+    ofixMsg		msg;
+    char		values[] = { '0', 'X' };
+    char		*vp;
+    char		*end = (char*)values + sizeof(values);
+    char		*str;
+
+    if (NULL == (msg = ofix_msg_create(&err, "A", 4, 4, 14))) {
+	test_print("[%d] %s\n", err.code, err.msg);
+	test_fail();
+	return;
+    }
+    for (vp = values; vp < end; vp++) {
+	ofix_msg_set_char(&err, msg, 5000, *vp);
+	if (OFIX_OK != err.code) {
+	    test_print("set char of %d failed: [%d] %s\n", err.code, err.msg);
+	    test_fail();
+	    ofix_err_clear(&err);
+	}
+	str = ofix_msg_to_str(&err, msg);
+	if (OFIX_OK != err.code) {
+	    test_print("[%d] %s\n", err.code, err.msg);
+	    test_fail();
+	    return;
+	}
+	a += sprintf(a, "%s\n", str);
+	free(str);
+    }
+    ofix_msg_destroy(msg);
+    test_same(expected, actual);
+}
+
+static void
+set_boolean_test() {
+    char		actual[1024];
+    char		*a = actual;
+    char		*expected = "\
+8=FIX.4.4^9=012^35=A^5000=Y^10=110^\n\
+8=FIX.4.4^9=012^35=A^5000=N^10=099^\n";
+    struct _ofixErr	err = OFIX_ERR_INIT;
+    ofixMsg		msg;
+    bool		values[] = { true, false };
+    bool		*vp;
+    bool		*end = (bool*)((char*)values + sizeof(values));
+    char		*str;
+
+    if (NULL == (msg = ofix_msg_create(&err, "A", 4, 4, 14))) {
+	test_print("[%d] %s\n", err.code, err.msg);
+	test_fail();
+	return;
+    }
+    for (vp = values; vp < end; vp++) {
+	ofix_msg_set_bool(&err, msg, 5000, *vp);
+	if (OFIX_OK != err.code) {
+	    test_print("set bool of %d failed: [%d] %s\n", err.code, err.msg);
+	    test_fail();
+	    ofix_err_clear(&err);
+	}
+	str = ofix_msg_to_str(&err, msg);
+	if (OFIX_OK != err.code) {
+	    test_print("[%d] %s\n", err.c
