@@ -157,4 +157,79 @@ set_boolean_test() {
 	}
 	str = ofix_msg_to_str(&err, msg);
 	if (OFIX_OK != err.code) {
-	    test_print("[%d] %s\n", err.c
+	    test_print("[%d] %s\n", err.code, err.msg);
+	    test_fail();
+	    return;
+	}
+	a += sprintf(a, "%s\n", str);
+	free(str);
+    }
+    ofix_msg_destroy(msg);
+    test_same(expected, actual);
+}
+
+typedef struct _DubVal {
+    double	value;
+    int		fracDigits;
+} *DubVal;
+
+static void
+set_float_test() {
+    char		actual[1024];
+    char		*a = actual;
+    char		*expected = "\
+8=FIX.4.4^9=012^35=A^5000=0^10=069^\n\
+8=FIX.4.4^9=012^35=A^5000=5^10=074^\n\
+8=FIX.4.4^9=015^35=A^5000=5.01^10=220^\n\
+8=FIX.4.4^9=016^35=A^5000=-4.99^10=026^\n\
+8=FIX.4.4^9=027^35=A^5000=123456789.012345^10=085^\n\
+8=FIX.4.4^9=017^35=A^5000=0.0420^10=062^\n\
+8=FIX.4.4^9=013^35=A^5000=21^10=121^\n";
+    struct _ofixErr	err = OFIX_ERR_INIT;
+    ofixMsg		msg;
+    struct _DubVal	values[] = { { 0.0, 1 },
+				     { 5.01, 0 },
+				     { 5.01, 2 },
+				     { -4.99, 2 },
+				     { 123456789.012345, 6 },
+				     { 0.042, 4 },
+				     { 21.001, 2 } };
+    DubVal		vp;
+    DubVal		end = (DubVal)((char*)values + sizeof(values));
+    char		*str;
+
+    if (NULL == (msg = ofix_msg_create(&err, "A", 4, 4, 14))) {
+	test_print("[%d] %s\n", err.code, err.msg);
+	test_fail();
+	return;
+    }
+    for (vp = values; vp < end; vp++) {
+	ofix_msg_set_float(&err, msg, 5000, vp->value, vp->fracDigits);
+	if (OFIX_OK != err.code) {
+	    test_print("set float of %d failed: [%d] %s\n", err.code, err.msg);
+	    test_fail();
+	    ofix_err_clear(&err);
+	}
+	str = ofix_msg_to_str(&err, msg);
+	if (OFIX_OK != err.code) {
+	    test_print("[%d] %s\n", err.code, err.msg);
+	    test_fail();
+	    return;
+	}
+	a += sprintf(a, "%s\n", str);
+	free(str);
+    }
+    ofix_msg_destroy(msg);
+    test_same(expected, actual);
+}
+
+static void
+set_data_test() {
+    char		actual[1024];
+    char		*a = actual;
+    char		*expected = "\
+8=FIX.4.4^9=015^35=A^5000=tiny^10=220^\n\
+8=FIX.4.4^9=017^35=A^5000=larger^10=151^\n\
+8=FIX.4.4^9=016^35=A^5000=small^10=050^\n\
+NULL or zero length array is not a valid value for ofix_msg_set_data_only()\n";
+    st
