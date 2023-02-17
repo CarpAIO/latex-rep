@@ -232,4 +232,74 @@ set_data_test() {
 8=FIX.4.4^9=017^35=A^5000=larger^10=151^\n\
 8=FIX.4.4^9=016^35=A^5000=small^10=050^\n\
 NULL or zero length array is not a valid value for ofix_msg_set_data_only()\n";
-    st
+    struct _ofixErr	err = OFIX_ERR_INIT;
+    ofixMsg		msg;
+    char		*values[] = { "tiny", "larger", "small", NULL };
+    char		**vp;
+    char		**end = (char**)((char*)values + sizeof(values));
+    char		*str;
+
+    if (NULL == (msg = ofix_msg_create(&err, "A", 4, 4, 14))) {
+	test_print("[%d] %s\n", err.code, err.msg);
+	test_fail();
+	return;
+    }
+    for (vp = values; vp < end; vp++) {
+	if (NULL == *vp) {
+	    ofix_msg_set_data_only(&err, msg, 5000, 0, 0);
+	    a += sprintf(a, "%s\n", err.msg);
+	    ofix_err_clear(&err);
+	} else {
+	    ofix_msg_set_data_only(&err, msg, 5000, *vp, strlen(*vp));
+	    if (OFIX_OK != err.code) {
+		test_print("set data of %d failed: [%d] %s\n", err.code, err.msg);
+		test_fail();
+		ofix_err_clear(&err);
+	    }
+	    str = ofix_msg_to_str(&err, msg);
+	    if (OFIX_OK != err.code) {
+		test_print("[%d] %s\n", err.code, err.msg);
+		test_fail();
+	    }
+	    a += sprintf(a, "%s\n", str);
+	    free(str);
+	}
+    }
+    ofix_msg_destroy(msg);
+    test_same(expected, actual);
+}
+
+static void
+set_string_test() {
+    char		actual[1024];
+    char		*a = actual;
+    char		*expected = "\
+8=FIX.4.4^9=015^35=A^5000=tiny^10=220^\n\
+8=FIX.4.4^9=017^35=A^5000=larger^10=151^\n\
+8=FIX.4.4^9=016^35=A^5000=small^10=050^\n\
+NULL or zero length string is not a valid value for ofix_msg_set_str().\n";
+    struct _ofixErr	err = OFIX_ERR_INIT;
+    ofixMsg		msg;
+    char		*values[] = { "tiny", "larger", "small", 0 };
+    char		**vp;
+    char		**end = (char**)((char*)values + sizeof(values));
+    char		*str;
+
+    if (NULL == (msg = ofix_msg_create(&err, "A", 4, 4, 14))) {
+	test_print("[%d] %s\n", err.code, err.msg);
+	test_fail();
+	return;
+    }
+    for (vp = values; vp < end; vp++) {
+	if (NULL == *vp) {
+	    ofix_msg_set_str(&err, msg, 5000, 0);
+	    a += sprintf(a, "%s\n", err.msg);
+	    ofix_err_clear(&err);
+	} else {
+	    ofix_msg_set_str(&err, msg, 5000, *vp);
+	    if (OFIX_OK != err.code) {
+		test_print("set string of %d failed: [%d] %s\n", err.code, err.msg);
+		test_fail();
+		ofix_err_clear(&err);
+	    }
+	    str = ofix_msg_to_str(&err, msg
