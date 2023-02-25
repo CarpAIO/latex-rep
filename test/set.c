@@ -371,4 +371,78 @@ set_timeonly_test() {
     ofixMsg		msg;
     struct _ofixDate	values[] = {
 	{ 0, 0, 0, 0, 19, 44, 33, 0, OFIX_TIMEONLY },
-	
+	{ 0, 0, 0, 0, 23, 59, 59, 999, OFIX_TIMEONLY },
+	{ 0, 0, 0, 0, 0, 0, 0, 0, OFIX_TIMEONLY } };
+    ofixDate		vp;
+    ofixDate		end = (ofixDate)((char*)values + sizeof(values));
+    char		*str;
+
+    if (NULL == (msg = ofix_msg_create(&err, "A", 4, 4, 14))) {
+	test_print("[%d] %s\n", err.code, err.msg);
+	test_fail();
+	return;
+    }
+    for (vp = values; vp < end; vp++) {
+	ofix_msg_set_date(&err, msg, 5000, vp);
+	if (OFIX_OK != err.code) {
+	    test_print("set date of %d failed: [%d] %s\n", err.code, err.msg);
+	    test_fail();
+	    ofix_err_clear(&err);
+	}
+	str = ofix_msg_to_str(&err, msg);
+	if (OFIX_OK != err.code) {
+	    test_print("[%d] %s\n", err.code, err.msg);
+	    test_fail();
+	}
+	a += sprintf(a, "%s\n", str);
+	free(str);
+    }
+    ofix_msg_destroy(msg);
+    test_same(expected, actual);
+}
+
+static void
+set_dateonly_test() {
+    char		actual[1024];
+    char		*a = actual;
+    char		*expected = "\
+8=FIX.4.4^9=019^35=A^5000=20071130^10=170^\n\
+8=FIX.4.4^9=019^35=A^5000=99991231^10=199^\n\
+8=FIX.4.4^9=019^35=A^5000=00000101^10=158^\n";
+    struct _ofixErr	err = OFIX_ERR_INIT;
+    ofixMsg		msg;
+    struct _ofixDate	values[] = {
+	{ 2007, 11, 0, 30, 0, 0, 0, 0, OFIX_DATEONLY },
+	{ 9999, 12, 0, 31, 0, 0, 0, 0, OFIX_DATEONLY },
+	{ 0, 1, 0, 1, 0, 0, 0, 0, OFIX_DATEONLY } };
+    ofixDate		vp;
+    ofixDate		end = (ofixDate)((char*)values + sizeof(values));
+    char		*str;
+
+    if (NULL == (msg = ofix_msg_create(&err, "A", 4, 4, 14))) {
+	test_print("[%d] %s\n", err.code, err.msg);
+	test_fail();
+	return;
+    }
+    for (vp = values; vp < end; vp++) {
+	ofix_msg_set_date(&err, msg, 5000, vp);
+	if (OFIX_OK != err.code) {
+	    test_print("set date of %d failed: [%d] %s\n", err.code, err.msg);
+	    test_fail();
+	    ofix_err_clear(&err);
+	}
+	str = ofix_msg_to_str(&err, msg);
+	if (OFIX_OK != err.code) {
+	    test_print("[%d] %s\n", err.code, err.msg);
+	    test_fail();
+	}
+	a += sprintf(a, "%s\n", str);
+	free(str);
+    }
+    ofix_msg_destroy(msg);
+    test_same(expected, actual);
+}
+
+static void
+set_yyyymm_test() {
+    c
