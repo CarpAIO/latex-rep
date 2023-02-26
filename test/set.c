@@ -445,4 +445,71 @@ set_dateonly_test() {
 
 static void
 set_yyyymm_test() {
-    c
+    char		actual[1024];
+    char		*a = actual;
+    char		*expected = "\
+8=FIX.4.4^9=017^35=A^5000=200711^10=069^\n\
+8=FIX.4.4^9=017^35=A^5000=999912^10=097^\n\
+8=FIX.4.4^9=017^35=A^5000=000001^10=059^\n";
+    struct _ofixErr	err = OFIX_ERR_INIT;
+    ofixMsg		msg;
+    struct _ofixDate	values[] = {
+	{ 2007, 11, 0, 0, 0, 0, 0, 0, OFIX_YYYYMM },
+	{ 9999, 12, 0, 0, 0, 0, 0, 0, OFIX_YYYYMM },
+	{ 0, 1, 0, 0, 0, 0, 0, 0, OFIX_YYYYMM } };
+    ofixDate		vp;
+    ofixDate		end = (ofixDate)((char*)values + sizeof(values));
+    char		*str;
+
+    if (NULL == (msg = ofix_msg_create(&err, "A", 4, 4, 14))) {
+	test_print("[%d] %s\n", err.code, err.msg);
+	test_fail();
+	return;
+    }
+    for (vp = values; vp < end; vp++) {
+	ofix_msg_set_date(&err, msg, 5000, vp);
+	if (OFIX_OK != err.code) {
+	    test_print("set date of %d failed: [%d] %s\n", err.code, err.msg);
+	    test_fail();
+	    ofix_err_clear(&err);
+	}
+	str = ofix_msg_to_str(&err, msg);
+	if (OFIX_OK != err.code) {
+	    test_print("[%d] %s\n", err.code, err.msg);
+	    test_fail();
+	}
+	a += sprintf(a, "%s\n", str);
+	free(str);
+    }
+    ofix_msg_destroy(msg);
+    test_same(expected, actual);
+}
+
+static void
+set_yyyymmww_test() {
+    char		actual[1024];
+    char		*a = actual;
+    char		*expected = "\
+8=FIX.4.4^9=019^35=A^5000=200711w2^10=240^\n\
+8=FIX.4.4^9=019^35=A^5000=999912w5^10=015^\n\
+8=FIX.4.4^9=019^35=A^5000=000001w1^10=229^\n";
+    struct _ofixErr	err = OFIX_ERR_INIT;
+    ofixMsg		msg;
+    struct _ofixDate	values[] = {
+	{ 2007, 11, 2, 0, 0, 0, 0, 0, OFIX_YYYYMMWW },
+	{ 9999, 12, 5, 0, 0, 0, 0, 0, OFIX_YYYYMMWW },
+	{ 0, 1, 1, 0, 0, 0, 0, 0, OFIX_YYYYMMWW } };
+    ofixDate		vp;
+    ofixDate		end = (ofixDate)((char*)values + sizeof(values));
+    char		*str;
+
+    if (NULL == (msg = ofix_msg_create(&err, "A", 4, 4, 14))) {
+	test_print("[%d] %s\n", err.code, err.msg);
+	test_fail();
+	return;
+    }
+    for (vp = values; vp < end; vp++) {
+	ofix_msg_set_date(&err, msg, 5000, vp);
+	if (OFIX_OK != err.code) {
+	    test_print("set date of %d failed: [%d] %s\n", err.code, err.msg);
+	    test_fail();
