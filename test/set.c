@@ -581,4 +581,9 @@ append_set_tests(Test tests) {
     test_append(tests, "set.data", set_data_test);
     test_append(tests, "set.string", set_string_test);
     test_append(tests, "set.timestamp", set_timestamp_test);
-    test_append(tests,
+    test_append(tests, "set.timeonly", set_timeonly_test);
+    test_append(tests, "set.dateonly", set_dateonly_test);
+    test_append(tests, "set.yyyymm", set_yyyymm_test);
+    test_append(tests, "set.yyyymmww", set_yyyymmww_test);
+    test_append(tests, "set.time", set_time_test);
+}
