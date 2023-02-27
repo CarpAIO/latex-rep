@@ -59,4 +59,94 @@ test_init(int argc, char **argv, const char *group_name, Test all_tests) {
 	if (0 == strcmp("-o", a)) {
 	    argc--;
 	    argv++;
-	    if (0 =
+	    if (0 == (test_out = fopen(*argv, "a"))) {
+		printf("Failed to open %s\n", *argv);
+		usage(app_name);
+	    }
+	} else if (0 == strcmp("-c", a)) {
+	    argc--;
+	    argv++;
+	    if (0 == (test_out = fopen(*argv, "w"))) {
+		printf("Failed to open %s\n", *argv);
+		usage(app_name);
+	    }
+	} else if (0 == strcmp("-v", a)) {
+	    test_verbose = 1;
+	} else {
+	    if (0 == (t = find_test(a))) {
+		printf("%s does not contain test %s\n", group, a);
+		usage(app_name);
+	    }
+	    t->run = 1;
+	    runAll = 0;
+	}
+    }
+    if (runAll) {
+	for (t = tests; t->name != 0; t++) {
+	    t->run = 1;
+	}
+    }
+    test_print("%s tests started\n", group);
+
+    for (current_test = tests; NULL != current_test->name; current_test++) {
+	if (current_test->run) {
+	    if (1 <= test_verbose) {
+		test_print("  %s\n", current_test->name);
+	    }
+	    current_test->func();
+	}
+    }
+}
+
+void
+test_done(void) {
+    char	nameFormat[32];
+    Test	t;
+    char	*result = "Skipped";
+    time_t	tt;
+    int		cnt = 0;
+    int		fail = 0;
+    int		skip = 0;
+    int		len, maxLen = 1;
+    
+    for (t = tests; t->name != 0; t++) {
+	len = strlen(t->name);
+	if (maxLen < len) {
+	    maxLen = len;
+	}
+    }
+    sprintf(nameFormat, "  %%%ds: %%s\n", maxLen);
+    test_print("Summary for %s:\n", group);
+    for (t = tests; t->name != 0; t++) {
+	switch (t->pass) {
+	case -1:
+	    result = "Skipped";
+	    skip++;
+	    break;
+	case 0:
+	    result = "FAILED";
+	    fail++;
+	    break;
+	case 1:
+	default:
+	    result = "Passed";
+	    break;
+	}
+	cnt++;
+	test_print(nameFormat, t->name, result);
+    }
+    test_print("\n");
+    if (0 < fail) {
+	test_print("%d out of %d tests failed for %s\n", fail, cnt, group);
+	if (0 < skip) {
+	    test_print("%d out of %d skipped\n", skip, cnt);
+	}
+	test_print("%d out of %d passed\n", (cnt - fail - skip), cnt);
+    } else if (0 < skip) {
+	test_print("%d out of %d skipped\n", skip, cnt);
+	test_print("%d out of %d passed\n", (cnt - skip), cnt);
+    } else {
+	test_print("All %d tests passed!\n", cnt);
+    }
+    tt = time(0);
+    test_print("%s tests completed %s
