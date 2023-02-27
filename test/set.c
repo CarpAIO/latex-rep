@@ -513,3 +513,72 @@ set_yyyymmww_test() {
 	if (OFIX_OK != err.code) {
 	    test_print("set date of %d failed: [%d] %s\n", err.code, err.msg);
 	    test_fail();
+	    ofix_err_clear(&err);
+	}
+	str = ofix_msg_to_str(&err, msg);
+	if (OFIX_OK != err.code) {
+	    test_print("[%d] %s\n", err.code, err.msg);
+	    test_fail();
+	}
+	a += sprintf(a, "%s\n", str);
+	free(str);
+    }
+    ofix_msg_destroy(msg);
+    test_same(expected, actual);
+}
+
+static void
+set_time_test() {
+    char		actual[1024];
+    char		*a = actual;
+    char		*expected = "\
+8=FIX.4.4^9=028^35=A^5000=20071130-19:44:33^10=131^\n\
+8=FIX.4.4^9=028^35=A^5000=20080101-23:59:59^10=138^\n\
+8=FIX.4.4^9=028^35=A^5000=00000101-00:00:00^10=095^\n\
+8=FIX.4.4^9=028^35=A^5000=99991231-23:59:59^10=169^\n";
+    struct _ofixErr	err = OFIX_ERR_INIT;
+    ofixMsg		msg;
+    struct _ofixDate	values[] = {
+	{ 2007, 11, 0, 30, 19, 44, 33, 0, OFIX_TIME },
+	{ 2008, 1, 0, 1, 23, 59, 59, 999, OFIX_TIME },
+	{ 0, 1, 0, 1, 0, 0, 0, 0, OFIX_TIME },
+	{ 9999, 12, 0, 31, 23, 59, 59, 999, OFIX_TIME } };
+    ofixDate		vp;
+    ofixDate		end = (ofixDate)((char*)values + sizeof(values));
+    char		*str;
+
+    if (NULL == (msg = ofix_msg_create(&err, "A", 4, 4, 14))) {
+	test_print("[%d] %s\n", err.code, err.msg);
+	test_fail();
+	return;
+    }
+    for (vp = values; vp < end; vp++) {
+	ofix_msg_set_date(&err, msg, 5000, vp);
+	if (OFIX_OK != err.code) {
+	    test_print("set date of %d failed: [%d] %s\n", err.code, err.msg);
+	    test_fail();
+	    ofix_err_clear(&err);
+	}
+	str = ofix_msg_to_str(&err, msg);
+	if (OFIX_OK != err.code) {
+	    test_print("[%d] %s\n", err.code, err.msg);
+	    test_fail();
+	}
+	a += sprintf(a, "%s\n", str);
+	free(str);
+    }
+    ofix_msg_destroy(msg);
+    test_same(expected, actual);
+}
+
+void
+append_set_tests(Test tests) {
+    test_append(tests, "set.int", set_int_test);
+    test_append(tests, "set.neg_tag", set_neg_tag_test);
+    test_append(tests, "set.char", set_char_test);
+    test_append(tests, "set.boolean", set_boolean_test);
+    test_append(tests, "set.float", set_float_test);
+    test_append(tests, "set.data", set_data_test);
+    test_append(tests, "set.string", set_string_test);
+    test_append(tests, "set.timestamp", set_timestamp_test);
+    test_append(tests,
