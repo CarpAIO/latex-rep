@@ -241,4 +241,112 @@ test_same(const char *expected, const char *actual) {
 	test_print("%s.%s Failed: Actual result shorter than expected\n", group, current_test->name);
 	pass = 0;
 	if (test_verbose) {
-	    test_print("expected: '%s'\n", ex
+	    test_print("expected: '%s'\n", expected);
+	    test_print("  actual: '%s'\n\n", actual);
+	}
+    }
+    if (current_test->pass != 0) {	// don't replace failed status
+	current_test->pass = pass;
+    }
+    return pass;
+}
+
+void
+test_fail() {
+    test_print("%s.%s Failed\n", group, current_test->name);
+    current_test->pass = 0;
+}
+
+int
+test_true(bool condition) {
+    if (!condition) {
+	test_print("%s.%s Failed: Condition was false\n", group, current_test->name);
+	current_test->pass = 0;
+    } else {
+	if (current_test->pass == -1) {	// don't replace failed status
+	    current_test->pass = 1;
+	}
+    }
+    return condition;
+}
+
+int
+test_false(bool condition) {
+    if (condition) {
+	test_print("%s.%s Failed: Condition was true\n", group, current_test->name);
+	current_test->pass = 0;
+    } else {
+	if (current_test->pass == -1) {	// don't replace failed status
+	    current_test->pass = 1;
+	}
+    }
+    return !condition;
+}
+
+char*
+test_load_file(const char *filename) {
+    FILE	*f;
+    char	*buf;
+    long	len;
+
+    if (0 == (f = fopen(filename, "r"))) {
+	test_print("Error: failed to open %s.\n", filename);
+	return 0;
+    }
+    fseek(f, 0, SEEK_END);
+    len = ftell(f);
+    if (0 == (buf = malloc(len + 1))) {
+	test_print("Error: failed to allocate %ld bytes for file %s.\n", len, filename);
+	return 0;
+    }
+    fseek(f, 0, SEEK_SET);
+    if (len != fread(buf, 1, len, f)) {
+	test_print("Error: failed to read %ld bytes from %s.\n", len, filename);
+	fclose(f);
+	return 0;
+    }
+    fclose(f);
+    buf[len] = '\0';
+
+    return buf;
+}
+
+void
+test_report_test(const char *testName) {
+    Test	t = find_test(testName);
+    const char	*result;
+
+    if (0 == t) {
+	if (0 != testName) {
+	    return;
+	}
+	t = current_test;
+	if (0 == t) {
+	    return;
+	}
+    }
+    switch (t->pass) {
+    case -1:
+	result = "Skipped";
+	break;
+    case 0:
+	result = "FAILED";
+	break;
+    case 1:
+    default:
+	result = "Passed";
+	break;
+    }
+    test_print("%s: %s", t->name, result);
+}
+
+void
+test_reset_test(const char *testName) {
+    Test	t = find_test(testName);
+
+    if (0 == t) {
+	if (0 != testName) {
+	    return;
+	}
+	t = current_test;
+	if (0 == t) {
