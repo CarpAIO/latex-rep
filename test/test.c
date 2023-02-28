@@ -350,3 +350,107 @@ test_reset_test(const char *testName) {
 	}
 	t = current_test;
 	if (0 == t) {
+	    return;
+	}
+    }
+    t->pass = -1;
+}
+
+static void
+usage(const char *app_name) {
+    printf("%s [-m] [-o file] [-c file]\n", app_name);
+    printf("  -o file  name of output file to append to\n");
+    printf("  -c file  name of output file to create and write to\n");
+    exit(0);
+}
+
+static Test
+find_test(const char *name) {
+    if (0 != name) {
+	Test	t;
+
+	for (t = tests; t->name != 0; t++) {
+	    if (0 == strcmp(name, t->name)) {
+		return t;
+	    }
+	}
+    }
+    return 0;
+}
+
+void
+test_hex_dump(const uint8_t *data, int len) {
+    const uint8_t	*b = data;
+    const uint8_t	*end = data + len;
+    char		buf[20];
+    char		*s = buf;
+    int			i;
+
+    for (; b < end; b++) {
+        printf("%02X ", *b);
+	if (' ' <= *b && *b < 127) {
+	    *s++ = (char)*b;
+	} else {
+	    *s++ = '.';
+	}
+	i = (b - data) % 16;
+        if (7 == i) {
+            printf(" ");
+	    *s++ = ' ';
+        } else if (15 == i) {
+	    *s = '\0';
+            printf("  %s\n", buf);
+	    s = buf;
+        }
+    }
+    i = (b - data) % 16;
+    if (0 != i) {
+	if (i < 8) {
+	    printf(" ");
+	}
+	for (; i < 16; i++) {
+	    printf("   ");
+	}
+	*s = '\0';
+	printf("  %s\n", buf);
+    }
+}
+
+char*
+test_to_code_str(const uint8_t *data, int len) {
+    const uint8_t	*d;
+    const uint8_t	*end = data + len;
+    int			clen = 0;
+    char		*str;
+    char		*s;
+    
+    for (d = data; d < end; d++) {
+	if (*d < ' ' || 127 <= *d) {
+	    clen += 4;
+	} else if ('"' == *d || '\\' == *d) {
+	    clen += 3;
+	} else {
+	    clen++;
+	}
+    }
+    if (0 == (str = (char*)malloc(clen + 1))) {
+	return 0;
+    }
+    for (s = str, d = data; d < end; d++) {
+	if (*d < ' ' || 127 <= *d) {
+	    *s++ = '\\';
+	    *s++ = '0' + (*d >> 6);
+	    *s++ = '0' + ((*d >> 3) & 0x07);
+	    *s++ = '0' + (*d & 0x07);
+	} else if ('"' == *d || '\\' == *d) {
+	    *s++ = '\\';
+	    *s++ = '\\';
+	    *s++ = *d;
+	} else {
+	    *s++ = *d;
+	}
+    }
+    *s = '\0';
+    
+    return str;
+}
