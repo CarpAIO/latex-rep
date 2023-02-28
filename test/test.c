@@ -149,4 +149,96 @@ test_done(void) {
 	test_print("All %d tests passed!\n", cnt);
     }
     tt = time(0);
-    test_print("%s tests completed %s
+    test_print("%s tests completed %s\n", group, ctime(&tt));
+    if (stdout != test_out) {
+	fclose(test_out);
+    }
+    // exit((cnt << 16) | fail);
+    //exit(0);
+}
+
+int
+test_same(const char *expected, const char *actual) {
+    const char	*e = expected;
+    const char	*a = actual;
+    int		line = 1;
+    int		col = 1;
+    int		pass = 1;
+
+    if (expected == actual) {
+	if (current_test->pass != 0) {	// don't replace failed status
+	    current_test->pass = 1;
+	}
+	return 1;
+    }
+    if (0 == actual || 0 == expected) {
+	current_test->pass = 0;
+	return 0;
+    }
+    for (; '\0' != *e && '\0' != *a; e++, a++) {
+	if (*e == *a || '?' == *e) {
+	    if ('\n' == *a) {
+		line++;
+		col = 0;
+	    }
+	    col++;
+	} else if ('$' == *e) {	// a digit
+	    if ('0' <= *a && *a <= '9') {
+		while ('0' <= *a && *a <= '9') {
+		    a++;
+		    col++;
+		}
+		a--;
+	    } else {
+		pass = 0;
+		break;
+	    }
+	} else if ('#' == *e) {	// hexidecimal
+	    if (('0' <= *a && *a <= '9') ||
+		('a' <= *a && *a <= 'f') ||
+		('A' <= *a && *a <= 'F')) {
+		while (('0' <= *a && *a <= '9') ||
+		       ('a' <= *a && *a <= 'f') ||
+		       ('A' <= *a && *a <= 'F')) {
+		    a++;
+		    col++;
+		}
+		a--;
+	    } else {
+		pass = 0;
+		break;
+	    }
+	} else if ('*' == *e) {
+	    const char	ne = *(e + 1);
+
+	    while (ne != *a && '\0' != *a) {
+		a++;
+		col++;
+	    }
+	    a--;
+	} else {
+	    pass = 0;
+	    break;
+	}
+    }
+    if ('\0' != *a) {
+	if ('\0' == *e) {
+	    test_print("%s.%s Failed: Actual result longer than expected\n", group, current_test->name);
+	    pass = 0;
+	    if (test_verbose) {
+		test_print("expected: '%s'\n", expected);
+		test_print("  actual: '%s'\n\n", actual);
+	    }
+	} else {
+	    test_print("%s.%s Failed: Mismatch at line %d, column %d\n", group, current_test->name, line, col);
+	    if (test_verbose) {
+		test_print("expected: '%s'\n", expected);
+		test_print("  actual: '%s'\n\n", actual);
+	    }
+	    pass = 0;
+	}
+    } else if ('\0' != *e) {
+	test_print("%s.%s Failed: Actual result shorter than expected\n", group, current_test->name);
+	pass = 0;
+	if (test_verbose) {
+	    test_print("expected: '%s'\n", ex
